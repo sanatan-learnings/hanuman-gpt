@@ -3,17 +3,19 @@ layout: default
 title: "Complete Hanuman Chalisa - Full Text"
 description: "Read the complete Hanuman Chalisa with all 43 verses on a single page with Devanagari text, transliteration, and translations"
 ---
+{% assign t_en = site.data.translations.en %}
+{% assign t_hi = site.data.translations.hi %}
 
 <div class="full-chalisa-container">
     <div class="full-chalisa-header">
-        <h1>Complete Hanuman Chalisa</h1>
-        <p class="subtitle">All 43 verses on one page</p>
+        <h1><span data-lang="en">{{ t_en.full_chalisa.title }}</span><span data-lang="hi">{{ t_hi.full_chalisa.title }}</span></h1>
+        <p class="subtitle"><span data-lang="en">{{ t_en.full_chalisa.subtitle }}</span><span data-lang="hi">{{ t_hi.full_chalisa.subtitle }}</span></p>
 
         <div class="view-options">
-            <label><input type="checkbox" id="toggle-transliteration" checked> Show Transliteration</label>
-            <label><input type="checkbox" id="toggle-translation" checked> Show Translation</label>
-            <label><input type="checkbox" id="toggle-meanings"> Show Word Meanings</label>
-            <button onclick="window.print()" class="print-all-button">🖨️ Print All</button>
+            <label><input type="checkbox" id="toggle-transliteration" checked> <span data-lang="en">{{ t_en.full_chalisa.show_transliteration }}</span><span data-lang="hi">{{ t_hi.full_chalisa.show_transliteration }}</span></label>
+            <label><input type="checkbox" id="toggle-translation" checked> <span data-lang="en">{{ t_en.full_chalisa.show_translation }}</span><span data-lang="hi">{{ t_hi.full_chalisa.show_translation }}</span></label>
+            <label><input type="checkbox" id="toggle-meanings"> <span data-lang="en">{{ t_en.full_chalisa.show_meanings }}</span><span data-lang="hi">{{ t_hi.full_chalisa.show_meanings }}</span></label>
+            <button onclick="window.print()" class="print-all-button">🖨️ <span data-lang="en">{{ t_en.full_chalisa.print_all }}</span><span data-lang="hi">{{ t_hi.full_chalisa.print_all }}</span></button>
         </div>
     </div>
 
@@ -21,34 +23,35 @@ description: "Read the complete Hanuman Chalisa with all 43 verses on a single p
         {% for verse in site.verses %}
         <article class="verse-item" id="{{ verse.url | split: '/' | last }}">
             <div class="verse-header">
-                <h2>{{ verse.title }}</h2>
-                <a href="{{ verse.url | relative_url }}" class="verse-link">View Details →</a>
+                <h2><span data-lang="en">{{ verse.title_en | default: verse.title }}</span><span data-lang="hi">{{ verse.title_hi | default: verse.title }}</span></h2>
+                <a href="{{ verse.url | relative_url }}" class="verse-link"><span data-lang="en">{{ t_en.labels.view_details }}</span><span data-lang="hi">{{ t_hi.labels.view_details }}</span> →</a>
             </div>
 
             <div class="verse-section devanagari-section">
-                <h3>Devanagari</h3>
+                <h3><span data-lang="en">{{ t_en.full_chalisa.devanagari }}</span><span data-lang="hi">{{ t_hi.full_chalisa.devanagari }}</span></h3>
                 <pre class="devanagari-text">{{ verse.devanagari }}</pre>
             </div>
 
             <div class="verse-section transliteration-section">
-                <h3>Transliteration</h3>
+                <h3><span data-lang="en">{{ t_en.full_chalisa.transliteration }}</span><span data-lang="hi">{{ t_hi.full_chalisa.transliteration }}</span></h3>
                 <pre class="transliteration-text">{{ verse.transliteration }}</pre>
             </div>
 
             <div class="verse-section translation-section">
-                <h3>Translation</h3>
+                <h3><span data-lang="en">{{ t_en.full_chalisa.translation }}</span><span data-lang="hi">{{ t_hi.full_chalisa.translation }}</span></h3>
                 {% if verse.literal_translation.en %}
-                <p class="literal-translation">{{ verse.literal_translation.en }}</p>
-                {% else %}
-                <p class="literal-translation">{{ verse.literal_translation }}</p>
+                <p class="literal-translation" data-lang="en">{{ verse.literal_translation.en }}</p>
+                {% endif %}
+                {% if verse.literal_translation.hi %}
+                <p class="literal-translation" data-lang="hi">{{ verse.literal_translation.hi }}</p>
                 {% endif %}
             </div>
 
             <div class="verse-section meanings-section" style="display: none;">
-                <h3>Word-by-Word Meaning</h3>
+                <h3><span data-lang="en">{{ t_en.full_chalisa.word_meaning }}</span><span data-lang="hi">{{ t_hi.full_chalisa.word_meaning }}</span></h3>
                 <ul class="word-meanings">
                 {% for item in verse.word_meanings %}
-                    <li><strong>{{ item.word }}</strong> ({{ item.roman }}) - {{ item.meaning }}</li>
+                    <li><strong>{{ item.word }}</strong> ({{ item.roman }}) - {% if item.meaning.en %}<span data-lang="en">{{ item.meaning.en }}</span><span data-lang="hi">{{ item.meaning.hi }}</span>{% else %}{{ item.meaning }}{% endif %}</li>
                 {% endfor %}
                 </ul>
             </div>
@@ -59,8 +62,8 @@ description: "Read the complete Hanuman Chalisa with all 43 verses on a single p
     </div>
 
     <div class="full-chalisa-footer">
-        <p><a href="{{ '/' | relative_url }}">← Back to Verse List</a></p>
-        <p><em>May Lord Hanuman's blessings be with all who recite these sacred verses.</em></p>
+        <p><a href="{{ '/' | relative_url }}">← <span data-lang="en">{{ t_en.labels.back_to_list }}</span><span data-lang="hi">{{ t_hi.labels.back_to_list }}</span></a></p>
+        <p><em><span data-lang="en">{{ t_en.footer.blessing }}</span><span data-lang="hi">{{ t_hi.footer.blessing }}</span></em></p>
     </div>
 </div>
 

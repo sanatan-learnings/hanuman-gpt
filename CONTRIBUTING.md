@@ -31,14 +31,56 @@ Edit files using any text editor. Common contribution areas:
 **For content changes:**
 - Preview Markdown files in your editor
 - Ensure Devanagari script displays correctly
+- Verify YAML syntax is correct (no missing colons, proper indentation)
 
-**For code/layout changes (optional):**
+**For code/layout changes - Test Locally (Recommended):**
+
+Testing locally catches build errors before pushing to GitHub:
+
 ```bash
-# Install Jekyll (optional, GitHub will build for you)
-gem install jekyll bundler
-jekyll serve
+# One-time setup: Install dependencies
+gem install bundler
+bundle install
+
+# Start local Jekyll server
+bundle exec jekyll serve
 
 # Visit http://localhost:4000/hanuman-chalisa/
+```
+
+**What to test:**
+- Navigate through verses - check all links work
+- Test language switcher (English ↔ Hindi)
+- Verify search functionality
+- Check print layout (Cmd/Ctrl+P)
+- Test on mobile (resize browser)
+- Check browser console for errors (F12)
+
+**Common local build errors:**
+- **Liquid syntax error:** Check templates in `_layouts/` for typos
+- **YAML parsing error:** Check verse files for proper indentation
+- **Missing translation key:** Check `_data/translations/*.yml`
+- **Port already in use:** Kill existing Jekyll server or use `--port 4001`
+
+**Local vs GitHub Pages:**
+- Local uses latest Jekyll version
+- GitHub Pages uses specific versions (see `Gemfile`)
+- Always test with `bundle exec jekyll serve` to match GitHub environment
+- If local build succeeds but GitHub fails, check Actions log
+
+**Troubleshooting:**
+```bash
+# Check Jekyll version
+bundle exec jekyll --version
+
+# Build without serving (faster error checking)
+bundle exec jekyll build
+
+# Verbose output for debugging
+bundle exec jekyll serve --verbose
+
+# Clean and rebuild
+bundle exec jekyll clean && bundle exec jekyll build
 ```
 
 ### 5. Commit and Push

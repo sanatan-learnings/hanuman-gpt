@@ -23,23 +23,6 @@ This comprehensive guide aims to make the Hanuman Chalisa accessible and meaning
 
 ## Features
 
-### 🌐 Bilingual Support
-
-The entire website is fully bilingual, supporting both **English** and **हिन्दी (Hindi)**:
-
-- **Language Switcher** - Toggle between languages at any time from the header
-- **Persistent Selection** - Your language preference is remembered across all pages
-- **Complete Translation** - Every element of the site switches languages:
-  - All 43 verse titles
-  - Word-by-word meanings for every verse
-  - Literal translations, interpretive meanings, and stories
-  - Section headings, navigation buttons, and UI elements
-  - Page titles, descriptions, and footer content
-- **Client-Side Implementation** - Fast language switching without page reload
-- **Extensible Architecture** - Ready to support additional languages (Tamil, Telugu, Spanish planned)
-
-Whether you're more comfortable reading in English or हिन्दी, the complete devotional content and scholarly insights are available to you.
-
 ### Interactive Website Features
 - **📖 Full chalisa view** - Read all 43 verses on a single page with bilingual display
 - **🔍 Search functionality** - Search across all verses in Devanagari, transliteration, translations
@@ -58,6 +41,23 @@ Whether you're more comfortable reading in English or हिन्दी, the co
 - **Story and context** from Ramayana in both languages
 - **Practical applications** for daily life in both languages
 
+### 🌐 Bilingual Support
+
+The entire website is fully bilingual, supporting both **English** and **हिन्दी (Hindi)**:
+
+- **Language Switcher** - Toggle between languages at any time from the header
+- **Persistent Selection** - Your language preference is remembered across all pages
+- **Complete Translation** - Every element of the site switches languages:
+  - All 43 verse titles
+  - Word-by-word meanings for every verse
+  - Literal translations, interpretive meanings, and stories
+  - Section headings, navigation buttons, and UI elements
+  - Page titles, descriptions, and footer content
+- **Client-Side Implementation** - Fast language switching without page reload
+- **Extensible Architecture** - Ready to support additional languages (Tamil, Telugu, Spanish planned)
+
+Whether you're more comfortable reading in English or हिन्दी, the complete devotional content and scholarly insights are available to you.
+
 For detailed information about the verse structure, see **[verse-structure.md](docs/verse-structure.md)**.
 
 ## Documentation
@@ -66,23 +66,9 @@ For detailed information about the verse structure, see **[verse-structure.md](d
 - **[tech-stack.md](docs/tech-stack.md)** - Technologies, tools, and services used (Jekyll, PyCharm, Claude Code, Midjourney, ElevenLabs)
 - **[multilingual-implementation.md](docs/multilingual-implementation.md)** - Multi-language architecture and implementation guide
 - **[background.md](docs/background.md)** - Complete history and context of the Hanuman Chalisa
-- **[guidehttps://arun-gupta.github.io/hanuman-chalisa/.md](docs/guide.md)** - Comprehensive usage guide for different purposes
+- **[guide.md](docs/guide.md)** - Comprehensive usage guide for different purposes
 - **[github-pages-setup.md](docs/github-pages-setup.md)** - How the website is built and deployed with Jekyll and GitHub Pages
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute to this project
-
-## Completed Features ✓
-
-- ✅ **Complete bilingual implementation** - Full English + Hindi support across entire site
-  - All 43 verse titles translated
-  - Word-by-word meanings in both languages (all verses)
-  - Literal translations, interpretive meanings, stories in both languages (all verses)
-  - All UI elements, navigation, section headings bilingual
-  - Client-side language switching with localStorage persistence
-- ✅ **Full chalisa view** - All 43 verses on single page with bilingual toggle controls
-- ✅ **Search functionality** - Client-side search across all content types
-- ✅ **Print-friendly CSS** - Optimized for printing verses
-- ✅ **YAML-based architecture** - Clean separation of data and presentation
-- ✅ **Pre-commit hooks** - Automated validation of YAML syntax and Jekyll builds
 
 ## Upcoming Features
 

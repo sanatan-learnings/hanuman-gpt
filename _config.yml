@@ -21,6 +21,10 @@ exclude:
   - .gitignore
   - .idea/
   - .claude/
+  - Gemfile
+  - Gemfile.lock
+  - verses_original_backup.txt
+  - CONTRIBUTING.md
 
 # Plugins
 plugins:

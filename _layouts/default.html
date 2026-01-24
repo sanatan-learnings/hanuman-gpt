@@ -1,11 +1,9 @@
-{% assign lang = page.lang %}
-{% unless lang %}
-  {% assign lang = "en" %}
-{% endunless %}
-{% assign t = site.data.translations[lang] %}
-{% unless t %}
-  {% assign t = site.data.translations["en"] %}
-{% endunless %}
+{% assign lang = page.lang | default: "en" %}
+{% if site.data.translations[lang] %}
+  {% assign t = site.data.translations[lang] %}
+{% else %}
+  {% assign t = site.data.translations.en %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ lang }}" dir="{{ t.direction }}">
 <head>

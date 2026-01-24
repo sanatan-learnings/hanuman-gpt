@@ -9,9 +9,9 @@ layout: none
     "verse_number": {{ verse.verse_number | jsonify }},
     "devanagari": {{ verse.devanagari | jsonify }},
     "transliteration": {{ verse.transliteration | jsonify }},
-    "literal_translation": {{ verse.literal_translation | jsonify }},
-    "interpretive_meaning": {{ verse.interpretive_meaning | jsonify }},
-    "story": {{ verse.story | jsonify }},
+    "literal_translation": {% if verse.literal_translation.en %}{{ verse.literal_translation.en | jsonify }}{% else %}{{ verse.literal_translation | jsonify }}{% endif %},
+    "interpretive_meaning": {% if verse.interpretive_meaning.en %}{{ verse.interpretive_meaning.en | jsonify }}{% else %}{{ verse.interpretive_meaning | jsonify }}{% endif %},
+    "story": {% if verse.story.en %}{{ verse.story.en | jsonify }}{% else %}{{ verse.story | jsonify }}{% endif %},
     "word_meanings": {{ verse.word_meanings | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}

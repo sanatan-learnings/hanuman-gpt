@@ -1,145 +1,37 @@
 # Multi-Language Implementation Guide
 
-This document outlines the steps needed to add multi-language support to the Hanuman Chalisa website.
+This document describes the multi-language implementation for the Hanuman Chalisa website.
 
 ## Overview
 
-Currently, the site has:
-- **Devanagari text**: Already in Hindi script ✓
-- **UI and content**: All in English ✗
+The site supports:
+- **Devanagari text**: Hindi script ✓
+- **UI translations**: English and Hindi ✓
+- **Content translations**: English and Hindi ✓
 
-To support multiple languages (Hindi, Tamil, Telugu, Spanish, etc.), we need to translate both UI elements and content.
+## Implemented Architecture: Client-Side Language Switching
 
-## Architecture: Data Files Approach
+**Key Decision**: Jekyll cannot access URL query parameters at build time, so we use a client-side approach.
 
-**Recommended** for GitHub Pages compatibility (no plugins needed).
+### How It Works
 
-### Step 1: Create Translation Data Files
+1. **Both languages rendered**: All verse content is rendered in HTML with `data-lang` attributes
+2. **JavaScript toggles visibility**: Based on URL `?lang=` parameter or localStorage
+3. **Navigation preserves language**: All links include the current language parameter
 
-Create `_data/translations/` directory with language files:
+## Implementation Details
 
-```
-_data/
-  translations/
-    en.yml    # English (default)
-    hi.yml    # Hindi
-    ta.yml    # Tamil
-    te.yml    # Telugu
-    es.yml    # Spanish
-```
+### 1. UI Translation Files
 
-### Step 2: UI Translations
+Located in `_data/translations/`:
+- `en.yml` - English UI strings
+- `hi.yml` - Hindi UI strings
 
-**File: `_data/translations/en.yml`**
-```yaml
-language_name: "English"
-language_code: "en"
+UI strings include navigation labels, section headings, and other interface text.
 
-nav:
-  previous: "Previous"
-  next: "Next"
-  home: "All Verses"
-  print: "Print"
-  search: "Search"
+### 2. Verse Content Structure
 
-sections:
-  devanagari: "1. Original Hindi Text (Devanagari Script)"
-  transliteration: "2. Simplified Transliteration"
-  pronunciation: "3. Pronunciation Guide"
-  word_meanings: "4. Word-by-Word Meaning"
-  literal_translation: "5. Literal Translation"
-  interpretive_meaning: "6. Interpretive Meaning"
-  story: "7. Story Behind the Verse"
-  practical_application: "9. Practical Application"
-
-labels:
-  audio_recitation: "Audio Recitation"
-  coming_soon: "Coming Soon"
-  key_teaching: "Key Teaching"
-  when_to_use: "When to Use This Verse"
-  phonetic_breakdown: "Phonetic Breakdown"
-  guide_link: "For general recitation tips and guidelines, see the"
-  comprehensive_guide: "Comprehensive Guide"
-
-home:
-  title: "Hanuman Chalisa: A Comprehensive Guide"
-  welcome: "Welcome to the Hanuman Chalisa Guide"
-  blessing: "May Lord Hanuman's blessings be with all who study and recite these sacred verses."
-  read_complete: "Read Complete Chalisa"
-  search_verses: "Search Verses"
-  usage_guide: "Usage Guide"
-  opening_dohas: "Opening Dohas"
-  main_chalisa: "Main Chalisa (40 Verses)"
-  closing_doha: "Closing Doha"
-
-footer:
-  blessing: "May Lord Hanuman's blessings be with all who study and recite these sacred verses."
-  view_github: "View on GitHub"
-  usage_guide: "Usage Guide"
-  contribute: "Contribute"
-```
-
-**File: `_data/translations/hi.yml`**
-```yaml
-language_name: "हिन्दी"
-language_code: "hi"
-
-nav:
-  previous: "पिछला"
-  next: "अगला"
-  home: "सभी छंद"
-  print: "छापें"
-  search: "खोजें"
-
-sections:
-  devanagari: "1. मूल हिंदी पाठ (देवनागरी लिपि)"
-  transliteration: "2. सरलीकृत लिप्यंतरण"
-  pronunciation: "3. उच्चारण मार्गदर्शिका"
-  word_meanings: "4. शब्द-दर-शब्द अर्थ"
-  literal_translation: "5. शाब्दिक अनुवाद"
-  interpretive_meaning: "6. व्याख्यात्मक अर्थ"
-  story: "7. छंद की पृष्ठभूमि की कहानी"
-  practical_application: "9. व्यावहारिक अनुप्रयोग"
-
-labels:
-  audio_recitation: "ऑडियो पाठ"
-  coming_soon: "जल्द आ रहा है"
-  key_teaching: "मुख्य शिक्षा"
-  when_to_use: "इस छंद का उपयोग कब करें"
-  phonetic_breakdown: "ध्वन्यात्मक विवरण"
-  guide_link: "सामान्य पाठ युक्तियों और दिशानिर्देशों के लिए, देखें"
-  comprehensive_guide: "व्यापक मार्गदर्शिका"
-
-home:
-  title: "हनुमान चालीसा: एक व्यापक मार्गदर्शिका"
-  welcome: "हनुमान चालीसा मार्गदर्शिका में आपका स्वागत है"
-  blessing: "भगवान हनुमान का आशीर्वाद उन सभी के साथ हो जो इन पवित्र छंदों का अध्ययन और पाठ करते हैं।"
-  read_complete: "पूर्ण चालीसा पढ़ें"
-  search_verses: "छंद खोजें"
-  usage_guide: "उपयोग मार्गदर्शिका"
-  opening_dohas: "प्रारंभिक दोहे"
-  main_chalisa: "मुख्य चालीसा (40 छंद)"
-  closing_doha: "समापन दोहा"
-
-footer:
-  blessing: "भगवान हनुमान का आशीर्वाद उन सभी के साथ हो जो इन पवित्र छंदों का अध्ययन और पाठ करते हैं।"
-  view_github: "GitHub पर देखें"
-  usage_guide: "उपयोग मार्गदर्शिका"
-  contribute: "योगदान करें"
-```
-
-### Step 3: Content Translations
-
-For verse content, expand YAML fields to support multiple languages:
-
-**Current Structure:**
-```yaml
-literal_translation: "Hail Hanuman, ocean of knowledge..."
-interpretive_meaning: "Hanuman is described as an ocean..."
-story: "Hanuman was blessed by various gods..."
-```
-
-**New Multi-Language Structure:**
+All verses use nested language keys:
 ```yaml
 literal_translation:
   en: "Hail Hanuman, ocean of knowledge and virtues. Hail the lord of monkeys, who illuminates the three worlds."

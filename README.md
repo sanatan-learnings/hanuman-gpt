@@ -109,3 +109,4 @@ Built with Jekyll and GitHub Pages. See [tech-stack.md](docs/tech-stack.md) for 
 ## License & Usage
 
 This guide is created for educational, devotional, and non-commercial purposes. May it serve the spiritual upliftment of all beings.
+

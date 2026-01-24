@@ -67,6 +67,20 @@ Here are some ways you can contribute:
 - Improve practical applications
 - Add Ramayana citations where missing
 
+### Translations
+- **Complete Hindi translations** - Help translate remaining verses (22/43 completed)
+- **Add new languages** - Tamil, Telugu, Spanish, or other languages
+- **Translate UI strings** - Add new language file in `_data/translations/`
+- Review and improve existing translations
+- **Translation format:**
+  ```yaml
+  literal_translation:
+    en: "English text..."
+    hi: "हिन्दी अनुवाद..."
+    ta: "தமிழ் மொழிபெயர்ப்பு..."
+  ```
+See [multilingual-implementation.md](docs/multilingual-implementation.md) for translation guide.
+
 ### Media Creation
 - **Create alternate themed images** - Design images based on different artistic themes (modern, traditional, minimalist, etc.)
 - Record human voice recitations
@@ -81,11 +95,12 @@ Here are some ways you can contribute:
 
 ### Technical Features
 - **Create PDF export functionality** - Generate a printable PDF version of all verses
-- Add search functionality
 - Implement dark mode
 - Add verse bookmarking
 - Create mobile app version
 - Add social sharing features
+- Progressive Web App (PWA) with offline support
+- Analytics integration (privacy-friendly)
 
 ### Accessibility
 - Improve screen reader compatibility

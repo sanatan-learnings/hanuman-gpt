@@ -42,6 +42,7 @@
 - **YAML Front Matter** - All verse content structured as data
 - **Markdown Files** - Each verse is a `.md` file with YAML front matter
 - **Jekyll Collections** - `_verses/` directory with 43 verse files
+- **Multi-Language Support** - English + Hindi with extensible architecture
 
 ## Project Structure
 
@@ -119,6 +120,93 @@ The `_layouts/verse.html` template renders all content from YAML data:
 - Change template once, affects all 43 verses
 - Clean separation of data and presentation
 - Easy to maintain and update
+
+## Internationalization (i18n)
+
+### Multi-Language Architecture
+
+The site supports multiple languages with extensible architecture:
+
+**Current Languages:**
+- English (default)
+- Hindi (हिन्दी)
+
+**Translation System:**
+```
+_data/
+  translations/
+    en.yml    # English UI strings
+    hi.yml    # Hindi UI strings
+```
+
+**UI Translations:** ~70 strings per language
+- Navigation labels (Previous, Next, Home)
+- Section headings (Devanagari, Transliteration, etc.)
+- Common labels (Coming Soon, Audio Recitation)
+- Home page content, footer text
+
+**Content Translations:** Multi-language verse content
+```yaml
+literal_translation:
+  en: "Hail Hanuman, ocean of knowledge..."
+  hi: "हनुमान की जय हो, ज्ञान और गुणों के सागर..."
+
+interpretive_meaning:
+  en: "Hanuman is described as an ocean..."
+  hi: "हनुमान को एक सागर के रूप में वर्णित किया गया है..."
+```
+
+**Language Switching:**
+- Dropdown selector in header
+- URL parameter support (`?lang=hi`)
+- localStorage for preference persistence
+- Preserved across navigation
+
+**Fallback System:**
+- If Hindi translation missing → show English
+- Graceful degradation
+- No broken content
+
+### Adding New Languages
+
+To add a new language (e.g., Tamil):
+1. Create `_data/translations/ta.yml`
+2. Translate ~70 UI strings
+3. Add to language dropdown
+4. Translate verse content (optional, falls back to English)
+
+See [multilingual-implementation.md](multilingual-implementation.md) for complete guide.
+
+## Key Features
+
+### 1. Single-Page View (`/full-chalisa`)
+- All 43 verses on one page
+- Toggle sections (transliteration, translation, word meanings)
+- Print-friendly button
+- Automatic generation from `site.verses` collection
+- Jekyll template loops through all verses dynamically
+
+### 2. Search Functionality (`/search`)
+- Client-side search across all content
+- Search in: Devanagari, transliteration, translations, meanings
+- Real-time filtering with debouncing
+- Highlight matching text
+- Result snippets with context
+- Generated JSON index (`search.json`)
+
+### 3. Navigation
+- Arrow keys (← →) between verses
+- Previous/Next buttons on each verse
+- Home button (☰ All Verses)
+- Language preserved in navigation
+- Keyboard shortcuts help
+
+### 4. Print Support
+- Dedicated print.css for printer-friendly output
+- Hide navigation and non-essential elements
+- Optimized typography for paper
+- A4 page configuration
+- Print button on full chalisa view
 
 ## Development Workflow
 

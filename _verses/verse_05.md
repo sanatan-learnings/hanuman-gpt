@@ -53,13 +53,23 @@ word_meanings:
     roman: "Sajai"
     meaning: "adorned/decorated"
 
-literal_translation: "In your hand shine the mace and flag, and on your shoulder rests the sacred thread."
+literal_translation:
+  en: "In your hand shine the mace and flag, and on your shoulder rests the sacred thread."
+  hi: "आपके हाथ में गदा और ध्वजा शोभायमान हैं, और आपके कंधे पर जनेऊ सुशोभित है।"
 
-interpretive_meaning: "The mace (gada) represents Hanuman's warrior aspect and his power to destroy evil. The flag symbolizes victory and dharma. The sacred thread (janeu) is significant - despite being born in a monkey form, Hanuman was a Brahmachari (celibate) and a learned scholar who deserved the sacred thread worn by the twice-born."
+interpretive_meaning:
+  en: "The mace (gada) represents Hanuman's warrior aspect and his power to destroy evil. The flag symbolizes victory and dharma. The sacred thread (janeu) is significant - despite being born in a monkey form, Hanuman was a Brahmachari (celibate) and a learned scholar who deserved the sacred thread worn by the twice-born."
+  hi: "गदा हनुमान के योद्धा पक्ष और बुराई को नष्ट करने की उनकी शक्ति का प्रतिनिधित्व करती है। ध्वजा विजय और धर्म का प्रतीक है। जनेऊ महत्वपूर्ण है - वानर रूप में जन्म लेने के बावजूद, हनुमान ब्रह्मचारी और विद्वान थे जो द्विज द्वारा पहने जाने वाले पवित्र धागे के योग्य थे।"
 
-story: "Hanuman received extensive education from Surya (the Sun God) himself. He mastered the Vedas and scriptures, earning the right to wear the sacred thread. This challenges social hierarchies, showing that spiritual attainment transcends birth. His mace was a weapon he used to protect dharma during the Ramayana war."
+story:
+  en: "Hanuman received extensive education from Surya (the Sun God) himself. He mastered the Vedas and scriptures, earning the right to wear the sacred thread. This challenges social hierarchies, showing that spiritual attainment transcends birth. His mace was a weapon he used to protect dharma during the Ramayana war."
+  hi: "हनुमान ने स्वयं सूर्य देव से व्यापक शिक्षा प्राप्त की। उन्होंने वेदों और शास्त्रों में महारत हासिल की, जनेऊ पहनने का अधिकार अर्जित किया। यह सामाजिक पदानुक्रमों को चुनौती देता है, यह दर्शाता है कि आध्यात्मिक उपलब्धि जन्म से परे है। उनकी गदा वह हथियार थी जिसका उपयोग उन्होंने रामायण युद्ध के दौरान धर्म की रक्षा के लिए किया।"
 
 practical_application:
-  teaching: "True worthiness comes from knowledge, devotion, and character - not from birth or social status."
-  when_to_use: "Recite this verse when you need to remember that spiritual attainment is available to all who seek it sincerely, regardless of their background."
+  teaching:
+    en: "True worthiness comes from knowledge, devotion, and character - not from birth or social status."
+    hi: "सच्ची योग्यता ज्ञान, भक्ति और चरित्र से आती है - जन्म या सामाजिक स्थिति से नहीं।"
+  when_to_use:
+    en: "Recite this verse when you need to remember that spiritual attainment is available to all who seek it sincerely, regardless of their background."
+    hi: "इस चौपाई का पाठ करें जब आपको याद रखने की आवश्यकता हो कि आध्यात्मिक उपलब्धि सभी के लिए उपलब्ध है जो इसे ईमानदारी से चाहते हैं, उनकी पृष्ठभूमि के बावजूद।"
 ---

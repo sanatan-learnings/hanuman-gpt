@@ -50,13 +50,23 @@ word_meanings:
     roman: "Jarava"
     meaning: "burned"
 
-literal_translation: "Taking a tiny form, you appeared before Sita; assuming a gigantic fierce form, you burned Lanka."
+literal_translation:
+  en: "Taking a tiny form, you appeared before Sita; assuming a gigantic fierce form, you burned Lanka."
+  hi: "सूक्ष्म रूप धारण कर आप सीता के सामने प्रकट हुए; विशाल भयानक रूप धारण कर आपने लंका को जलाया।"
 
-interpretive_meaning: "This verse showcases Hanuman's ability to transform according to need. The tiny form showed gentleness and the need to comfort Sita without frightening her. The gigantic form demonstrated power to instill fear in enemies. This teaches adaptability - using the right approach for different situations, always in service of dharma."
+interpretive_meaning:
+  en: "This verse showcases Hanuman's ability to transform according to need. The tiny form showed gentleness and the need to comfort Sita without frightening her. The gigantic form demonstrated power to instill fear in enemies. This teaches adaptability - using the right approach for different situations, always in service of dharma."
+  hi: "यह पद हनुमान की आवश्यकतानुसार रूप बदलने की क्षमता को प्रदर्शित करता है। सूक्ष्म रूप ने कोमलता और सीता को बिना डराए सांत्वना देने की आवश्यकता को दिखाया। विशाल रूप ने शत्रुओं में भय उत्पन्न करने की शक्ति प्रदर्शित की। यह अनुकूलनशीलता सिखाता है - विभिन्न परिस्थितियों के लिए सही दृष्टिकोण का उपयोग करना, सदैव धर्म की सेवा में।"
 
-story: "When Hanuman found Sita in Ashok Vatika, he made himself small (some say thumb-sized) to approach her gently, as she was already traumatized. After delivering Rama's message, when challenged by Ravana's forces, he grew enormous, allowing himself to be captured but then setting Lanka ablaze with his burning tail, demonstrating that he could destroy the kingdom even while bound."
+story:
+  en: "When Hanuman found Sita in Ashok Vatika, he made himself small (some say thumb-sized) to approach her gently, as she was already traumatized. After delivering Rama's message, when challenged by Ravana's forces, he grew enormous, allowing himself to be captured but then setting Lanka ablaze with his burning tail, demonstrating that he could destroy the kingdom even while bound."
+  hi: "जब हनुमान ने सीता को अशोक वाटिका में पाया, तो उन्होंने स्वयं को छोटा (कुछ कहते हैं अंगूठे के आकार का) बना लिया ताकि उनके पास धीरे से पहुंच सकें, क्योंकि वे पहले से ही आघात में थीं। राम का संदेश देने के बाद, जब रावण की सेना ने चुनौती दी, तो वे विशाल हो गए, स्वयं को पकड़वा लिया लेकिन फिर अपनी जलती पूंछ से लंका को आग लगा दी, यह प्रदर्शित करते हुए कि वे बंधन में रहते हुए भी राज्य को नष्ट कर सकते थे।"
 
 practical_application:
-  teaching: "Adaptability in approach - being gentle with those who need comfort and fierce with those who oppose righteousness - is a sign of true wisdom."
-  when_to_use: "Recite this verse when you need to adapt your approach to different situations, showing gentleness or strength as circumstances require."
+  teaching:
+    en: "Adaptability in approach - being gentle with those who need comfort and fierce with those who oppose righteousness - is a sign of true wisdom."
+    hi: "दृष्टिकोण में अनुकूलनशीलता - जिन्हें सांत्वना की आवश्यकता है उनके साथ कोमल होना और जो धर्म का विरोध करते हैं उनके साथ कठोर होना - सच्चे ज्ञान का संकेत है।"
+  when_to_use:
+    en: "Recite this verse when you need to adapt your approach to different situations, showing gentleness or strength as circumstances require."
+    hi: "इस चौपाई का पाठ करें जब आपको विभिन्न परिस्थितियों में अपने दृष्टिकोण को अनुकूलित करने की आवश्यकता हो, परिस्थितियों के अनुसार कोमलता या शक्ति प्रदर्शित करते हुए।"
 ---

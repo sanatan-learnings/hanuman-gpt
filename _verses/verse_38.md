@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 38: Power of Hundred Recitations"
+title_en: "Verse 38: Power of Hundred Recitations"
+title_hi: "चौपाई 38: सौ बार पाठ की शक्ति"
 verse_number: 38
 previous_verse: "/verses/verse_37"
 next_verse: "/verses/verse_39"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "जो"
     roman: "Jo"
-    meaning: "who"
+    meaning: 
+      en: "who"
+      hi: "who"
   - word: "सत बार"
     roman: "Sat Baar"
-    meaning: "hundred times"
+    meaning: 
+      en: "hundred times"
+      hi: "hundred times"
   - word: "पाठ"
     roman: "Path"
-    meaning: "recitation/reading"
+    meaning: 
+      en: "recitation/reading"
+      hi: "recitation/reading"
   - word: "कर"
     roman: "Kar"
-    meaning: "does"
+    meaning: 
+      en: "does"
+      hi: "does"
   - word: "कोई"
     roman: "Koi"
-    meaning: "anyone"
+    meaning: 
+      en: "anyone"
+      hi: "anyone"
   - word: "छूटहि"
     roman: "Chhutahi"
-    meaning: "released/freed"
+    meaning: 
+      en: "released/freed"
+      hi: "released/freed"
   - word: "बंदि"
     roman: "Bandi"
-    meaning: "bondage/imprisonment"
+    meaning: 
+      en: "bondage/imprisonment"
+      hi: "bondage/imprisonment"
   - word: "महा सुख"
     roman: "Maha Sukh"
-    meaning: "great happiness"
+    meaning: 
+      en: "great happiness"
+      hi: "great happiness"
   - word: "होई"
     roman: "Hoi"
-    meaning: "happens/occurs"
+    meaning: 
+      en: "happens/occurs"
+      hi: "happens/occurs"
 
 literal_translation:
   en: |

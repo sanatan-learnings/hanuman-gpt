@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 29: Glory Across All Ages"
+title_en: "Verse 29: Glory Across All Ages"
+title_hi: "चौपाई 29: सभी युगों में महिमा"
 verse_number: 29
 previous_verse: "/verses/verse_28"
 next_verse: "/verses/verse_30"
@@ -27,25 +28,39 @@ phonetic_notes:
 word_meanings:
   - word: "चारों जुग"
     roman: "Charon Yuga"
-    meaning: "four ages"
+    meaning: 
+      en: "four ages"
+      hi: "four ages"
   - word: "परताप"
     roman: "Pratap"
-    meaning: "glory/fame/might"
+    meaning: 
+      en: "glory/fame/might"
+      hi: "glory/fame/might"
   - word: "तुम्हारा"
     roman: "Tumhara"
-    meaning: "your"
+    meaning: 
+      en: "your"
+      hi: "तुम्हारा/तुम्हारी"
   - word: "है"
     roman: "Hai"
-    meaning: "is"
+    meaning: 
+      en: "is"
+      hi: "is"
   - word: "परसिद्ध"
     roman: "Parsiddh"
-    meaning: "famous/renowned"
+    meaning: 
+      en: "famous/renowned"
+      hi: "famous/renowned"
   - word: "जगत"
     roman: "Jagat"
-    meaning: "world"
+    meaning: 
+      en: "world"
+      hi: "world"
   - word: "उजियारा"
     roman: "Ujiyara"
-    meaning: "illuminator/light"
+    meaning: 
+      en: "illuminator/light"
+      hi: "illuminator/light"
 
 literal_translation:
   en: |

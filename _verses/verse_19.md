@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 19: Crossing the Ocean with Rama"
+title_en: "Verse 19: Crossing the Ocean with Rama's Ring"
+title_hi: "चौपाई 19: राम की अंगूठी के साथ समुद्र पार करना"
 verse_number: 19
 previous_verse: "/verses/verse_18"
 next_verse: "/verses/verse_20"
@@ -27,34 +28,54 @@ phonetic_notes:
 word_meanings:
   - word: "प्रभु"
     roman: "Prabhu"
-    meaning: "Lord's"
+    meaning:
+      en: "Lord's"
+      hi: "प्रभु की"
   - word: "मुद्रिका"
     roman: "Mudrika"
-    meaning: "ring"
+    meaning:
+      en: "ring"
+      hi: "अंगूठी"
   - word: "मेलि"
     roman: "Meli"
-    meaning: "placed/putting"
+    meaning:
+      en: "placed/putting"
+      hi: "रखकर"
   - word: "मुख"
     roman: "Mukh"
-    meaning: "mouth"
+    meaning:
+      en: "mouth"
+      hi: "मुख"
   - word: "माहीं"
     roman: "Mahin"
-    meaning: "in"
+    meaning:
+      en: "in"
+      hi: "में"
   - word: "जलधि"
     roman: "Jaladhi"
-    meaning: "ocean"
+    meaning:
+      en: "ocean"
+      hi: "समुद्र"
   - word: "लांघि"
     roman: "Langhi"
-    meaning: "crossed/leaped over"
+    meaning:
+      en: "crossed/leaped over"
+      hi: "पार किया"
   - word: "गये"
     roman: "Gaye"
-    meaning: "went"
+    meaning:
+      en: "went"
+      hi: "गए"
   - word: "अचरज"
     roman: "Acharaj"
-    meaning: "wonder/surprise"
+    meaning:
+      en: "wonder/surprise"
+      hi: "आश्चर्य"
   - word: "नाहीं"
     roman: "Nahin"
-    meaning: "not"
+    meaning:
+      en: "not"
+      hi: "नहीं"
 
 literal_translation:
   en: |

@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 31: Giver of Eight Siddhis and Nine Treasures"
+title_en: "Verse 31: Giver of Eight Siddhis and Nine Treasures"
+title_hi: "चौपाई 31: अष्ट सिद्धि और नव निधि के दाता"
 verse_number: 31
 previous_verse: "/verses/verse_30"
 next_verse: "/verses/verse_32"
@@ -27,34 +28,54 @@ phonetic_notes:
 word_meanings:
   - word: "अष्ट"
     roman: "Ashta"
-    meaning: "eight"
+    meaning: 
+      en: "eight"
+      hi: "eight"
   - word: "सिद्धि"
     roman: "Siddhi"
-    meaning: "spiritual powers/accomplishments"
+    meaning: 
+      en: "spiritual powers/accomplishments"
+      hi: "spiritual powers/accomplishments"
   - word: "नौ"
     roman: "Nau"
-    meaning: "nine"
+    meaning: 
+      en: "nine"
+      hi: "nine"
   - word: "निधि"
     roman: "Nidhi"
-    meaning: "treasures"
+    meaning: 
+      en: "treasures"
+      hi: "treasures"
   - word: "के दाता"
     roman: "Ke Data"
-    meaning: "giver of"
+    meaning: 
+      en: "giver of"
+      hi: "giver of"
   - word: "अस"
     roman: "As"
-    meaning: "such"
+    meaning: 
+      en: "such"
+      hi: "such"
   - word: "बर"
     roman: "Var"
-    meaning: "boon/blessing"
+    meaning: 
+      en: "boon/blessing"
+      hi: "boon/blessing"
   - word: "दीन"
     roman: "Deen"
-    meaning: "given"
+    meaning: 
+      en: "given"
+      hi: "given"
   - word: "जानकी"
     roman: "Janaki"
-    meaning: "Sita (daughter of Janaka)"
+    meaning: 
+      en: "Sita (daughter of Janaka)"
+      hi: "Sita (daughter of Janaka)"
   - word: "माता"
     roman: "Mata"
-    meaning: "mother"
+    meaning: 
+      en: "mother"
+      hi: "mother"
 
 literal_translation:
   en: "Mother Sita gave you the boon of being the giver of the eight siddhis and nine nidhis."

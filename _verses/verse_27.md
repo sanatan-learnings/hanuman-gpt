@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 27: Accomplisher of Rama"
+title_en: "Verse 27: Accomplisher of Rama"
+title_hi: "चौपाई 27: राम के कार्य सिद्ध करने वाले"
 verse_number: 27
 previous_verse: "/verses/verse_26"
 next_verse: "/verses/verse_28"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "सब पर"
     roman: "Sab Par"
-    meaning: "above all/supreme"
+    meaning: 
+      en: "above all/supreme"
+      hi: "above all/supreme"
   - word: "राम"
     roman: "Ram"
-    meaning: "Rama"
+    meaning: 
+      en: "Rama"
+      hi: "Rama"
   - word: "तपस्वी"
     roman: "Tapasvi"
-    meaning: "ascetic/one practicing austerities"
+    meaning: 
+      en: "ascetic/one practicing austerities"
+      hi: "ascetic/one practicing austerities"
   - word: "राजा"
     roman: "Raja"
-    meaning: "king"
+    meaning: 
+      en: "king"
+      hi: "king"
   - word: "तिन के"
     roman: "Tin Ke"
-    meaning: "his/of him"
+    meaning: 
+      en: "his/of him"
+      hi: "his/of him"
   - word: "काज"
     roman: "Kaaj"
-    meaning: "work/tasks"
+    meaning: 
+      en: "work/tasks"
+      hi: "work/tasks"
   - word: "सकल"
     roman: "Sakal"
-    meaning: "all"
+    meaning: 
+      en: "all"
+      hi: "all"
   - word: "तुम"
     roman: "Tum"
-    meaning: "you"
+    meaning: 
+      en: "you"
+      hi: "तुम"
   - word: "साजा"
     roman: "Saja"
-    meaning: "accomplished/arranged"
+    meaning: 
+      en: "accomplished/arranged"
+      hi: "accomplished/arranged"
 
 literal_translation:
   en: |

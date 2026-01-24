@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 5: Bearer of Mace and Sacred Thread"
+title_en: "Verse 5: Bearer of Mace and Sacred Thread"
+title_hi: "चौपाई 5: गदा और जनेऊ धारण करने वाले"
 verse_number: 5
 previous_verse: "/verses/verse_04"
 next_verse: "/verses/verse_06"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "हाथ"
     roman: "Hath"
-    meaning: "hand"
+    meaning:
+      en: "hand"
+      hi: "हाथ"
   - word: "बज्र"
     roman: "Bajra"
-    meaning: "mace/thunderbolt weapon"
+    meaning:
+      en: "mace/thunderbolt weapon"
+      hi: "गदा/वज्र"
   - word: "औ"
     roman: "Au"
-    meaning: "and"
+    meaning:
+      en: "and"
+      hi: "और"
   - word: "ध्वजा"
     roman: "Dhvaja"
-    meaning: "flag"
+    meaning:
+      en: "flag"
+      hi: "ध्वजा"
   - word: "बिराजै"
     roman: "Virajai"
-    meaning: "adorns/shines"
+    meaning:
+      en: "adorns/shines"
+      hi: "शोभायमान"
   - word: "कांधे"
     roman: "Kandhe"
-    meaning: "on shoulder"
+    meaning:
+      en: "on shoulder"
+      hi: "कंधे पर"
   - word: "मूंज"
     roman: "Moonj"
-    meaning: "sacred thread made of munja grass"
+    meaning:
+      en: "sacred thread made of munja grass"
+      hi: "मूंज से बना जनेऊ"
   - word: "जनेऊ"
     roman: "Janeoo"
-    meaning: "sacred thread"
+    meaning:
+      en: "sacred thread"
+      hi: "जनेऊ"
   - word: "साजै"
     roman: "Sajai"
-    meaning: "adorned/decorated"
+    meaning:
+      en: "adorned/decorated"
+      hi: "सुशोभित"
 
 literal_translation:
   en: "In your hand shine the mace and flag, and on your shoulder rests the sacred thread."

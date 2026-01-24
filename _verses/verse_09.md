@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 9: Master of Form - Tiny and Gigantic"
+title_en: "Verse 9: Master of Form - Tiny and Gigantic"
+title_hi: "चौपाई 9: रूप के स्वामी - सूक्ष्म और विशाल"
 verse_number: 9
 previous_verse: "/verses/verse_08"
 next_verse: "/verses/verse_10"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "सूक्ष्म"
     roman: "Sukshma"
-    meaning: "subtle/tiny"
+    meaning:
+      en: "subtle/tiny"
+      hi: "सूक्ष्म/छोटा"
   - word: "रूप"
     roman: "Roop"
-    meaning: "form"
+    meaning:
+      en: "form"
+      hi: "रूप"
   - word: "धरि"
     roman: "Dhari"
-    meaning: "assuming"
+    meaning:
+      en: "assuming"
+      hi: "धारण कर"
   - word: "सियहिं"
     roman: "Siyahin"
-    meaning: "to Sita"
+    meaning:
+      en: "to Sita"
+      hi: "सीता को"
   - word: "दिखावा"
     roman: "Dikhava"
-    meaning: "showed"
+    meaning:
+      en: "showed"
+      hi: "दिखाया"
   - word: "बिकट"
     roman: "Bikat"
-    meaning: "fierce/gigantic"
+    meaning:
+      en: "fierce/gigantic"
+      hi: "भयानक/विशाल"
   - word: "लंक"
     roman: "Lanka"
-    meaning: "Lanka (Ravana's kingdom)"
+    meaning:
+      en: "Lanka (Ravana's kingdom)"
+      hi: "लंका"
   - word: "जरावा"
     roman: "Jarava"
-    meaning: "burned"
+    meaning:
+      en: "burned"
+      hi: "जलाया"
 
 literal_translation:
   en: "Taking a tiny form, you appeared before Sita; assuming a gigantic fierce form, you burned Lanka."

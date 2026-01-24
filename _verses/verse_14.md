@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 14: Praised by Gods and Sages"
+title_en: "Verse 14: Praised by Gods and Sages"
+title_hi: "चौपाई 14: देवताओं और ऋषियों द्वारा प्रशंसित"
 verse_number: 14
 previous_verse: "/verses/verse_13"
 next_verse: "/verses/verse_15"
@@ -27,25 +28,39 @@ phonetic_notes:
 word_meanings:
   - word: "सनकादिक"
     roman: "Sanakadik"
-    meaning: "Sanaka and other (four Kumaras)"
+    meaning:
+      en: "Sanaka and other (four Kumaras)"
+      hi: "सनक और अन्य (चार कुमार)"
   - word: "ब्रह्मादि"
     roman: "Brahmadi"
-    meaning: "Brahma and other (gods)"
+    meaning:
+      en: "Brahma and other (gods)"
+      hi: "ब्रह्मा और अन्य (देवता)"
   - word: "मुनीसा"
     roman: "Munisa"
-    meaning: "great sages"
+    meaning:
+      en: "great sages"
+      hi: "महान ऋषि"
   - word: "नारद"
     roman: "Narada"
-    meaning: "Sage Narada"
+    meaning:
+      en: "Sage Narada"
+      hi: "नारद मुनि"
   - word: "सारद"
     roman: "Sarada"
-    meaning: "Goddess Saraswati"
+    meaning:
+      en: "Goddess Saraswati"
+      hi: "सरस्वती देवी"
   - word: "सहित"
     roman: "Sahit"
-    meaning: "along with"
+    meaning:
+      en: "along with"
+      hi: "सहित"
   - word: "अहीसा"
     roman: "Ahisa"
-    meaning: "Shesha (serpent king)"
+    meaning:
+      en: "Shesha (serpent king)"
+      hi: "शेषनाग"
 
 literal_translation:
   en: "The four Kumaras, Brahma and other gods, great sages, Narada, Saraswati, along with Shesha (all sing your praises)."

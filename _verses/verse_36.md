@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 36: Remover of Crises and Pain"
+title_en: "Verse 36: Remover of Crises and Pain"
+title_hi: "चौपाई 36: संकट और पीड़ा के निवारक"
 verse_number: 36
 previous_verse: "/verses/verse_35"
 next_verse: "/verses/verse_37"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "संकट"
     roman: "Sankat"
-    meaning: "crisis/difficulties"
+    meaning: 
+      en: "crisis/difficulties"
+      hi: "crisis/difficulties"
   - word: "कटै"
     roman: "Katai"
-    meaning: "cut/removed"
+    meaning: 
+      en: "cut/removed"
+      hi: "cut/removed"
   - word: "मिटै"
     roman: "Mitai"
-    meaning: "erased/destroyed"
+    meaning: 
+      en: "erased/destroyed"
+      hi: "erased/destroyed"
   - word: "सब"
     roman: "Sab"
-    meaning: "all"
+    meaning: 
+      en: "all"
+      hi: "all"
   - word: "पीरा"
     roman: "Pira"
-    meaning: "pain/suffering"
+    meaning: 
+      en: "pain/suffering"
+      hi: "pain/suffering"
   - word: "जो"
     roman: "Jo"
-    meaning: "who"
+    meaning: 
+      en: "who"
+      hi: "who"
   - word: "सुमिरै"
     roman: "Sumirai"
-    meaning: "remembers/meditates upon"
+    meaning: 
+      en: "remembers/meditates upon"
+      hi: "remembers/meditates upon"
   - word: "हनुमत"
     roman: "Hanumat"
-    meaning: "Hanuman"
+    meaning: 
+      en: "Hanuman"
+      hi: "Hanuman"
   - word: "बलबीरा"
     roman: "Balbira"
-    meaning: "mighty hero"
+    meaning: 
+      en: "mighty hero"
+      hi: "mighty hero"
 
 literal_translation:
   en: |

@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 2: Rama's Messenger"
+title_en: "Verse 2: Rama's Messenger"
+title_hi: "चौपाई 2: राम के दूत"
 verse_number: 2
 previous_verse: "/verses/verse_01"
 next_verse: "/verses/verse_03"
@@ -31,25 +32,39 @@ phonetic_notes:
 word_meanings:
   - word: "राम दूत"
     roman: "Ram Doot"
-    meaning: "messenger of Rama"
+    meaning:
+      en: "messenger of Rama"
+      hi: "राम के दूत"
   - word: "अतुलित"
     roman: "Atulit"
-    meaning: "incomparable/matchless"
+    meaning:
+      en: "incomparable/matchless"
+      hi: "अतुलनीय/बेजोड़"
   - word: "बल"
     roman: "Bal"
-    meaning: "strength"
+    meaning:
+      en: "strength"
+      hi: "बल/शक्ति"
   - word: "धामा"
     roman: "Dhama"
-    meaning: "abode/repository"
+    meaning:
+      en: "abode/repository"
+      hi: "धाम/भंडार"
   - word: "अंजनि-पुत्र"
     roman: "Anjani-Putra"
-    meaning: "son of Anjani"
+    meaning:
+      en: "son of Anjani"
+      hi: "अंजनी के पुत्र"
   - word: "पवनसुत"
     roman: "Pavansut"
-    meaning: "son of wind"
+    meaning:
+      en: "son of wind"
+      hi: "पवन के पुत्र"
   - word: "नामा"
     roman: "Nama"
-    meaning: "named"
+    meaning:
+      en: "named"
+      hi: "नाम वाले"
 
 literal_translation:
   en: "You are Rama's messenger, repository of incomparable strength. You are known as the son of Anjani and the son of the wind."

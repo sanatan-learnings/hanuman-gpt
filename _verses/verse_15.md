@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 15: Beyond Description"
+title_en: "Verse 15: Beyond Description"
+title_hi: "चौपाई 15: वर्णन से परे"
 verse_number: 15
 previous_verse: "/verses/verse_14"
 next_verse: "/verses/verse_16"
@@ -24,28 +25,44 @@ phonetic_notes:
 word_meanings:
   - word: "जम"
     roman: "Yama"
-    meaning: "God of death"
+    meaning:
+      en: "God of death"
+      hi: "यमराज"
   - word: "कुबेर"
     roman: "Kuber"
-    meaning: "God of wealth"
+    meaning:
+      en: "God of wealth"
+      hi: "कुबेर (धन के देवता)"
   - word: "दिगपाल"
     roman: "Digpal"
-    meaning: "guardians of directions"
+    meaning:
+      en: "guardians of directions"
+      hi: "दिशाओं के रक्षक"
   - word: "जहां ते"
     roman: "Jahan Te"
-    meaning: "from where"
+    meaning:
+      en: "from where"
+      hi: "कहां से"
   - word: "कबि"
     roman: "Kavi"
-    meaning: "poets"
+    meaning:
+      en: "poets"
+      hi: "कवि"
   - word: "कोबिद"
     roman: "Kovid"
-    meaning: "scholars/learned ones"
+    meaning:
+      en: "scholars/learned ones"
+      hi: "विद्वान"
   - word: "कहि सके"
     roman: "Kahi Sake"
-    meaning: "can describe"
+    meaning:
+      en: "can describe"
+      hi: "वर्णन कर सकें"
   - word: "कहां ते"
     roman: "Kahan Te"
-    meaning: "from where/how"
+    meaning:
+      en: "from where/how"
+      hi: "कहां से/कैसे"
 
 literal_translation:
   en: "Yama, Kubera, the guardians of directions - from where can poets and scholars even begin to describe your glory?"

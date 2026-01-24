@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 18: Childhood Leap to the Sun"
+title_en: "Verse 18: Childhood Leap to the Sun"
+title_hi: "चौपाई 18: बचपन में सूर्य की ओर छलांग"
 verse_number: 18
 previous_verse: "/verses/verse_17"
 next_verse: "/verses/verse_19"
@@ -27,34 +28,54 @@ phonetic_notes:
 word_meanings:
   - word: "जुग"
     roman: "Yuga"
-    meaning: "an age/era"
+    meaning:
+      en: "an age/era"
+      hi: "युग"
   - word: "सहस्र"
     roman: "Sahasra"
-    meaning: "thousand"
+    meaning:
+      en: "thousand"
+      hi: "हजार"
   - word: "जोजन"
     roman: "Yojana"
-    meaning: "ancient unit of distance (approx 8 miles)"
+    meaning:
+      en: "ancient unit of distance (approx 8 miles)"
+      hi: "योजन (प्राचीन दूरी मापक)"
   - word: "पर"
     roman: "Par"
-    meaning: "away/at"
+    meaning:
+      en: "away/at"
+      hi: "पर/दूर"
   - word: "भानू"
     roman: "Bhanu"
-    meaning: "sun"
+    meaning:
+      en: "sun"
+      hi: "सूर्य"
   - word: "लील्यो"
     roman: "Lilyo"
-    meaning: "swallowed/leaped toward"
+    meaning:
+      en: "swallowed/leaped toward"
+      hi: "निगल लिया/कूद पड़े"
   - word: "ताहि"
     roman: "Tahi"
-    meaning: "that"
+    meaning:
+      en: "that"
+      hi: "उसे"
   - word: "मधुर"
     roman: "Madhur"
-    meaning: "sweet"
+    meaning:
+      en: "sweet"
+      hi: "मधुर"
   - word: "फल"
     roman: "Phal"
-    meaning: "fruit"
+    meaning:
+      en: "fruit"
+      hi: "फल"
   - word: "जानू"
     roman: "Janu"
-    meaning: "thinking/considering"
+    meaning:
+      en: "thinking/considering"
+      hi: "समझकर"
 
 literal_translation:
   en: |

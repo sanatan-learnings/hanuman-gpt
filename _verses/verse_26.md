@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 26: Liberation from Crisis"
+title_en: "Verse 26: Liberation from Crisis"
+title_hi: "चौपाई 26: संकट से मुक्ति"
 verse_number: 26
 previous_verse: "/verses/verse_25"
 next_verse: "/verses/verse_27"
@@ -27,34 +28,54 @@ phonetic_notes:
 word_meanings:
   - word: "संकट"
     roman: "Sankat"
-    meaning: "crisis/difficulties"
+    meaning: 
+      en: "crisis/difficulties"
+      hi: "crisis/difficulties"
   - word: "तें"
     roman: "Ten"
-    meaning: "from"
+    meaning: 
+      en: "from"
+      hi: "from"
   - word: "हनुमान"
     roman: "Hanuman"
-    meaning: "Hanuman"
+    meaning: 
+      en: "Hanuman"
+      hi: "Hanuman"
   - word: "छुड़ावै"
     roman: "Chhudavai"
-    meaning: "liberates/frees"
+    meaning: 
+      en: "liberates/frees"
+      hi: "liberates/frees"
   - word: "मन"
     roman: "Man"
-    meaning: "mind"
+    meaning: 
+      en: "mind"
+      hi: "mind"
   - word: "क्रम"
     roman: "Kram"
-    meaning: "action"
+    meaning: 
+      en: "action"
+      hi: "action"
   - word: "बचन"
     roman: "Bachan"
-    meaning: "speech/words"
+    meaning: 
+      en: "speech/words"
+      hi: "speech/words"
   - word: "ध्यान"
     roman: "Dhyan"
-    meaning: "meditation/focus"
+    meaning: 
+      en: "meditation/focus"
+      hi: "meditation/focus"
   - word: "जो"
     roman: "Jo"
-    meaning: "who"
+    meaning: 
+      en: "who"
+      hi: "who"
   - word: "लावै"
     roman: "Lavai"
-    meaning: "applies/engages"
+    meaning: 
+      en: "applies/engages"
+      hi: "applies/engages"
 
 literal_translation:
   en: |

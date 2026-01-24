@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 1: Ocean of Knowledge and Virtues"
+title_en: "Verse 1: Ocean of Knowledge and Virtues"
+title_hi: "चौपाई 1: ज्ञान और गुणों के सागर"
 verse_number: 1
 previous_verse: "/verses/doha_02"
 next_verse: "/verses/verse_02"
@@ -31,31 +32,49 @@ phonetic_notes:
 word_meanings:
   - word: "जय"
     roman: "Jai"
-    meaning: "victory/hail"
+    meaning:
+      en: "victory/hail"
+      hi: "जय/विजय"
   - word: "हनुमान"
     roman: "Hanuman"
-    meaning: "Lord Hanuman"
+    meaning:
+      en: "Lord Hanuman"
+      hi: "हनुमान जी"
   - word: "ज्ञान"
     roman: "Gyan"
-    meaning: "knowledge/wisdom"
+    meaning:
+      en: "knowledge/wisdom"
+      hi: "ज्ञान"
   - word: "गुन"
     roman: "Gun"
-    meaning: "virtues/qualities"
+    meaning:
+      en: "virtues/qualities"
+      hi: "गुण"
   - word: "सागर"
     roman: "Sagar"
-    meaning: "ocean"
+    meaning:
+      en: "ocean"
+      hi: "सागर"
   - word: "कपीस"
     roman: "Kapis"
-    meaning: "lord of monkeys"
+    meaning:
+      en: "lord of monkeys"
+      hi: "वानरों के स्वामी"
   - word: "तिहुं"
     roman: "Tihun"
-    meaning: "three"
+    meaning:
+      en: "three"
+      hi: "तीनों"
   - word: "लोक"
     roman: "Lok"
-    meaning: "worlds"
+    meaning:
+      en: "worlds"
+      hi: "लोक"
   - word: "उजागर"
     roman: "Ujagar"
-    meaning: "illuminator/enlightener"
+    meaning:
+      en: "illuminator/enlightener"
+      hi: "प्रकाशित करने वाले"
 
 literal_translation:
   en: "Hail Hanuman, ocean of knowledge and virtues. Hail the lord of monkeys, who illuminates the three worlds."

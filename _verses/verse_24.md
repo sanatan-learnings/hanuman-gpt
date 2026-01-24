@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 24: Protection from Evil Spirits"
+title_en: "Verse 24: Protection from Evil Spirits"
+title_hi: "चौपाई 24: दुष्ट आत्माओं से सुरक्षा"
 verse_number: 24
 previous_verse: "/verses/verse_23"
 next_verse: "/verses/verse_25"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "भूत"
     roman: "Bhoot"
-    meaning: "ghosts/evil spirits"
+    meaning: 
+      en: "ghosts/evil spirits"
+      hi: "ghosts/evil spirits"
   - word: "पिसाच"
     roman: "Pisacha"
-    meaning: "demons/ghouls"
+    meaning: 
+      en: "demons/ghouls"
+      hi: "demons/ghouls"
   - word: "निकट"
     roman: "Nikat"
-    meaning: "near"
+    meaning: 
+      en: "near"
+      hi: "near"
   - word: "नहिं"
     roman: "Nahin"
-    meaning: "not"
+    meaning: 
+      en: "not"
+      hi: "नहीं"
   - word: "आवै"
     roman: "Aavai"
-    meaning: "come"
+    meaning: 
+      en: "come"
+      hi: "come"
   - word: "महाबीर"
     roman: "Mahavir"
-    meaning: "great hero (Hanuman)"
+    meaning: 
+      en: "great hero (Hanuman)"
+      hi: "great hero (Hanuman)"
   - word: "जब"
     roman: "Jab"
-    meaning: "when"
+    meaning: 
+      en: "when"
+      hi: "when"
   - word: "नाम"
     roman: "Naam"
-    meaning: "name"
+    meaning: 
+      en: "name"
+      hi: "name"
   - word: "सुनावै"
     roman: "Sunavai"
-    meaning: "is uttered/spoken"
+    meaning: 
+      en: "is uttered/spoken"
+      hi: "is uttered/spoken"
 
 literal_translation:
   en: "Ghosts and demons do not come near when the name of Mahavir (Hanuman) is uttered."

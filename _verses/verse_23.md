@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 23: Self-Controlled Power"
+title_en: "Verse 23: Self-Controlled Power"
+title_hi: "चौपाई 23: आत्म-नियंत्रित शक्ति"
 verse_number: 23
 previous_verse: "/verses/verse_22"
 next_verse: "/verses/verse_24"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "आपन"
     roman: "Aapan"
-    meaning: "your own"
+    meaning: 
+      en: "your own"
+      hi: "your own"
   - word: "तेज"
     roman: "Tej"
-    meaning: "power/brilliance/radiance"
+    meaning: 
+      en: "power/brilliance/radiance"
+      hi: "power/brilliance/radiance"
   - word: "सम्हारो"
     roman: "Samharo"
-    meaning: "control/restrain"
+    meaning: 
+      en: "control/restrain"
+      hi: "control/restrain"
   - word: "आपै"
     roman: "Aapai"
-    meaning: "yourself"
+    meaning: 
+      en: "yourself"
+      hi: "yourself"
   - word: "तीनों लोक"
     roman: "Teenon Lok"
-    meaning: "three worlds"
+    meaning: 
+      en: "three worlds"
+      hi: "three worlds"
   - word: "हांक"
     roman: "Hank"
-    meaning: "roar/shout"
+    meaning: 
+      en: "roar/shout"
+      hi: "roar/shout"
   - word: "तें"
     roman: "Ten"
-    meaning: "from"
+    meaning: 
+      en: "from"
+      hi: "from"
   - word: "कांपै"
     roman: "Kanpai"
-    meaning: "trembles"
+    meaning: 
+      en: "trembles"
+      hi: "trembles"
 
 literal_translation:
   en: "You alone can control your own power; the three worlds tremble at your roar."

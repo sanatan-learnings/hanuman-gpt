@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 39: Attainment of Siddhi"
+title_en: "Verse 39: Attainment of Siddhi"
+title_hi: "चौपाई 39: सिद्धि की प्राप्ति"
 verse_number: 39
 previous_verse: "/verses/verse_38"
 next_verse: "/verses/verse_40"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "जो"
     roman: "Jo"
-    meaning: "who"
+    meaning: 
+      en: "who"
+      hi: "who"
   - word: "यह"
     roman: "Yah"
-    meaning: "this"
+    meaning: 
+      en: "this"
+      hi: "this"
   - word: "पढ़ै"
     roman: "Padhai"
-    meaning: "reads/recites"
+    meaning: 
+      en: "reads/recites"
+      hi: "reads/recites"
   - word: "हनुमान चालीसा"
     roman: "Hanuman Chalisa"
-    meaning: "Hanuman Chalisa"
+    meaning: 
+      en: "Hanuman Chalisa"
+      hi: "Hanuman Chalisa"
   - word: "होय"
     roman: "Hoye"
-    meaning: "happens/becomes"
+    meaning: 
+      en: "happens/becomes"
+      hi: "happens/becomes"
   - word: "सिद्धि"
     roman: "Siddhi"
-    meaning: "accomplishment/success/spiritual powers"
+    meaning: 
+      en: "accomplishment/success/spiritual powers"
+      hi: "accomplishment/success/spiritual powers"
   - word: "साखी"
     roman: "Sakhi"
-    meaning: "witness"
+    meaning: 
+      en: "witness"
+      hi: "witness"
   - word: "गौरीसा"
     roman: "Gaurisa"
-    meaning: "Lord Shiva (husband of Gauri/Parvati)"
+    meaning: 
+      en: "Lord Shiva (husband of Gauri/Parvati)"
+      hi: "Lord Shiva (husband of Gauri/Parvati)"
 
 literal_translation:
   en: |

@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 10: Destroyer of Demons, Accomplisher of Rama"
+title_en: "Verse 10: Destroyer of Demons, Accomplisher of Rama"
+title_hi: "चौपाई 10: राक्षसों का विनाशक, राम के कार्यों को सिद्ध करने वाले"
 verse_number: 10
 previous_verse: "/verses/verse_09"
 next_verse: "/verses/verse_11"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "भीम"
     roman: "Bhima"
-    meaning: "terrible/frightening"
+    meaning:
+      en: "terrible/frightening"
+      hi: "भयानक"
   - word: "रूप"
     roman: "Roop"
-    meaning: "form"
+    meaning:
+      en: "form"
+      hi: "रूप"
   - word: "धरि"
     roman: "Dhari"
-    meaning: "assuming"
+    meaning:
+      en: "assuming"
+      hi: "धारण कर"
   - word: "असुर"
     roman: "Asur"
-    meaning: "demons"
+    meaning:
+      en: "demons"
+      hi: "राक्षस"
   - word: "संहारे"
     roman: "Sanhare"
-    meaning: "destroyed/killed"
+    meaning:
+      en: "destroyed/killed"
+      hi: "संहार किया"
   - word: "रामचंद्र"
     roman: "Ramchandra"
-    meaning: "Lord Rama"
+    meaning:
+      en: "Lord Rama"
+      hi: "रामचंद्र"
   - word: "के काज"
     roman: "Ke Kaaj"
-    meaning: "work/tasks"
+    meaning:
+      en: "work/tasks"
+      hi: "कार्य"
   - word: "संवारे"
     roman: "Sanvare"
-    meaning: "accomplished/perfected"
+    meaning:
+      en: "accomplished/perfected"
+      hi: "सिद्ध किए"
 
 literal_translation:
   en: |

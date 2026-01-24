@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 3: Great Hero with Body Like Thunderbolt"
+title_en: "Verse 3: Great Hero with Body Like Thunderbolt"
+title_hi: "चौपाई 3: वज्र के समान शरीर वाले महावीर"
 verse_number: 3
 previous_verse: "/verses/verse_02"
 next_verse: "/verses/verse_04"
@@ -31,25 +32,39 @@ phonetic_notes:
 word_meanings:
   - word: "महाबीर"
     roman: "Mahavir"
-    meaning: "great warrior/hero"
+    meaning:
+      en: "great warrior/hero"
+      hi: "महान वीर"
   - word: "बिक्रम"
     roman: "Vikram"
-    meaning: "valor/prowess"
+    meaning:
+      en: "valor/prowess"
+      hi: "पराक्रम"
   - word: "बजरंगी"
     roman: "Bajrangi"
-    meaning: "one with a body like a thunderbolt/diamond"
+    meaning:
+      en: "one with a body like a thunderbolt/diamond"
+      hi: "वज्र के समान शरीर वाले"
   - word: "कुमति"
     roman: "Kumati"
-    meaning: "evil/wrong thoughts"
+    meaning:
+      en: "evil/wrong thoughts"
+      hi: "बुरे विचार"
   - word: "निवार"
     roman: "Nivar"
-    meaning: "remover"
+    meaning:
+      en: "remover"
+      hi: "दूर करने वाले"
   - word: "सुमति"
     roman: "Sumati"
-    meaning: "good/right thoughts"
+    meaning:
+      en: "good/right thoughts"
+      hi: "अच्छे विचार"
   - word: "के संगी"
     roman: "Ke Sangi"
-    meaning: "companion of"
+    meaning:
+      en: "companion of"
+      hi: "के साथी"
 
 literal_translation:
   en: "O great hero of immense valor, with a body strong as a thunderbolt, you remove evil thoughts and are the companion of good thoughts."

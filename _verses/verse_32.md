@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 32: Possessor of Rama"
+title_en: "Verse 32: Possessor of Rama"
+title_hi: "चौपाई 32: राम के धारक"
 verse_number: 32
 previous_verse: "/verses/verse_31"
 next_verse: "/verses/verse_33"
@@ -27,25 +28,39 @@ phonetic_notes:
 word_meanings:
   - word: "राम रसायन"
     roman: "Ram Rasayan"
-    meaning: "elixir of Rama/devotion to Rama"
+    meaning: 
+      en: "elixir of Rama/devotion to Rama"
+      hi: "elixir of Rama/devotion to Rama"
   - word: "तुम्हरे"
     roman: "Tumhare"
-    meaning: "your"
+    meaning: 
+      en: "your"
+      hi: "तुम्हारा/तुम्हारी"
   - word: "पासा"
     roman: "Pasa"
-    meaning: "with/possession"
+    meaning: 
+      en: "with/possession"
+      hi: "with/possession"
   - word: "सदा"
     roman: "Sada"
-    meaning: "always"
+    meaning: 
+      en: "always"
+      hi: "always"
   - word: "रहो"
     roman: "Raho"
-    meaning: "remain"
+    meaning: 
+      en: "remain"
+      hi: "remain"
   - word: "रघुपति"
     roman: "Raghupati"
-    meaning: "Lord Rama"
+    meaning: 
+      en: "Lord Rama"
+      hi: "Lord Rama"
   - word: "के दासा"
     roman: "Ke Dasa"
-    meaning: "servant of"
+    meaning: 
+      en: "servant of"
+      hi: "servant of"
 
 literal_translation:
   en: |

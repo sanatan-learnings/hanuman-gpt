@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 22: Refuge and Protection"
+title_en: "Verse 22: Refuge and Protection"
+title_hi: "चौपाई 22: शरण और सुरक्षा"
 verse_number: 22
 previous_verse: "/verses/verse_21"
 next_verse: "/verses/verse_23"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "सब सुख"
     roman: "Sab Sukh"
-    meaning: "all happiness/comforts"
+    meaning: 
+      en: "all happiness/comforts"
+      hi: "सभी सुख"
   - word: "लहै"
     roman: "Lahai"
-    meaning: "obtain/receive"
+    meaning: 
+      en: "obtain/receive"
+      hi: "प्राप्त करना"
   - word: "तुम्हारी"
     roman: "Tumhari"
-    meaning: "your"
+    meaning: 
+      en: "your"
+      hi: "तुम्हारा/तुम्हारी"
   - word: "सरना"
     roman: "Sarana"
-    meaning: "refuge/shelter"
+    meaning: 
+      en: "refuge/shelter"
+      hi: "शरण"
   - word: "तुम"
     roman: "Tum"
-    meaning: "you"
+    meaning: 
+      en: "you"
+      hi: "तुम"
   - word: "रक्षक"
     roman: "Rakshak"
-    meaning: "protector"
+    meaning: 
+      en: "protector"
+      hi: "रक्षक"
   - word: "काहू को"
     roman: "Kahu Ko"
-    meaning: "anyone/to anyone"
+    meaning: 
+      en: "anyone/to anyone"
+      hi: "anyone/to anyone"
   - word: "डर ना"
     roman: "Dar Na"
-    meaning: "fear not/no fear"
+    meaning: 
+      en: "fear not/no fear"
+      hi: "fear not/no fear"
 
 literal_translation:
   en: |

@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 30: Protector of Saints, Destroyer of Demons"
+title_en: "Verse 30: Protector of Saints, Destroyer of Demons"
+title_hi: "चौपाई 30: संतों के रक्षक, राक्षसों के विनाशक"
 verse_number: 30
 previous_verse: "/verses/verse_29"
 next_verse: "/verses/verse_31"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "साधु"
     roman: "Sadhu"
-    meaning: "holy person/saint"
+    meaning: 
+      en: "holy person/saint"
+      hi: "holy person/saint"
   - word: "संत"
     roman: "Sant"
-    meaning: "saint/sage"
+    meaning: 
+      en: "saint/sage"
+      hi: "saint/sage"
   - word: "के"
     roman: "Ke"
-    meaning: "of"
+    meaning: 
+      en: "of"
+      hi: "of"
   - word: "तुम"
     roman: "Tum"
-    meaning: "you"
+    meaning: 
+      en: "you"
+      hi: "तुम"
   - word: "रखवारे"
     roman: "Rakhvare"
-    meaning: "protector/guardian"
+    meaning: 
+      en: "protector/guardian"
+      hi: "protector/guardian"
   - word: "असुर"
     roman: "Asur"
-    meaning: "demon"
+    meaning: 
+      en: "demon"
+      hi: "demon"
   - word: "निकंदन"
     roman: "Nikandan"
-    meaning: "destroyer"
+    meaning: 
+      en: "destroyer"
+      hi: "destroyer"
   - word: "राम"
     roman: "Ram"
-    meaning: "Rama"
+    meaning: 
+      en: "Rama"
+      hi: "Rama"
   - word: "दुलारे"
     roman: "Dulare"
-    meaning: "beloved/dear one"
+    meaning: 
+      en: "beloved/dear one"
+      hi: "beloved/dear one"
 
 literal_translation:
   en: |

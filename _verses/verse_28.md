@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 28: Fulfiller of Desires"
+title_en: "Verse 28: Fulfiller of Desires"
+title_hi: "चौपाई 28: इच्छाओं को पूर्ण करने वाले"
 verse_number: 28
 previous_verse: "/verses/verse_27"
 next_verse: "/verses/verse_29"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "और"
     roman: "Aur"
-    meaning: "and/other"
+    meaning: 
+      en: "and/other"
+      hi: "and/other"
   - word: "मनोरथ"
     roman: "Manorath"
-    meaning: "desire/wish"
+    meaning: 
+      en: "desire/wish"
+      hi: "desire/wish"
   - word: "जो कोई"
     roman: "Jo Koi"
-    meaning: "whoever"
+    meaning: 
+      en: "whoever"
+      hi: "whoever"
   - word: "लावै"
     roman: "Lavai"
-    meaning: "brings/harbors"
+    meaning: 
+      en: "brings/harbors"
+      hi: "brings/harbors"
   - word: "सोई"
     roman: "Soi"
-    meaning: "that person"
+    meaning: 
+      en: "that person"
+      hi: "that person"
   - word: "अमित"
     roman: "Amit"
-    meaning: "unlimited/abundant"
+    meaning: 
+      en: "unlimited/abundant"
+      hi: "unlimited/abundant"
   - word: "जीवन"
     roman: "Jeevan"
-    meaning: "life"
+    meaning: 
+      en: "life"
+      hi: "life"
   - word: "फल"
     roman: "Phal"
-    meaning: "fruit/result"
+    meaning: 
+      en: "fruit/result"
+      hi: "fruit/result"
   - word: "पावै"
     roman: "Pavai"
-    meaning: "obtains"
+    meaning: 
+      en: "obtains"
+      hi: "obtains"
 
 literal_translation:
   en: |

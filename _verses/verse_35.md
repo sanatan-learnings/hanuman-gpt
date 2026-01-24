@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 35: Sufficient Devotion to Hanuman"
+title_en: "Verse 35: Sufficient Devotion to Hanuman"
+title_hi: "चौपाई 35: हनुमान की पर्याप्त भक्ति"
 verse_number: 35
 previous_verse: "/verses/verse_34"
 next_verse: "/verses/verse_36"
@@ -27,34 +28,54 @@ phonetic_notes:
 word_meanings:
   - word: "और"
     roman: "Aur"
-    meaning: "other"
+    meaning: 
+      en: "other"
+      hi: "other"
   - word: "देवता"
     roman: "Devata"
-    meaning: "deities/gods"
+    meaning: 
+      en: "deities/gods"
+      hi: "deities/gods"
   - word: "चित्त"
     roman: "Chitta"
-    meaning: "mind/consciousness"
+    meaning: 
+      en: "mind/consciousness"
+      hi: "mind/consciousness"
   - word: "न"
     roman: "Na"
-    meaning: "not"
+    meaning: 
+      en: "not"
+      hi: "नहीं"
   - word: "धरई"
     roman: "Dharai"
-    meaning: "hold/keep"
+    meaning: 
+      en: "hold/keep"
+      hi: "hold/keep"
   - word: "हनुमत"
     roman: "Hanumat"
-    meaning: "Hanuman"
+    meaning: 
+      en: "Hanuman"
+      hi: "Hanuman"
   - word: "सेइ"
     roman: "Sei"
-    meaning: "serving/worshiping"
+    meaning: 
+      en: "serving/worshiping"
+      hi: "serving/worshiping"
   - word: "सर्व"
     roman: "Sarva"
-    meaning: "all"
+    meaning: 
+      en: "all"
+      hi: "all"
   - word: "सुख"
     roman: "Sukh"
-    meaning: "happiness"
+    meaning: 
+      en: "happiness"
+      hi: "happiness"
   - word: "करई"
     roman: "Karai"
-    meaning: "does/creates"
+    meaning: 
+      en: "does/creates"
+      hi: "does/creates"
 
 literal_translation:
   en: |

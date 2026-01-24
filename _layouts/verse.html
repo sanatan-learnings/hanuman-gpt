@@ -30,7 +30,7 @@ layout: default
     </nav>
 
     <div class="verse-content">
-        <h1>{{ page.title }}</h1>
+        <h1><span data-lang="en">{{ page.title_en | default: page.title }}</span><span data-lang="hi">{{ page.title_hi | default: page.title }}</span></h1>
 
         {% comment %}
         TODO: Add verse images when ready
@@ -68,7 +68,7 @@ layout: default
         <h2><span data-lang="en">{{ t_en.sections.word_meanings }}</span><span data-lang="hi">{{ t_hi.sections.word_meanings }}</span></h2>
         <ul>
         {% for item in page.word_meanings %}
-            <li><strong>{{ item.word }}</strong> ({{ item.roman }}) - {{ item.meaning }}</li>
+            <li><strong>{{ item.word }}</strong> ({{ item.roman }}) - {% if item.meaning.en %}<span data-lang="en">{{ item.meaning.en }}</span><span data-lang="hi">{{ item.meaning.hi }}</span>{% else %}{{ item.meaning }}{% endif %}</li>
         {% endfor %}
         </ul>
 

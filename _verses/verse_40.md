@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 40: Tulsidas"
+title_en: "Verse 40: Tulsidas"
+title_hi: "चौपाई 40: तुलसीदास"
 verse_number: 40
 previous_verse: "/verses/verse_39"
 next_verse: "/verses/doha_closing"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "तुलसीदास"
     roman: "Tulsidas"
-    meaning: "Tulsidas (the author)"
+    meaning: 
+      en: "Tulsidas (the author)"
+      hi: "Tulsidas (the author)"
   - word: "सदा"
     roman: "Sada"
-    meaning: "always"
+    meaning: 
+      en: "always"
+      hi: "always"
   - word: "हरि"
     roman: "Hari"
-    meaning: "Lord Vishnu/Rama"
+    meaning: 
+      en: "Lord Vishnu/Rama"
+      hi: "Lord Vishnu/Rama"
   - word: "चेरा"
     roman: "Chera"
-    meaning: "servant"
+    meaning: 
+      en: "servant"
+      hi: "servant"
   - word: "कीजै"
     roman: "Kijai"
-    meaning: "make/do"
+    meaning: 
+      en: "make/do"
+      hi: "make/do"
   - word: "नाथ"
     roman: "Nath"
-    meaning: "lord/master"
+    meaning: 
+      en: "lord/master"
+      hi: "lord/master"
   - word: "हृदय"
     roman: "Hridaya"
-    meaning: "heart"
+    meaning: 
+      en: "heart"
+      hi: "heart"
   - word: "महं"
     roman: "Mahan"
-    meaning: "in"
+    meaning: 
+      en: "in"
+      hi: "in"
   - word: "डेरा"
     roman: "Dera"
-    meaning: "dwelling/residence"
+    meaning: 
+      en: "dwelling/residence"
+      hi: "dwelling/residence"
 
 literal_translation:
   en: |

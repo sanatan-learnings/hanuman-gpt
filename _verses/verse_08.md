@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 8: Passionate Listener with Rama in Heart"
+title_en: "Verse 8: Passionate Listener with Rama in Heart"
+title_hi: "चौपाई 8: हृदय में राम के साथ उत्साही श्रोता"
 verse_number: 8
 previous_verse: "/verses/verse_07"
 next_verse: "/verses/verse_09"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "प्रभु"
     roman: "Prabhu"
-    meaning: "Lord"
+    meaning:
+      en: "Lord"
+      hi: "प्रभु"
   - word: "चरित्र"
     roman: "Charitra"
-    meaning: "stories/deeds"
+    meaning:
+      en: "stories/deeds"
+      hi: "कथा/चरित्र"
   - word: "सुनिबे को"
     roman: "Sunibe Ko"
-    meaning: "to listen"
+    meaning:
+      en: "to listen"
+      hi: "सुनने के लिए"
   - word: "रसिया"
     roman: "Rasiya"
-    meaning: "passionate/enthusiast"
+    meaning:
+      en: "passionate/enthusiast"
+      hi: "रसिक/उत्साही"
   - word: "राम"
     roman: "Ram"
-    meaning: "Lord Rama"
+    meaning:
+      en: "Lord Rama"
+      hi: "श्री राम"
   - word: "लखन"
     roman: "Lakhan"
-    meaning: "Lakshmana"
+    meaning:
+      en: "Lakshmana"
+      hi: "लक्ष्मण"
   - word: "सीता"
     roman: "Sita"
-    meaning: "Goddess Sita"
+    meaning:
+      en: "Goddess Sita"
+      hi: "सीता माता"
   - word: "मन"
     roman: "Man"
-    meaning: "heart/mind"
+    meaning:
+      en: "heart/mind"
+      hi: "मन/हृदय"
   - word: "बसिया"
     roman: "Basiya"
-    meaning: "dwelling/residing"
+    meaning:
+      en: "dwelling/residing"
+      hi: "निवास करते हैं"
 
 literal_translation:
   en: |

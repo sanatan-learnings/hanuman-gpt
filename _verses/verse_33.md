@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 33: Path to Rama"
+title_en: "Verse 33: Path to Rama"
+title_hi: "चौपाई 33: राम का मार्ग"
 verse_number: 33
 previous_verse: "/verses/verse_32"
 next_verse: "/verses/verse_34"
@@ -24,25 +25,39 @@ phonetic_notes:
 word_meanings:
   - word: "तुम्हरे"
     roman: "Tumhare"
-    meaning: "your"
+    meaning: 
+      en: "your"
+      hi: "तुम्हारा/तुम्हारी"
   - word: "भजन"
     roman: "Bhajan"
-    meaning: "worship/devotion"
+    meaning: 
+      en: "worship/devotion"
+      hi: "worship/devotion"
   - word: "राम को"
     roman: "Ram Ko"
-    meaning: "Rama"
+    meaning: 
+      en: "Rama"
+      hi: "Rama"
   - word: "पावै"
     roman: "Pavai"
-    meaning: "obtains/reaches"
+    meaning: 
+      en: "obtains/reaches"
+      hi: "obtains/reaches"
   - word: "जनम जनम"
     roman: "Janam Janam"
-    meaning: "birth after birth"
+    meaning: 
+      en: "birth after birth"
+      hi: "birth after birth"
   - word: "के दुख"
     roman: "Ke Dukh"
-    meaning: "sorrows of"
+    meaning: 
+      en: "sorrows of"
+      hi: "sorrows of"
   - word: "बिसरावै"
     roman: "Bisravai"
-    meaning: "forgets/removes"
+    meaning: 
+      en: "forgets/removes"
+      hi: "forgets/removes"
 
 literal_translation:
   en: |

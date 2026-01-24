@@ -27,56 +27,23 @@ title: Home
 <section class="verse-navigation">
     <h3>🕉️ <span data-lang="en">{{ t_en.home.opening_dohas }}</span><span data-lang="hi">{{ t_hi.home.opening_dohas }}</span></h3>
     <ul>
-        <li><a href="{{ '/verses/doha_01' | relative_url }}">Doha 1: Invocation to the Guru</a></li>
-        <li><a href="{{ '/verses/doha_02' | relative_url }}">Doha 2: Prayer to Hanuman</a></li>
+        {% assign doha_01 = site.verses | where: "url", "/verses/doha_01/" | first %}
+        {% assign doha_02 = site.verses | where: "url", "/verses/doha_02/" | first %}
+        <li><a href="{{ doha_01.url | relative_url }}"><span data-lang="en">{{ doha_01.title_en }}</span><span data-lang="hi">{{ doha_01.title_hi }}</span></a></li>
+        <li><a href="{{ doha_02.url | relative_url }}"><span data-lang="en">{{ doha_02.title_en }}</span><span data-lang="hi">{{ doha_02.title_hi }}</span></a></li>
     </ul>
 
     <h3>📿 <span data-lang="en">{{ t_en.home.main_chalisa }}</span><span data-lang="hi">{{ t_hi.home.main_chalisa }}</span></h3>
     <ul class="verse-list">
-        <li><a href="{{ '/verses/verse_01' | relative_url }}">Verse 1: Ocean of Knowledge and Virtues</a></li>
-        <li><a href="{{ '/verses/verse_02' | relative_url }}">Verse 2: Rama's Messenger</a></li>
-        <li><a href="{{ '/verses/verse_03' | relative_url }}">Verse 3: Great Hero with Vajra Body</a></li>
-        <li><a href="{{ '/verses/verse_04' | relative_url }}">Verse 4: Golden Complexion and Beautiful Form</a></li>
-        <li><a href="{{ '/verses/verse_05' | relative_url }}">Verse 5: Bearer of Mace and Sacred Thread</a></li>
-        <li><a href="{{ '/verses/verse_06' | relative_url }}">Verse 6: Son of Kesari, Like Shiva</a></li>
-        <li><a href="{{ '/verses/verse_07' | relative_url }}">Verse 7: Learned and Eager to Serve Rama</a></li>
-        <li><a href="{{ '/verses/verse_08' | relative_url }}">Verse 8: Devoted Listener of Rama's Stories</a></li>
-        <li><a href="{{ '/verses/verse_09' | relative_url }}">Verse 9: Master of Many Forms</a></li>
-        <li><a href="{{ '/verses/verse_10' | relative_url }}">Verse 10: Destroyer of Demons</a></li>
-        <li><a href="{{ '/verses/verse_11' | relative_url }}">Verse 11: Bringing the Sanjeevani Herb</a></li>
-        <li><a href="{{ '/verses/verse_12' | relative_url }}">Verse 12: Praised by Rama</a></li>
-        <li><a href="{{ '/verses/verse_13' | relative_url }}">Verse 13: Sung by Shesha</a></li>
-        <li><a href="{{ '/verses/verse_14' | relative_url }}">Verse 14: Praised by Gods and Sages</a></li>
-        <li><a href="{{ '/verses/verse_15' | relative_url }}">Verse 15: Beyond Description</a></li>
-        <li><a href="{{ '/verses/verse_16' | relative_url }}">Verse 16: Helper of Sugriva</a></li>
-        <li><a href="{{ '/verses/verse_17' | relative_url }}">Verse 17: Advisor to Vibhishana</a></li>
-        <li><a href="{{ '/verses/verse_18' | relative_url }}">Verse 18: The Sun Swallowing Incident</a></li>
-        <li><a href="{{ '/verses/verse_19' | relative_url }}">Verse 19: Crossing the Ocean</a></li>
-        <li><a href="{{ '/verses/verse_20' | relative_url }}">Verse 20: Remover of Difficulties</a></li>
-        <li><a href="{{ '/verses/verse_21' | relative_url }}">Verse 21: Guardian at Rama's Door</a></li>
-        <li><a href="{{ '/verses/verse_22' | relative_url }}">Verse 22: Source of All Happiness</a></li>
-        <li><a href="{{ '/verses/verse_23' | relative_url }}">Verse 23: Controller of Own Power</a></li>
-        <li><a href="{{ '/verses/verse_24' | relative_url }}">Verse 24: Protector from Evil Spirits</a></li>
-        <li><a href="{{ '/verses/verse_25' | relative_url }}">Verse 25: Destroyer of Disease</a></li>
-        <li><a href="{{ '/verses/verse_26' | relative_url }}">Verse 26: Liberator from Crises</a></li>
-        <li><a href="{{ '/verses/verse_27' | relative_url }}">Verse 27: Servant of the Supreme King</a></li>
-        <li><a href="{{ '/verses/verse_28' | relative_url }}">Verse 28: Granter of Desires</a></li>
-        <li><a href="{{ '/verses/verse_29' | relative_url }}">Verse 29: Renowned Through All Ages</a></li>
-        <li><a href="{{ '/verses/verse_30' | relative_url }}">Verse 30: Protector of Saints</a></li>
-        <li><a href="{{ '/verses/verse_31' | relative_url }}">Verse 31: Giver of Eight Siddhis</a></li>
-        <li><a href="{{ '/verses/verse_32' | relative_url }}">Verse 32: Possessor of Ram Rasayan</a></li>
-        <li><a href="{{ '/verses/verse_33' | relative_url }}">Verse 33: Path to Rama</a></li>
-        <li><a href="{{ '/verses/verse_34' | relative_url }}">Verse 34: Journey to Rama's Abode</a></li>
-        <li><a href="{{ '/verses/verse_35' | relative_url }}">Verse 35: Sufficient Devotion</a></li>
-        <li><a href="{{ '/verses/verse_36' | relative_url }}">Verse 36: Remover of All Suffering</a></li>
-        <li><a href="{{ '/verses/verse_37' | relative_url }}">Verse 37: Invocation for Grace</a></li>
-        <li><a href="{{ '/verses/verse_38' | relative_url }}">Verse 38: Freedom Through Recitation</a></li>
-        <li><a href="{{ '/verses/verse_39' | relative_url }}">Verse 39: Witness of Shiva</a></li>
-        <li><a href="{{ '/verses/verse_40' | relative_url }}">Verse 40: Tulsidas's Prayer</a></li>
+        {% assign verses = site.verses | where_exp: "item", "item.url contains 'verse_'" | sort: "verse_number" %}
+        {% for verse in verses %}
+        <li><a href="{{ verse.url | relative_url }}"><span data-lang="en">{{ verse.title_en }}</span><span data-lang="hi">{{ verse.title_hi }}</span></a></li>
+        {% endfor %}
     </ul>
 
     <h3>🙏 <span data-lang="en">{{ t_en.home.closing_doha }}</span><span data-lang="hi">{{ t_hi.home.closing_doha }}</span></h3>
     <ul>
-        <li><a href="{{ '/verses/doha_closing' | relative_url }}">Closing Doha: Final Prayer</a></li>
+        {% assign doha_closing = site.verses | where: "url", "/verses/doha_closing/" | first %}
+        <li><a href="{{ doha_closing.url | relative_url }}"><span data-lang="en">{{ doha_closing.title_en }}</span><span data-lang="hi">{{ doha_closing.title_hi }}</span></a></li>
     </ul>
 </section>

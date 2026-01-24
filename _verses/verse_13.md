@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 13: Praised by Shesha"
+title_en: "Verse 13: Praised by Shesha"
+title_hi: "चौपाई 13: शेषनाग द्वारा स्तुति"
 verse_number: 13
 previous_verse: "/verses/verse_12"
 next_verse: "/verses/verse_14"
@@ -27,34 +28,54 @@ phonetic_notes:
 word_meanings:
   - word: "सहस"
     roman: "Sahas"
-    meaning: "thousand"
+    meaning:
+      en: "thousand"
+      hi: "हजार"
   - word: "बदन"
     roman: "Badan"
-    meaning: "mouths/faces"
+    meaning:
+      en: "mouths/faces"
+      hi: "मुख"
   - word: "तुम्हरो"
     roman: "Tumharo"
-    meaning: "your"
+    meaning:
+      en: "your"
+      hi: "तुम्हारा"
   - word: "जस"
     roman: "Jas"
-    meaning: "glory/fame"
+    meaning:
+      en: "glory/fame"
+      hi: "यश"
   - word: "गावैं"
     roman: "Gavain"
-    meaning: "sing"
+    meaning:
+      en: "sing"
+      hi: "गाते हैं"
   - word: "अस"
     roman: "As"
-    meaning: "thus"
+    meaning:
+      en: "thus"
+      hi: "ऐसा"
   - word: "कहि"
     roman: "Kahi"
-    meaning: "saying"
+    meaning:
+      en: "saying"
+      hi: "कहकर"
   - word: "श्रीपति"
     roman: "Shripati"
-    meaning: "Lord (husband of Lakshmi/Rama)"
+    meaning:
+      en: "Lord (husband of Lakshmi/Rama)"
+      hi: "श्रीपति"
   - word: "कंठ"
     roman: "Kanth"
-    meaning: "neck/throat"
+    meaning:
+      en: "neck/throat"
+      hi: "गले"
   - word: "लगावैं"
     roman: "Lagavain"
-    meaning: "embraced"
+    meaning:
+      en: "embraced"
+      hi: "लगाया"
 
 literal_translation:
   en: |

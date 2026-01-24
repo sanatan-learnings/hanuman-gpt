@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Doha 2: Prayer to Hanuman"
+title_en: "Doha 2: Prayer to Hanuman"
+title_hi: "दोहा 2: हनुमान की प्रार्थना"
 verse_number: "Doha 2"
 previous_verse: "/verses/doha_01"
 next_verse: "/verses/verse_01"
@@ -31,43 +32,69 @@ phonetic_notes:
 word_meanings:
   - word: "बुद्धिहीन"
     roman: "Buddhiheen"
-    meaning: "lacking intelligence"
+    meaning:
+      en: "lacking intelligence"
+      hi: "बुद्धिहीन"
   - word: "तनु"
     roman: "Tanu"
-    meaning: "body/self"
+    meaning:
+      en: "body/self"
+      hi: "शरीर/स्वयं"
   - word: "जानिके"
     roman: "Janike"
-    meaning: "knowing/considering"
+    meaning:
+      en: "knowing/considering"
+      hi: "जानकर"
   - word: "सुमिरौं"
     roman: "Sumirou"
-    meaning: "I remember/meditate upon"
+    meaning:
+      en: "I remember/meditate upon"
+      hi: "मैं स्मरण करता हूं"
   - word: "पवन-कुमार"
     roman: "Pavan-Kumar"
-    meaning: "son of the wind (Hanuman)"
+    meaning:
+      en: "son of the wind (Hanuman)"
+      hi: "पवन के पुत्र (हनुमान)"
   - word: "बल"
     roman: "Bal"
-    meaning: "strength"
+    meaning:
+      en: "strength"
+      hi: "बल/शक्ति"
   - word: "बुद्धि"
     roman: "Buddhi"
-    meaning: "intelligence/wisdom"
+    meaning:
+      en: "intelligence/wisdom"
+      hi: "बुद्धि"
   - word: "बिद्या"
     roman: "Vidya"
-    meaning: "knowledge"
+    meaning:
+      en: "knowledge"
+      hi: "विद्या/ज्ञान"
   - word: "देहु"
     roman: "Dehu"
-    meaning: "give"
+    meaning:
+      en: "give"
+      hi: "दो/प्रदान करो"
   - word: "मोहिं"
     roman: "Mohin"
-    meaning: "to me"
+    meaning:
+      en: "to me"
+      hi: "मुझे"
   - word: "हरहु"
     roman: "Harahu"
-    meaning: "remove"
+    meaning:
+      en: "remove"
+      hi: "दूर करो"
   - word: "कलेस"
     roman: "Kales"
-    meaning: "suffering/troubles"
+    meaning:
+      en: "suffering/troubles"
+      hi: "कष्ट/क्लेश"
   - word: "बिकार"
     roman: "Vikar"
-    meaning: "impurities/vices"
+    meaning:
+      en: "impurities/vices"
+      hi: "विकार/दोष"
 
 literal_translation:
   en: "Knowing myself to be lacking in intelligence, I remember the son of the wind. Please grant me strength, wisdom, and knowledge, and remove my suffering and impurities."

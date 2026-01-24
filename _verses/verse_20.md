@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 20: Making the Difficult Easy"
+title_en: "Verse 20: Making the Difficult Easy"
+title_hi: "चौपाई 20: कठिन को आसान बनाना"
 verse_number: 20
 previous_verse: "/verses/verse_19"
 next_verse: "/verses/verse_21"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "दुर्गम"
     roman: "Durgam"
-    meaning: "difficult/impossible"
+    meaning:
+      en: "difficult/impossible"
+      hi: "कठिन/दुर्गम"
   - word: "काज"
     roman: "Kaaj"
-    meaning: "task/work"
+    meaning:
+      en: "task/work"
+      hi: "कार्य"
   - word: "जगत"
     roman: "Jagat"
-    meaning: "world"
+    meaning:
+      en: "world"
+      hi: "जगत"
   - word: "के जेते"
     roman: "Ke Jete"
-    meaning: "whatever/all that"
+    meaning:
+      en: "whatever/all that"
+      hi: "जितने भी"
   - word: "सुगम"
     roman: "Sugam"
-    meaning: "easy"
+    meaning:
+      en: "easy"
+      hi: "आसान/सरल"
   - word: "अनुग्रह"
     roman: "Anugraha"
-    meaning: "grace/blessing"
+    meaning:
+      en: "grace/blessing"
+      hi: "कृपा/आशीर्वाद"
   - word: "तुम्हरे"
     roman: "Tumhare"
-    meaning: "your"
+    meaning:
+      en: "your"
+      hi: "तुम्हारे"
   - word: "तेते"
     roman: "Tete"
-    meaning: "so much/that much"
+    meaning:
+      en: "so much/that much"
+      hi: "उतने ही"
 
 literal_translation:
   en: |

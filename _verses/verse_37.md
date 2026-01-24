@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 37: Prayer for Guru-Like Grace"
+title_en: "Verse 37: Prayer for Guru-Like Grace"
+title_hi: "चौपाई 37: गुरु जैसी कृपा की प्रार्थना"
 verse_number: 37
 previous_verse: "/verses/verse_36"
 next_verse: "/verses/verse_38"
@@ -27,25 +28,39 @@ phonetic_notes:
 word_meanings:
   - word: "जै जै जै"
     roman: "Jai Jai Jai"
-    meaning: "victory, victory, victory/hail"
+    meaning: 
+      en: "victory, victory, victory/hail"
+      hi: "victory, victory, victory/hail"
   - word: "हनुमान"
     roman: "Hanuman"
-    meaning: "Hanuman"
+    meaning: 
+      en: "Hanuman"
+      hi: "Hanuman"
   - word: "गोसाईं"
     roman: "Gosain"
-    meaning: "lord/master"
+    meaning: 
+      en: "lord/master"
+      hi: "lord/master"
   - word: "कृपा"
     roman: "Kripa"
-    meaning: "grace/mercy"
+    meaning: 
+      en: "grace/mercy"
+      hi: "grace/mercy"
   - word: "करहु"
     roman: "Karahu"
-    meaning: "do/bestow"
+    meaning: 
+      en: "do/bestow"
+      hi: "do/bestow"
   - word: "गुरुदेव"
     roman: "Gurudev"
-    meaning: "divine teacher/guru"
+    meaning: 
+      en: "divine teacher/guru"
+      hi: "divine teacher/guru"
   - word: "की नाईं"
     roman: "Ki Nain"
-    meaning: "like/in the manner of"
+    meaning: 
+      en: "like/in the manner of"
+      hi: "like/in the manner of"
 
 literal_translation:
   en: |

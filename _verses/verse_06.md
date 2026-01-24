@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 6: Avatar of Shiva, Son of Kesari"
+title_en: "Verse 6: Avatar of Shiva, Son of Kesari"
+title_hi: "चौपाई 6: शिव के अवतार, केसरी के पुत्र"
 verse_number: 6
 previous_verse: "/verses/verse_05"
 next_verse: "/verses/verse_07"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "शंकर"
     roman: "Shankar"
-    meaning: "Shiva"
+    meaning:
+      en: "Shiva"
+      hi: "शिव"
   - word: "सुवन"
     roman: "Suvan"
-    meaning: "like/similar to"
+    meaning:
+      en: "like/similar to"
+      hi: "के समान"
   - word: "केसरी"
     roman: "Kesari"
-    meaning: "Hanuman's father (also means lion)"
+    meaning:
+      en: "Hanuman's father (also means lion)"
+      hi: "केसरी (हनुमान के पिता)"
   - word: "नंदन"
     roman: "Nandan"
-    meaning: "son/delight"
+    meaning:
+      en: "son/delight"
+      hi: "पुत्र/आनंद"
   - word: "तेज"
     roman: "Tej"
-    meaning: "radiance/brilliance"
+    meaning:
+      en: "radiance/brilliance"
+      hi: "तेज"
   - word: "प्रताप"
     roman: "Pratap"
-    meaning: "glory/might"
+    meaning:
+      en: "glory/might"
+      hi: "प्रताप"
   - word: "महा"
     roman: "Maha"
-    meaning: "great"
+    meaning:
+      en: "great"
+      hi: "महान"
   - word: "जग"
     roman: "Jag"
-    meaning: "world"
+    meaning:
+      en: "world"
+      hi: "जगत"
   - word: "बंदन"
     roman: "Bandan"
-    meaning: "saluted/worshipped"
+    meaning:
+      en: "saluted/worshipped"
+      hi: "वंदन/पूजित"
 
 literal_translation:
   en: |

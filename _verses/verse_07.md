@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 7: Learned, Virtuous, and Eager to Serve"
+title_en: "Verse 7: Learned, Virtuous, and Eager to Serve"
+title_hi: "चौपाई 7: विद्वान, गुणवान और सेवा के लिए उत्सुक"
 verse_number: 7
 previous_verse: "/verses/verse_06"
 next_verse: "/verses/verse_08"
@@ -27,25 +28,39 @@ phonetic_notes:
 word_meanings:
   - word: "विद्यावान"
     roman: "Vidyavan"
-    meaning: "knowledgeable/learned"
+    meaning:
+      en: "knowledgeable/learned"
+      hi: "विद्वान"
   - word: "गुणी"
     roman: "Guni"
-    meaning: "virtuous"
+    meaning:
+      en: "virtuous"
+      hi: "गुणवान"
   - word: "अति"
     roman: "Ati"
-    meaning: "very/extremely"
+    meaning:
+      en: "very/extremely"
+      hi: "अत्यंत"
   - word: "चातुर"
     roman: "Chatur"
-    meaning: "clever/intelligent"
+    meaning:
+      en: "clever/intelligent"
+      hi: "चतुर"
   - word: "राम काज"
     roman: "Ram Kaaj"
-    meaning: "Rama's work"
+    meaning:
+      en: "Rama's work"
+      hi: "राम का कार्य"
   - word: "करिबे को"
     roman: "Karibe Ko"
-    meaning: "to do"
+    meaning:
+      en: "to do"
+      hi: "करने के लिए"
   - word: "आतुर"
     roman: "Aatur"
-    meaning: "eager/anxious"
+    meaning:
+      en: "eager/anxious"
+      hi: "उत्सुक"
 
 literal_translation:
   en: |

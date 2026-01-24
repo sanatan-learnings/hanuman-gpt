@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 34: Auspicious Death and Rebirth"
+title_en: "Verse 34: Auspicious Death and Rebirth"
+title_hi: "चौपाई 34: शुभ मृत्यु और पुनर्जन्म"
 verse_number: 34
 previous_verse: "/verses/verse_33"
 next_verse: "/verses/verse_35"
@@ -27,25 +28,39 @@ phonetic_notes:
 word_meanings:
   - word: "अंत काल"
     roman: "Ant Kaal"
-    meaning: "end time/moment of death"
+    meaning: 
+      en: "end time/moment of death"
+      hi: "end time/moment of death"
   - word: "रघुबर पुर"
     roman: "Raghubar Pur"
-    meaning: "Rama's abode/city"
+    meaning: 
+      en: "Rama's abode/city"
+      hi: "Rama's abode/city"
   - word: "जाई"
     roman: "Jaai"
-    meaning: "going"
+    meaning: 
+      en: "going"
+      hi: "going"
   - word: "जहां"
     roman: "Jahan"
-    meaning: "where"
+    meaning: 
+      en: "where"
+      hi: "where"
   - word: "जन्म"
     roman: "Janma"
-    meaning: "birth"
+    meaning: 
+      en: "birth"
+      hi: "birth"
   - word: "हरिभक्त"
     roman: "Haribhakt"
-    meaning: "devotee of Hari/Vishnu"
+    meaning: 
+      en: "devotee of Hari/Vishnu"
+      hi: "devotee of Hari/Vishnu"
   - word: "कहाई"
     roman: "Kahai"
-    meaning: "called/known as"
+    meaning: 
+      en: "called/known as"
+      hi: "called/known as"
 
 literal_translation:
   en: |

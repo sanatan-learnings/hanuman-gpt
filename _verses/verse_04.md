@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 4: Golden Complexion and Beautiful Form"
+title_en: "Verse 4: Golden Complexion and Beautiful Form"
+title_hi: "चौपाई 4: सुनहरे वर्ण और सुंदर रूप"
 verse_number: 4
 previous_verse: "/verses/verse_03"
 next_verse: "/verses/verse_05"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "कंचन"
     roman: "Kanchan"
-    meaning: "golden"
+    meaning:
+      en: "golden"
+      hi: "सुनहरा"
   - word: "बरन"
     roman: "Varan"
-    meaning: "color/complexion"
+    meaning:
+      en: "color/complexion"
+      hi: "वर्ण/रंग"
   - word: "बिराज"
     roman: "Viraj"
-    meaning: "shine/adorn"
+    meaning:
+      en: "shine/adorn"
+      hi: "शोभायमान"
   - word: "सुबेसा"
     roman: "Subesa"
-    meaning: "beautiful attire"
+    meaning:
+      en: "beautiful attire"
+      hi: "सुंदर वस्त्र"
   - word: "कानन"
     roman: "Kanan"
-    meaning: "in the ears"
+    meaning:
+      en: "in the ears"
+      hi: "कानों में"
   - word: "कुंडल"
     roman: "Kundal"
-    meaning: "earrings"
+    meaning:
+      en: "earrings"
+      hi: "कुंडल"
   - word: "कुंचित"
     roman: "Kunchit"
-    meaning: "curly"
+    meaning:
+      en: "curly"
+      hi: "घुंघराले"
   - word: "केसा"
     roman: "Kesa"
-    meaning: "hair"
+    meaning:
+      en: "hair"
+      hi: "बाल"
 
 literal_translation:
   en: "Your complexion is golden, and you shine in beautiful attire, with earrings in your ears and curly hair."

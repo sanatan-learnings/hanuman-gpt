@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 16: Helper of Sugriva"
+title_en: "Verse 16: Helper of Sugriva"
+title_hi: "चौपाई 16: सुग्रीव के सहायक"
 verse_number: 16
 previous_verse: "/verses/verse_15"
 next_verse: "/verses/verse_17"
@@ -24,28 +25,44 @@ phonetic_notes:
 word_meanings:
   - word: "तुम"
     roman: "Tum"
-    meaning: "you"
+    meaning:
+      en: "you"
+      hi: "तुम"
   - word: "उपकार"
     roman: "Upkar"
-    meaning: "favor/help"
+    meaning:
+      en: "favor/help"
+      hi: "उपकार"
   - word: "सुग्रीवहिं"
     roman: "Sugrivhin"
-    meaning: "to Sugriva"
+    meaning:
+      en: "to Sugriva"
+      hi: "सुग्रीव पर"
   - word: "कीन्हा"
     roman: "Kinha"
-    meaning: "did"
+    meaning:
+      en: "did"
+      hi: "किया"
   - word: "राम"
     roman: "Ram"
-    meaning: "Rama"
+    meaning:
+      en: "Rama"
+      hi: "राम"
   - word: "मिलाय"
     roman: "Milaaya"
-    meaning: "united/introduced"
+    meaning:
+      en: "united/introduced"
+      hi: "मिलाया"
   - word: "राज पद"
     roman: "Raj Pad"
-    meaning: "kingdom/throne"
+    meaning:
+      en: "kingdom/throne"
+      hi: "राज्य/सिंहासन"
   - word: "दीन्हा"
     roman: "Dinha"
-    meaning: "gave"
+    meaning:
+      en: "gave"
+      hi: "दिया"
 
 literal_translation:
   en: "You did a great favor to Sugriva by uniting him with Rama and helping him obtain his kingdom."

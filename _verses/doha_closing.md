@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Closing Doha: Final Prayer"
+title_en: "Closing Doha: Final Prayer"
+title_hi: "समापन दोहा: अंतिम प्रार्थना"
 verse_number: "Doha Closing"
 previous_verse: "/verses/verse_40"
 next_verse: ""
@@ -37,40 +38,64 @@ phonetic_notes:
 word_meanings:
   - word: "पवनतनय"
     roman: "Pavantanaya"
-    meaning: "son of the wind"
+    meaning:
+      en: "son of the wind"
+      hi: "पवन के पुत्र"
   - word: "संकट"
     roman: "Sankat"
-    meaning: "crisis/difficulties"
+    meaning:
+      en: "crisis/difficulties"
+      hi: "संकट"
   - word: "हरन"
     roman: "Haran"
-    meaning: "remover"
+    meaning:
+      en: "remover"
+      hi: "दूर करने वाले"
   - word: "मंगल मूरति"
     roman: "Mangal Murti"
-    meaning: "auspicious form"
+    meaning:
+      en: "auspicious form"
+      hi: "मंगलकारी रूप"
   - word: "रूप"
     roman: "Roop"
-    meaning: "form/appearance"
+    meaning:
+      en: "form/appearance"
+      hi: "रूप"
   - word: "राम"
     roman: "Ram"
-    meaning: "Rama"
+    meaning:
+      en: "Rama"
+      hi: "राम"
   - word: "लखन"
     roman: "Lakhan"
-    meaning: "Lakshmana"
+    meaning:
+      en: "Lakshmana"
+      hi: "लक्ष्मण"
   - word: "सीता"
     roman: "Sita"
-    meaning: "Sita"
+    meaning:
+      en: "Sita"
+      hi: "सीता"
   - word: "सहित"
     roman: "Sahit"
-    meaning: "along with"
+    meaning:
+      en: "along with"
+      hi: "सहित"
   - word: "हृदय"
     roman: "Hridaya"
-    meaning: "heart"
+    meaning:
+      en: "heart"
+      hi: "हृदय"
   - word: "बसहु"
     roman: "Basahu"
-    meaning: "dwell/reside"
+    meaning:
+      en: "dwell/reside"
+      hi: "निवास करो"
   - word: "सुर भूप"
     roman: "Sur Bhoop"
-    meaning: "king of gods/lord"
+    meaning:
+      en: "king of gods/lord"
+      hi: "देवों के राजा"
 
 literal_translation:
   en: "O son of the wind, remover of crises, of auspicious form! Along with Rama, Lakshmana, and Sita, please dwell in my heart, O king of gods."

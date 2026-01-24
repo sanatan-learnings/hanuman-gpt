@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Doha 1: Invocation to the Guru"
+title_en: "Doha 1: Invocation to the Guru"
+title_hi: "दोहा 1: गुरु का आह्वान"
 verse_number: "Doha 1"
 previous_verse: ""
 next_verse: "/verses/doha_02"
@@ -31,52 +32,84 @@ phonetic_notes:
 word_meanings:
   - word: "श्रीगुरु"
     roman: "Shri Guru"
-    meaning: "Revered Guru/Teacher"
+    meaning:
+      en: "Revered Guru/Teacher"
+      hi: "श्रद्धेय गुरु/शिक्षक"
   - word: "चरन"
     roman: "Charan"
-    meaning: "feet"
+    meaning:
+      en: "feet"
+      hi: "चरण"
   - word: "सरोज"
     roman: "Saroj"
-    meaning: "lotus"
+    meaning:
+      en: "lotus"
+      hi: "कमल"
   - word: "रज"
     roman: "Raj"
-    meaning: "dust"
+    meaning:
+      en: "dust"
+      hi: "धूल"
   - word: "निज"
     roman: "Nij"
-    meaning: "own"
+    meaning:
+      en: "own"
+      hi: "अपना"
   - word: "मन"
     roman: "Man"
-    meaning: "mind"
+    meaning:
+      en: "mind"
+      hi: "मन"
   - word: "मुकुरु"
     roman: "Mukuru"
-    meaning: "mirror"
+    meaning:
+      en: "mirror"
+      hi: "दर्पण"
   - word: "सुधारि"
     roman: "Sudhari"
-    meaning: "cleaning/purifying"
+    meaning:
+      en: "cleaning/purifying"
+      hi: "शुद्ध करना"
   - word: "बरनउं"
     roman: "Barnau"
-    meaning: "I describe/narrate"
+    meaning:
+      en: "I describe/narrate"
+      hi: "मैं वर्णन करता हूं"
   - word: "रघुबर"
     roman: "Raghubar"
-    meaning: "Lord Rama (best of Raghu dynasty)"
+    meaning:
+      en: "Lord Rama (best of Raghu dynasty)"
+      hi: "श्री राम (रघु वंश के श्रेष्ठ)"
   - word: "बिमल"
     roman: "Bimal"
-    meaning: "pure/spotless"
+    meaning:
+      en: "pure/spotless"
+      hi: "निर्मल"
   - word: "जसु"
     roman: "Jasu"
-    meaning: "glory/fame"
+    meaning:
+      en: "glory/fame"
+      hi: "यश/कीर्ति"
   - word: "जो"
     roman: "Jo"
-    meaning: "which"
+    meaning:
+      en: "which"
+      hi: "जो"
   - word: "दायकु"
     roman: "Dayaku"
-    meaning: "giver"
+    meaning:
+      en: "giver"
+      hi: "देने वाला"
   - word: "फल"
     roman: "Phal"
-    meaning: "fruits/results"
+    meaning:
+      en: "fruits/results"
+      hi: "फल"
   - word: "चारि"
     roman: "Chari"
-    meaning: "four"
+    meaning:
+      en: "four"
+      hi: "चार"
 
 literal_translation:
   en: "With the dust of my Guru's lotus feet, I cleanse the mirror of my mind and describe the pure glory of Raghubar (Lord Rama), which grants the four fruits."

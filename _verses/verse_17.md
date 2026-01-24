@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 17: Counselor to Vibhishana"
+title_en: "Verse 17: Counselor to Vibhishana"
+title_hi: "चौपाई 17: विभीषण के परामर्शदाता"
 verse_number: 17
 previous_verse: "/verses/verse_16"
 next_verse: "/verses/verse_18"
@@ -24,28 +25,44 @@ phonetic_notes:
 word_meanings:
   - word: "तुम्हरो"
     roman: "Tumharo"
-    meaning: "your"
+    meaning:
+      en: "your"
+      hi: "तुम्हारा"
   - word: "मंत्र"
     roman: "Mantra"
-    meaning: "advice/counsel"
+    meaning:
+      en: "advice/counsel"
+      hi: "सलाह/परामर्श"
   - word: "बिभीषन"
     roman: "Vibhishana"
-    meaning: "Vibhishana (Ravana's brother)"
+    meaning:
+      en: "Vibhishana (Ravana's brother)"
+      hi: "विभीषण (रावण के भाई)"
   - word: "माना"
     roman: "Mana"
-    meaning: "accepted/followed"
+    meaning:
+      en: "accepted/followed"
+      hi: "माना/स्वीकार किया"
   - word: "लंकेश्वर"
     roman: "Lankeshwar"
-    meaning: "Lord of Lanka"
+    meaning:
+      en: "Lord of Lanka"
+      hi: "लंका के स्वामी"
   - word: "भए"
     roman: "Bhaye"
-    meaning: "became"
+    meaning:
+      en: "became"
+      hi: "बने"
   - word: "सब जग"
     roman: "Sab Jag"
-    meaning: "entire world"
+    meaning:
+      en: "entire world"
+      hi: "सारा जगत"
   - word: "जाना"
     roman: "Jana"
-    meaning: "knows"
+    meaning:
+      en: "knows"
+      hi: "जानता है"
 
 literal_translation:
   en: "Vibhishana accepted your counsel and became the Lord of Lanka, as the entire world knows."

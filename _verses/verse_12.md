@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 12: Dear as Bharata"
+title_en: "Verse 12: Dear as Bharata"
+title_hi: "चौपाई 12: भरत के समान प्रिय"
 verse_number: 12
 previous_verse: "/verses/verse_11"
 next_verse: "/verses/verse_13"
@@ -24,31 +25,49 @@ phonetic_notes:
 word_meanings:
   - word: "रघुपति"
     roman: "Raghupati"
-    meaning: "Lord of Raghu dynasty (Rama)"
+    meaning:
+      en: "Lord of Raghu dynasty (Rama)"
+      hi: "रघुपति (राम)"
   - word: "कीन्ही"
     roman: "Kinhi"
-    meaning: "did/gave"
+    meaning:
+      en: "did/gave"
+      hi: "की"
   - word: "बहुत"
     roman: "Bahut"
-    meaning: "much/great"
+    meaning:
+      en: "much/great"
+      hi: "बहुत"
   - word: "बड़ाई"
     roman: "Badai"
-    meaning: "praise"
+    meaning:
+      en: "praise"
+      hi: "प्रशंसा"
   - word: "तुम"
     roman: "Tum"
-    meaning: "you"
+    meaning:
+      en: "you"
+      hi: "तुम"
   - word: "मम"
     roman: "Mam"
-    meaning: "my"
+    meaning:
+      en: "my"
+      hi: "मेरे"
   - word: "प्रिय"
     roman: "Priya"
-    meaning: "dear/beloved"
+    meaning:
+      en: "dear/beloved"
+      hi: "प्रिय"
   - word: "भरतहि सम"
     roman: "Bharatahi Sam"
-    meaning: "equal to Bharata"
+    meaning:
+      en: "equal to Bharata"
+      hi: "भरत के समान"
   - word: "भाई"
     roman: "Bhai"
-    meaning: "brother"
+    meaning:
+      en: "brother"
+      hi: "भाई"
 
 literal_translation:
   en: |

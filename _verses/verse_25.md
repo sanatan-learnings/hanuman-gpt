@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 25: Healer of All Suffering"
+title_en: "Verse 25: Healer of All Suffering"
+title_hi: "चौपाई 25: सभी कष्टों के निवारक"
 verse_number: 25
 previous_verse: "/verses/verse_24"
 next_verse: "/verses/verse_26"
@@ -27,31 +28,49 @@ phonetic_notes:
 word_meanings:
   - word: "नासै"
     roman: "Nasai"
-    meaning: "destroy/cure"
+    meaning: 
+      en: "destroy/cure"
+      hi: "destroy/cure"
   - word: "रोग"
     roman: "Rog"
-    meaning: "disease"
+    meaning: 
+      en: "disease"
+      hi: "disease"
   - word: "हरै"
     roman: "Harai"
-    meaning: "removes"
+    meaning: 
+      en: "removes"
+      hi: "removes"
   - word: "सब"
     roman: "Sab"
-    meaning: "all"
+    meaning: 
+      en: "all"
+      hi: "all"
   - word: "पीरा"
     roman: "Pira"
-    meaning: "pain/suffering"
+    meaning: 
+      en: "pain/suffering"
+      hi: "pain/suffering"
   - word: "जपत"
     roman: "Japat"
-    meaning: "chanting/repeating"
+    meaning: 
+      en: "chanting/repeating"
+      hi: "chanting/repeating"
   - word: "निरंतर"
     roman: "Nirantar"
-    meaning: "continuously/constantly"
+    meaning: 
+      en: "continuously/constantly"
+      hi: "continuously/constantly"
   - word: "हनुमत"
     roman: "Hanumat"
-    meaning: "of Hanuman"
+    meaning: 
+      en: "of Hanuman"
+      hi: "of Hanuman"
   - word: "बीरा"
     roman: "Bira"
-    meaning: "heroic name"
+    meaning: 
+      en: "heroic name"
+      hi: "heroic name"
 
 literal_translation:
   en: |

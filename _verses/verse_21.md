@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 21: Guardian at Rama"
+title_en: "Verse 21: Guardian at Rama"
+title_hi: "चौपाई 21: राम के द्वारपाल"
 verse_number: 21
 previous_verse: "/verses/verse_20"
 next_verse: "/verses/verse_22"
@@ -27,25 +28,39 @@ phonetic_notes:
 word_meanings:
   - word: "राम दुआरे"
     roman: "Ram Duaare"
-    meaning: "at Rama's door/gate"
+    meaning:
+      en: "at Rama's door/gate"
+      hi: "राम के द्वार पर"
   - word: "तुम"
     roman: "Tum"
-    meaning: "you"
+    meaning:
+      en: "you"
+      hi: "तुम"
   - word: "रखवारे"
     roman: "Rakhvare"
-    meaning: "guardian/gatekeeper"
+    meaning:
+      en: "guardian/gatekeeper"
+      hi: "रक्षक/द्वारपाल"
   - word: "होत न"
     roman: "Hot Na"
-    meaning: "does not happen"
+    meaning:
+      en: "does not happen"
+      hi: "नहीं होता"
   - word: "आज्ञा"
     roman: "Aagya"
-    meaning: "permission/command"
+    meaning:
+      en: "permission/command"
+      hi: "आज्ञा"
   - word: "बिनु"
     roman: "Binu"
-    meaning: "without"
+    meaning:
+      en: "without"
+      hi: "बिना"
   - word: "पैसारे"
     roman: "Paisare"
-    meaning: "entry"
+    meaning:
+      en: "entry"
+      hi: "प्रवेश"
 
 literal_translation:
   en: "You are the guardian at Rama's door; no one can enter without your permission."

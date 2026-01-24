@@ -1,6 +1,7 @@
 ---
 layout: verse
-title: "Verse 11: Bringing the Sanjeevani Herb"
+title_en: "Verse 11: Bringing the Sanjeevani Herb"
+title_hi: "चौपाई 11: संजीवनी बूटी लाना"
 verse_number: 11
 previous_verse: "/verses/verse_10"
 next_verse: "/verses/verse_12"
@@ -27,28 +28,44 @@ phonetic_notes:
 word_meanings:
   - word: "लाय"
     roman: "Laaye"
-    meaning: "brought"
+    meaning:
+      en: "brought"
+      hi: "लाए"
   - word: "सजीवन"
     roman: "Sanjeevani"
-    meaning: "life-restoring herb"
+    meaning:
+      en: "life-restoring herb"
+      hi: "संजीवनी बूटी"
   - word: "लखन"
     roman: "Lakhan"
-    meaning: "Lakshmana"
+    meaning:
+      en: "Lakshmana"
+      hi: "लक्ष्मण"
   - word: "जियाये"
     roman: "Jiyaye"
-    meaning: "revived/brought to life"
+    meaning:
+      en: "revived/brought to life"
+      hi: "जीवित किया"
   - word: "श्री रघुबीर"
     roman: "Shri Raghubir"
-    meaning: "Lord Rama"
+    meaning:
+      en: "Lord Rama"
+      hi: "श्री रघुवीर"
   - word: "हरषि"
     roman: "Harashi"
-    meaning: "joyfully"
+    meaning:
+      en: "joyfully"
+      hi: "हर्षपूर्वक"
   - word: "उर"
     roman: "Ur"
-    meaning: "chest"
+    meaning:
+      en: "chest"
+      hi: "हृदय"
   - word: "लाये"
     roman: "Laaye"
-    meaning: "embraced"
+    meaning:
+      en: "embraced"
+      hi: "लगाया"
 
 literal_translation:
   en: "You brought the Sanjeevani herb and revived Lakshmana; Rama joyfully embraced you to his chest."

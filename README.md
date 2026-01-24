@@ -49,7 +49,7 @@ For detailed information about the verse structure, see **[verse-structure.md](d
 - **[tech-stack.md](docs/tech-stack.md)** - Technologies, tools, and services used (Jekyll, PyCharm, Claude Code, Midjourney, ElevenLabs)
 - **[multilingual-implementation.md](docs/multilingual-implementation.md)** - Multi-language architecture and implementation guide
 - **[background.md](docs/background.md)** - Complete history and context of the Hanuman Chalisa
-- **[guide.md](docs/guide.md)** - Comprehensive usage guide for different purposes
+- **[guidehttps://arun-gupta.github.io/hanuman-chalisa/.md](docs/guide.md)** - Comprehensive usage guide for different purposes
 - **[github-pages-setup.md](docs/github-pages-setup.md)** - How the website is built and deployed with Jekyll and GitHub Pages
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute to this project
 

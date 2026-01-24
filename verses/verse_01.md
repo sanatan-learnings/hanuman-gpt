@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 1: Ocean of Knowledge and Virtues"
+previous_verse: "/verses/doha_02"
+next_verse: "/verses/verse_02"
+---
+
 # Verse 1: Ocean of Knowledge and Virtues
 
 ![Verse 1](../images/verse_01.jpg)

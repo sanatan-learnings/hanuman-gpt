@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 23: Self-Controlled Power"
+previous_verse: "/verses/verse_22"
+next_verse: "/verses/verse_24"
+---
+
 # Verse 23: Self-Controlled Power
 
 ![Verse 23](../images/verse_23.jpg)

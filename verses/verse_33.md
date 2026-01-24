@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 33: Path to Rama"
+previous_verse: "/verses/verse_32"
+next_verse: "/verses/verse_34"
+---
+
 # Verse 33: Path to Rama
 
 ![Verse 33](../images/verse_33.jpg)

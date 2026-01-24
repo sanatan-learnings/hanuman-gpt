@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 21: Guardian at Rama's Door"
+previous_verse: "/verses/verse_20"
+next_verse: "/verses/verse_22"
+---
+
 # Verse 21: Guardian at Rama's Door
 
 ![Verse 21](../images/verse_21.jpg)

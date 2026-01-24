@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Doha 2: Prayer to Hanuman"
+previous_verse: "/verses/doha_01"
+next_verse: "/verses/verse_01"
+---
+
 # Doha 2: Prayer to Hanuman
 
 ![Doha 2](../images/doha_02.jpg)

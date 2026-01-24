@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 28: Fulfiller of Desires"
+previous_verse: "/verses/verse_27"
+next_verse: "/verses/verse_29"
+---
+
 # Verse 28: Fulfiller of Desires
 
 ![Verse 28](../images/verse_28.jpg)

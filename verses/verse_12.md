@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 12: Dear as Bharata"
+previous_verse: "/verses/verse_11"
+next_verse: "/verses/verse_13"
+---
+
 # Verse 12: Dear as Bharata
 
 ![Verse 12](../images/verse_12.jpg)

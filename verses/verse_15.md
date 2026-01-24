@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 15: Beyond Description"
+previous_verse: "/verses/verse_14"
+next_verse: "/verses/verse_16"
+---
+
 # Verse 15: Beyond Description
 
 ![Verse 15](../images/verse_15.jpg)

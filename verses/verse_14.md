@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 14: Praised by Gods and Sages"
+previous_verse: "/verses/verse_13"
+next_verse: "/verses/verse_15"
+---
+
 # Verse 14: Praised by Gods and Sages
 
 ![Verse 14](../images/verse_14.jpg)

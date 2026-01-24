@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Doha 1: Invocation to the Guru"
+previous_verse: ""
+next_verse: "/verses/doha_02"
+---
+
 # Doha 1: Invocation to the Guru
 
 ![Doha 1](../images/doha_01.jpg)

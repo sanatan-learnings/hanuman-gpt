@@ -3,6 +3,8 @@
 ॐ श्री हनुमते नमः
 Om Shri Hanumate Namah
 
+**🌐 [View the live interactive website →](https://arun-gupta.github.io/hanuman-chalisa/)**
+
 _May Lord Hanuman's blessings be with all who study and recite these sacred verses._
 
 ## Project Overview
@@ -89,6 +91,7 @@ Simple, universal practices including:
 For more detailed information, please refer to:
 - **[background.md](docs/background.md)** - Complete history and context of the Hanuman Chalisa
 - **[guide.md](docs/guide.md)** - Comprehensive usage guide for different purposes
+- **[github-pages-setup.md](docs/github-pages-setup.md)** - How the website is built and deployed with Jekyll and GitHub Pages
 
 ## Contribution & Feedback
 

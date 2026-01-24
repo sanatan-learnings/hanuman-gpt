@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 24: Protection from Evil Spirits"
+previous_verse: "/verses/verse_23"
+next_verse: "/verses/verse_25"
+---
+
 # Verse 24: Protection from Evil Spirits
 
 ![Verse 24](../images/verse_24.jpg)

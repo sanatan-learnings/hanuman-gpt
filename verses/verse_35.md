@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 35: Sufficient Devotion to Hanuman"
+previous_verse: "/verses/verse_34"
+next_verse: "/verses/verse_36"
+---
+
 # Verse 35: Sufficient Devotion to Hanuman
 
 ![Verse 35](../images/verse_35.jpg)

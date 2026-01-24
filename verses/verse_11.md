@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 11: Bringing the Sanjeevani Herb"
+previous_verse: "/verses/verse_10"
+next_verse: "/verses/verse_12"
+---
+
 # Verse 11: Bringing the Sanjeevani Herb
 
 ![Verse 11](../images/verse_11.jpg)

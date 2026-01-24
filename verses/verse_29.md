@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 29: Glory Across All Ages"
+previous_verse: "/verses/verse_28"
+next_verse: "/verses/verse_30"
+---
+
 # Verse 29: Glory Across All Ages
 
 ![Verse 29](../images/verse_29.jpg)

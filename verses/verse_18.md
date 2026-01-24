@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 18: Childhood Leap to the Sun"
+previous_verse: "/verses/verse_17"
+next_verse: "/verses/verse_19"
+---
+
 # Verse 18: Childhood Leap to the Sun
 
 ![Verse 18](../images/verse_18.jpg)

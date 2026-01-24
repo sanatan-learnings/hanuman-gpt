@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 2: Rama's Messenger"
+previous_verse: "/verses/verse_01"
+next_verse: "/verses/verse_03"
+---
+
 # Verse 2: Rama's Messenger
 
 ![Verse 2](../images/verse_02.jpg)

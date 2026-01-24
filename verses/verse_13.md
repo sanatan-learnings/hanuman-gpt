@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 13: Praised by Shesha"
+previous_verse: "/verses/verse_12"
+next_verse: "/verses/verse_14"
+---
+
 # Verse 13: Praised by Shesha
 
 ![Verse 13](../images/verse_13.jpg)

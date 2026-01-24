@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 7: Learned, Virtuous, and Eager to Serve"
+previous_verse: "/verses/verse_06"
+next_verse: "/verses/verse_08"
+---
+
 # Verse 7: Learned, Virtuous, and Eager to Serve
 
 ![Verse 7](../images/verse_07.jpg)

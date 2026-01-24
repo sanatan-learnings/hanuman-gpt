@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 5: Bearer of Mace and Sacred Thread"
+previous_verse: "/verses/verse_04"
+next_verse: "/verses/verse_06"
+---
+
 # Verse 5: Bearer of Mace and Sacred Thread
 
 ![Verse 5](../images/verse_05.jpg)

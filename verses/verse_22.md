@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 22: Refuge and Protection"
+previous_verse: "/verses/verse_21"
+next_verse: "/verses/verse_23"
+---
+
 # Verse 22: Refuge and Protection
 
 ![Verse 22](../images/verse_22.jpg)

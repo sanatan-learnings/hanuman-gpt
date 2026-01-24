@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<article class="verse-container">
+    <nav class="verse-nav">
+        {% if page.previous_verse %}
+        <a href="{{ page.previous_verse | relative_url }}" class="nav-button prev" title="Previous verse (Left arrow)">
+            ← Previous
+        </a>
+        {% else %}
+        <span class="nav-button prev disabled">← Previous</span>
+        {% endif %}
+
+        <a href="{{ '/' | relative_url }}" class="nav-button home" title="Home">
+            ☰ All Verses
+        </a>
+
+        {% if page.next_verse %}
+        <a href="{{ page.next_verse | relative_url }}" class="nav-button next" title="Next verse (Right arrow)">
+            Next →
+        </a>
+        {% else %}
+        <span class="nav-button next disabled">Next →</span>
+        {% endif %}
+    </nav>
+
+    <div class="verse-content">
+        {{ content }}
+    </div>
+
+    <nav class="verse-nav bottom">
+        {% if page.previous_verse %}
+        <a href="{{ page.previous_verse | relative_url }}" class="nav-button prev">← Previous</a>
+        {% else %}
+        <span class="nav-button prev disabled">← Previous</span>
+        {% endif %}
+
+        <a href="{{ '/' | relative_url }}" class="nav-button home">☰ All Verses</a>
+
+        {% if page.next_verse %}
+        <a href="{{ page.next_verse | relative_url }}" class="nav-button next">Next →</a>
+        {% else %}
+        <span class="nav-button next disabled">Next →</span>
+        {% endif %}
+    </nav>
+</article>
+
+<script>
+    // Store navigation URLs for arrow key navigation
+    window.verseNav = {
+        previous: "{{ page.previous_verse | relative_url }}",
+        next: "{{ page.next_verse | relative_url }}"
+    };
+</script>

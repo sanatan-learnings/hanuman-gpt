@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 31: Giver of Eight Siddhis and Nine Treasures"
+previous_verse: "/verses/verse_30"
+next_verse: "/verses/verse_32"
+---
+
 # Verse 31: Giver of Eight Siddhis and Nine Treasures
 
 ![Verse 31](../images/verse_31.jpg)

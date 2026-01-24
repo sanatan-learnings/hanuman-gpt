@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 3: Great Hero with Body Like Thunderbolt"
+previous_verse: "/verses/verse_02"
+next_verse: "/verses/verse_04"
+---
+
 # Verse 3: Great Hero with Body Like Thunderbolt
 
 ![Verse 3](../images/verse_03.jpg)

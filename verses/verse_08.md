@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 8: Passionate Listener with Rama in Heart"
+previous_verse: "/verses/verse_07"
+next_verse: "/verses/verse_09"
+---
+
 # Verse 8: Passionate Listener with Rama in Heart
 
 ![Verse 8](../images/verse_08.jpg)

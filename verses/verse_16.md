@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 16: Helper of Sugriva"
+previous_verse: "/verses/verse_15"
+next_verse: "/verses/verse_17"
+---
+
 # Verse 16: Helper of Sugriva
 
 ![Verse 16](../images/verse_16.jpg)

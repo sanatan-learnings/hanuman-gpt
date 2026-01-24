@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 27: Accomplisher of Rama's Tasks"
+previous_verse: "/verses/verse_26"
+next_verse: "/verses/verse_28"
+---
+
 # Verse 27: Accomplisher of Rama's Tasks
 
 ![Verse 27](../images/verse_27.jpg)

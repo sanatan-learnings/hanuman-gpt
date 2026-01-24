@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Closing Doha: Final Prayer"
+previous_verse: "/verses/verse_40"
+next_verse: ""
+---
+
 # Closing Doha: Final Prayer
 
 ![Closing Doha](../images/doha_closing.jpg)

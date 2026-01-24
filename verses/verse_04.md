@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 4: Golden Complexion and Beautiful Form"
+previous_verse: "/verses/verse_03"
+next_verse: "/verses/verse_05"
+---
+
 # Verse 4: Golden Complexion and Beautiful Form
 
 ![Verse 4](../images/verse_04.jpg)

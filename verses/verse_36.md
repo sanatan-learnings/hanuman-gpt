@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 36: Remover of Crises and Pain"
+previous_verse: "/verses/verse_35"
+next_verse: "/verses/verse_37"
+---
+
 # Verse 36: Remover of Crises and Pain
 
 ![Verse 36](../images/verse_36.jpg)

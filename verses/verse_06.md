@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 6: Avatar of Shiva, Son of Kesari"
+previous_verse: "/verses/verse_05"
+next_verse: "/verses/verse_07"
+---
+
 # Verse 6: Avatar of Shiva, Son of Kesari
 
 ![Verse 6](../images/verse_06.jpg)

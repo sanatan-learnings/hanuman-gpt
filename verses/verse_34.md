@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 34: Auspicious Death and Rebirth"
+previous_verse: "/verses/verse_33"
+next_verse: "/verses/verse_35"
+---
+
 # Verse 34: Auspicious Death and Rebirth
 
 ![Verse 34](../images/verse_34.jpg)

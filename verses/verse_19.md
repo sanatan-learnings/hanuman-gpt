@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 19: Crossing the Ocean with Rama's Ring"
+previous_verse: "/verses/verse_18"
+next_verse: "/verses/verse_20"
+---
+
 # Verse 19: Crossing the Ocean with Rama's Ring
 
 ![Verse 19](../images/verse_19.jpg)

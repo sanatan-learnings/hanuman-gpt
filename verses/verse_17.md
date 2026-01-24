@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 17: Counselor to Vibhishana"
+previous_verse: "/verses/verse_16"
+next_verse: "/verses/verse_18"
+---
+
 # Verse 17: Counselor to Vibhishana
 
 ![Verse 17](../images/verse_17.jpg)

@@ -1,0 +1,27 @@
+# Site settings
+title: "Hanuman Chalisa: A Comprehensive Guide"
+description: "A detailed, verse-by-verse exploration of the Hanuman Chalisa with audio, translations, and practical guidance"
+baseurl: "/hanuman-chalisa"
+url: "https://arun-gupta.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  verses:
+    output: true
+    permalink: /verses/:name/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .idea/
+  - .claude/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag

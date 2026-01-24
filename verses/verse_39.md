@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 39: Attainment of Siddhi"
+previous_verse: "/verses/verse_38"
+next_verse: "/verses/verse_40"
+---
+
 # Verse 39: Attainment of Siddhi
 
 ![Verse 39](../images/verse_39.jpg)

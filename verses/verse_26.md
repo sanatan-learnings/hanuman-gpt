@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 26: Liberation from Crisis"
+previous_verse: "/verses/verse_25"
+next_verse: "/verses/verse_27"
+---
+
 # Verse 26: Liberation from Crisis
 
 ![Verse 26](../images/verse_26.jpg)

@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 10: Destroyer of Demons, Accomplisher of Rama's Work"
+previous_verse: "/verses/verse_09"
+next_verse: "/verses/verse_11"
+---
+
 # Verse 10: Destroyer of Demons, Accomplisher of Rama's Work
 
 ![Verse 10](../images/verse_10.jpg)

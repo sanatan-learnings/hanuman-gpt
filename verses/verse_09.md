@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 9: Master of Form - Tiny and Gigantic"
+previous_verse: "/verses/verse_08"
+next_verse: "/verses/verse_10"
+---
+
 # Verse 9: Master of Form - Tiny and Gigantic
 
 ![Verse 9](../images/verse_09.jpg)

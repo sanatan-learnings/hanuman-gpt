@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 40: Tulsidas's Personal Prayer"
+previous_verse: "/verses/verse_39"
+next_verse: "/verses/doha_closing"
+---
+
 # Verse 40: Tulsidas's Personal Prayer
 
 ![Verse 40](../images/verse_40.jpg)

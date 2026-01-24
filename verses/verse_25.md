@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 25: Healer of All Suffering"
+previous_verse: "/verses/verse_24"
+next_verse: "/verses/verse_26"
+---
+
 # Verse 25: Healer of All Suffering
 
 ![Verse 25](../images/verse_25.jpg)

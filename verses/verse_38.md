@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 38: Power of Hundred Recitations"
+previous_verse: "/verses/verse_37"
+next_verse: "/verses/verse_39"
+---
+
 # Verse 38: Power of Hundred Recitations
 
 ![Verse 38](../images/verse_38.jpg)

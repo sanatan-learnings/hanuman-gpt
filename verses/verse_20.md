@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 20: Making the Difficult Easy"
+previous_verse: "/verses/verse_19"
+next_verse: "/verses/verse_21"
+---
+
 # Verse 20: Making the Difficult Easy
 
 ![Verse 20](../images/verse_20.jpg)

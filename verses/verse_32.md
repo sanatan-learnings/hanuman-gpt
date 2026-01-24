@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 32: Possessor of Rama's Elixir"
+previous_verse: "/verses/verse_31"
+next_verse: "/verses/verse_33"
+---
+
 # Verse 32: Possessor of Rama's Elixir
 
 ![Verse 32](../images/verse_32.jpg)

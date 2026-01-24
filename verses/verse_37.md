@@ -1,3 +1,10 @@
+---
+layout: verse
+title: "Verse 37: Prayer for Guru-Like Grace"
+previous_verse: "/verses/verse_36"
+next_verse: "/verses/verse_38"
+---
+
 # Verse 37: Prayer for Guru-Like Grace
 
 ![Verse 37](../images/verse_37.jpg)

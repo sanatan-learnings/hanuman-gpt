@@ -5,6 +5,7 @@ title_hi: "चौपाई 8: हृदय में राम के साथ 
 verse_number: 8
 previous_verse: "/verses/verse_07"
 next_verse: "/verses/verse_09"
+image: "/images/verse-08.png"
 
 devanagari: |
   प्रभु चरित्र सुनिबे को रसिया।

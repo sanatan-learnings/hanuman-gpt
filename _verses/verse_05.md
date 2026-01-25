@@ -5,6 +5,7 @@ title_hi: "चौपाई 5: गदा और जनेऊ धारण कर�
 verse_number: 5
 previous_verse: "/verses/verse_04"
 next_verse: "/verses/verse_06"
+image: "/images/verse-05.png"
 
 devanagari: |
   हाथ बज्र औ ध्वजा बिराजै।

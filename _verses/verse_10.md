@@ -5,6 +5,7 @@ title_hi: "चौपाई 10: राक्षसों का विनाश�
 verse_number: 10
 previous_verse: "/verses/verse_09"
 next_verse: "/verses/verse_11"
+image: "/images/verse-10.png"
 
 devanagari: |
   भीम रूप धरि असुर संहारे।

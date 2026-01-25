@@ -5,6 +5,7 @@ title_hi: "चौपाई 6: शिव के अवतार, केसरी 
 verse_number: 6
 previous_verse: "/verses/verse_05"
 next_verse: "/verses/verse_07"
+image: "/images/verse-06.png"
 
 devanagari: |
   शंकर सुवन केसरी नंदन।

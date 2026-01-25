@@ -5,6 +5,7 @@ title_hi: "चौपाई 9: रूप के स्वामी - सूक्
 verse_number: 9
 previous_verse: "/verses/verse_08"
 next_verse: "/verses/verse_10"
+image: "/images/verse-09.png"
 
 devanagari: |
   सूक्ष्म रूप धरि सियहिं दिखावा।

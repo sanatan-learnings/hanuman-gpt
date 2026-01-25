@@ -5,6 +5,7 @@ title_hi: "चौपाई 7: विद्वान, गुणवान और �
 verse_number: 7
 previous_verse: "/verses/verse_06"
 next_verse: "/verses/verse_08"
+image: "/images/verse-07.png"
 
 devanagari: |
   विद्यावान गुणी अति चातुर।

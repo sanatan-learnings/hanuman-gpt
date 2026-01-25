@@ -5,6 +5,7 @@ title_hi: "चौपाई 14: देवताओं और ऋषियों �
 verse_number: 14
 previous_verse: "/verses/verse_13"
 next_verse: "/verses/verse_15"
+image: "/images/verse-14.png"
 
 devanagari: |
   सनकादिक ब्रह्मादि मुनीसा।

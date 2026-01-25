@@ -5,6 +5,7 @@ title_hi: "चौपाई 13: शेषनाग द्वारा स्त�
 verse_number: 13
 previous_verse: "/verses/verse_12"
 next_verse: "/verses/verse_14"
+image: "/images/verse-13.png"
 
 devanagari: |
   सहस बदन तुम्हरो जस गावैं।

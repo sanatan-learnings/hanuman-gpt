@@ -5,6 +5,7 @@ title_hi: "चौपाई 12: भरत के समान प्रिय"
 verse_number: 12
 previous_verse: "/verses/verse_11"
 next_verse: "/verses/verse_13"
+image: "/images/verse-12.png"
 
 devanagari: |
   रघुपति कीन्ही बहुत बड़ाई।

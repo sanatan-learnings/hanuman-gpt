@@ -5,6 +5,7 @@ title_hi: "चौपाई 11: संजीवनी बूटी लाना"
 verse_number: 11
 previous_verse: "/verses/verse_10"
 next_verse: "/verses/verse_12"
+image: "/images/verse-11.png"
 
 devanagari: |
   लाय सजीवन लखन जियाये।

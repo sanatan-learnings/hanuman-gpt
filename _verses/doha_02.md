@@ -5,6 +5,7 @@ title_hi: "दोहा 2: हनुमान की प्रार्थना
 verse_number: "Doha 2"
 previous_verse: "/verses/doha_01"
 next_verse: "/verses/verse_01"
+image: "/images/opening-doha-02.png"
 
 devanagari: |
   बुद्धिहीन तनु जानिके,

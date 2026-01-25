@@ -5,6 +5,7 @@ title_hi: "दोहा 1: गुरु का आह्वान"
 verse_number: "Doha 1"
 previous_verse: ""
 next_verse: "/verses/doha_02"
+image: "/images/opening-doha-01.png"
 
 devanagari: |
   श्रीगुरु चरन सरोज रज,

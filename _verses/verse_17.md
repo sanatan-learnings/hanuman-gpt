@@ -5,6 +5,7 @@ title_hi: "चौपाई 17: विभीषण के परामर्श�
 verse_number: 17
 previous_verse: "/verses/verse_16"
 next_verse: "/verses/verse_18"
+image: "/images/verse-17.png"
 
 devanagari: |
   तुम्हरो मंत्र बिभीषन माना।

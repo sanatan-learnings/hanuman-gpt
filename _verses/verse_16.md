@@ -5,6 +5,7 @@ title_hi: "चौपाई 16: सुग्रीव के सहायक"
 verse_number: 16
 previous_verse: "/verses/verse_15"
 next_verse: "/verses/verse_17"
+image: "/images/verse-16.png"
 
 devanagari: |
   तुम उपकार सुग्रीवहिं कीन्हा।

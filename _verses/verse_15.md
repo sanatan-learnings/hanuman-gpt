@@ -5,6 +5,7 @@ title_hi: "चौपाई 15: वर्णन से परे"
 verse_number: 15
 previous_verse: "/verses/verse_14"
 next_verse: "/verses/verse_16"
+image: "/images/verse-15.png"
 
 devanagari: |
   जम कुबेर दिगपाल जहां ते।

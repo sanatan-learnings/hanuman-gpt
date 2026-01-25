@@ -125,6 +125,18 @@ main {
     color: #666;
 }
 
+.title-image-container {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.title-page-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
 /* About Section (Collapsible) */
 .about-section {
     max-width: 700px;

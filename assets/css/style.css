@@ -48,6 +48,20 @@ header .subtitle {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     opacity: 0.95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+/* Style the Om symbol in header subtitle */
+header .subtitle::first-letter {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Header Controls Container */

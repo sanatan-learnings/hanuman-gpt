@@ -319,13 +319,6 @@ main {
     padding-bottom: 1rem;
 }
 
-/* Om Symbol Styling */
-.om-symbol {
-    color: #4a90e2;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 .verse-navigation h3:after {
     content: '';
     position: absolute;

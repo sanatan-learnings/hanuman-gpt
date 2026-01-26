@@ -31,7 +31,7 @@ description: "Generate a printable book version of Hanuman Chalisa with customiz
                     <label><input type="checkbox" id="includeDevanagari" checked> <span data-lang="en">Hindi Text (Devanagari)</span><span data-lang="hi">हिंदी पाठ (देवनागरी)</span></label>
                     <label><input type="checkbox" id="includeTransliteration"> <span data-lang="en">Transliteration</span><span data-lang="hi">लिप्यंतरण</span></label>
                     <label><input type="checkbox" id="includeLiteralTranslation" checked> <span data-lang="en">Literal Translation</span><span data-lang="hi">शाब्दिक अनुवाद</span></label>
-                    <label><input type="checkbox" id="includeInterpretiveMeaning" checked> <span data-lang="en">Interpretive Meaning</span><span data-lang="hi">व्याख्यात्मक अर्थ</span></label>
+                    <label><input type="checkbox" id="includeInterpretiveMeaning"> <span data-lang="en">Interpretive Meaning</span><span data-lang="hi">व्याख्यात्मक अर्थ</span></label>
                     <label><input type="checkbox" id="includeWordMeanings"> <span data-lang="en">Word Meanings</span><span data-lang="hi">शब्द अर्थ</span></label>
                     <label><input type="checkbox" id="includeStory"> <span data-lang="en">Story/Background</span><span data-lang="hi">कहानी/पृष्ठभूमि</span></label>
                 </div>
@@ -267,11 +267,27 @@ description: "Generate a printable book version of Hanuman Chalisa with customiz
 .book-page {
     background: white;
     margin: 0 auto 20px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     page-break-after: always;
     page-break-inside: avoid;
     position: relative;
+    display: grid;
+    grid-template-columns: 40% 58%;
+    gap: 2%;
+    align-items: start;
+}
+
+.book-page-content-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.book-page-content-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .book-page.size-6x4 {
@@ -305,25 +321,29 @@ description: "Generate a printable book version of Hanuman Chalisa with customiz
 .verse-number-label {
     color: #ff6b35;
     font-weight: bold;
-    font-size: 1.1em;
-    margin-bottom: 10px;
+    font-size: 1em;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff6b35;
 }
 
 .book-image {
     width: 100%;
-    max-height: 35%;
+    height: auto;
+    max-height: 100%;
     object-fit: contain;
-    margin-bottom: 15px;
     border-radius: 6px;
 }
 
 .book-devanagari {
-    font-size: 1.3em;
-    line-height: 1.8;
+    font-size: 1.4em;
+    line-height: 1.9;
     color: #333;
-    text-align: center;
-    margin: 15px 0;
+    text-align: left;
+    margin: 0 0 15px 0;
     font-weight: 500;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .book-transliteration {
@@ -418,10 +438,13 @@ description: "Generate a printable book version of Hanuman Chalisa with customiz
 
     .book-page {
         margin: 0;
-        padding: 0.5in;
+        padding: 0.3in;
         box-shadow: none;
         page-break-after: always;
         page-break-inside: avoid;
+        display: grid;
+        grid-template-columns: 40% 58%;
+        gap: 2%;
     }
 
     .book-page.size-6x4 {
@@ -442,6 +465,11 @@ description: "Generate a printable book version of Hanuman Chalisa with customiz
     .book-page.size-a4 {
         width: 8.3in;
         height: 11.7in;
+    }
+
+    .book-page-content-left,
+    .book-page-content-right {
+        height: 100%;
     }
 
     @page {
@@ -543,31 +571,38 @@ function generateBook() {
         const page = document.createElement('div');
         page.className = `book-page size-${config.pageSize}`;
 
-        let html = '';
+        let leftHtml = '';
+        let rightHtml = '';
 
-        // Verse title (not "Verse 1" format, but actual title)
-        if (config.includeVerseNumbers) {
-            const title = config.language === 'hi' ?
-                (verse.title_hi || verse.title_en) :
-                (verse.title_en || verse.title_hi);
-            html += `<div class="verse-number-label">${escapeHtml(title)}</div>`;
-        }
-
-        // Image
+        // LEFT SIDE: Image
         if (config.includeImage && verse.image) {
             // Replace the theme in the image path
             const imagePath = verse.image.replace(/\/images\/[^\/]+\//, `/images/${config.theme}/`);
-            html += `<img src="${imagePath}" class="book-image" alt="Verse ${verse.verse_number}" onerror="console.error('Failed to load image:', this.src)">`;
+            leftHtml += `<img src="${imagePath}" class="book-image" alt="Verse ${verse.verse_number}" onerror="console.error('Failed to load image:', this.src)">`;
         }
 
-        // Devanagari
+        // RIGHT SIDE: Content
+
+        // Verse title (strip "Doha 1:", "Verse 1:", etc.)
+        if (config.includeVerseNumbers) {
+            let title = config.language === 'hi' ?
+                (verse.title_hi || verse.title_en) :
+                (verse.title_en || verse.title_hi);
+
+            // Remove prefixes like "Doha 1:", "Verse 1:", "चौपाई 1:", etc.
+            title = title.replace(/^(Doha|Verse|चौपाई|दोहा)\s*\d+\s*:\s*/i, '');
+
+            rightHtml += `<div class="verse-number-label">${escapeHtml(title)}</div>`;
+        }
+
+        // Devanagari (Hindi text)
         if (config.includeDevanagari && verse.devanagari) {
-            html += `<div class="book-devanagari">${escapeHtml(verse.devanagari)}</div>`;
+            rightHtml += `<div class="book-devanagari">${escapeHtml(verse.devanagari)}</div>`;
         }
 
         // Transliteration
         if (config.includeTransliteration && verse.transliteration) {
-            html += `<div class="book-transliteration">${escapeHtml(verse.transliteration)}</div>`;
+            rightHtml += `<div class="book-transliteration">${escapeHtml(verse.transliteration)}</div>`;
         }
 
         // Literal Translation
@@ -633,12 +668,22 @@ function generateBook() {
         }
 
         // Page number
+        let pageNumberHtml = '';
         if (config.includePageNumbers) {
-            html += `<div class="page-number">${pageNumber}</div>`;
+            pageNumberHtml = `<div class="page-number">${pageNumber}</div>`;
             pageNumber++;
         }
 
-        page.innerHTML = html;
+        // Combine left and right columns
+        page.innerHTML = `
+            <div class="book-page-content-left">
+                ${leftHtml}
+            </div>
+            <div class="book-page-content-right">
+                ${rightHtml}
+            </div>
+            ${pageNumberHtml}
+        `;
         bookContent.appendChild(page);
     });
 }

@@ -8,6 +8,7 @@ layout: none
     "title_hi": {{ verse.title_hi | default: verse.title | jsonify }},
     "url": {{ verse.url | relative_url | jsonify }},
     "verse_number": {{ verse.verse_number | jsonify }},
+    "image": {{ verse.image | relative_url | jsonify }},
     "devanagari": {{ verse.devanagari | jsonify }},
     "transliteration": {{ verse.transliteration | jsonify }},
     "literal_translation_en": {% if verse.literal_translation.en %}{{ verse.literal_translation.en | jsonify }}{% else %}{{ verse.literal_translation | jsonify }}{% endif %},

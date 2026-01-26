@@ -466,6 +466,9 @@ description: "Generate a printable book version of Hanuman Chalisa with customiz
 </style>
 
 <script>
+// Base URL for the site
+const BASE_URL = '{{ site.baseurl }}';
+
 // Load verse data
 let versesData = [];
 fetch('{{ "/search.json" | relative_url }}')
@@ -507,24 +510,37 @@ function generateBook() {
     const bookContent = document.getElementById('bookContent');
     bookContent.innerHTML = '';
 
+    // Sort verses to ensure closing doha comes last
+    const sortedVerses = [...versesData].sort((a, b) => {
+        const aIsClosing = a.url && a.url.includes('doha_closing');
+        const bIsClosing = b.url && b.url.includes('doha_closing');
+
+        if (aIsClosing) return 1;  // a comes after
+        if (bIsClosing) return -1; // b comes after
+        return 0; // maintain original order
+    });
+
     let pageNumber = 1;
 
-    versesData.forEach((verse, index) => {
+    sortedVerses.forEach((verse, index) => {
         const page = document.createElement('div');
         page.className = `book-page size-${config.pageSize}`;
 
         let html = '';
 
-        // Verse number
+        // Verse title (not "Verse 1" format, but actual title)
         if (config.includeVerseNumbers) {
-            const title = config.language === 'hi' ? verse.title_hi : verse.title_en;
-            html += `<div class="verse-number-label">${title || verse.title_en}</div>`;
+            const title = config.language === 'hi' ?
+                (verse.title_hi || verse.title_en) :
+                (verse.title_en || verse.title_hi);
+            html += `<div class="verse-number-label">${escapeHtml(title)}</div>`;
         }
 
         // Image
-        if (config.includeImage && verse.url) {
-            const imagePath = verse.url.replace('/verses/', `/images/${config.theme}/`).replace(/\/$/, '') + '.png';
-            html += `<img src="{{ site.baseurl }}${imagePath}" class="book-image" alt="Verse ${verse.verse_number}">`;
+        if (config.includeImage && verse.image) {
+            // Replace the theme in the image path
+            const imagePath = verse.image.replace(/\/images\/[^\/]+\//, `/images/${config.theme}/`);
+            html += `<img src="${imagePath}" class="book-image" alt="Verse ${verse.verse_number}" onerror="console.error('Failed to load image:', this.src)">`;
         }
 
         // Devanagari

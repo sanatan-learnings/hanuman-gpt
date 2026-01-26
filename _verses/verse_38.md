@@ -5,6 +5,7 @@ title_hi: "चौपाई 38: सौ बार पाठ की शक्ति
 verse_number: 38
 previous_verse: "/verses/verse_37"
 next_verse: "/verses/verse_39"
+image: "/images/verse-38.png"
 
 devanagari: |
   जो सत बार पाठ कर कोई।

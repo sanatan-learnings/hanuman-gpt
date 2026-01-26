@@ -5,6 +5,7 @@ title_hi: "चौपाई 37: गुरु जैसी कृपा की प
 verse_number: 37
 previous_verse: "/verses/verse_36"
 next_verse: "/verses/verse_38"
+image: "/images/verse-37.png"
 
 devanagari: |
   जै जै जै हनुमान गोसाईं।

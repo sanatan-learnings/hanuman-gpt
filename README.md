@@ -3,6 +3,8 @@
 ॐ श्री हनुमते नमः
 Om Shri Hanumate Namah
 
+🚩 **जय श्री राम | Jai Shri Ram** 🚩
+
 **🌐 [View the live interactive website →](https://arun-gupta.github.io/hanuman-chalisa/)**
 
 _May Lord Hanuman's blessings be with all who study and recite these sacred verses._
@@ -104,4 +106,6 @@ May it serve the spiritual upliftment of all beings.
 ---
 
 **ॐ श्री हनुमते नमः** 🙏
+
+**जय श्री राम | Jai Shri Ram** 🚩
 

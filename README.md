@@ -7,172 +7,120 @@ Om Shri Hanumate Namah
 
 _May Lord Hanuman's blessings be with all who study and recite these sacred verses._
 
-## Project Overview
+---
 
-This project presents a detailed, verse-by-verse exploration of the Hanuman Chalisa, one of the most revered devotional hymns in Sanatan Dharma (Hinduism). Composed by the 16th-century poet-saint Goswami Tulsidas, the Hanuman Chalisa consists of 40 verses (chaupais) that glorify Lord Hanuman's virtues, strength, and unwavering devotion to Lord Rama.
+## About
 
-## Purpose
+A detailed, verse-by-verse exploration of the Hanuman Chalisa - one of the most revered devotional hymns in Hinduism. Composed by poet-saint Goswami Tulsidas, it consists of 40 verses (chaupais) glorifying Lord Hanuman's virtues and devotion to Lord Rama.
 
-This comprehensive guide aims to make the Hanuman Chalisa accessible and meaningful to devotees, scholars, and seekers from all backgrounds by providing:
+This guide provides deep understanding of each verse with translations, meanings, stories from the Ramayana, and practical applications for modern life - all available in **English** and **हिन्दी (Hindi)**.
 
-- Deep understanding of each verse's meaning and significance
-- Practical applications for modern life
-- Cultural and scriptural context
-- Proper pronunciation and recitation guidance
-- Devotional insights for spiritual growth
+## Features
 
-## 🎨 Generate Your Own Image Theme
+### 📖 Read & Study
+- **43 verses** with original Devanagari text and transliteration
+- **Word-by-word meanings** and literal translations
+- **Interpretive meanings** explaining spiritual depth
+- **Stories from Ramayana** providing context
+- **Search functionality** across all verses
+- **Bilingual support** - Switch between English and Hindi instantly
+- **Beautiful AI-generated images** for each verse
 
-Want to create images in a different artistic style? Use our automated script:
+### 📕 Generate Custom Books
+Create personalized printable books:
+- **Multiple sizes**: 6"×4" pocket, 8"×6" medium, A5, A4
+- **Customizable content**: Choose what to include
+- **Custom headers/footers**: Personalize with your own text
+- **Print or PDF**: Ready for home or professional printing
+
+[Visit Book Generator →](https://arun-gupta.github.io/hanuman-chalisa/book)
+
+### 🎨 Multiple Themes
+- Switch between different artistic styles
+- Current: Modern Minimalist theme
+- Generate your own themes using DALL-E 3 (see below)
+
+## For Developers
+
+### Generate Custom Image Themes
+
+Create new artistic themes using our automated script:
 
 ```bash
 # Get OpenAI API key from https://platform.openai.com/api-keys
 export OPENAI_API_KEY='your-key-here'
 
-# Generate all 47 images in your chosen style
-./scripts/generate.sh traditional-art --style "traditional Indian devotional art style"
-./scripts/generate.sh watercolor --style "soft watercolor painting style"
-./scripts/generate.sh pencil-sketch --style "detailed pencil drawings"
+# Generate 47 images in your style
+./scripts/generate.sh traditional-art --style "traditional Indian devotional art"
+./scripts/generate.sh watercolor --style "soft watercolor painting"
 
-# Advanced options
-./scripts/generate.sh watercolor --style "soft colors" --quality hd
-./scripts/generate.sh traditional-art --resume verse-15.png
-./scripts/generate.sh --help  # See all options
+# See all options
+./scripts/generate.sh --help
 ```
 
-**Cost**: ~$2 for all 47 images (standard quality) | See [scripts/README.md](scripts/README.md) for details
+**Cost**: ~$2 for 47 images (standard quality)
+**Details**: See [scripts/README.md](scripts/README.md)
 
-## 📕 Generate Printable Books
+### Project Structure
 
-Create custom physical books of the Hanuman Chalisa:
-
-- **Multiple page sizes**: 6"×4" pocket, 8"×6" medium, A5, A4
-- **Configurable content**: Choose what to include (images, translations, meanings, stories)
-- **Customizable headers/footers**: Add custom text or use language-aware defaults
-  - Default header: "Om Shri Hanumate Namah" / "ॐ श्री हनुमते नमः"
-  - Default footer: "Shri Hanuman Chalisa" / "हनुमान चालीसा"
-- **Bilingual options**: English, Hindi, or both languages side-by-side
-- **Theme selection**: Use any available image theme
-- **Professional layout**: Two-column design with centered content
-- **Print or PDF**: Generate print-ready books or save as PDF
-
-Visit the [Book Generation page](https://arun-gupta.github.io/hanuman-chalisa/book) or see [docs/book-generation.md](docs/book-generation.md) for full instructions.
-
-## Features
-
-### Interactive Website Features
-- **📖 Full chalisa view** - Read all 43 verses on a single page with bilingual display
-- **📕 Book Generation** - Create custom printable books with configurable page sizes (6×4, 8×6, A5, A4), content options, and layout
-- **🔍 Search functionality** - Search across all verses in Devanagari, transliteration, translations
-- **⌨️ Arrow key navigation** (← →) between verses
-- **🖨️ Print-friendly** - Optimized CSS for printing verses and generating PDFs
-- **📱 Mobile responsive** design
-- **🎨 Theme Switcher** - Choose from different artistic styles for verse images (Modern Minimalist available)
-- **🖼️ Beautiful AI-generated images** - All 47 images complete (title + 2 dohas + 40 verses + closing doha)
-- **🃏 Card-based layout** - Visual grid showcasing verse thumbnails on the home page
-- **🎵 Audio recitations** (coming soon)
-
-### Content for Each Verse
-- **Original Hindi text** with Devanagari script
-- **Simplified English transliteration** (phonetic, easy-to-read)
-- **Word-by-word meanings** in both English and Hindi (शब्द-दर-शब्द अर्थ)
-- **Literal translations** in English and Hindi (शाब्दिक अनुवाद)
-- **Interpretive meanings** in English and Hindi (व्याख्यात्मक अर्थ)
-- **Story and context** from Ramayana in both languages
-- **Practical applications** for daily life in both languages
-
-### 🌐 Bilingual Support & Image Themes
-
-The entire website is fully bilingual and supports multiple image themes:
-
-**Language Support:**
-- **Language Switcher** - Toggle between **English** and **हिन्दी (Hindi)** at any time from the header
-- **Persistent Selection** - Your language preference is remembered across all pages
-- **Complete Translation** - Every element of the site switches languages:
-  - All 43 verse titles
-  - Word-by-word meanings for every verse
-  - Literal translations, interpretive meanings, and stories
-  - Section headings, navigation buttons, and UI elements
-  - Page titles, descriptions, and footer content
-- **Client-Side Implementation** - Fast language switching without page reload
-- **Extensible Architecture** - Ready to support additional languages (Tamil, Telugu, Spanish planned)
-
-**Image Theme Support:**
-- **Theme Switcher** - Change the artistic style of all verse images with one click
-- **Current Theme: Modern Minimalist** - Contemporary spiritual aesthetics with saffron orange and clean backgrounds
-- **Persistent Selection** - Your theme preference is remembered across all pages
-- **Client-Side Implementation** - Instant theme switching without page reload
-- **Extensible Architecture** - Ready to support additional themes (Traditional, Watercolor, etc.)
-
-Whether you're more comfortable reading in English or हिन्दी, and whichever artistic style resonates with you, the complete devotional content is available to you.
-
-For detailed information about the verse structure, see **[verse-structure.md](docs/verse-structure.md)**.
+```
+├── _verses/          # 43 verse files with all content
+├── images/           # AI-generated images by theme
+│   └── modern-minimalist/
+├── docs/             # User guides and documentation
+├── scripts/          # DALL-E 3 image generation
+└── book.html         # Custom book generator
+```
 
 ## Documentation
 
-### User Guides
-- **[guide.md](docs/guide.md)** - Comprehensive usage guide for different purposes
-- **[background.md](docs/background.md)** - Complete history and context of the Hanuman Chalisa
+**User Guides:**
+- [Usage Guide](docs/guide.md) - How to use the website
+- [Background](docs/background.md) - History of the Hanuman Chalisa
+- [Book Generation](docs/book-generation.md) - Create printable books
 
-### Technical Documentation
-- **[verse-structure.md](docs/verse-structure.md)** - Detailed explanation of verse components and structure
-- **[tech-stack.md](docs/tech-stack.md)** - Technologies, tools, and services used (Jekyll, PyCharm, Claude Code, DALL-E 3)
-- **[multilingual-implementation.md](docs/multilingual-implementation.md)** - Multi-language architecture and implementation guide
-- **[github-pages-setup.md](docs/github-pages-setup.md)** - How the website is built and deployed with Jekyll and GitHub Pages
+**Technical Docs:**
+- [Verse Structure](docs/verse-structure.md) - How verses are organized
+- [Tech Stack](docs/tech-stack.md) - Technologies used
+- [Adding Themes](docs/adding-themes.md) - Create new image themes
+- [Image Prompts](docs/image-prompts.md) - DALL-E 3 prompts used
 
-### Image Theme System
-- **[adding-themes.md](docs/adding-themes.md)** - Guide for adding new image themes
-- **[image-prompts.md](docs/image-prompts.md)** - DALL-E 3 prompts used for generating images
-- **[scripts/README.md](scripts/README.md)** - Automated image generation using DALL-E 3 API
+## Contributing
 
-### Contributing
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute to this project
-
-## Upcoming Features
-
-We have several exciting enhancements planned! Check out our [GitHub Issues](https://github.com/arun-gupta/hanuman-chalisa/issues) for:
-
-1. **Audio Recitations** - Generate audio files using AI voice synthesis for all 43 verses (full speed + slow speed)
-2. **Additional Image Themes** - Add Traditional Art, Watercolor, and other artistic styles
-3. **Additional Languages** - Add Tamil (தமிழ்), Telugu (తెలుగు), Spanish (Español) translations
-4. **PDF Generation** - Create printable PDF with Devanagari text, transliteration, translations, and images
-5. **Alternate Image Themes** - Multiple artistic styles with theme switcher
-
-Want to help? Check the [issues](https://github.com/arun-gupta/hanuman-chalisa/issues) or see [CONTRIBUTING.md](CONTRIBUTING.md) for how to get started!
-
-## Contribution & Feedback
-
-This is a living document created with devotion and scholarly care. If you find:
+We welcome contributions! Whether it's:
 - Translation improvements
-- Additional contextual information
-- Corrections to citations or pronunciations
-- Personal insights from your practice
+- Additional languages (Tamil, Telugu, Spanish planned)
+- New image themes
+- Audio recitations
+- Bug fixes or features
 
-Please feel free to contribute to making this resource more comprehensive and beneficial for all seekers.
+See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+
+**Upcoming Features:** Check [GitHub Issues](https://github.com/arun-gupta/hanuman-chalisa/issues)
 
 ## Acknowledgments
 
 ### Content Creation
-
-This project was created using:
-- **Claude Code** (Anthropic) - AI-assisted content generation and project scaffolding
-- **PyCharm IDE** (JetBrains) - Human review and validation of all generated content
-- **Human-in-the-loop approach** - All AI-generated content reviewed and approved
+- **DALL-E 3** (OpenAI) - AI-generated verse images
+- **Claude Code** (Anthropic) - AI-assisted content generation and development
+- **Human review** - All content validated for accuracy and devotional authenticity
 
 ### Traditional Sources
-
-The content generated by Claude Code draws upon knowledge embedded in its training data, which includes:
+Content draws upon:
 - Valmiki Ramayana
 - Tulsidas's Shri Ramcharitmanas
 - Traditional commentaries by various acharyas
-- Scholarly translations and interpretations
 - Living oral traditions of Hanuman Chalisa recitation
 
 ### Technology
+Built with Jekyll and GitHub Pages. Hosted on GitHub.
 
-Built with Jekyll and GitHub Pages. See [tech-stack.md](docs/tech-stack.md) for complete technology details.
+## License
 
-## License & Usage
+Created for educational, devotional, and non-commercial purposes.
+May it serve the spiritual upliftment of all beings.
 
-This guide is created for educational, devotional, and non-commercial purposes. May it serve the spiritual upliftment of all beings.
+---
+
+**ॐ श्री हनुमते नमः** 🙏
 

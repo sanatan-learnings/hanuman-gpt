@@ -52,6 +52,12 @@ header .subtitle {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+header .subtitle .separator {
+    opacity: 0.6;
+    margin: 0 0.3rem;
 }
 
 /* Om Icon Styling - purple rounded box with white Om symbol */

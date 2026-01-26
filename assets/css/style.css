@@ -732,14 +732,6 @@ footer .footer-links a:hover {
     color: #ff6b35;
 }
 
-footer .jai-shri-ram {
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ff6b35;
-    letter-spacing: 0.5px;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .verse-nav {

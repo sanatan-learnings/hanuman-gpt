@@ -11,7 +11,10 @@ Use the wrapper script for one-command generation:
 ./scripts/generate.sh traditional-art
 
 # With custom style
-./scripts/generate.sh watercolor "soft watercolor painting style"
+./scripts/generate.sh watercolor --style "soft watercolor painting style"
+
+# Show all options
+./scripts/generate.sh --help
 ```
 
 **First Time Setup (30 seconds):**
@@ -21,16 +24,35 @@ Use the wrapper script for one-command generation:
 
 Done! The script auto-installs dependencies and generates all 47 images.
 
-**Options:**
+### CLI Options
+
+```bash
+./scripts/generate.sh <theme-name> [options]
+
+Options:
+  -s, --style <description>  Custom style description for the theme
+  -q, --quality <level>      Image quality: 'standard' or 'hd' (default: standard)
+      --size <dimensions>    Image size: '1024x1024' or '1024x1792' (default: 1024x1024)
+  -r, --resume <filename>    Resume from specific image (e.g., verse-15.png)
+  -h, --help                 Show help message
+```
+
+**Examples:**
 ```bash
 # HD quality (2x cost)
-QUALITY=hd ./scripts/generate.sh theme-name
+./scripts/generate.sh theme-name --quality hd
 
 # Custom size
-SIZE=1024x1792 ./scripts/generate.sh theme-name
+./scripts/generate.sh theme-name --size 1024x1792
 
 # Resume from specific image
-RESUME=verse-15.png ./scripts/generate.sh theme-name
+./scripts/generate.sh theme-name --resume verse-15.png
+
+# Multiple options
+./scripts/generate.sh pencil-sketch \
+  --style "detailed pencil drawings" \
+  --quality hd \
+  --resume verse-20.png
 ```
 
 ---

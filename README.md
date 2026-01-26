@@ -30,9 +30,14 @@ Want to create images in a different artistic style? Use our automated script:
 export OPENAI_API_KEY='your-key-here'
 
 # Generate all 47 images in your chosen style
-./scripts/generate.sh traditional-art "traditional Indian devotional art style"
-./scripts/generate.sh watercolor "soft watercolor painting style"
-./scripts/generate.sh pencil-sketch "detailed pencil drawings"
+./scripts/generate.sh traditional-art --style "traditional Indian devotional art style"
+./scripts/generate.sh watercolor --style "soft watercolor painting style"
+./scripts/generate.sh pencil-sketch --style "detailed pencil drawings"
+
+# Advanced options
+./scripts/generate.sh watercolor --style "soft colors" --quality hd
+./scripts/generate.sh traditional-art --resume verse-15.png
+./scripts/generate.sh --help  # See all options
 ```
 
 **Cost**: ~$2 for all 47 images (standard quality) | See [scripts/README.md](scripts/README.md) for details

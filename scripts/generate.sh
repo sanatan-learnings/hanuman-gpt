@@ -10,7 +10,102 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
 NC='\033[0m' # No Color
+
+# Default values
+QUALITY="${QUALITY:-standard}"
+SIZE="${SIZE:-1024x1024}"
+RESUME="${RESUME:-}"
+THEME_NAME=""
+STYLE=""
+
+# Show usage
+show_usage() {
+    echo -e "${BLUE}Hanuman Chalisa Image Theme Generator${NC}"
+    echo ""
+    echo "Usage: ./scripts/generate.sh <theme-name> [options]"
+    echo ""
+    echo "Arguments:"
+    echo "  <theme-name>              Name of the theme (e.g., traditional-art, watercolor)"
+    echo ""
+    echo "Options:"
+    echo "  -s, --style <description> Custom style description for the theme"
+    echo "  -q, --quality <level>     Image quality: 'standard' or 'hd' (default: standard)"
+    echo "  --size <dimensions>       Image size: '1024x1024' or '1024x1792' (default: 1024x1024)"
+    echo "  -r, --resume <filename>   Resume from specific image (e.g., verse-15.png)"
+    echo "  -h, --help                Show this help message"
+    echo ""
+    echo "Examples:"
+    echo "  ./scripts/generate.sh traditional-art"
+    echo "  ./scripts/generate.sh watercolor --style 'soft watercolor painting style'"
+    echo "  ./scripts/generate.sh pencil-sketch -s 'detailed pencil drawings' -q hd"
+    echo "  ./scripts/generate.sh traditional-art --resume verse-15.png"
+    echo ""
+    echo "Cost Estimates (all 47 images):"
+    echo "  Standard quality (1024x1024): ~\$2.00"
+    echo "  HD quality (1024x1024):       ~\$4.00"
+    echo ""
+    echo "API Key:"
+    echo "  Set OPENAI_API_KEY environment variable or create .env file"
+    echo "  Get your key from: https://platform.openai.com/api-keys"
+    exit 0
+}
+
+# Parse command line arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h|--help)
+            show_usage
+            ;;
+        -s|--style)
+            STYLE="$2"
+            shift 2
+            ;;
+        -q|--quality)
+            QUALITY="$2"
+            if [[ ! "$QUALITY" =~ ^(standard|hd)$ ]]; then
+                echo -e "${RED}Error: Quality must be 'standard' or 'hd'${NC}"
+                exit 1
+            fi
+            shift 2
+            ;;
+        --size)
+            SIZE="$2"
+            if [[ ! "$SIZE" =~ ^(1024x1024|1024x1792)$ ]]; then
+                echo -e "${RED}Error: Size must be '1024x1024' or '1024x1792'${NC}"
+                exit 1
+            fi
+            shift 2
+            ;;
+        -r|--resume)
+            RESUME="$2"
+            shift 2
+            ;;
+        -*)
+            echo -e "${RED}Error: Unknown option: $1${NC}"
+            echo "Use --help for usage information"
+            exit 1
+            ;;
+        *)
+            if [ -z "$THEME_NAME" ]; then
+                THEME_NAME="$1"
+            else
+                echo -e "${RED}Error: Too many arguments${NC}"
+                echo "Use --help for usage information"
+                exit 1
+            fi
+            shift
+            ;;
+    esac
+done
+
+# Check if theme name is provided
+if [ -z "$THEME_NAME" ]; then
+    echo -e "${RED}Error: Theme name is required${NC}"
+    echo ""
+    show_usage
+fi
 
 # Check if Python is available
 if ! command -v python3 &> /dev/null; then
@@ -46,30 +141,6 @@ if [ -z "$OPENAI_API_KEY" ]; then
     fi
 fi
 
-# Show usage if no arguments
-if [ $# -eq 0 ]; then
-    echo "Usage: ./scripts/generate.sh <theme-name> [style-description]"
-    echo ""
-    echo "Examples:"
-    echo "  ./scripts/generate.sh traditional-art"
-    echo "  ./scripts/generate.sh watercolor 'soft watercolor painting style'"
-    echo "  ./scripts/generate.sh pencil-sketch 'detailed pencil drawings'"
-    echo ""
-    echo "Options:"
-    echo "  Set QUALITY=hd for HD quality (2x cost)"
-    echo "  Set SIZE=1024x1792 for portrait images"
-    echo ""
-    echo "Resume interrupted generation:"
-    echo "  RESUME=verse-15.png ./scripts/generate.sh traditional-art"
-    exit 1
-fi
-
-THEME_NAME="$1"
-STYLE="${2:-}"
-QUALITY="${QUALITY:-standard}"
-SIZE="${SIZE:-1024x1024}"
-RESUME="${RESUME:-}"
-
 echo -e "${GREEN}🎨 Generating images for theme: $THEME_NAME${NC}"
 echo "Style: ${STYLE:-default}"
 echo "Quality: $QUALITY"
@@ -78,21 +149,21 @@ echo "Size: $SIZE"
 echo ""
 
 # Build command
-CMD="python3 $SCRIPT_DIR/generate_theme_images.py --theme-name $THEME_NAME --quality $QUALITY --size $SIZE"
+CMD=("python3" "$SCRIPT_DIR/generate_theme_images.py" "--theme-name" "$THEME_NAME" "--quality" "$QUALITY" "--size" "$SIZE")
 
 if [ -n "$STYLE" ]; then
-    CMD="$CMD --style \"$STYLE\""
+    CMD+=("--style" "$STYLE")
 fi
 
 if [ -n "$RESUME" ]; then
-    CMD="$CMD --start-from $RESUME"
+    CMD+=("--start-from" "$RESUME")
 fi
 
 # Run the generation
-echo -e "${YELLOW}Running: $CMD${NC}"
+echo -e "${YELLOW}Running: ${CMD[*]}${NC}"
 echo ""
 
-eval $CMD
+"${CMD[@]}"
 
 echo ""
 echo -e "${GREEN}✓ Generation complete!${NC}"

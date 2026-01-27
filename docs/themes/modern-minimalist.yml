@@ -1,0 +1,341 @@
+# Modern Minimalist Theme - Comprehensive Specification
+# Hanuman Chalisa Visual Theme Definition
+
+theme:
+  # ===== Identity =====
+  id: modern-minimalist
+  version: "1.0"
+  created: "2026-01"
+  last_updated: "2026-01"
+  generator: DALL-E 3
+
+  # ===== Naming =====
+  name:
+    en: "Modern Minimalist"
+    hi: "आधुनिक न्यूनतम"
+    technical: "Contemporary Spiritual Aesthetic"
+
+  # ===== Purpose & Intent =====
+  purpose: "A visual interpretation of the Hanuman Chalisa that bridges traditional Hindu devotional art with contemporary design sensibilities, making ancient wisdom accessible to modern audiences while maintaining cultural authenticity and spiritual reverence."
+
+  intent:
+    primary: "Create a cohesive visual narrative across all 47 images that enhances understanding and devotion"
+    secondary: "Demonstrate that sacred art can be both culturally authentic and aesthetically modern"
+    spiritual: "Invoke divine presence through radiant, luminous depictions that inspire devotion and spiritual contemplation"
+    accessibility: "Appeal to younger, globally-distributed audiences while respecting traditional iconography"
+
+  # ===== Visual Style Core =====
+  style:
+    aesthetic: "Contemporary Spiritual Minimalism"
+    movement: "Modern Sacred Art"
+    influence:
+      - "Traditional Hindu devotional art"
+      - "Contemporary digital illustration"
+      - "Sacred geometry and mandala patterns"
+      - "Cinematic lighting and composition"
+
+    description:
+      primary: "Luminous, radiant depictions combining minimalist principles with divine opulence"
+      atmosphere: "Mystical, ethereal, and spiritually charged with golden divine energy"
+      approach: "Balance between simplicity and detail - minimalist where it serves clarity, detailed where it conveys divinity"
+
+  # ===== Color Palette =====
+  color_palette:
+    primary:
+      name: "Saffron Orange / Sacred Gold"
+      hex: "#FF8C00"
+      significance: "The color of divine fire, spiritual awakening, and Hindu sacred tradition"
+      usage: "Primary color for Hanuman's form, divine radiance, and spiritual energy"
+
+    secondary:
+      - name: "Deep Golden"
+        hex: "#FFA500"
+        usage: "Divine auras, heavenly light, mystical atmosphere"
+
+      - name: "Amber Glow"
+        hex: "#FFBF00"
+        usage: "Radiant energy, enlightenment, cosmic illumination"
+
+      - name: "Burnt Sienna"
+        hex: "#E97451"
+        usage: "Warmth, earthly connection, grounding elements"
+
+    background:
+      dark:
+        name: "Charcoal Black"
+        hex: "#2B2B2B"
+        usage: "Creates dramatic contrast, emphasizes luminosity of divine figures"
+
+      light:
+        name: "Cosmic Mist"
+        hex: "#F5E6D3"
+        usage: "Ethereal atmospheres, heavenly realms, soft divine spaces"
+
+    accents:
+      - name: "Divine Blue"
+        hex: "#4169E1"
+        significance: "Connection to Rama, cosmic consciousness"
+
+      - name: "Sacred Red"
+        hex: "#DC143C"
+        significance: "Power, protection, devotional fervor"
+
+      - name: "Lotus Pink"
+        hex: "#FFB6C1"
+        significance: "Purity, spiritual unfolding"
+
+    mood: "Warm, radiant, spiritually uplifting with dramatic contrast between light and shadow"
+
+  # ===== Depiction Rules =====
+  depiction_rules:
+    hanuman:
+      form: "Anthropomorphic monkey deity with human-like proportions"
+      complexion: "Golden-orange to saffron, luminous and radiant"
+      physique: "Muscular and powerful, displaying divine strength"
+      face: "Simian features with expressive, devotional eyes and noble bearing"
+      tail: "Long, curved, often visible as signature element"
+
+      attributes:
+        mandatory:
+          - "Gada (mace) - symbol of strength"
+          - "Janeu (sacred thread) - symbol of spiritual authority"
+          - "Tilak (forehead mark) - devotional marking"
+
+        common:
+          - "Crown or ornamental headpiece"
+          - "Earrings (kundala)"
+          - "Jewelry and ornaments"
+          - "Dhoti or minimal clothing"
+          - "Ankle and wrist ornaments"
+
+      expressions:
+        devotional: "Eyes closed or gazing upward in meditation, hands in anjali mudra"
+        powerful: "Fierce yet benevolent, displaying strength without aggression"
+        protective: "Alert, watchful, guardian stance"
+        joyful: "Radiant smile when in service to Rama"
+
+    rama:
+      when_depicted: "Often shown with Hanuman, in Hanuman's heart, or being served by him"
+      appearance: "Blue-complexioned deity with regal bearing, bow and arrows"
+      treatment: "Central and honored, with Hanuman in devoted service"
+
+    other_deities:
+      consistency: "Maintain traditional iconography for Sita, Lakshmana, Shiva, Brahma, etc."
+      hierarchy: "Hanuman and Rama as primary focus, others as supporting divine presence"
+
+    devotees:
+      representation: "Human figures in reverent poses, receiving blessings or in prayer"
+      relationship: "Shown smaller in scale, looking up to divine figures"
+      diversity: "Include various ages, genders, representing universal accessibility"
+
+  # ===== Composition Principles =====
+  composition:
+    layout:
+      orientation: "Portrait (2:3 ratio)"
+      focus: "Central subject with supporting elements radiating outward"
+      balance: "Asymmetric balance weighted toward divine figures"
+
+    focal_points:
+      primary: "Hanuman's face or central divine action"
+      secondary: "Sacred symbols, divine attributes, supporting narrative elements"
+
+    perspective:
+      preferred: "Low angle looking up (enhances divine majesty)"
+      alternative: "Eye level for intimate devotional moments"
+      dramatic: "Aerial views for cosmic or expansive scenes"
+
+    depth:
+      foreground: "Main divine figures in sharp focus with highest luminosity"
+      midground: "Supporting elements, narrative context"
+      background: "Atmospheric elements, cosmic or earthly settings, often with bokeh effect"
+
+  # ===== Lighting & Atmosphere =====
+  lighting:
+    primary_source: "Divine inner radiance emanating from sacred figures"
+    quality: "Soft, glowing, otherworldly"
+    direction: "Often emanating from the deity outward, creating halos and auras"
+
+    effects:
+      - "Rim lighting around divine forms"
+      - "Volumetric light rays (god rays)"
+      - "Particle effects suggesting divine energy"
+      - "Glowing auras and halos"
+      - "Bokeh light spots in background"
+
+    mood: "Mystical, transcendent, spiritually charged"
+    contrast: "High contrast between illuminated divine figures and darker surroundings"
+
+  # ===== Pattern & Ornamentation =====
+  patterns:
+    mandalas:
+      usage: "Background elements, halos, sacred geometry"
+      style: "Intricate but not overwhelming, support rather than dominate"
+      complexity: "Medium to high detail, often with sacred geometry"
+
+    decorative_elements:
+      - "Lotus patterns (purity, spiritual unfolding)"
+      - "Paisley motifs (traditional Indian aesthetic)"
+      - "Om symbols and sacred syllables"
+      - "Geometric sacred patterns"
+      - "Stylized flames (divine fire)"
+
+    integration: "Patterns enhance but never distract from the central divine figure"
+
+  # ===== Symbolic Elements =====
+  symbolism:
+    recurring_motifs:
+      - element: "Divine radiance"
+        meaning: "Spiritual illumination, enlightenment, divine presence"
+
+      - element: "Sacred geometry"
+        meaning: "Cosmic order, divine perfection, universal harmony"
+
+      - element: "Lotus imagery"
+        meaning: "Purity, spiritual awakening, transcendence"
+
+      - element: "Mountains"
+        meaning: "Stability, strength, spiritual ascent"
+
+      - element: "Celestial spheres"
+        meaning: "Three worlds, cosmic consciousness, universal scope"
+
+      - element: "Fire and flames"
+        meaning: "Purification, transformation, divine energy"
+
+    color_symbolism:
+      saffron: "Renunciation, spirituality, fire of knowledge"
+      gold: "Divine nature, purity, immortality"
+      blue: "Infinity, cosmic consciousness, connection to Rama"
+
+  # ===== Technical Specifications =====
+  technical:
+    resolution:
+      width: 1024
+      height: 1536
+      unit: "pixels"
+      aspect_ratio: "2:3 (portrait)"
+
+    format:
+      file_type: "PNG"
+      bit_depth: 24
+      transparency: "Supported where appropriate"
+      color_space: "sRGB"
+
+    quality:
+      detail_level: "High"
+      clarity: "Sharp focus on primary subjects, atmospheric depth for background"
+      texture: "Smooth for divine forms, detailed for ornamentation"
+
+    generation_parameters:
+      model: "DALL-E 3"
+      quality: "standard"
+      size: "1024x1024 or 1024x1792 (cropped to 1024x1536)"
+      iterations: "Multiple variations reviewed for best spiritual and artistic quality"
+
+  # ===== File Organization =====
+  files:
+    total_count: 44
+    structure:
+      title: "title-page.png (1 file)"
+      opening_dohas: "opening-doha-01.png, opening-doha-02.png (2 files)"
+      verses: "verse-01.png through verse-40.png (40 files)"
+      closing: "closing-doha.png (1 file)"
+
+    naming_convention: "lowercase-with-hyphens-and-number.png"
+    location: "images/modern-minimalist/"
+
+  # ===== Artistic Principles =====
+  principles:
+    cultural_authenticity:
+      - "Respect traditional Hindu iconography"
+      - "Maintain accepted artistic conventions for deity representation"
+      - "Ensure gestures (mudras) are traditionally accurate"
+      - "Honor the sacred nature of the subject matter"
+
+    spiritual_effectiveness:
+      - "Create images that inspire devotion and contemplation"
+      - "Balance beauty with spiritual power"
+      - "Evoke the divine presence, not just illustrate stories"
+      - "Support meditation and spiritual practice"
+
+    visual_coherence:
+      - "Consistent color palette across all 47 images"
+      - "Unified lighting and atmospheric treatment"
+      - "Recognizable Hanuman appearance throughout"
+      - "Similar compositional approaches for visual flow"
+
+    modern_accessibility:
+      - "Clean, uncluttered compositions"
+      - "Contemporary aesthetic sensibility"
+      - "Digital-native presentation"
+      - "Globally appealing while culturally specific"
+
+  # ===== Theme Variations =====
+  variations:
+    title_banner:
+      style: "Flat, graphic, minimalist silhouette"
+      background: "Clean dark charcoal"
+      text: "Devanagari calligraphy integrated"
+      purpose: "Project identity, GitHub banner"
+
+    opening_dohas:
+      style: "More minimalist, linear, contemplative"
+      mood: "Reverent, preparatory, invocational"
+      focus: "Guru-devotee relationship, humility"
+
+    main_verses:
+      style: "Full radiance, detailed, narrative-driven"
+      mood: "Dynamic, powerful, story-telling"
+      range: "From fierce warrior to gentle devotee"
+
+    closing_doha:
+      style: "Intimate, heart-centered, unified"
+      mood: "Complete, fulfilled, peaceful"
+      focus: "Divine presence in devotee's heart"
+
+  # ===== Usage Guidelines =====
+  usage:
+    appropriate_contexts:
+      - "Devotional websites and digital platforms"
+      - "Educational resources about Hanuman Chalisa"
+      - "Personal spiritual practice and meditation"
+      - "Print publications with proper attribution"
+      - "Mobile applications for scripture reading"
+
+    attribution:
+      required: "Images generated using DALL-E 3 for Hanuman Chalisa project"
+      style_credit: "Modern Minimalist theme by [project creator]"
+
+    modifications:
+      allowed: "Scaling, cropping for different formats"
+      discouraged: "Color alterations that change sacred significance"
+      prohibited: "Commercial use without permission, disrespectful alterations"
+
+  # ===== Keywords & Tags =====
+  keywords:
+    - "modern sacred art"
+    - "contemporary Hindu devotional art"
+    - "minimalist spiritual design"
+    - "divine illustration"
+    - "saffron aesthetic"
+    - "luminous deity depiction"
+    - "sacred geometry"
+    - "devotional imagery"
+    - "AI generated spiritual art"
+    - "Hanuman iconography"
+
+  # ===== Design Philosophy =====
+  philosophy: |
+    This theme represents a bridge between ancient devotional tradition and
+    contemporary visual language. By embracing modern minimalism while honoring
+    traditional iconography, it makes the timeless wisdom of the Hanuman Chalisa
+    accessible to digital-native audiences worldwide.
+
+    The luminous, radiant quality of each image aims to evoke the actual
+    experience of divine darshan (viewing of the sacred), not merely illustrate
+    stories. Each composition is designed to support meditation, inspire devotion,
+    and create a visual sanctuary for spiritual contemplation.
+
+    The consistent use of saffron-gold tones creates a unified spiritual
+    atmosphere while honoring the color's deep significance in Hindu tradition
+    as the shade of sacred fire, renunciation, and spiritual awakening.

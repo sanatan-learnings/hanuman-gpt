@@ -232,6 +232,33 @@ theme:
       size: "1024x1024 or 1024x1792 (cropped to 1024x1536)"
       iterations: "Multiple variations reviewed for best spiritual and artistic quality"
 
+  # ===== Generation Configuration =====
+  # This section is used by scripts/generate_theme_images.py for automated image generation
+  generation:
+    # Style modifier appended to base prompts from docs/image-prompts.md
+    style_modifier: |
+      Modern minimalist spiritual art style with luminous golden-orange and saffron tones.
+      Divine radiance emanating from the figures with dramatic lighting and glowing auras.
+      Clean composition with intricate sacred geometry and mandala patterns in background.
+      Mystical, ethereal atmosphere with cinematic quality. High contrast between illuminated
+      divine figures and dark charcoal or soft cosmic mist backgrounds. Rim lighting,
+      volumetric light rays, and bokeh effects. Contemporary digital art aesthetic while
+      maintaining traditional Hindu devotional symbolism. Professional, reverent, and
+      spiritually uplifting.
+
+    # DALL-E 3 API parameters
+    dalle_params:
+      model: "dall-e-3"
+      size: "1024x1792"      # Portrait orientation (crop to 1024x1536 for final)
+      quality: "standard"     # Options: standard, hd
+      style: "natural"        # Options: natural, vivid
+      n: 1
+
+    # Generation behavior
+    retry_count: 3           # Number of retries on API failure
+    rate_limit_delay: 2      # Seconds between API calls
+    skip_existing: true      # Skip files that already exist
+
   # ===== File Organization =====
   files:
     total_count: 44

@@ -4,23 +4,29 @@ This directory contains scripts for generating verse images using AI image gener
 
 ## ⚡ Quick Start (Simplest Way)
 
-Use the wrapper script for one-command generation:
+### Option 1: Generate from Theme YAML (Recommended)
+
+If a theme specification exists at `docs/themes/<theme-name>.yml`:
 
 ```bash
-# Basic usage
-./scripts/generate.sh traditional-art
+# Just specify the theme name - everything else is automatic!
+./scripts/generate.sh modern-minimalist
+```
 
-# With custom style
+The script reads all settings (style, quality, size) from the theme YAML file.
+
+### Option 2: Generate with Custom Style
+
+For new custom themes without a YAML file:
+
+```bash
 ./scripts/generate.sh watercolor --style "soft watercolor painting style"
-
-# Show all options
-./scripts/generate.sh --help
 ```
 
 **First Time Setup (30 seconds):**
 1. Get API key: https://platform.openai.com/api-keys
 2. Set it: `export OPENAI_API_KEY='your-key-here'`
-3. Run: `./scripts/generate.sh your-theme-name`
+3. Run: `./scripts/generate.sh modern-minimalist`
 
 Done! The script auto-installs dependencies and generates all 47 images.
 
@@ -30,20 +36,26 @@ Done! The script auto-installs dependencies and generates all 47 images.
 ./scripts/generate.sh <theme-name> [options]
 
 Options:
-  -s, --style <description>  Custom style description for the theme
-  -q, --quality <level>      Image quality: 'standard' or 'hd' (default: standard)
-      --size <dimensions>    Image size: '1024x1024' or '1024x1792' (default: 1024x1024)
+  -s, --style <description>  Custom style (overrides theme YAML if present)
+  -q, --quality <level>      Image quality: 'standard' or 'hd' (default: from theme or standard)
+      --size <dimensions>    Image size: '1024x1024' or '1024x1792' (default: from theme or 1024x1024)
   -r, --resume <filename>    Resume from specific image (e.g., verse-15.png)
   -h, --help                 Show help message
 ```
 
 **Examples:**
 ```bash
-# HD quality (2x cost)
-./scripts/generate.sh theme-name --quality hd
+# Generate using theme YAML settings (simplest)
+./scripts/generate.sh modern-minimalist
 
-# Custom size
-./scripts/generate.sh theme-name --size 1024x1792
+# Override theme quality with HD (2x cost)
+./scripts/generate.sh modern-minimalist --quality hd
+
+# Custom style for new theme
+./scripts/generate.sh watercolor --style "soft watercolor painting style"
+
+# Override theme style completely
+./scripts/generate.sh modern-minimalist --style "completely different style"
 
 # Resume from specific image
 ./scripts/generate.sh theme-name --resume verse-15.png
@@ -173,44 +185,50 @@ Check current pricing at: https://openai.com/pricing
 
 ## Examples
 
-### 1. Modern Minimalist (Default)
+### 1. Modern Minimalist (Using Theme YAML)
 
 ```bash
-python generate_theme_images.py \
-  --theme-name modern-minimalist \
-  --style "modern minimalist artistic silhouette in saffron orange against clean white background with subtle mandala patterns"
+# Simplest - reads everything from docs/themes/modern-minimalist.yml
+./scripts/generate.sh modern-minimalist
 ```
 
-### 2. Traditional Indian Art
+### 2. Traditional Indian Art (Custom Style)
 
 ```bash
-python generate_theme_images.py \
-  --theme-name traditional-art \
+./scripts/generate.sh traditional-art \
   --style "traditional Indian devotional art style inspired by Mughal miniature paintings, rich colors, gold leaf accents, intricate details, sacred atmosphere"
 ```
 
 ### 3. Watercolor Style
 
 ```bash
-python generate_theme_images.py \
-  --theme-name watercolor \
+./scripts/generate.sh watercolor \
   --style "soft watercolor illustration with gentle colors, flowing brush strokes, dreamy contemplative mood, hand-painted artistic feel"
 ```
 
 ### 4. Pencil Sketch
 
 ```bash
-python generate_theme_images.py \
-  --theme-name pencil-sketch \
+./scripts/generate.sh pencil-sketch \
   --style "detailed pencil sketch drawing, black and white, classical line art, timeless artistic aesthetic"
 ```
 
 ### 5. Contemporary Digital Art
 
 ```bash
-python generate_theme_images.py \
-  --theme-name digital-art \
+./scripts/generate.sh digital-art \
   --style "contemporary digital illustration, vibrant colors, dynamic composition, modern graphic novel style with spiritual symbolism"
+```
+
+### 6. Override Theme Settings
+
+```bash
+# Use modern-minimalist theme but with different style
+./scripts/generate.sh modern-minimalist \
+  --style "modern minimalist with cool blue tones instead of orange"
+
+# Use theme style but with HD quality
+./scripts/generate.sh modern-minimalist --quality hd
 ```
 
 ## Configuration Information Required
@@ -259,9 +277,23 @@ images/{theme-name}/
 └── closing-doha.png
 ```
 
-## After Generation
+## Creating a New Theme
 
-### 1. Review Images
+### Method A: Create Theme YAML First (Recommended)
+
+1. **Create theme specification**: Copy `docs/themes/modern-minimalist.yml` to `docs/themes/my-theme.yml`
+2. **Edit generation settings**: Update the `generation.style_modifier` section with your desired style
+3. **Generate images**: Run `./scripts/generate.sh my-theme`
+4. **Review and iterate**: Check images, adjust theme YAML if needed, regenerate
+
+### Method B: Generate First, Document Later
+
+1. **Generate images**: Run `./scripts/generate.sh my-theme --style "your style description"`
+2. **Create theme YAML**: Document your theme in `docs/themes/my-theme.yml` for future reference
+
+### After Generation
+
+#### 1. Review Images
 
 ```bash
 open images/your-theme-name/  # macOS
@@ -269,9 +301,9 @@ xdg-open images/your-theme-name/  # Linux
 explorer images\your-theme-name\  # Windows
 ```
 
-### 2. Update Theme Configuration
+#### 2. Update Theme Configuration
 
-Edit `_data/themes.yml`:
+Edit `_data/themes.yml` to add simple Jekyll config:
 
 ```yaml
 your-theme-name:
@@ -283,7 +315,17 @@ your-theme-name:
   default: false
 ```
 
-### 3. Test Locally
+#### 3. Create Theme Documentation (if not done)
+
+Create `docs/themes/your-theme-name.yml` with complete specifications:
+- Visual style guidelines
+- Color palette
+- Generation configuration
+- Usage guidelines
+
+See `docs/themes/modern-minimalist.yml` for a complete example.
+
+#### 4. Test Locally
 
 ```bash
 cd ..
@@ -292,14 +334,50 @@ jekyll serve
 # Test theme switching
 ```
 
-### 4. Commit and Push
+#### 5. Commit and Push
 
 ```bash
 git add images/your-theme-name/
 git add _data/themes.yml
+git add docs/themes/your-theme-name.yml
 git commit -m "Add [Your Theme Name] image theme"
 git push origin main
 ```
+
+## Theme YAML Files
+
+Theme YAML files in `docs/themes/` serve dual purposes:
+
+1. **Design Documentation**: Complete visual style guides, color palettes, depiction rules
+2. **Generation Configuration**: Automated settings for image generation
+
+### Key Sections for Generation
+
+```yaml
+generation:
+  # Style description appended to base prompts
+  style_modifier: |
+    Your detailed style description here...
+
+  # DALL-E 3 API parameters
+  dalle_params:
+    model: "dall-e-3"
+    size: "1024x1792"
+    quality: "standard"  # or "hd"
+    style: "natural"     # or "vivid"
+
+  # Generation behavior
+  retry_count: 3
+  rate_limit_delay: 2
+  skip_existing: true
+```
+
+### Benefits of Theme YAML
+
+- **Consistency**: Ensures reproducible results
+- **Documentation**: Records design decisions and rationale
+- **Simplicity**: One command generates entire theme: `./scripts/generate.sh theme-name`
+- **Flexibility**: Can override any setting via command line
 
 ## Troubleshooting
 

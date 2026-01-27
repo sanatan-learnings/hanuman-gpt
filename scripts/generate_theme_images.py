@@ -21,10 +21,15 @@ from pathlib import Path
 from typing import List, Dict, Optional
 import requests
 from openai import OpenAI
+try:
+    import yaml
+except ImportError:
+    yaml = None
 
 # Configuration
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 IMAGES_DIR = Path(__file__).parent.parent / "images"
+THEMES_DIR = DOCS_DIR / "themes"
 PROMPTS_FILE = DOCS_DIR / "image-prompts.md"
 
 # DALL-E 3 Configuration
@@ -37,7 +42,7 @@ IMAGE_STYLE = "natural"  # Options: natural, vivid
 class ImageGenerator:
     """Generate images using DALL-E 3 API."""
 
-    def __init__(self, api_key: str, theme_name: str, style_modifier: str = ""):
+    def __init__(self, api_key: str, theme_name: str, style_modifier: str = "", theme_config: Optional[Dict] = None):
         """
         Initialize the image generator.
 
@@ -45,9 +50,17 @@ class ImageGenerator:
             api_key: OpenAI API key
             theme_name: Name of the theme (e.g., 'traditional-art')
             style_modifier: Additional style description to append to base prompts
+            theme_config: Optional theme configuration from YAML file
         """
         self.client = OpenAI(api_key=api_key)
         self.theme_name = theme_name
+        self.theme_config = theme_config or {}
+
+        # Get style modifier from theme config or parameter
+        if not style_modifier and theme_config:
+            generation = theme_config.get('theme', {}).get('generation', {})
+            style_modifier = generation.get('style_modifier', '').strip()
+
         self.style_modifier = style_modifier
         self.output_dir = IMAGES_DIR / theme_name
 
@@ -249,6 +262,33 @@ class ImageGenerator:
             print(f"4. Commit and push to GitHub")
 
 
+def load_theme_config(theme_name: str) -> Optional[Dict]:
+    """
+    Load theme configuration from YAML file if it exists.
+
+    Args:
+        theme_name: Name of the theme
+
+    Returns:
+        Theme configuration dict or None if not found
+    """
+    if not yaml:
+        return None
+
+    theme_file = THEMES_DIR / f"{theme_name}.yml"
+    if not theme_file.exists():
+        return None
+
+    try:
+        with open(theme_file, 'r', encoding='utf-8') as f:
+            config = yaml.safe_load(f)
+            print(f"✓ Loaded theme configuration from {theme_file}")
+            return config
+    except Exception as e:
+        print(f"⚠ Warning: Failed to load theme config: {e}")
+        return None
+
+
 def main():
     """Main entry point for the script."""
     parser = argparse.ArgumentParser(
@@ -256,10 +296,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Generate modern minimalist theme (default)
+  # Generate from theme YAML (automatically reads style from docs/themes/modern-minimalist.yml)
   python scripts/generate_theme_images.py --theme-name modern-minimalist
 
-  # Generate traditional art style
+  # Generate with custom style (overrides theme YAML)
   python scripts/generate_theme_images.py \\
     --theme-name traditional-art \\
     --style "traditional Indian devotional art style with rich colors and gold accents"
@@ -280,6 +320,11 @@ Configuration:
 
   Or use .env file (requires python-dotenv):
     OPENAI_API_KEY=your-api-key-here
+
+Theme YAML Files:
+  Place theme specifications in docs/themes/<theme-name>.yml
+  The script will automatically read generation settings from the YAML file
+  Use --style to override the theme's default style modifier
 
 Cost Estimate:
   - DALL-E 3 Standard: $0.040 per image
@@ -359,9 +404,30 @@ Cost Estimate:
         print("Error: Theme name must contain only lowercase letters, numbers, and hyphens")
         sys.exit(1)
 
+    # Try to load theme configuration
+    theme_config = load_theme_config(args.theme_name)
+
+    # Apply theme config defaults if available and not overridden
+    if theme_config and not args.style:
+        generation = theme_config.get('theme', {}).get('generation', {})
+        dalle_params = generation.get('dalle_params', {})
+
+        # Override command line args with theme defaults if not explicitly set
+        if args.size == '1024x1792' and 'size' in dalle_params:
+            IMAGE_SIZE = dalle_params['size']
+            print(f"✓ Using theme size: {IMAGE_SIZE}")
+
+        if args.quality == 'standard' and 'quality' in dalle_params:
+            IMAGE_QUALITY = dalle_params['quality']
+            print(f"✓ Using theme quality: {IMAGE_QUALITY}")
+
+        if args.style_type == 'natural' and 'style' in dalle_params:
+            IMAGE_STYLE = dalle_params['style']
+            print(f"✓ Using theme style: {IMAGE_STYLE}")
+
     # Create generator and run
     try:
-        generator = ImageGenerator(api_key, args.theme_name, args.style)
+        generator = ImageGenerator(api_key, args.theme_name, args.style, theme_config)
         generator.generate_all_images(start_from=args.start_from)
     except KeyboardInterrupt:
         print("\n\n⚠ Generation interrupted by user")

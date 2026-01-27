@@ -11,3 +11,6 @@ Pillow>=10.0.0
 
 # Environment variable management (optional)
 python-dotenv>=1.0.0
+
+# YAML parsing for theme configuration files
+PyYAML>=6.0.0

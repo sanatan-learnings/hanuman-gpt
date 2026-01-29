@@ -88,7 +88,7 @@ You should get a response!
 
 ## Updating the Worker
 
-Made changes to `cloudflare-worker.js`?
+Made changes to `workers/cloudflare-worker.js`?
 
 ```bash
 wrangler deploy
@@ -179,7 +179,7 @@ Both work equally well! Choose what you prefer.
 
 - View metrics: https://dash.cloudflare.com/ > Workers > hanuman-chalisa-api > Metrics
 - Set custom domain: https://dash.cloudflare.com/ > Workers > hanuman-chalisa-api > Settings > Triggers
-- Restrict CORS: Edit `cloudflare-worker.js` line 13 to your domain
+- Restrict CORS: Edit `workers/cloudflare-worker.js` line 13 to your domain
 
 ---
 

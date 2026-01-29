@@ -74,7 +74,7 @@ python3 -m venv venv
 # Generate embeddings locally (FREE, no API needed)
 ./venv/bin/python scripts/generate_embeddings_local.py
 
-# Output: embeddings.json (~1.1MB)
+# Output: data/embeddings.json (~1.1MB)
 ```
 
 **Cost:** FREE - runs locally on your machine, no API calls required!

@@ -73,7 +73,7 @@ function initGuidanceSystem() {
  */
 async function loadEmbeddings() {
     try {
-        const response = await fetch('/hanuman-chalisa/embeddings.json');
+        const response = await fetch('/hanuman-chalisa/data/embeddings.json');
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
         }

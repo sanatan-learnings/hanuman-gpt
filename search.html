@@ -234,7 +234,7 @@ function getCurrentLanguage() {
 }
 
 // Load verses data
-fetch('{{ "/search.json" | relative_url }}')
+fetch('{{ "/data/search.json" | relative_url }}')
     .then(response => response.json())
     .then(data => {
         versesData = data;

@@ -81,7 +81,7 @@ hanuman-chalisa/
 ├── audio/                   # Audio recitations (coming soon)
 ├── docs/                    # Documentation
 ├── venv/                    # Python virtual environment (NEW, excluded from Jekyll)
-├── embeddings.json          # Pre-computed embeddings - 1.1MB (NEW)
+├── data/embeddings.json          # Pre-computed embeddings - 1.1MB (NEW)
 ├── guidance.html            # Spiritual guidance chat interface (NEW)
 └── index.html              # Home page with navigation
 ```
@@ -212,7 +212,7 @@ See [multilingual-implementation.md](multilingual-implementation.md) for complet
 - Real-time filtering with debouncing
 - Highlight matching text
 - Result snippets with context
-- Generated JSON index (`search.json`)
+- Generated JSON index (`data/search.json`)
 
 ### 3. Spiritual Guidance (RAG System) (`/guidance`)
 - **AI-powered Q&A** - Ask spiritual questions and receive guidance
@@ -254,10 +254,10 @@ See [multilingual-implementation.md](multilingual-implementation.md) for complet
 **Files:**
 - `scripts/generate_embeddings.py` - Pluggable embedding generation (OpenAI or HuggingFace)
 - `scripts/generate_embeddings_local.py` - Local HuggingFace embedding generation (legacy)
-- `embeddings.json` - Pre-computed verse embeddings (4.2MB, 1536-dim)
+- `data/embeddings.json` - Pre-computed verse embeddings (4.2MB, 1536-dim)
 - `guidance.html` - Chat interface
 - `assets/js/guidance.js` - RAG pipeline logic (supports both modes)
-- `cloudflare-worker.js` - Serverless API proxy for OpenAI
+- `workers/cloudflare-worker.js` - Serverless API proxy for OpenAI
 - `wrangler.toml` - Cloudflare Worker configuration
 - `scripts/deploy-cloudflare-worker.sh` - Automated deployment script
 - `venv/` - Python virtual environment (excluded from Jekyll build)
@@ -347,7 +347,7 @@ modern-minimalist:
 - **Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
 - **Virtual environment** - `venv/` for isolated dependencies
 - **Cost**: FREE (runs locally, no API calls)
-- **Output**: `embeddings.json` (1.1MB for 43 verses × 2 languages)
+- **Output**: `data/embeddings.json` (1.1MB for 43 verses × 2 languages)
 
 **Dependencies** (in `venv/`):
 ```bash
@@ -364,7 +364,7 @@ pip install sentence-transformers  # ~500MB including PyTorch
 2. Extracts YAML front matter (title, transliteration, meanings, stories)
 3. Combines fields into rich semantic documents
 4. Generates 384-dimensional embeddings locally
-5. Outputs `embeddings.json` with verse metadata + vectors
+5. Outputs `data/embeddings.json` with verse metadata + vectors
 6. Takes ~2-3 minutes on modern hardware
 
 ## Development Tools

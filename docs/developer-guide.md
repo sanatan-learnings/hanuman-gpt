@@ -309,7 +309,7 @@ All images should be:
 ### Caching Strategy
 
 - Static assets cached by GitHub Pages CDN
-- `search.json` regenerated on each build
+- `data/search.json` regenerated on each build
 - Images served with long cache headers
 
 ## API Integration

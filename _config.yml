@@ -34,6 +34,7 @@ exclude:
   - env/
   - .venv/
   - scripts/
+  - workers/
 
 # Plugins
 plugins:

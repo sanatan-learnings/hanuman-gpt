@@ -27,7 +27,7 @@ load_dotenv()
 
 # Configuration
 VERSES_DIR = Path(__file__).parent.parent / "_verses"
-OUTPUT_FILE = Path(__file__).parent.parent / "embeddings.json"
+OUTPUT_FILE = Path(__file__).parent.parent / "data" / "embeddings.json"
 
 # Provider configurations
 PROVIDERS = {

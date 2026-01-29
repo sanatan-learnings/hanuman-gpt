@@ -31,7 +31,7 @@ except ImportError:
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_DIMENSIONS = 384
 VERSES_DIR = Path(__file__).parent.parent / "_verses"
-OUTPUT_FILE = Path(__file__).parent.parent / "embeddings.json"
+OUTPUT_FILE = Path(__file__).parent.parent / "data" / "embeddings.json"
 
 def extract_yaml_frontmatter(file_path):
     """Extract YAML front matter from markdown file."""

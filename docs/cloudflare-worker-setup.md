@@ -30,7 +30,7 @@ This guide shows you how to deploy a Cloudflare Worker to proxy OpenAI API reque
 
 1. After deployment, click **Edit Code**
 2. Delete the default code
-3. Copy the entire contents of `cloudflare-worker.js` from your repo
+3. Copy the entire contents of `workers/cloudflare-worker.js` from your repo
 4. Paste it into the editor
 5. Click **Save and Deploy**
 

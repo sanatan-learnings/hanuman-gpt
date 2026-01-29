@@ -37,7 +37,7 @@ warning() {
 }
 
 # Check if we're in the right directory
-if [ ! -f "wrangler.toml" ] || [ ! -f "cloudflare-worker.js" ]; then
+if [ ! -f "wrangler.toml" ] || [ ! -f "workers/cloudflare-worker.js" ]; then
     error "Please run this script from the project root directory (where wrangler.toml is located)"
 fi
 

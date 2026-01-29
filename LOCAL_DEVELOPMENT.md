@@ -332,7 +332,7 @@ python scripts/generate_embeddings.py --provider openai
 - Switching embedding providers (HuggingFace ↔ OpenAI)
 
 **Output:**
-- File: `embeddings.json` (4.2MB for OpenAI, 1.1MB for HuggingFace)
+- File: `data/embeddings.json` (4.2MB for OpenAI, 1.1MB for HuggingFace)
 - Contains: Pre-computed embeddings for all 43 verses in English and Hindi
 
 ### Deploying Cloudflare Worker (For Maintainers)
@@ -400,7 +400,7 @@ git push
 ### Troubleshooting
 
 **"Error: Failed to load verse embeddings"**
-- Check if `embeddings.json` exists in project root
+- Check if `data/embeddings.json` exists in project root
 - Regenerate if missing: `./venv/bin/python scripts/generate_embeddings_local.py`
 
 **"Error: OpenAI API quota exceeded"**

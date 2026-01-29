@@ -160,7 +160,7 @@ Safe to run multiple times! The script:
 - Won't commit if there are no changes
 
 Use it to:
-- Redeploy after updating `cloudflare-worker.js`
+- Redeploy after updating `workers/cloudflare-worker.js`
 - Update API key
 - Get the worker URL again
 

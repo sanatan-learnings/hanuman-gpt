@@ -3,7 +3,7 @@
 # Your Jekyll site stays on GitHub Pages.
 
 name = "hanuman-chalisa-api"
-main = "cloudflare-worker.js"
+main = "workers/cloudflare-worker.js"
 compatibility_date = "2026-01-29"
 
 # Workers configuration

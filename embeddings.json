@@ -2,7 +2,7 @@
   "model": "sentence-transformers/all-MiniLM-L6-v2",
   "dimensions": 384,
   "provider": "local",
-  "generated_at": "2026-01-28T17:04:20.621564",
+  "generated_at": "2026-01-29T08:19:53.996019",
   "verses": {
     "en": [
       {

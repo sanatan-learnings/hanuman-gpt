@@ -101,7 +101,7 @@ Here are some ways you can contribute:
 See [multilingual-implementation.md](docs/multilingual-implementation.md) for translation guide.
 
 ### Media Creation
-- **Generate themed images** - Use DALL-E 3 to create new artistic themes (~$2 for 47 images). See [Developer Guide](docs/developer-guide.md#generate-custom-image-themes)
+- **Generate themed images** - Use DALL-E 3 to create new artistic themes (~$2 for 47 images). See [Image Generation Guide](images/README.md)
 - Record human voice recitations
 - Create regional language audio versions
 - Design verse-specific illustrations

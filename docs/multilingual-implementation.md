@@ -64,6 +64,7 @@ Add language parameter handling:
 - Or use cookies/localStorage to remember preference
 
 **Language Switcher in Header:**
+{% raw %}
 ```html
 <div class="language-switcher">
   <select id="languageSelect" onchange="switchLanguage(this.value)">
@@ -75,11 +76,13 @@ Add language parameter handling:
   </select>
 </div>
 ```
+{% endraw %}
 
 ### Step 5: Update Templates
 
 **File: `_layouts/verse.html` (updated)**
 
+{% raw %}
 ```liquid
 {% assign lang = page.lang | default: "en" %}
 {% assign t = site.data.translations[lang] %}
@@ -162,6 +165,7 @@ Add language parameter handling:
     </div>
 </article>
 ```
+{% endraw %}
 
 ## Implementation Workflow
 

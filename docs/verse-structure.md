@@ -116,15 +116,15 @@ The `_layouts/verse.html` template processes the YAML data:
 
 | Section | YAML Field | Template Code |
 |---------|-----------|---------------|
-| Image | `verse_number` | `{{ '/images/verse_' \| append: verse_img \| append: '.jpg' }}` |
-| Devanagari | `devanagari` | `{{ page.devanagari }}` |
-| Transliteration | `transliteration` | `{{ page.transliteration }}` |
-| Phonetic Notes | `phonetic_notes` | `{% for note in page.phonetic_notes %}` |
-| Word Meanings | `word_meanings` | `{% for item in page.word_meanings %}` |
-| Literal Translation | `literal_translation` | `{{ page.literal_translation }}` |
-| Interpretive Meaning | `interpretive_meaning` | `{{ page.interpretive_meaning }}` |
-| Story | `story` | `{{ page.story }}` |
-| Practical Application | `practical_application` | `{{ page.practical_application.teaching }}` |
+| Image | `verse_number` | {% raw %}`{{ '/images/verse_' \| append: verse_img \| append: '.jpg' }}`{% endraw %} |
+| Devanagari | `devanagari` | {% raw %}`{{ page.devanagari }}`{% endraw %} |
+| Transliteration | `transliteration` | {% raw %}`{{ page.transliteration }}`{% endraw %} |
+| Phonetic Notes | `phonetic_notes` | {% raw %}`{% for note in page.phonetic_notes %}`{% endraw %} |
+| Word Meanings | `word_meanings` | {% raw %}`{% for item in page.word_meanings %}`{% endraw %} |
+| Literal Translation | `literal_translation` | {% raw %}`{{ page.literal_translation }}`{% endraw %} |
+| Interpretive Meaning | `interpretive_meaning` | {% raw %}`{{ page.interpretive_meaning }}`{% endraw %} |
+| Story | `story` | {% raw %}`{{ page.story }}`{% endraw %} |
+| Practical Application | `practical_application` | {% raw %}`{{ page.practical_application.teaching }}`{% endraw %} |
 
 ## Rendered Sections
 

@@ -82,7 +82,7 @@ python3 -m venv venv
 ## Documentation
 
 **User Guides:**
-- [Usage Guide](docs/guide.md) - How to use the website
+- [User Guide](docs/user-guide.md) - How to use the website
 - [Background](docs/background.md) - History of the Hanuman Chalisa
 - [Book Generation](docs/book-generation.md) - Create printable books
 

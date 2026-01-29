@@ -319,4 +319,4 @@ Have ideas for book generation improvements? See [CONTRIBUTING.md](../CONTRIBUTI
 
 **May your personalized Hanuman Chalisa book bring devotion, understanding, and spiritual growth! 🙏**
 
-[← Back to Documentation]({{ '/docs/guide' | relative_url }})
+[← Back to Documentation]({{ '/docs/user-guide' | relative_url }})

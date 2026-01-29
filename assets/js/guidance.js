@@ -24,17 +24,33 @@ const TOP_K = 3; // Number of relevant verses to retrieve
 const MAX_TOKENS = 1000;
 const TEMPERATURE = 0.7;
 
+// Cloudflare Worker URL (set this after deploying your worker)
+// If set, the worker will be used and API key won't be required from users
+// Example: 'https://hanuman-chalisa-api.your-subdomain.workers.dev'
+const WORKER_URL = ''; // Leave empty to use user-provided API key mode
+
 /**
  * Initialize the guidance system on page load
  */
 function initGuidanceSystem() {
     console.log('Initializing guidance system...');
 
+    // Check if using Cloudflare Worker mode
+    if (WORKER_URL) {
+        console.log('Using Cloudflare Worker mode - API key not required');
+        // Hide API key section when using worker
+        const apiKeySection = document.getElementById('apiKeySection');
+        if (apiKeySection) {
+            apiKeySection.style.display = 'none';
+        }
+    } else {
+        console.log('Using user-provided API key mode');
+        // Initialize API key from localStorage
+        initApiKey();
+    }
+
     // Load embeddings
     loadEmbeddings();
-
-    // Initialize API key
-    initApiKey();
 
     // Set up event listeners
     setupEventListeners();
@@ -42,9 +58,9 @@ function initGuidanceSystem() {
     // Update placeholders based on language
     updatePlaceholders();
 
-    // Focus on API key input if not set, otherwise on query input
+    // Focus on query input
     setTimeout(() => {
-        if (!apiKey) {
+        if (!WORKER_URL && !apiKey) {
             document.getElementById('apiKeyInput')?.focus();
         } else {
             document.getElementById('queryInput')?.focus();
@@ -338,23 +354,41 @@ async function getGuidance(query, verses, lang) {
             { role: 'user', content: query }
         ];
 
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${apiKey}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                model: GPT_MODEL,
-                messages: messages,
-                temperature: TEMPERATURE,
-                max_tokens: MAX_TOKENS
-            })
-        });
+        const requestBody = {
+            model: GPT_MODEL,
+            messages: messages,
+            temperature: TEMPERATURE,
+            max_tokens: MAX_TOKENS
+        };
+
+        let response;
+
+        if (WORKER_URL) {
+            // Use Cloudflare Worker (no API key needed)
+            console.log('Calling Cloudflare Worker:', WORKER_URL);
+            response = await fetch(WORKER_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            });
+        } else {
+            // Use direct OpenAI API (requires user's API key)
+            console.log('Calling OpenAI API directly');
+            response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            });
+        }
 
         if (!response.ok) {
             const error = await response.json();
-            console.error('OpenAI API Error Response:', error);
+            console.error('API Error Response:', error);
             console.error('HTTP Status:', response.status);
             console.error('Error details:', {
                 message: error.error?.message,
@@ -386,7 +420,8 @@ async function handleSendQuery() {
         return;
     }
 
-    if (!apiKey) {
+    // Only check for API key if not using Cloudflare Worker
+    if (!WORKER_URL && !apiKey) {
         const lang = getCurrentLanguage();
         const errorMsg = lang === 'hi'
             ? 'कृपया पहले अपनी OpenAI API key सेट करें'

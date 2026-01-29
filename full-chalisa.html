@@ -12,7 +12,7 @@ description: "Read the complete Hanuman Chalisa with all 43 verses on a single p
         <p class="subtitle"><span data-lang="en">{{ t_en.full_chalisa.subtitle }}</span><span data-lang="hi">{{ t_hi.full_chalisa.subtitle }}</span></p>
 
         <div class="view-options">
-            <label><input type="checkbox" id="toggle-transliteration" checked> <span data-lang="en">{{ t_en.full_chalisa.show_transliteration }}</span><span data-lang="hi">{{ t_hi.full_chalisa.show_transliteration }}</span></label>
+            <label data-lang="en"><input type="checkbox" id="toggle-transliteration" checked> <span data-lang="en">{{ t_en.full_chalisa.show_transliteration }}</span></label>
             <label><input type="checkbox" id="toggle-translation" checked> <span data-lang="en">{{ t_en.full_chalisa.show_translation }}</span><span data-lang="hi">{{ t_hi.full_chalisa.show_translation }}</span></label>
             <label><input type="checkbox" id="toggle-meanings"> <span data-lang="en">{{ t_en.full_chalisa.show_meanings }}</span><span data-lang="hi">{{ t_hi.full_chalisa.show_meanings }}</span></label>
             <button onclick="window.print()" class="print-all-button">🖨️ <span data-lang="en">{{ t_en.full_chalisa.print_all }}</span><span data-lang="hi">{{ t_hi.full_chalisa.print_all }}</span></button>
@@ -59,7 +59,7 @@ description: "Read the complete Hanuman Chalisa with all 43 verses on a single p
                             <pre class="devanagari-text">{{ verse.devanagari }}</pre>
                         </div>
 
-                        <div class="text-column transliteration-section">
+                        <div class="text-column transliteration-section" data-lang="en">
                             <pre class="transliteration-text">{{ verse.transliteration }}</pre>
                         </div>
 

@@ -41,23 +41,25 @@ layout: default
         <h2><span data-lang="en">{{ t_en.sections.devanagari }}</span><span data-lang="hi">{{ t_hi.sections.devanagari }}</span></h2>
         <pre>{{ page.devanagari }}</pre>
 
-        <h2><span data-lang="en">{{ t_en.sections.transliteration }}</span><span data-lang="hi">{{ t_hi.sections.transliteration }}</span></h2>
-        <pre>{{ page.transliteration }}</pre>
+        <div data-lang="en">
+            <h2>{{ t_en.sections.transliteration }}</h2>
+            <pre>{{ page.transliteration }}</pre>
 
-        <h2><span data-lang="en">{{ t_en.sections.pronunciation }}</span><span data-lang="hi">{{ t_hi.sections.pronunciation }}</span></h2>
-        <p><strong><span data-lang="en">{{ t_en.labels.audio_recitation }}</span><span data-lang="hi">{{ t_hi.labels.audio_recitation }}</span>:</strong> <em>(<span data-lang="en">{{ t_en.labels.coming_soon }}</span><span data-lang="hi">{{ t_hi.labels.coming_soon }}</span>)</em></p>
-        <p><span data-lang="en">{{ t_en.labels.audio_description }}</span><span data-lang="hi">{{ t_hi.labels.audio_description }}</span></p>
+            <h2>{{ t_en.sections.pronunciation }}</h2>
+            <p><strong>{{ t_en.labels.audio_recitation }}:</strong> <em>({{ t_en.labels.coming_soon }})</em></p>
+            <p>{{ t_en.labels.audio_description }}</p>
 
-        {% if page.phonetic_notes %}
-        <p><strong><span data-lang="en">{{ t_en.labels.phonetic_breakdown }}</span><span data-lang="hi">{{ t_hi.labels.phonetic_breakdown }}</span>:</strong></p>
-        <p><span data-lang="en">{{ t_en.labels.key_words }}</span><span data-lang="hi">{{ t_hi.labels.key_words }}</span>:</p>
-        <ul>
-        {% for note in page.phonetic_notes %}
-            <li><strong>{{ note.word }}</strong> - [Phonetic: {{ note.phonetic }}] (emphasis on {{ note.emphasis }})</li>
-        {% endfor %}
-        </ul>
-        <p><em><span data-lang="en">{{ t_en.labels.guide_link }}</span><span data-lang="hi">{{ t_hi.labels.guide_link }}</span> <a href="{{ '/docs/guide' | relative_url }}?lang={{ lang }}"><span data-lang="en">{{ t_en.labels.comprehensive_guide }}</span><span data-lang="hi">{{ t_hi.labels.comprehensive_guide }}</span></a>.</em></p>
-        {% endif %}
+            {% if page.phonetic_notes %}
+            <p><strong>{{ t_en.labels.phonetic_breakdown }}:</strong></p>
+            <p>{{ t_en.labels.key_words }}:</p>
+            <ul>
+            {% for note in page.phonetic_notes %}
+                <li><strong>{{ note.word }}</strong> - [Phonetic: {{ note.phonetic }}] (emphasis on {{ note.emphasis }})</li>
+            {% endfor %}
+            </ul>
+            <p><em>{{ t_en.labels.guide_link }} <a href="{{ '/docs/guide' | relative_url }}?lang={{ lang }}">{{ t_en.labels.comprehensive_guide }}</a>.</em></p>
+            {% endif %}
+        </div>
 
         <h2><span data-lang="en">{{ t_en.sections.word_meanings }}</span><span data-lang="hi">{{ t_hi.sections.word_meanings }}</span></h2>
         <ul>

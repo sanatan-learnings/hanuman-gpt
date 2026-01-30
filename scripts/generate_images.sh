@@ -196,9 +196,12 @@ if [ -n "$FORCE" ]; then
         echo -e "${YELLOW}⚠ WARNING: Force regeneration will delete $IMAGE_COUNT existing images!${NC}"
         echo -e "${YELLOW}Theme directory: $IMAGES_DIR${NC}"
         echo ""
-        read -p "Are you sure you want to delete and regenerate ALL images? (yes/no): " CONFIRM
+        read -p "Are you sure you want to delete and regenerate ALL images? (y/n): " CONFIRM
 
-        if [ "$CONFIRM" = "yes" ]; then
+        # Convert to lowercase for comparison
+        CONFIRM_LOWER=$(echo "$CONFIRM" | tr '[:upper:]' '[:lower:]')
+
+        if [[ "$CONFIRM_LOWER" =~ ^(y|yes)$ ]]; then
             echo ""
             echo -e "${YELLOW}Deleting existing theme directory...${NC}"
             rm -rf "$IMAGES_DIR"

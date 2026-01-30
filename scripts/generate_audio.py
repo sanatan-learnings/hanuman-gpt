@@ -32,6 +32,7 @@ import re
 try:
     from elevenlabs import VoiceSettings
     from elevenlabs.client import ElevenLabs
+    from elevenlabs.environment import ElevenLabsEnvironment
 except ImportError:
     print("Error: elevenlabs package not installed")
     print("Install with: pip install elevenlabs")
@@ -71,17 +72,18 @@ class AudioGenerator:
             api_key: Eleven Labs API key
             voice_id: Voice ID to use for generation
         """
-        # Initialize client with correct endpoint for EU data residency
+        # Initialize client with correct environment for data residency
         if "_residency_eu" in api_key:
-            # Try EU endpoint format
+            # Use EU production environment
             self.client = ElevenLabs(
                 api_key=api_key,
-                base_url="https://eu.api.elevenlabs.io"
+                environment=ElevenLabsEnvironment.PRODUCTION_EU
             )
-            print("✓ Using EU data residency endpoint (eu.api.elevenlabs.io)")
+            print("✓ Using EU production environment")
         else:
+            # Use default global environment
             self.client = ElevenLabs(api_key=api_key)
-            print("✓ Using global endpoint")
+            print("✓ Using global production environment")
 
         self.voice_id = voice_id
 

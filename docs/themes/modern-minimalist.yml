@@ -33,23 +33,6 @@ theme:
       - "Educational resources for adults"
       - "Contemporary religious art appreciation"
 
-  # ===== Character Consistency Reference =====
-  # This description is prepended to EVERY image prompt to ensure Hanuman appears the same across all 44 images
-  character_reference: |
-    IMPORTANT - Character Consistency: Hanuman appears as the SAME divine figure in EVERY scene with these EXACT features:
-    - Radiant golden-orange skin with luminous spiritual glow
-    - Serene, wise expression with gentle eyes conveying devotion and strength
-    - Athletic, graceful build with divine proportions
-    - Simple traditional orange-saffron dhoti with subtle gold trim
-    - Elegant golden crown (mukuta) with refined details
-    - Traditional vertical tilak marking on forehead in red-saffron
-    - Minimal but refined golden jewelry: simple necklace, armlets, anklets
-    - Long expressive tail in natural, graceful poses
-    - Bare feet
-    - When shown with mace (gada): elegant golden staff with traditional ornate head
-    - Overall appearance: dignified, peaceful, spiritually powerful yet approachable
-    This EXACT SAME divine form appears consistently in every image - maintain these specific features across all scenes.
-
   # ===== Visual Style Core =====
   style:
     aesthetic: "Contemporary Spiritual Minimalism"

@@ -33,24 +33,6 @@ theme:
       - "Educational introduction to Hindu mythology"
       - "Family devotional activities"
 
-  # ===== Character Consistency Reference =====
-  # This description is prepended to EVERY image prompt to ensure Hanuman appears the same across all 44 images
-  character_reference: |
-    IMPORTANT - Character Consistency: Hanuman appears as the SAME friendly cartoon monkey character in EVERY scene with these EXACT features:
-    - Golden-orange fur with soft warm glow
-    - Large round expressive brown eyes with friendly sparkle and kind gaze
-    - Gentle warm smile showing care and strength (never scary or fierce)
-    - Athletic but child-friendly proportions (superhero-like build appropriate for kids)
-    - Simple bright orange dhoti (cloth around waist) with decorative golden border
-    - Small golden decorative crown with red jewel in the center
-    - Simple vertical red tilak marking on forehead (between eyes)
-    - Colorful armlets on both upper arms (orange and gold decorative bands)
-    - Simple gold necklace
-    - Long expressive tail that curves playfully
-    - Bare feet (no shoes)
-    - When shown with mace: appears as magical golden glowing staff with round top
-    This EXACT SAME character appears in every image - maintain these features consistently across all scenes.
-
   # ===== Visual Style Core =====
   style:
     aesthetic: "Playful Children's Storybook Illustration"

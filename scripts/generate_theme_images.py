@@ -132,7 +132,7 @@ class ImageGenerator:
 
     def build_full_prompt(self, scene_description: str) -> str:
         """
-        Build the full prompt by combining character reference, scene description, and theme style.
+        Build the full prompt by combining scene description with theme style.
 
         Args:
             scene_description: The scene description from docs/image-prompts.md
@@ -141,11 +141,6 @@ class ImageGenerator:
             Complete prompt for DALL-E 3
         """
         prompt_parts = []
-
-        # Add character reference for consistency (if provided in theme)
-        character_ref = self.theme_config.get('theme', {}).get('character_reference', '').strip()
-        if character_ref:
-            prompt_parts.append(f"Character Reference: {character_ref}")
 
         # Add scene description
         prompt_parts.append(scene_description)

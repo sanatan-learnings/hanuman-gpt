@@ -72,19 +72,19 @@ class AudioGenerator:
             voice_id: Voice ID to use for generation
         """
         # Detect data residency region from API key
-        base_url = None
+        # For EU residency keys, the SDK should automatically route correctly
+        # But we can explicitly set the base_url if needed
         if "_residency_eu" in api_key:
-            base_url = "https://api.elevenlabs.eu"
-            print("✓ Detected EU data residency API key")
-        elif "_residency_" in api_key:
-            # Other residency regions could be added here
-            print("⚠ Non-EU residency key detected - using global endpoint")
-
-        # Initialize client with appropriate base URL
-        if base_url:
-            self.client = ElevenLabs(api_key=api_key, base_url=base_url)
+            # EU data residency endpoint
+            self.client = ElevenLabs(
+                api_key=api_key,
+                base_url="https://api.eu.elevenlabs.io"
+            )
+            print("✓ Using EU data residency endpoint (api.eu.elevenlabs.io)")
         else:
+            # Global endpoint
             self.client = ElevenLabs(api_key=api_key)
+            print("✓ Using global endpoint")
 
         self.voice_id = voice_id
 

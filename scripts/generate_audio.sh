@@ -17,6 +17,7 @@ NC='\033[0m' # No Color
 RESUME="${RESUME:-}"
 ONLY=""
 REGENERATE=""
+FORCE=""
 VOICE_ID=""
 
 # Show usage
@@ -28,6 +29,7 @@ show_usage() {
     echo "Options:"
     echo "  --only <filename>               Generate only one specific file (e.g., doha_01_full.mp3)"
     echo "  --regenerate <file1,file2>      Regenerate specific files (comma-separated)"
+    echo "  -f, --force                     Force regenerate ALL files (deletes audio directory)"
     echo "  -r, --resume <filename>         Resume from specific file (e.g., verse_15_full.mp3)"
     echo "  -v, --voice-id <id>             Eleven Labs voice ID (default: Rachel - 21m00Tcm4TlvDq8ikWAM)"
     echo "  -h, --help                      Show this help message"
@@ -41,6 +43,9 @@ show_usage() {
     echo ""
     echo "  # Regenerate specific failed files"
     echo "  ./scripts/generate_audio.sh --regenerate doha_01_full.mp3,verse_10_slow.mp3"
+    echo ""
+    echo "  # Force regenerate ALL files"
+    echo "  ./scripts/generate_audio.sh --force"
     echo ""
     echo "  # Resume from specific file"
     echo "  ./scripts/generate_audio.sh --resume verse_15_full.mp3"
@@ -76,6 +81,10 @@ while [[ $# -gt 0 ]]; do
         --regenerate)
             REGENERATE="$2"
             shift 2
+            ;;
+        -f|--force)
+            FORCE="true"
+            shift
             ;;
         -r|--resume)
             RESUME="$2"
@@ -132,7 +141,59 @@ if [ -z "$ELEVENLABS_API_KEY" ]; then
     fi
 fi
 
+# Check for conflicting options
+if [ -n "$FORCE" ] && [ -n "$REGENERATE" ]; then
+    echo -e "${RED}Error: Cannot use --force and --regenerate together${NC}"
+    echo "Use --force to regenerate ALL files, or --regenerate for specific files"
+    exit 1
+fi
+
+if [ -n "$FORCE" ] && [ -n "$ONLY" ]; then
+    echo -e "${RED}Error: Cannot use --force and --only together${NC}"
+    echo "Use --force to regenerate ALL files, or --only for a single file"
+    exit 1
+fi
+
+# Handle --force option (must come before main generation)
+if [ -n "$FORCE" ]; then
+    AUDIO_DIR="$PROJECT_DIR/audio"
+
+    if [ -d "$AUDIO_DIR" ]; then
+        # Count existing audio files (excluding README.md)
+        AUDIO_COUNT=$(find "$AUDIO_DIR" -name "*.mp3" 2>/dev/null | wc -l | xargs)
+
+        if [ "$AUDIO_COUNT" -gt 0 ]; then
+            echo -e "${YELLOW}⚠ WARNING: Force regeneration will delete $AUDIO_COUNT existing audio files!${NC}"
+            echo -e "${YELLOW}Directory: $AUDIO_DIR${NC}"
+            echo ""
+            read -p "Are you sure you want to delete and regenerate ALL audio files? (y/n): " CONFIRM
+
+            # Convert to lowercase for comparison
+            CONFIRM_LOWER=$(echo "$CONFIRM" | tr '[:upper:]' '[:lower:]')
+
+            if [[ "$CONFIRM_LOWER" =~ ^(y|yes)$ ]]; then
+                echo ""
+                echo -e "${YELLOW}Deleting existing audio files...${NC}"
+                find "$AUDIO_DIR" -name "*.mp3" -delete
+                echo -e "${GREEN}✓ Deleted $AUDIO_COUNT audio file(s)${NC}"
+                echo -e "${YELLOW}Will now regenerate all 86 audio files...${NC}"
+                echo ""
+            else
+                echo -e "${RED}Aborted. No files were deleted.${NC}"
+                exit 0
+            fi
+        else
+            echo -e "${YELLOW}No existing audio files found. Will generate all files.${NC}"
+            echo ""
+        fi
+    else
+        echo -e "${YELLOW}Audio directory not found. Will create and generate all files.${NC}"
+        echo ""
+    fi
+fi
+
 echo -e "${GREEN}🎙️  Generating audio files for Hanuman Chalisa${NC}"
+[ -n "$FORCE" ] && echo -e "${YELLOW}Mode: FORCE REGENERATE ALL${NC}"
 [ -n "$ONLY" ] && echo "Mode: Generate single file ($ONLY)"
 [ -n "$REGENERATE" ] && echo "Mode: Regenerate specific files ($REGENERATE)"
 [ -n "$RESUME" ] && echo "Resume from: $RESUME"

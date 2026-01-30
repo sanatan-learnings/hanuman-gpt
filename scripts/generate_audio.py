@@ -24,6 +24,7 @@ Output:
 import os
 import sys
 import time
+import subprocess
 from pathlib import Path
 from typing import Dict, Optional
 import argparse
@@ -148,25 +149,17 @@ class AudioGenerator:
         Returns:
             True if successful, False otherwise
         """
-        # Adjust voice settings based on speed
+        # Voice settings (same for both speeds - actual slowing done via ffmpeg)
+        voice_settings = VoiceSettings(
+            stability=FULL_SPEED_STABILITY,
+            similarity_boost=FULL_SPEED_SIMILARITY,
+            style=0.0,
+            use_speaker_boost=True
+        )
+
+        # Add slight pauses between lines for clarity
         if speed == "slow":
-            # Slower, more deliberate pronunciation
-            voice_settings = VoiceSettings(
-                stability=SLOW_SPEED_STABILITY,
-                similarity_boost=SLOW_SPEED_SIMILARITY,
-                style=0.0,
-                use_speaker_boost=True
-            )
-            # Add pauses between lines for slow version
-            text = text.replace('\n', '... ')
-        else:
-            # Normal conversational speed
-            voice_settings = VoiceSettings(
-                stability=FULL_SPEED_STABILITY,
-                similarity_boost=FULL_SPEED_SIMILARITY,
-                style=0.0,
-                use_speaker_boost=True
-            )
+            text = text.replace('\n', ' ... ')
 
         for attempt in range(1, retry_count + 1):
             try:
@@ -178,10 +171,21 @@ class AudioGenerator:
                     voice_settings=voice_settings
                 )
 
-                # Save to file
-                with open(output_path, 'wb') as f:
+                # Save to temporary file first
+                temp_path = output_path.with_suffix('.temp.mp3') if speed == "slow" else output_path
+
+                with open(temp_path, 'wb') as f:
                     for chunk in audio:
                         f.write(chunk)
+
+                # If slow speed, apply audio processing to slow it down
+                if speed == "slow":
+                    success = self._slow_down_audio(temp_path, output_path)
+                    # Clean up temp file
+                    if temp_path.exists():
+                        temp_path.unlink()
+                    if not success:
+                        return False
 
                 return True
 
@@ -195,6 +199,64 @@ class AudioGenerator:
                     return False
 
         return False
+
+    def _slow_down_audio(self, input_path: Path, output_path: Path, speed_factor: float = 0.75) -> bool:
+        """
+        Slow down audio file without changing pitch using ffmpeg.
+
+        Args:
+            input_path: Input audio file
+            output_path: Output audio file
+            speed_factor: Speed factor (0.75 = 75% speed = slower)
+
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            # Check if ffmpeg is available
+            result = subprocess.run(
+                ['ffmpeg', '-version'],
+                capture_output=True,
+                timeout=5
+            )
+            if result.returncode != 0:
+                print("  ⚠ ffmpeg not found - slow version will be same as full speed")
+                # Just copy the file
+                import shutil
+                shutil.copy(input_path, output_path)
+                return True
+
+            # Use atempo filter to slow down without changing pitch
+            # atempo range is 0.5 to 2.0, so we use 0.75 for 25% slower
+            cmd = [
+                'ffmpeg',
+                '-i', str(input_path),
+                '-filter:a', f'atempo={speed_factor}',
+                '-y',  # Overwrite output file
+                str(output_path)
+            ]
+
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                timeout=30
+            )
+
+            if result.returncode == 0:
+                return True
+            else:
+                print(f"  ⚠ ffmpeg error: {result.stderr.decode()[:100]}")
+                # Fallback: just copy the file
+                import shutil
+                shutil.copy(input_path, output_path)
+                return True
+
+        except Exception as e:
+            print(f"  ⚠ Error slowing down audio: {e}")
+            # Fallback: just copy the file
+            import shutil
+            shutil.copy(input_path, output_path)
+            return True
 
     def generate_all(self, start_from: Optional[str] = None, only_file: Optional[str] = None, regenerate_files: Optional[list] = None):
         """

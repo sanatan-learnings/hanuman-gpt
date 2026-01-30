@@ -20,6 +20,9 @@ Use the automated generation script:
 **Requirements:**
 - Eleven Labs API key in `.env` file: `ELEVENLABS_API_KEY=your-key-here`
 - Get API key from: https://elevenlabs.io/app/settings/api-keys
+- `ffmpeg` installed (for slow speed processing)
+  - macOS: `brew install ffmpeg`
+  - Linux: `sudo apt-get install ffmpeg`
 
 ## File Naming Convention
 
@@ -47,7 +50,7 @@ Each verse has two audio files:
 - **Model**: eleven_multilingual_v2 (supports Hindi/Sanskrit)
 - **Voice**: Rachel (default) - clear, neutral female voice
 - **Full speed**: Natural conversational pace
-- **Slow speed**: Deliberate pronunciation with pauses for learning
+- **Slow speed**: 75% speed (slowed down via ffmpeg without pitch change) + pauses for learning
 
 ## Total Files
 

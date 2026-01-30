@@ -25,6 +25,14 @@ This guide provides deep understanding of each verse with translations, meanings
 - **Bilingual support** - Switch between English and Hindi instantly
 - **Beautiful AI-generated images** for each verse
 
+### 🎵 Audio Pronunciation
+- **86 audio files** - Every verse in two speeds (full and slow)
+- **Full speed** - Natural recitation pace for experienced practitioners
+- **Slow speed** - 25% slower for learning pronunciation
+- **AI-generated** - Clear, natural Hindi/Sanskrit pronunciation via Eleven Labs
+- **Embedded players** - Listen directly on each verse page
+- Perfect for learning correct pronunciation and recitation practice
+
 ### 💬 Spiritual Guidance (AI-Powered)
 - **Ask questions** and receive spiritual guidance based on relevant verses
 - **RAG system** - Finds and cites specific verses for your questions
@@ -56,6 +64,7 @@ Want to contribute or generate custom themes?
 **→ See the [Developer Guide](docs/developer-guide.md)** for:
 - Local development setup
 - Generating custom image themes with DALL-E 3 (~$2 for 47 images)
+- Generating audio files with Eleven Labs (~$0.02 for 86 files)
 - **Regenerating embeddings** for the RAG system (FREE, runs locally)
 - Project structure and architecture
 - Testing and deployment
@@ -99,7 +108,6 @@ We welcome contributions! Whether it's:
 - Translation improvements
 - Additional languages (Tamil, Telugu, Spanish planned)
 - New image themes
-- Audio recitations
 - Bug fixes or features
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
@@ -110,6 +118,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 ### Content Creation
 - **DALL-E 3** (OpenAI) - AI-generated verse images
+- **Eleven Labs** - AI text-to-speech for audio recitations (eleven_multilingual_v2)
+- **ffmpeg** - Audio post-processing for speed control
 - **GPT-4** (OpenAI) - Spiritual guidance generation
 - **sentence-transformers** (Hugging Face) - Local embeddings for semantic search
 - **Claude Code** (Anthropic) - AI-assisted content generation and development

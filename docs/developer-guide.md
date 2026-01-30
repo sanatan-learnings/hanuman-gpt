@@ -42,12 +42,17 @@ hanuman-chalisa/
 │   ├── css/                  # Stylesheets
 │   ├── js/                   # JavaScript files
 │   └── images/               # Static images
+├── audio/                    # AI-generated audio files
+│   ├── doha_01_full.mp3      # Full speed recitations
+│   └── doha_01_slow.mp3      # Slow speed (75%) for learning
 ├── docs/                     # Documentation
 ├── images/                   # AI-generated verse images
 │   └── modern-minimalist/    # Default theme (47 images)
 ├── scripts/                  # Automation scripts
 │   ├── generate.sh           # Image generation wrapper
-│   └── generate_theme_images.py  # Python script for DALL-E 3
+│   ├── generate_theme_images.py  # Python script for DALL-E 3
+│   ├── generate_audio.sh     # Audio generation wrapper
+│   └── generate_audio.py     # Python script for Eleven Labs
 ├── book.html                 # Book generator page
 ├── index.html                # Home page
 ├── full-chalisa.html         # Complete chalisa view
@@ -168,6 +173,65 @@ git push
 
 See [scripts/README.md](../scripts/README.md) for detailed instructions.
 
+## Generate Audio Files
+
+Create audio pronunciations for all verses using Eleven Labs text-to-speech.
+
+### Quick Start
+
+```bash
+# Get API key from https://elevenlabs.io/app/settings/api-keys
+export ELEVENLABS_API_KEY='your-key-here'
+
+# Generate all 86 audio files (43 verses × 2 speeds)
+./scripts/generate_audio.sh
+
+# See all options
+./scripts/generate_audio.sh --help
+```
+
+### Configuration Options
+
+```bash
+# Generate single file for testing
+./scripts/generate_audio.sh --only doha_01_full.mp3
+
+# Regenerate specific files
+./scripts/generate_audio.sh --regenerate verse_10_full.mp3,verse_10_slow.mp3
+
+# Force regenerate ALL files
+./scripts/generate_audio.sh --force
+
+# Resume from specific file
+./scripts/generate_audio.sh --resume verse_15_full.mp3
+
+# Use different voice
+./scripts/generate_audio.sh --voice-id YOUR_VOICE_ID
+```
+
+### Cost Estimate
+
+- **Total cost**: ~$0.02 for 86 audio files
+- **Eleven Labs Free Tier**: 10,000 characters/month (sufficient for one-time generation)
+- **Model**: eleven_multilingual_v2 (supports Hindi/Sanskrit)
+
+### Audio Specifications
+
+- **Format**: MP3 (128kbps+)
+- **Full speed**: Natural recitation pace via Eleven Labs
+- **Slow speed**: 75% speed via ffmpeg atempo filter (25% slower)
+- **Total files**: 86 (43 verses × 2 speeds)
+
+### Requirements
+
+- Python 3.8+
+- Eleven Labs API key
+- ffmpeg (for slow speed processing)
+  - macOS: `brew install ffmpeg`
+  - Linux: `sudo apt-get install ffmpeg`
+
+See [audio/README.md](../audio/README.md) for detailed instructions.
+
 ## Tech Stack
 
 ### Core Technologies
@@ -187,8 +251,10 @@ See [scripts/README.md](../scripts/README.md) for detailed instructions.
 
 ### Development Tools
 
-- **Python 3.8+** - Image generation scripts
-- **OpenAI API** - DALL-E 3 integration
+- **Python 3.8+** - Image and audio generation scripts
+- **OpenAI API** - DALL-E 3 integration for images
+- **Eleven Labs API** - Text-to-speech for audio
+- **ffmpeg** - Audio post-processing (speed control)
 - **Ruby/Bundler** - Dependency management
 - **Git** - Version control
 
@@ -197,6 +263,7 @@ See [scripts/README.md](../scripts/README.md) for detailed instructions.
 - `jekyll-seo-tag` - SEO optimization
 - `jekyll-sitemap` - Sitemap generation
 - `openai` (Python) - DALL-E 3 API client
+- `elevenlabs` (Python) - Text-to-speech API client
 - `requests` (Python) - HTTP library
 - `pillow` (Python) - Image processing
 

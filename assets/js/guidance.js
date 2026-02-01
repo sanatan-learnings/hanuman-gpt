@@ -17,6 +17,7 @@ let conversationHistory = [];
 let isProcessing = false;
 
 // Configuration
+const BASE_URL = '/hanuman-chalisa'; // GitHub Pages baseurl
 const EMBEDDING_MODEL = 'sentence-transformers/all-MiniLM-L6-v2';
 const HF_API_URL = `https://router.huggingface.co/pipeline/feature-extraction/${EMBEDDING_MODEL}`;
 const GPT_MODEL = 'gpt-4o'; // Can change to 'gpt-4o-mini' for lower cost
@@ -73,7 +74,7 @@ function initGuidanceSystem() {
  */
 async function loadEmbeddings() {
     try {
-        const response = await fetch('/hanuman-chalisa/data/embeddings.json');
+        const response = await fetch(`${BASE_URL}/data/embeddings.json`);
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
         }
@@ -541,6 +542,21 @@ async function handleSendQuery() {
 }
 
 /**
+ * Convert simple markdown to HTML
+ */
+function markdownToHtml(text) {
+    return text
+        // Convert **bold** to <strong>
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        // Convert numbered lists to proper HTML
+        .replace(/^(\d+)\.\s+\*\*(.*?)\*\*:/gm, '<br><strong>$1. $2:</strong>')
+        // Add line breaks for newlines
+        .replace(/\n/g, '<br>')
+        // Clean up multiple <br> tags
+        .replace(/(<br>\s*){3,}/g, '<br><br>');
+}
+
+/**
  * Add message to chat
  */
 function addMessage(role, content, verses = null) {
@@ -552,7 +568,8 @@ function addMessage(role, content, verses = null) {
 
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
-    contentDiv.textContent = content;
+    // Convert markdown to HTML for better formatting
+    contentDiv.innerHTML = role === 'assistant' ? markdownToHtml(content) : content;
 
     // Add verse citations if provided
     if (verses && verses.length > 0) {
@@ -570,7 +587,7 @@ function addMessage(role, content, verses = null) {
             card.className = 'citation-card';
 
             const link = document.createElement('a');
-            link.href = verse.url + (verse.url.includes('?') ? '&' : '?') + 'lang=' + lang;
+            link.href = BASE_URL + verse.url + (verse.url.includes('?') ? '&' : '?') + 'lang=' + lang;
             link.textContent = verse.title;
             card.appendChild(link);
 

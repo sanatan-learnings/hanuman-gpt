@@ -22,7 +22,7 @@ Old scripts have been moved to `scripts/legacy/` for reference:
 ### 1. Install the SDK
 
 ```bash
-pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+pip install verse-content-sdk
 ```
 
 Or use the provided requirements.txt:
@@ -218,7 +218,7 @@ verse-embeddings --provider huggingface
 ### SDK not installed
 
 ```bash
-pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+pip install verse-content-sdk
 
 # Verify installation
 verse-audio --help

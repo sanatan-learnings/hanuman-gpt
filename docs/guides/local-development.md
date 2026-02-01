@@ -273,9 +273,9 @@ When you commit, you'll see:
 ## Related Documentation
 
 - **Project architecture**: [tech-stack.md](tech-stack.md)
-- **Spiritual Guidance API**: [spiritual-guidance.md](../features/spiritual-guidance.md), [deployment.md](deployment.md)
+- **Spiritual Guidance API**: [spiritual-guidance.md](../reference/spiritual-guidance.md), [cloudflare-worker-setup.md](cloudflare-worker-setup.md)
 - **Developer guide**: [guide.md](guide.md)
-- **Adding content**: [verse-structure.md](../content/verse-structure.md)
+- **Adding content**: [verse-structure.md](../reference/verse-structure.md)
 
 ---
 

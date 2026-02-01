@@ -51,7 +51,7 @@ Deploy a serverless proxy for OpenAI API requests, allowing spiritual guidance t
 
 ```bash
 # Install verse-content-sdk
-pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+pip install verse-content-sdk
 
 # Deploy
 verse-deploy
@@ -155,4 +155,4 @@ Check build status:
 
 - [Setup Guide](setup.md) - Local development
 - [Developer Guide](guide.md) - Full developer documentation
-- [Spiritual Guidance Feature](../features/spiritual-guidance.md)
+- [Spiritual Guidance Feature](../reference/spiritual-guidance.md)

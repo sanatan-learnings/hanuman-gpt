@@ -416,7 +416,7 @@ Navigation:
 
 ## Internal Documentation
 
-- [verse-structure.md](../content/verse-structure.md) - Verse YAML structure
-- [background.md](../users/background.md) - Hanuman Chalisa history
-- [user-guide.md](../users/guide.md) - Recitation guide
-- [deployment.md](deployment.md) - Deployment setup
+- [verse-structure.md](verse-structure.md) - Verse YAML structure
+- [background.md](background.md) - Hanuman Chalisa history
+- [user-guide.md](../guides/user-guide.md) - Recitation guide
+- [cloudflare-worker-setup.md](../guides/cloudflare-worker-setup.md) - Deployment setup

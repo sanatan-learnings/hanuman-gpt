@@ -182,4 +182,4 @@ To update content across all verses:
 
 - See complete YAML example: `_verses/verse_01.md`
 - Template implementation: `_layouts/verse.html`
-- Technical details: [tech-stack.md](../developers/tech-stack.md)
+- Technical details: [tech-stack.md](tech-stack.md)

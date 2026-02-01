@@ -1,66 +1,71 @@
-# Hanuman Chalisa Documentation
+# Documentation
 
-Welcome to the Hanuman Chalisa project documentation.
+Documentation for the Hanuman Chalisa website.
 
-## 📖 For Users
+## Structure
 
-Documentation for devotees and end users.
+```
+docs/
+├── guides/                      # Step-by-step how-to guides
+│   ├── local-development.md     # Setup and running locally
+│   ├── content-generation.md    # Creating verses and media
+│   ├── cloudflare-worker-setup.md # API proxy deployment
+│   └── user-guide.md            # Using the website
+├── reference/                   # Reference material
+│   ├── tech-stack.md            # Technical architecture
+│   ├── verse-structure.md       # YAML data format
+│   ├── image-prompts.md         # Scene descriptions
+│   ├── background.md            # About Hanuman Chalisa
+│   ├── book-generation.md       # PDF/print book generation
+│   ├── spiritual-guidance.md    # RAG system
+│   └── multilingual.md          # Internationalization
+└── themes/                      # Image theme configurations
+```
 
-- **[User Guide](users/guide.md)** - How to use the website and features
-- **[Background](users/background.md)** - About Hanuman Chalisa: history, meter, spiritual significance
+## Quick Start
 
-## 👩‍💻 For Developers
+### Generate Content
 
-Documentation for contributors and developers.
+```bash
+# Generate images for a theme
+verse-images --theme-name modern-minimalist
 
-- **[Setup Guide](developers/setup.md)** - Local development environment setup
-- **[Developer Guide](developers/guide.md)** - Complete development guide and workflows
-- **[Tech Stack](developers/tech-stack.md)** - Technologies, architecture, and commands
-- **[Deployment Guide](developers/deployment.md)** - GitHub Pages and Cloudflare Worker deployment
+# Generate audio recitations
+verse-audio
 
-## 📝 Content Structure
+# Generate embeddings for search
+verse-embeddings
+```
 
-Documentation about verse content and themes.
+### Commands
 
-- **[Verse Structure](content/verse-structure.md)** - YAML front matter and data format
-- **[Image Prompts](content/image-prompts.md)** - Scene descriptions for image generation
-- **[Themes](content/themes/)** - Visual theme specifications and generation workflow
-  - [Theme README](content/themes/README.md)
-  - [Generation Workflow](content/themes/generation-workflow.md)
+- `verse-images` - Generate images using DALL-E 3
+- `verse-audio` - Generate audio using ElevenLabs
+- `verse-embeddings` - Generate embeddings for semantic search
+- `verse-deploy` - Deploy Cloudflare Worker
 
-## ✨ Features
+See [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk) for full SDK documentation.
 
-Documentation for specific features.
+## Guides
 
-- **[Book Generation](features/book-generation.md)** - Generate PDF and print books
-- **[Spiritual Guidance](features/spiritual-guidance.md)** - AI-powered spiritual guidance API
-- **[Multilingual Support](features/multilingual.md)** - Internationalization implementation
+- **[Local Development](guides/local-development.md)** - Setup and run locally
+- **[Content Generation](guides/content-generation.md)** - Create verses and media
+- **[Cloudflare Worker](guides/cloudflare-worker-setup.md)** - Deploy API proxy
+- **[User Guide](guides/user-guide.md)** - Using the website
+
+## Reference
+
+- **[Tech Stack](reference/tech-stack.md)** - Architecture overview
+- **[Verse Structure](reference/verse-structure.md)** - YAML data format
+- **[Image Prompts](reference/image-prompts.md)** - Scene descriptions
+- **[Background](reference/background.md)** - About Hanuman Chalisa
+- **[Book Generation](reference/book-generation.md)** - PDF/print books
+- **[Spiritual Guidance](reference/spiritual-guidance.md)** - RAG system
+- **[Multilingual](reference/multilingual.md)** - Internationalization
+- **[Themes](themes/)** - Visual style configurations
 
 ## Quick Links
 
 - 🌐 [Live Website](https://sanatan-learnings.github.io/hanuman-chalisa/)
-- 📦 [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk) - Content generation toolkit
+- 📦 [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk)
 - 🐙 [GitHub Repository](https://github.com/sanatan-learnings/hanuman-chalisa)
-
-## Getting Started
-
-**New contributor?** Start here:
-
-1. Read [User Guide](users/guide.md) to understand the website
-2. Follow [Setup Guide](developers/setup.md) to set up your environment
-3. Read [Developer Guide](developers/guide.md) for development workflows
-4. Check [Verse Structure](content/verse-structure.md) to understand data format
-
-## Contributing
-
-We welcome contributions! See the [Developer Guide](developers/guide.md) for:
-- Adding new verses
-- Creating image themes
-- Generating audio
-- Improving documentation
-- Fixing bugs
-
----
-
-**Project:** Hanuman Chalisa - Digital devotional experience
-**Organization:** [Sanatan Learnings](https://github.com/sanatan-learnings)

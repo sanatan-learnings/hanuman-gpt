@@ -6,7 +6,7 @@ Generate theme images using [verse-content-sdk](https://github.com/sanatan-learn
 
 ```bash
 # Install SDK
-pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+pip install verse-content-sdk
 
 # Generate all images
 verse-images --theme-name traditional

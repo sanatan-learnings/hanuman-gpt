@@ -116,7 +116,7 @@ All multimedia content is generated using the [verse-content-sdk](https://github
 - **verse-embeddings** - Generate vector embeddings
 - **verse-deploy** - Deploy Cloudflare Workers
 
-Install once: `pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git`
+Install once: `pip install verse-content-sdk`
 
 See [scripts/README.md](../scripts/README.md) for complete documentation.
 
@@ -128,7 +128,7 @@ Create new artistic themes using DALL-E 3.
 
 ```bash
 # Install verse-content-sdk (one-time setup)
-pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+pip install verse-content-sdk
 
 # Get API key from https://platform.openai.com/api-keys
 export OPENAI_API_KEY='your-key-here'
@@ -194,7 +194,7 @@ Create audio pronunciations for all verses using Eleven Labs text-to-speech.
 
 ```bash
 # Install verse-content-sdk (one-time setup)
-pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+pip install verse-content-sdk
 
 # Get API key from https://elevenlabs.io/app/settings/api-keys
 export ELEVENLABS_API_KEY='your-key-here'

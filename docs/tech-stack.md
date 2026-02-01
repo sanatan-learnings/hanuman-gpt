@@ -22,9 +22,9 @@
 ┌──────────────────────────────────────────────┐
 │           AI-GENERATED MEDIA ASSETS           │
 ├──────────────────────────────────────────────┤
-│  • images/ (47 PNG per theme - DALL-E 3)    │
-│  • audio/ (86 MP3 files - Eleven Labs)      │
-│    - 43 verses × 2 speeds (full + slow)     │
+│  • images/ (47 PNG per theme) - verse-images│
+│  • audio/ (86 MP3 files) - verse-audio      │
+│  • embeddings/ - verse-embeddings           │
 └──────────────────┬───────────────────────────┘
                    │
                    ▼
@@ -70,12 +70,10 @@
 - Documentation generation
 
 ### System Dependencies
-- **Python 3.8+** - For image and audio generation scripts
-- **ffmpeg** - Audio post-processing for slow speed versions
-  - macOS: `brew install ffmpeg`
-  - Linux: `sudo apt-get install ffmpeg`
+- **Python 3.8+** - For verse-content-sdk
+- **ffmpeg** - Audio post-processing (`brew install ffmpeg`)
 - **Ruby 3.3+** - For Jekyll local development
-- **Node.js** (optional) - For Cloudflare Worker development
+- **Node.js** (optional) - For Cloudflare Worker deployment
 
 **Collaboration Pattern:**
 1. Claude Code generates structure and content
@@ -106,27 +104,17 @@ hanuman-chalisa/
 │   ├── js/navigation.js    # Arrow key navigation
 │   ├── js/language.js      # Language switching
 │   ├── js/theme.js         # Image theme switching
-│   └── js/guidance.js      # RAG system (NEW)
-├── scripts/                 # Python and bash utilities
-│   ├── generate_embeddings_local.py  # Local embedding generation
-│   ├── embedding_config.yaml         # Config for embeddings
-│   ├── generate_audio.py             # Eleven Labs audio generation
-│   ├── generate_audio.sh             # Audio generation wrapper
-│   ├── generate_theme_images.py      # DALL-E 3 image generation
-│   ├── generate_images.sh            # Image generation wrapper
-│   └── requirements.txt              # Python dependencies (elevenlabs, openai, etc.)
+│   └── js/guidance.js      # RAG system
+├── scripts/                 # Content generation configuration
+│   ├── embedding_config.yaml       # Config for verse-embeddings
+│   ├── requirements.txt            # verse-content-sdk installation
+│   └── legacy/                     # Old Python/bash scripts (deprecated)
 ├── images/                  # Verse images (organized by theme)
-│   └── modern-minimalist/  # Current theme (47 images complete)
-│       ├── title-page.png
-│       ├── opening-doha-01.png
-│       ├── opening-doha-02.png
-│       ├── verse-01.png through verse-40.png
-│       └── closing-doha.png
-├── audio/                   # Audio recitations (86 MP3 files: 43 verses × 2 speeds)
+│   └── modern-minimalist/  # 47 PNG files per theme
+├── audio/                   # Audio recitations (86 MP3 files)
 ├── docs/                    # Documentation
-├── venv/                    # Python virtual environment (NEW, excluded from Jekyll)
-├── data/embeddings.json          # Pre-computed embeddings - 1.1MB (NEW)
-├── guidance.html            # Spiritual guidance chat interface (NEW)
+├── data/embeddings.json     # Pre-computed embeddings (1.1MB)
+├── guidance.html            # Spiritual guidance chat interface
 └── index.html              # Home page with navigation
 ```
 
@@ -253,50 +241,34 @@ See [Adding New Languages](multilingual-implementation.md#adding-new-languages) 
 - Generated JSON index (`data/search.json`)
 
 ### 3. Spiritual Guidance (RAG System) (`/guidance`)
-- **AI-powered Q&A** - Ask spiritual questions and receive guidance
-- **Retrieval Augmented Generation (RAG)** - Finds relevant verses for context
-- **Keyword-based search** - Matches queries to verse content
-- **GPT-4 integration** - Generates spiritual guidance based on verses
-- **Bilingual support** - Works in English and Hindi
-- **Conversation history** - Maintains context for follow-up questions
-- **Two deployment modes** - User-provided API key OR Cloudflare Worker (serverless)
-- **Verse citations** - Links to relevant verses in responses
 
-**Technical Implementation:**
-- Pre-generated embeddings using sentence-transformers (384 dimensions, generated locally)
-- Keyword-based retrieval for client-side simplicity
-- OpenAI GPT-4o for spiritual guidance generation
-- Cost: ~$0.01 per query (site owner pays)
+**Technology**: GPT-4o + verse-embeddings + Cloudflare Worker
 
-**Production Architecture:**
-- **Cloudflare Worker** - Serverless proxy for OpenAI API
-- Site owner's API key stored securely as Cloudflare secret
-- Users make requests to worker endpoint
-- Worker forwards to OpenAI API
-- **Frictionless UX** - No API key entry needed by users
-- Rate limiting built-in (10 req/min per IP)
-- Free tier: 100,000 requests/day
-- CORS-enabled for browser requests
-- Current deployment: `https://hanuman-chalisa-api.arungupta.workers.dev`
+**Features**:
+- AI-powered Q&A on Hanuman Chalisa verses
+- Keyword-based retrieval with verse citations
+- Bilingual support (English/Hindi)
+- Serverless proxy (no user API keys needed)
 
-**Files:**
-- `scripts/generate_embeddings_local.py` - Local HuggingFace embedding generation (FREE)
-- `data/embeddings.json` - Pre-computed verse embeddings (1.1MB, 384-dim)
+**Commands**:
+```bash
+# Generate embeddings
+verse-embeddings --provider huggingface  # Free, local
+verse-embeddings --provider openai       # Fast, ~$0.01
+
+# Deploy worker
+verse-deploy
+```
+
+**Files**:
+- `data/embeddings.json` - Pre-computed vectors (1.1MB, 384-dim)
 - `guidance.html` - Chat interface
-- `assets/js/guidance.js` - RAG pipeline logic
-- `workers/cloudflare-worker.js` - Serverless API proxy for OpenAI
-- `wrangler.toml` - Cloudflare Worker configuration
-- `scripts/deploy-cloudflare-worker.sh` - Automated deployment script
-- `venv/` - Python virtual environment (excluded from Jekyll build)
+- `assets/js/guidance.js` - RAG logic
+- `workers/cloudflare-worker.js` - API proxy
 
-**Deployment:**
-- Automated script: `./scripts/deploy-cloudflare-worker.sh`
-- Manual CLI: `wrangler deploy` + `wrangler secret put OPENAI_API_KEY`
-- Dashboard: Copy/paste worker code via Cloudflare UI
-- See: [docs/cloudflare-worker-setup.md](cloudflare-worker-setup.md)
+**Deployment**: `https://hanuman-chalisa-api.arungupta.workers.dev`
 
-**Developer Note:**
-The code supports an alternative "user-provided API key" mode for development by setting `WORKER_URL = ''` in `assets/js/guidance.js`, but this is not exposed to end users in production.
+See [cloudflare-worker-setup.md](cloudflare-worker-setup.md) for details.
 
 ### 4. Navigation
 - Arrow keys (← →) between verses
@@ -334,136 +306,61 @@ The code supports an alternative "user-provided API key" mode for development by
 
 ### Images
 
-**Technology:**
-- **DALL-E 3** - AI image generation via OpenAI API
-- **Python script** - `scripts/generate_theme_images.py`
-- **Bash wrapper** - `scripts/generate_images.sh`
+**Technology**: DALL-E 3 via verse-content-sdk
 
-**Output:**
-- **Format**: PNG (high resolution, 1024×1024)
-- **Total files**: 47 images per theme (title + 2 opening dohas + 40 verses + closing doha)
-- **Naming**: `title-page.png`, `opening-doha-01.png`, `verse-01.png`, `closing-doha.png`
-- **Directory**: `/images/{theme-name}/`
-
-**Status:** ✅ Complete - Two themes generated (Modern Minimalist, Kids Friendly)
-
-**Generation Commands:**
+**Commands**:
 ```bash
-# Generate all images for a theme
-./scripts/generate_images.sh modern-minimalist
-
-# Generate single image for testing
-./scripts/generate_images.sh modern-minimalist --only verse-01.png
-
-# Regenerate specific images
-./scripts/generate_images.sh modern-minimalist --regenerate verse-10.png,verse-30.png
-
-# Force regenerate ALL images
-./scripts/generate_images.sh modern-minimalist --force
+verse-images --theme-name modern-minimalist
+verse-images --theme-name watercolor --style "soft watercolor painting"
+verse-images --theme-name my-theme --quality hd
+verse-images --theme-name my-theme --regenerate verse-10.png,verse-25.png
+verse-images --theme-name my-theme --force
 ```
 
-**Pipeline:**
-1. Read scene descriptions from `docs/image-prompts.md`
-2. Generate images via DALL-E 3 API (1024×1792 portrait)
-3. Crop to 1024×1536 (2:3 ratio for verse pages)
-4. Save as PNG in `/images/{theme-name}/`
+**Output**: 47 PNG files per theme in `images/{theme}/`
+- Format: 1024×1536 PNG (2:3 ratio)
+- Cost: $1.88 standard / $3.76 HD per theme
 
-**Requirements:**
-- OpenAI API key (stored in `.env`)
-- Python packages: `openai`, `pillow`, `requests`
+**Theme Configuration**: Define in `_data/themes.yml`
 
-**Cost:** ~$2 per theme (47 images × $0.040 standard quality)
-
-#### Theme Configuration
-Themes are defined in `_data/themes.yml`:
-```yaml
-modern-minimalist:
-  name_en: "Modern Minimalist"
-  name_hi: "आधुनिक न्यूनतम"
-  description_en: "Contemporary spiritual aesthetics"
-  folder: "modern-minimalist"
-  default: true
-```
-
-#### Theme Switching
-- Dropdown selector in header (next to language selector)
-- JavaScript-based instant theme switching (no page reload)
-- localStorage for preference persistence
-- All images automatically updated when theme changes
-- Extensible to support future themes (Traditional, Watercolor, etc.)
+See [scripts/README.md](../scripts/README.md) for details.
 
 ### Audio Recitations
 
-**Technology:**
-- **Eleven Labs** - AI text-to-speech (eleven_multilingual_v2 model for Hindi/Sanskrit)
-- **ffmpeg** - Audio post-processing for speed control
-- **Python script** - `scripts/generate_audio.py`
-- **Bash wrapper** - `scripts/generate_audio.sh`
+**Technology**: Eleven Labs TTS via verse-content-sdk
 
-**Output:**
-- **Format**: MP3 (128kbps+, Eleven Labs default)
-- **Total files**: 86 audio files (43 verses × 2 speeds)
-- **Two versions per verse**:
-  - Full speed: Natural conversational pace
-  - Slow speed: 75% speed (slowed via ffmpeg `atempo` filter)
-- **Naming**: `doha_01_full.mp3`, `doha_01_slow.mp3`, `verse_01_full.mp3`, `verse_01_slow.mp3`
-- **Directory**: `/audio/`
-- **Voice**: Rachel (default) - clear, neutral female voice
-
-**Status:** ✅ Complete - All 86 files generated
-
-**Generation Commands:**
+**Commands**:
 ```bash
-# Generate all audio files
-./scripts/generate_audio.sh
-
-# Generate single file for testing
-./scripts/generate_audio.sh --only doha_01_full.mp3
-
-# Regenerate specific files
-./scripts/generate_audio.sh --regenerate verse_10_full.mp3,verse_10_slow.mp3
-
-# Force regenerate ALL files
-./scripts/generate_audio.sh --force
+verse-audio
+verse-audio --only doha_01_full.mp3
+verse-audio --regenerate verse_10_full.mp3,verse_10_slow.mp3
+verse-audio --start-from verse_15_full.mp3
+verse-audio --force
 ```
 
-**Pipeline:**
-1. Extract Devanagari text from verse YAML front matter
-2. Generate audio via Eleven Labs API (text-to-speech)
-3. For slow version: Apply ffmpeg `atempo=0.75` filter (25% slower without pitch change)
-4. Save as MP3 in `/audio/` directory
+**Output**: 86 MP3 files (43 verses × 2 speeds) in `audio/`
+- Full speed: Natural pace
+- Slow speed: 75% speed via ffmpeg
+- Cost: Free tier (10,000 chars/month)
 
-**Requirements:**
-- Eleven Labs API key (stored in `.env`)
-- `ffmpeg` for slow speed processing (`brew install ffmpeg` on macOS)
-- Python packages: `elevenlabs`, `python-dotenv`
+See [scripts/README.md](../scripts/README.md) for details.
 
-**Cost:** ~$0.02 total (fits within free tier: 10,000 characters/month)
+### Embeddings
 
-### Embeddings Generation (Python)
-- **sentence-transformers** - Local embedding generation
-- **Model**: sentence-transformers/all-MiniLM-L6-v2 (384 dimensions)
-- **Virtual environment** - `venv/` for isolated dependencies
-- **Cost**: FREE (runs locally, no API calls)
-- **Output**: `data/embeddings.json` (1.1MB for 43 verses × 2 languages)
+**Technology**: OpenAI / HuggingFace via verse-content-sdk
 
-**Dependencies** (in `venv/`):
+**Commands**:
 ```bash
-pip install sentence-transformers  # ~500MB including PyTorch
+verse-embeddings                        # OpenAI (fast, ~$0.01)
+verse-embeddings --provider huggingface # Local (free, slower first run)
+verse-embeddings --verses-dir _verses --output data/embeddings.json
 ```
 
-**Generation command:**
-```bash
-./venv/bin/python scripts/generate_embeddings_local.py
-```
+**Output**: `data/embeddings.json` (1.1MB, 384 dimensions)
 
-**Process:**
-1. Reads all 43 verse files from `_verses/`
-2. Extracts YAML front matter (title, transliteration, meanings, stories)
-3. Combines fields into rich semantic documents
-4. Generates 384-dimensional embeddings locally
-5. Outputs `data/embeddings.json` with verse metadata + vectors
-6. Takes ~2-3 minutes on modern hardware
+**Process**: Extracts YAML from 43 verse files, generates semantic vectors
+
+See [scripts/README.md](../scripts/README.md) for details.
 
 ## URLs and Navigation
 
@@ -504,18 +401,12 @@ Navigation:
 
 - **Hosting**: Free (GitHub Pages)
 - **Domain** (optional): $10-15/year
-- **Images**: DALL-E 3 via OpenAI API
-  - Standard quality: $0.040/image
-  - 44 images per theme: ~$1.76 per theme
-  - Current: 2 themes × 44 images = $3.52 total (one-time)
-- **Audio**: Eleven Labs text-to-speech
-  - Free tier: 10,000 characters/month
-  - Total needed: ~10,000-15,000 characters (86 files)
-  - Cost: FREE (fits within free tier, one-time generation)
-- **Embeddings**: FREE (generated locally with HuggingFace)
-- **Spiritual Guidance**: ~$0.01 per query (user-borne if using worker mode)
+- **Images**: $1.88 per theme (47 images × $0.040) via verse-images
+- **Audio**: FREE (Eleven Labs free tier) via verse-audio
+- **Embeddings**: FREE (local HuggingFace) or $0.01 (OpenAI) via verse-embeddings
+- **Spiritual Guidance**: ~$0.01 per query (Cloudflare Worker proxy)
 
-**Total**: Free for hosting, ~$3.52 one-time cost for AI-generated media
+**Total**: ~$1.88 per image theme (one-time)
 
 ## Resources
 

@@ -48,11 +48,8 @@ hanuman-chalisa/
 ├── docs/                     # Documentation
 ├── images/                   # AI-generated verse images
 │   └── modern-minimalist/    # Default theme (47 images)
-├── scripts/                  # Automation scripts
-│   ├── generate.sh           # Image generation wrapper
-│   ├── generate_theme_images.py  # Python script for DALL-E 3
-│   ├── generate_audio.sh     # Audio generation wrapper
-│   └── generate_audio.py     # Python script for Eleven Labs
+├── scripts/                  # Legacy scripts (use verse-content-sdk instead)
+│   └── legacy/               # Old bash/python scripts (deprecated)
 ├── book.html                 # Book generator page
 ├── index.html                # Home page
 ├── full-chalisa.html         # Complete chalisa view
@@ -110,6 +107,19 @@ bundle exec jekyll serve --port 4001
 - Check `.github/workflows/` for CI configuration
 - Verify GitHub Pages compatible plugins
 
+## Content Generation with verse-content-sdk
+
+All multimedia content is generated using the [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk):
+
+- **verse-images** - Generate AI images with DALL-E 3
+- **verse-audio** - Generate audio pronunciations with ElevenLabs
+- **verse-embeddings** - Generate vector embeddings
+- **verse-deploy** - Deploy Cloudflare Workers
+
+Install once: `pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git`
+
+See [scripts/README.md](../scripts/README.md) for complete documentation.
+
 ## Generate Custom Image Themes
 
 Create new artistic themes using DALL-E 3.
@@ -117,27 +127,30 @@ Create new artistic themes using DALL-E 3.
 ### Quick Start
 
 ```bash
+# Install verse-content-sdk (one-time setup)
+pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+
 # Get API key from https://platform.openai.com/api-keys
 export OPENAI_API_KEY='your-key-here'
 
 # Generate all 47 images
-./scripts/generate.sh traditional-art --style "traditional Indian devotional art"
+verse-images traditional-art --style "traditional Indian devotional art"
 
 # See all options
-./scripts/generate.sh --help
+verse-images --help
 ```
 
 ### Configuration Options
 
 ```bash
 # Quality (standard or hd)
-./scripts/generate.sh my-theme --quality hd
+verse-images my-theme --quality hd
 
 # Size (1024x1024 or 1024x1792)
-./scripts/generate.sh my-theme --size 1024x1792
+verse-images my-theme --size 1024x1792
 
 # Resume from specific image
-./scripts/generate.sh my-theme --resume verse-15.png
+verse-images my-theme --resume verse-15.png
 ```
 
 ### Cost Estimate
@@ -180,33 +193,36 @@ Create audio pronunciations for all verses using Eleven Labs text-to-speech.
 ### Quick Start
 
 ```bash
+# Install verse-content-sdk (one-time setup)
+pip install git+https://github.com/sanatan-learnings/verse-content-sdk.git
+
 # Get API key from https://elevenlabs.io/app/settings/api-keys
 export ELEVENLABS_API_KEY='your-key-here'
 
 # Generate all 86 audio files (43 verses × 2 speeds)
-./scripts/generate_audio.sh
+verse-audio
 
 # See all options
-./scripts/generate_audio.sh --help
+verse-audio --help
 ```
 
 ### Configuration Options
 
 ```bash
 # Generate single file for testing
-./scripts/generate_audio.sh --only doha_01_full.mp3
+verse-audio --only doha_01_full.mp3
 
 # Regenerate specific files
-./scripts/generate_audio.sh --regenerate verse_10_full.mp3,verse_10_slow.mp3
+verse-audio --regenerate verse_10_full.mp3,verse_10_slow.mp3
 
 # Force regenerate ALL files
-./scripts/generate_audio.sh --force
+verse-audio --force
 
 # Resume from specific file
-./scripts/generate_audio.sh --resume verse_15_full.mp3
+verse-audio --resume verse_15_full.mp3
 
 # Use different voice
-./scripts/generate_audio.sh --voice-id YOUR_VOICE_ID
+verse-audio --voice-id YOUR_VOICE_ID
 ```
 
 ### Cost Estimate
@@ -251,7 +267,8 @@ See [audio/README.md](../audio/README.md) for detailed instructions.
 
 ### Development Tools
 
-- **Python 3.8+** - Image and audio generation scripts
+- **Python 3.8+** - Content generation SDK
+- **verse-content-sdk** - Content generation toolkit (images, audio, embeddings)
 - **OpenAI API** - DALL-E 3 integration for images
 - **Eleven Labs API** - Text-to-speech for audio
 - **ffmpeg** - Audio post-processing (speed control)
@@ -262,10 +279,7 @@ See [audio/README.md](../audio/README.md) for detailed instructions.
 
 - `jekyll-seo-tag` - SEO optimization
 - `jekyll-sitemap` - Sitemap generation
-- `openai` (Python) - DALL-E 3 API client
-- `elevenlabs` (Python) - Text-to-speech API client
-- `requests` (Python) - HTTP library
-- `pillow` (Python) - Image processing
+- `verse-content-sdk` - Content generation SDK (includes openai, elevenlabs, requests, pillow)
 
 ## File Formats
 
@@ -383,12 +397,19 @@ All images should be:
 
 ### DALL-E 3 Configuration
 
+The verse-content-sdk handles all API configuration. Default settings:
+
 ```python
-# scripts/generate_theme_images.py
+# verse_content_sdk/images/generator.py
 DALLE_MODEL = "dall-e-3"
 IMAGE_SIZE = "1024x1792"  # Portrait, crop to 1024x1536
 IMAGE_QUALITY = "standard"  # or "hd"
 IMAGE_STYLE = "natural"  # or "vivid"
+```
+
+Override via command-line options:
+```bash
+verse-images my-theme --quality hd --size 1024x1792 --style vivid
 ```
 
 ## Contributing

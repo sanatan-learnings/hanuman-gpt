@@ -22,11 +22,18 @@ Old scripts have been moved to `scripts/legacy/` for reference:
 ### 1. Install the SDK
 
 ```bash
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install SDK
 pip install verse-content-sdk
 ```
 
 Or use the provided requirements.txt:
 ```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r scripts/requirements.txt
 ```
 
@@ -218,6 +225,11 @@ verse-embeddings --provider huggingface
 ### SDK not installed
 
 ```bash
+# Create and activate venv
+python3 -m venv venv
+source venv/bin/activate
+
+# Install SDK
 pip install verse-content-sdk
 
 # Verify installation

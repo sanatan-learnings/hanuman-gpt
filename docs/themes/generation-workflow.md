@@ -5,6 +5,10 @@ Generate theme images using [verse-content-sdk](https://github.com/sanatan-learn
 ## Quick Start
 
 ```bash
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
 # Install SDK
 pip install verse-content-sdk
 

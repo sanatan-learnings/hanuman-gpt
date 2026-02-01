@@ -116,7 +116,7 @@ All multimedia content is generated using the [verse-content-sdk](https://github
 - **verse-embeddings** - Generate vector embeddings
 - **verse-deploy** - Deploy Cloudflare Workers
 
-Install once: `pip install verse-content-sdk`
+Install once: `python3 -m venv venv && source venv/bin/activate && pip install verse-content-sdk`
 
 See [scripts/README.md](../scripts/README.md) for complete documentation.
 
@@ -127,7 +127,11 @@ Create new artistic themes using DALL-E 3.
 ### Quick Start
 
 ```bash
-# Install verse-content-sdk (one-time setup)
+# Create and activate virtual environment (one-time setup)
+python3 -m venv venv
+source venv/bin/activate
+
+# Install SDK
 pip install verse-content-sdk
 
 # Get API key from https://platform.openai.com/api-keys
@@ -193,7 +197,11 @@ Create audio pronunciations for all verses using Eleven Labs text-to-speech.
 ### Quick Start
 
 ```bash
-# Install verse-content-sdk (one-time setup)
+# Create and activate virtual environment (one-time setup)
+python3 -m venv venv
+source venv/bin/activate
+
+# Install SDK
 pip install verse-content-sdk
 
 # Get API key from https://elevenlabs.io/app/settings/api-keys

@@ -50,7 +50,11 @@ Deploy a serverless proxy for OpenAI API requests, allowing spiritual guidance t
 ### Quick Deployment (SDK)
 
 ```bash
-# Install verse-content-sdk
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install SDK
 pip install verse-content-sdk
 
 # Deploy

@@ -58,6 +58,46 @@ cd ~/workspaces/hanuman-chalisa
 bundle install
 ```
 
+### 6. Set Up Python Virtual Environment
+
+For content generation (images, audio, embeddings), set up a Python virtual environment:
+
+```bash
+# Install Python 3 (if not already installed)
+brew install python3
+
+# Create virtual environment
+cd ~/workspaces/hanuman-chalisa
+python3 -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Install verse-content-sdk
+pip install verse-content-sdk
+
+# Verify installation
+verse-images --help
+```
+
+**Important:** Always activate the venv before running SDK commands:
+
+```bash
+# Activate venv (run this each time you open a new terminal)
+source venv/bin/activate
+
+# Now you can use SDK commands
+verse-images --theme-name modern-minimalist
+verse-audio
+verse-embeddings
+```
+
+**To deactivate:**
+
+```bash
+deactivate
+```
+
 ## Running the Local Server
 
 ### Start Jekyll Server
@@ -275,7 +315,7 @@ When you commit, you'll see:
 - **Project architecture**: [tech-stack.md](tech-stack.md)
 - **Spiritual Guidance API**: [spiritual-guidance.md](../reference/spiritual-guidance.md), [cloudflare-worker-setup.md](cloudflare-worker-setup.md)
 - **Developer guide**: [guide.md](guide.md)
-- **Adding content**: [verse-structure.md](../reference/verse-structure.md)
+- **YAML structure**: [tech-stack.md](../reference/tech-stack.md) (see Content Architecture section)
 
 ---
 

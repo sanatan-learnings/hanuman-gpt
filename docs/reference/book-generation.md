@@ -121,4 +121,4 @@ Potential enhancements: additional page sizes, custom fonts, color schemes, vers
 
 **May your personalized Hanuman Chalisa book bring devotion and spiritual growth! 🙏**
 
-[← Back to Documentation]({{ '/docs/user-guide' | relative_url }})
+[← Back to Documentation](../README.md)

@@ -9,11 +9,9 @@ docs/
 ├── guides/                      # Step-by-step how-to guides
 │   ├── local-development.md     # Setup and running locally
 │   ├── content-generation.md    # Creating verses and media
-│   ├── cloudflare-worker-setup.md # API proxy deployment
-│   └── user-guide.md            # Using the website
+│   └── cloudflare-worker-setup.md # API proxy deployment
 ├── reference/                   # Reference material
 │   ├── tech-stack.md            # Technical architecture
-│   ├── verse-structure.md       # YAML data format
 │   ├── image-prompts.md         # Scene descriptions
 │   ├── background.md            # About Hanuman Chalisa
 │   ├── book-generation.md       # PDF/print book generation
@@ -27,6 +25,11 @@ docs/
 ### Generate Content
 
 ```bash
+# Create and activate virtual environment (one-time)
+python3 -m venv venv
+source venv/bin/activate
+pip install verse-content-sdk
+
 # Generate images for a theme
 verse-images --theme-name modern-minimalist
 
@@ -51,12 +54,10 @@ See [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk) 
 - **[Local Development](guides/local-development.md)** - Setup and run locally
 - **[Content Generation](guides/content-generation.md)** - Create verses and media
 - **[Cloudflare Worker](guides/cloudflare-worker-setup.md)** - Deploy API proxy
-- **[User Guide](guides/user-guide.md)** - Using the website
 
 ## Reference
 
-- **[Tech Stack](reference/tech-stack.md)** - Architecture overview
-- **[Verse Structure](reference/verse-structure.md)** - YAML data format
+- **[Tech Stack](reference/tech-stack.md)** - Architecture and YAML structure
 - **[Image Prompts](reference/image-prompts.md)** - Scene descriptions
 - **[Background](reference/background.md)** - About Hanuman Chalisa
 - **[Book Generation](reference/book-generation.md)** - PDF/print books

@@ -21,7 +21,7 @@ const EMBEDDING_MODEL = 'sentence-transformers/all-MiniLM-L6-v2';
 const HF_API_URL = `https://router.huggingface.co/pipeline/feature-extraction/${EMBEDDING_MODEL}`;
 const GPT_MODEL = 'gpt-4o'; // Can change to 'gpt-4o-mini' for lower cost
 const TOP_K = 3; // Number of relevant verses to retrieve
-const MAX_TOKENS = 1000;
+const MAX_TOKENS = 300;
 const TEMPERATURE = 0.7;
 
 // Cloudflare Worker URL (set this after deploying your worker)
@@ -338,7 +338,11 @@ function buildSystemPrompt(verses, lang) {
         return `${header} ${v.title}\n${v.metadata.transliteration}\n${v.metadata.literal_translation}`;
     }).join('\n\n');
 
-    return `${intro}\n\nRelevant Verses:\n\n${versesContext}\n\nProvide guidance based on these verses. Be concise, respectful, and spiritually insightful.`;
+    const format = lang === 'hi'
+        ? '\n\nअपनी प्रतिक्रिया को इस प्रकार संरचित करें:\n1. सार: मुख्य संदेश (2-3 वाक्य)\n2. व्यावहारिक कार्य: 2-3 विशिष्ट, कार्रवाई योग्य चरण\n3. छंद संदर्भ: कौन से छंद लागू होते हैं और क्यों\n\nसंक्षिप्त रहें - कुल 150 शब्दों से कम।'
+        : '\n\nStructure your response as follows:\n1. **Key Insight**: Main message in 2-3 sentences\n2. **Actionable Practices**: 2-3 specific, practical steps the person can take\n3. **Verse References**: Which verses apply and why\n\nKeep it concise - under 150 words total.';
+
+    return `${intro}\n\nRelevant Verses:\n\n${versesContext}${format}`;
 }
 
 /**

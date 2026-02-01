@@ -1,0 +1,247 @@
+# Traditional Indian Devotional Art Theme
+# Hanuman Chalisa Visual Theme Definition
+
+theme:
+  # ===== Identity =====
+  id: traditional
+  version: "1.0"
+  created: "2026-01"
+  last_updated: "2026-01"
+  generator: DALL-E 3
+
+  # ===== Naming =====
+  name:
+    en: "Traditional Art"
+    hi: "पारंपरिक कला"
+    technical: "Classical Indian Devotional Painting"
+
+  # ===== Purpose & Intent =====
+  purpose: "A visual interpretation honoring classical Indian devotional art traditions, inspired by Mughal miniature paintings and temple art, bringing timeless sacred imagery to the Hanuman Chalisa."
+
+  intent:
+    primary: "Preserve and celebrate traditional Hindu devotional art styles"
+    secondary: "Create images that feel authentic to temple and manuscript traditions"
+    spiritual: "Invoke divine presence through classical iconography and traditional symbolism"
+    accessibility: "Connect with audiences who appreciate traditional religious art"
+
+  target_audience:
+    age_range: "All ages, especially those familiar with traditional temple art"
+    contexts:
+      - "Traditional devotional settings"
+      - "Religious education and temple displays"
+      - "Cultural heritage preservation"
+      - "Classical art appreciation"
+
+  # ===== Visual Style Core =====
+  style:
+    aesthetic: "Classical Indian Devotional Art"
+    movement: "Traditional Hindu Temple and Miniature Painting"
+    influence:
+      - "Mughal miniature paintings"
+      - "Pahari painting traditions"
+      - "Temple murals and iconography"
+      - "Classical Sanskrit manuscript illustrations"
+
+    description:
+      primary: "Rich, ornate depictions with intricate details, gold leaf accents, and traditional iconography"
+      atmosphere: "Sacred, reverential, and steeped in classical Hindu artistic traditions"
+      approach: "Highly detailed ornamentation, traditional postures and gestures, authentic symbolic elements"
+
+  # ===== Color Palette =====
+  color_palette:
+    primary:
+      name: "Vermillion Red"
+      hex: "#E34234"
+      significance: "Traditional color of divine power and auspiciousness"
+      usage: "Hanuman's body color, divine energy, sacred elements"
+
+    secondary:
+      - name: "Royal Gold"
+        hex: "#D4AF37"
+        usage: "Gold leaf accents, divine ornaments, halos, jewelry"
+
+      - name: "Sacred Saffron"
+        hex: "#FF9933"
+        usage: "Clothing, sacred objects, divine radiance"
+
+      - name: "Deep Crimson"
+        hex: "#8B0000"
+        usage: "Rich clothing details, borders, decorative elements"
+
+      - name: "Emerald Green"
+        hex: "#50C878"
+        usage: "Natural elements, foliage, traditional jewelry"
+
+      - name: "Peacock Blue"
+        hex: "#1C9CA8"
+        usage: "Sky, water, clothing details, divine accessories"
+
+    background:
+      - name: "Cream Parchment"
+        hex: "#F5E6D3"
+        usage: "Manuscript-style backgrounds, soft natural base"
+
+      - name: "Warm Beige"
+        hex: "#E8D5C4"
+        usage: "Temple wall backgrounds, architectural settings"
+
+    accent:
+      - name: "Lotus Pink"
+        hex: "#FF69B4"
+        usage: "Lotus flowers, delicate decorative elements"
+
+      - name: "Sandalwood Brown"
+        hex: "#8B7355"
+        usage: "Earthy elements, temple architecture"
+
+  # ===== Character Depiction - Hanuman =====
+  characters:
+    hanuman:
+      appearance:
+        body_color: "Vermillion red with golden undertones"
+        physique: "Heroic and powerful, traditional iconographic proportions"
+        face: "Noble, serene, with large expressive eyes showing devotion"
+        features: "Traditional monkey features with human nobility"
+
+      ornamentation:
+        crown: "Ornate traditional mukuta (crown) with gold and jewels"
+        jewelry: "Gold armlets, necklaces, anklets with intricate detail"
+        clothing: "Rich dhoti with traditional borders and patterns"
+        sacred_thread: "Visible yajnopavita (sacred thread)"
+
+      attributes:
+        tail: "Gracefully curved, prominent, often raised"
+        mace: "Traditional gada with detailed ornamentation"
+        posture: "Classical mudras and asanas from traditional iconography"
+        expression: "Serene devotion, strength tempered with bhakti"
+
+      divine_elements:
+        aura: "Golden halo with intricate mandala patterns"
+        radiance: "Soft golden glow, not overpowering"
+        symbolism: "Traditional iconographic symbols (mountains, flames, etc.)"
+
+  # ===== Composition & Layout =====
+  composition:
+    style: "Centered, symmetrical, following traditional iconographic rules"
+    framing: "Ornate borders with traditional patterns and motifs"
+    perspective: "Flat perspective typical of miniature paintings"
+    balance: "Formal, hierarchical composition emphasizing divine presence"
+
+    elements:
+      borders: "Intricate traditional patterns, floral motifs, geometric designs"
+      background: "Architectural elements, natural settings, or ornamental patterns"
+      foreground: "Main deity central and prominent"
+      decorative: "Rich ornamentation throughout without overwhelming the sacred figure"
+
+  # ===== Technical Specifications =====
+  generation:
+    # Style modifier for DALL-E 3 prompts
+    style_modifier: |
+      Traditional Indian devotional art style inspired by Mughal miniature paintings and classical temple art.
+      Rich colors with vermillion red for Hanuman, royal gold leaf accents throughout, intricate ornamental details.
+      Ornate traditional jewelry, crown (mukuta), and clothing with elaborate patterns.
+      Decorative borders with traditional Indian motifs and geometric patterns.
+      Classical iconographic proportions and postures.
+      Flat perspective typical of miniature paintings.
+      Sacred atmosphere with golden halos and divine symbolism.
+      Manuscript-quality detail with warm, rich color palette.
+      Traditional Hindu temple mural aesthetic with reverence and spiritual depth.
+
+    # DALL-E 3 API parameters
+    dalle_params:
+      model: "dall-e-3"
+      size: "1024x1792"  # Portrait format
+      quality: "hd"       # HD quality recommended for intricate details
+      style: "natural"    # More authentic to traditional art
+
+    # Generation behavior
+    retry_count: 3
+    rate_limit_delay: 2
+    skip_existing: true
+
+  # ===== Artistic Details =====
+  details:
+    texture:
+      - "Manuscript paper texture, aged parchment quality"
+      - "Gold leaf metallic sheen on ornaments and halos"
+      - "Rich fabric textures in clothing"
+      - "Detailed architectural stonework when present"
+
+    patterns:
+      borders: "Traditional Indian floral and geometric motifs"
+      clothing: "Intricate paisley, floral, and geometric patterns"
+      architecture: "Temple carvings, pillars with traditional designs"
+
+    symbolism:
+      - "Lotus flowers representing purity"
+      - "Mountains symbolizing strength"
+      - "Flames representing divine energy"
+      - "Traditional hand mudras (gestures)"
+      - "Sacred objects (mala, kalasha, etc.)"
+
+  # ===== Scene-Specific Guidelines =====
+  scenes:
+    devotional:
+      focus: "Hanuman in prayer or meditation"
+      elements: "Temple setting, lotus flowers, sacred fire"
+      mood: "Deep reverence and spiritual contemplation"
+
+    action:
+      focus: "Hanuman's heroic deeds"
+      elements: "Dynamic poses within traditional framework"
+      mood: "Powerful but graceful, divine strength"
+
+    narrative:
+      focus: "Story moments from Ramayana"
+      elements: "Multiple figures, architectural settings"
+      mood: "Sacred storytelling, mythological grandeur"
+
+  # ===== Cultural & Spiritual Guidelines =====
+  cultural_notes:
+    authenticity:
+      - "Follow traditional iconographic rules for deity depiction"
+      - "Use authentic symbolic elements from Hindu tradition"
+      - "Maintain respectful and reverential tone"
+      - "Accurate representation of traditional ornaments and clothing"
+
+    symbolism:
+      colors: "Each color carries traditional symbolic meaning"
+      gestures: "Hand mudras should follow classical iconography"
+      objects: "Sacred objects depicted with proper traditional form"
+      proportions: "Follow traditional iconometric guidelines where possible"
+
+  # ===== Quality Standards =====
+  quality:
+    must_have:
+      - "Intricate ornamental details throughout"
+      - "Rich, warm color palette with gold accents"
+      - "Traditional iconographic authenticity"
+      - "Decorative borders on images"
+      - "Reverential and sacred atmosphere"
+
+    avoid:
+      - "Modern or contemporary styling"
+      - "Photorealistic rendering"
+      - "Western artistic influences"
+      - "Minimalist or sparse compositions"
+      - "Disrespectful or casual depictions"
+
+  # ===== File Organization =====
+  output:
+    directory: "images/traditional"
+    naming: "[verse-id].png"
+    format: "PNG with transparency support for borders"
+    size: "1024x1792 (portrait, HD quality)"
+
+  # ===== Usage & Attribution =====
+  usage:
+    license: "Same as project (see LICENSE)"
+    attribution: "Generated with DALL-E 3, traditional art style specifications"
+    modifications: "Theme YAML can be modified for variations"
+
+  # ===== Notes =====
+  notes:
+    - "This theme celebrates classical Indian devotional art traditions"
+    - "HD quality recommended to capture intricate ornamental details"
+    - "Style emphasizes authenticity and cultural respect"
+    - "Suitable for traditional devotional contexts and cultural education"

@@ -14,11 +14,12 @@ kids-friendly:
   folder: "kids-friendly"
   default: false
 
+traditional:
+  name_en: "Traditional Art"
+  name_hi: "पारंपरिक कला"
+  description_en: "Classical Indian devotional art with rich colors, gold accents, and intricate details inspired by Mughal miniature paintings"
+  description_hi: "मुगल लघु चित्रों से प्रेरित समृद्ध रंग, सोने के उच्चारण और जटिल विवरण के साथ शास्त्रीय भारतीय भक्ति कला"
+  folder: "traditional"
+  default: false
+
 # Future themes can be added here
-# traditional:
-#   name_en: "Traditional Art"
-#   name_hi: "पारंपरिक कला"
-#   description_en: "Classic Indian devotional art style"
-#   description_hi: "क्लासिक भारतीय भक्ति कला शैली"
-#   folder: "traditional"
-#   default: false

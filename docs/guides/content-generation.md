@@ -11,7 +11,7 @@ Technical documentation for developers contributing to the Hanuman Chalisa proje
 
 ```bash
 # Clone the repository
-git clone https://github.com/sanatan-learnings/hanuman-chalisa.git
+git clone https://github.com/arungupta/hanuman-gpt.git
 cd hanuman-chalisa
 
 # Install dependencies
@@ -21,7 +21,7 @@ bundle install
 # Start local server
 bundle exec jekyll serve
 
-# Visit http://localhost:4000/hanuman-chalisa/
+# Visit http://localhost:4000/hanuman-gpt/
 ```
 
 ## Project Structure
@@ -368,7 +368,7 @@ The site auto-deploys via GitHub Pages when pushing to `main` branch.
 
 1. Push to `main` branch
 2. GitHub Actions runs Jekyll build
-3. Site deploys to `https://sanatan-learnings.github.io/hanuman-chalisa/`
+3. Site deploys to `https://arungupta.github.io/hanuman-gpt/`
 4. Check Actions tab for build status
 
 ### Pre-commit Validation
@@ -456,8 +456,8 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for:
 
 ## Getting Help
 
-- **Questions**: [GitHub Discussions](https://github.com/sanatan-learnings/hanuman-chalisa/discussions)
-- **Bugs**: [GitHub Issues](https://github.com/sanatan-learnings/hanuman-chalisa/issues)
+- **Questions**: [GitHub Discussions](https://github.com/arungupta/hanuman-gpt/discussions)
+- **Bugs**: [GitHub Issues](https://github.com/arungupta/hanuman-gpt/issues)
 - **Technical Docs**: See `docs/` directory
 
 ---

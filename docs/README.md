@@ -67,6 +67,6 @@ See [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk) 
 
 ## Quick Links
 
-- 🌐 [Live Website](https://sanatan-learnings.github.io/hanuman-chalisa/)
+- 🌐 [Live Website](https://arungupta.github.io/hanuman-gpt/)
 - 📦 [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk)
-- 🐙 [GitHub Repository](https://github.com/sanatan-learnings/hanuman-chalisa)
+- 🐙 [GitHub Repository](https://github.com/arungupta/hanuman-gpt)

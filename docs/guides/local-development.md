@@ -108,7 +108,7 @@ bundle exec jekyll serve
 
 This will:
 - Build your site
-- Start a local web server at http://localhost:4000/hanuman-chalisa/
+- Start a local web server at http://localhost:4000/hanuman-gpt/
 - Watch for file changes and rebuild automatically
 
 ### Common Options
@@ -130,7 +130,7 @@ bundle exec jekyll serve --incremental
 ## Testing Your Changes
 
 1. **Start the server**: `bundle exec jekyll serve`
-2. **Open browser**: http://localhost:4000/hanuman-chalisa/
+2. **Open browser**: http://localhost:4000/hanuman-gpt/
 3. **Make changes**: Edit files in your editor
 4. **Refresh browser**: Jekyll auto-rebuilds (wait a few seconds)
 5. **Check console**: Look for build errors in the terminal
@@ -248,7 +248,7 @@ cp _verses/verse_01.md _verses/verse_NEW.md
 
 # Edit the new file
 # Check it builds: bundle exec jekyll build
-# View it locally: http://localhost:4000/hanuman-chalisa/verses/verse_NEW/
+# View it locally: http://localhost:4000/hanuman-gpt/verses/verse_NEW/
 ```
 
 ## Performance Tips

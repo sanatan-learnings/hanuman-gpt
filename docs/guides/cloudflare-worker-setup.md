@@ -4,7 +4,7 @@ This guide covers deploying the Hanuman Chalisa website and its services.
 
 ## GitHub Pages (Static Site)
 
-**Live Site:** [https://arungupta.github.io/hanuman-gpt/](https://arungupta.github.io/hanuman-gpt/)
+**Live Site:** [https://sanatan-learnings.github.io/hanuman-gpt/](https://sanatan-learnings.github.io/hanuman-gpt/)
 
 ### How It Works
 

@@ -300,7 +300,7 @@ See [deployment guide](deployment.md) for details.
 3. **Commit** - Git with descriptive messages
 4. **Push** - GitHub receives changes
 5. **Build** - GitHub Pages automatically builds Jekyll site (1-2 min)
-6. **Deploy** - Live at https://arungupta.github.io/hanuman-gpt/
+6. **Deploy** - Live at https://sanatan-learnings.github.io/hanuman-gpt/
 
 ## Media Generation
 

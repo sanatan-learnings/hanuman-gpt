@@ -2,7 +2,7 @@
 
 🚩 **Jai Hanuman 🏹 Jai Shri Ram**
 
-**🌐 [View the live interactive website →](https://arungupta.github.io/hanuman-gpt/)**
+**🌐 [View the live interactive website →](https://sanatan-learnings.github.io/hanuman-gpt/)**
 
 _May Lord Hanuman's blessings be with all who study and recite these sacred verses._
 
@@ -112,7 +112,7 @@ We welcome contributions! Whether it's:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
-**Upcoming Features:** Check [GitHub Issues](https://github.com/arungupta/hanuman-gpt/issues)
+**Upcoming Features:** Check [GitHub Issues](https://github.com/sanatan-learnings/hanuman-gpt/issues)
 
 ## Acknowledgments
 

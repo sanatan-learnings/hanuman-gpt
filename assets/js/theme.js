@@ -1,47 +1,68 @@
 // Theme switching functionality for image themes
 
-// Get current theme from localStorage or use default
-function getCurrentTheme() {
-    return localStorage.getItem('selectedTheme') || 'modern-minimalist';
+// Get collection key from the page
+function getCurrentCollection() {
+    // Try to extract collection from image paths on the page
+    const firstImage = document.querySelector('img[src*="/images/"]');
+    if (firstImage) {
+        const match = firstImage.src.match(/\/images\/([^\/]+)\//);
+        if (match) {
+            return match[1];
+        }
+    }
+    return null;
 }
 
-// Set theme in localStorage
-function setCurrentTheme(theme) {
-    localStorage.setItem('selectedTheme', theme);
+// Get current theme from localStorage for specific collection
+function getCurrentTheme(collection) {
+    if (!collection) return 'modern-minimalist';
+    const key = `selectedTheme_${collection}`;
+    return localStorage.getItem(key) || 'modern-minimalist';
+}
+
+// Set theme in localStorage for specific collection
+function setCurrentTheme(collection, theme) {
+    if (!collection) return;
+    const key = `selectedTheme_${collection}`;
+    localStorage.setItem(key, theme);
 }
 
 // Switch to a new theme
 function switchTheme(theme) {
-    setCurrentTheme(theme);
-    applyTheme(theme);
+    const collection = getCurrentCollection();
+    setCurrentTheme(collection, theme);
+    applyTheme(collection, theme);
 }
 
-// Apply theme by updating all image sources
-function applyTheme(theme) {
-    // Update all images that have src containing /images/
+// Apply theme by updating all image sources for a specific collection
+function applyTheme(collection, theme) {
+    if (!collection) return;
+
+    // Update all images that have src containing /images/{collection}/
     // EXCEPT theme preview thumbnails (those should stay fixed)
-    const images = document.querySelectorAll('img[src*="/images/"]:not([data-theme-preview])');
+    const images = document.querySelectorAll(`img[src*="/images/${collection}/"]:not([data-theme-preview])`);
 
     images.forEach(img => {
         const currentSrc = img.getAttribute('src');
-        // Replace the theme folder in the path while preserving collection
+        // Replace the theme folder in the path for this specific collection
         // Pattern: /images/{collection}/{old-theme}/ -> /images/{collection}/{new-theme}/
-        const newSrc = currentSrc.replace(/\/images\/([^\/]+)\/[^\/]+\//, `/images/$1/${theme}/`);
+        const pattern = new RegExp(`/images/${collection}/[^/]+/`);
+        const newSrc = currentSrc.replace(pattern, `/images/${collection}/${theme}/`);
         img.setAttribute('src', newSrc);
     });
 }
 
 // Initialize theme on page load
 function initializeTheme() {
-    const theme = getCurrentTheme();
+    const collection = getCurrentCollection();
     const themeSelect = document.getElementById('themeSelect');
 
-    if (themeSelect) {
+    // Only apply theme if there's a theme switcher on this page
+    if (themeSelect && collection) {
+        const theme = getCurrentTheme(collection);
         themeSelect.value = theme;
+        applyTheme(collection, theme);
     }
-
-    // Apply the current theme to all images
-    applyTheme(theme);
 }
 
 // Run initialization when DOM is ready

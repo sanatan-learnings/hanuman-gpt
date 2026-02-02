@@ -46,9 +46,11 @@ layout: default
             <pre>{{ page.transliteration }}</pre>
         </div>
 
+        {% assign collection = page.collection_key | default: "hanuman-chalisa" %}
+
+        {% if collection == "hanuman-chalisa" %}
         <h2><span data-lang="en">{{ t_en.sections.pronunciation }}</span><span data-lang="hi">{{ t_hi.sections.pronunciation }}</span></h2>
         {% assign audio_base = page.path | split: "/" | last | split: "." | first %}
-        {% assign collection = page.collection_key | default: "hanuman-chalisa" %}
         {% assign audio_full = "/audio/" | append: collection | append: "/" | append: audio_base | append: "_full.mp3" %}
         {% assign audio_slow = "/audio/" | append: collection | append: "/" | append: audio_base | append: "_slow.mp3" %}
 
@@ -72,6 +74,7 @@ layout: default
             </div>
         </div>
         <p><span data-lang="en">{{ t_en.labels.audio_description }}</span><span data-lang="hi">{{ t_hi.labels.audio_description }}</span></p>
+        {% endif %}
 
         <div data-lang="en">
             {% if page.phonetic_notes %}

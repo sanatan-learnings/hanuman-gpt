@@ -1,6 +1,6 @@
 # Spiritual Guidance API Configuration
 
-The spiritual guidance feature uses OpenAI's API through a Cloudflare Worker proxy for secure, frictionless access.
+The spiritual guidance feature uses OpenAI's API through a Cloudflare Worker proxy for secure, frictionless access. The RAG system searches across all enabled collections (Hanuman Chalisa, Sundar Kaand, etc.).
 
 ## Current Setup: Cloudflare Worker
 

@@ -1,6 +1,6 @@
 # Documentation
 
-Documentation for the Hanuman Chalisa website.
+Documentation for the Hanuman GPT website (multi-collection sacred texts).
 
 ## Structure
 
@@ -25,26 +25,28 @@ docs/
 ### Generate Content
 
 ```bash
-# Create and activate virtual environment (one-time)
-python3 -m venv venv
-source venv/bin/activate
+# Install verse-content-sdk (one-time)
 pip install verse-content-sdk
 
-# Generate images for a theme
-verse-images --theme-name modern-minimalist
+# Generate embeddings for all collections
+verse-embeddings --multi-collection \
+  --collections-file _data/collections.yml \
+  --verses-dir _verses \
+  --output data/embeddings.json \
+  --language en hi
 
-# Generate audio recitations
-verse-audio
+# Generate images for a specific collection/theme
+verse-images --collection hanuman-chalisa --theme-name modern-minimalist
 
-# Generate embeddings for search
-verse-embeddings
+# Generate audio (Hanuman Chalisa only currently)
+verse-audio --collection hanuman-chalisa
 ```
 
 ### Commands
 
+- `verse-embeddings` - Generate embeddings for semantic search (supports `--multi-collection`)
 - `verse-images` - Generate images using DALL-E 3
 - `verse-audio` - Generate audio using ElevenLabs
-- `verse-embeddings` - Generate embeddings for semantic search
 - `verse-deploy` - Deploy Cloudflare Worker
 
 See [verse-content-sdk](https://github.com/sanatan-learnings/verse-content-sdk) for full SDK documentation.

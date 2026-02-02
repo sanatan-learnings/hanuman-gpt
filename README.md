@@ -10,23 +10,26 @@ _May Lord Hanuman's blessings be with all who study and recite these sacred vers
 
 ## About
 
-A detailed, verse-by-verse exploration of the Hanuman Chalisa - one of the most revered devotional hymns in Hinduism. Composed by poet-saint Goswami Tulsidas, it consists of 40 verses (chaupais) glorifying Lord Hanuman's virtues and devotion to Lord Rama.
+A detailed, verse-by-verse exploration of sacred Hindu texts related to Lord Hanuman. Currently features:
+- **Hanuman Chalisa** - 40 verses (chaupais) by Goswami Tulsidas glorifying Lord Hanuman
+- **Sundar Kaand** - Selected verses from Ramcharitmanas describing Hanuman's journey to Lanka
 
 This guide provides deep understanding of each verse with translations, meanings, stories from the Ramayana, and practical applications for modern life - all available in **English** and **हिन्दी (Hindi)**.
 
 ## Features
 
 ### 📖 Read & Study
-- **43 verses** with original Devanagari text and transliteration
+- **Multiple collections** - Hanuman Chalisa (43 verses) + Sundar Kaand (3 verses)
+- **Original Devanagari text** and transliteration
 - **Word-by-word meanings** and literal translations
 - **Interpretive meanings** explaining spiritual depth
 - **Stories from Ramayana** providing context
-- **Search functionality** across all verses
+- **Search functionality** across all collections
 - **Bilingual support** - Switch between English and Hindi instantly
 - **Beautiful AI-generated images** for each verse
 
-### 🎵 Audio Pronunciation
-- **86 audio files** - Every verse in two speeds (full and slow)
+### 🎵 Audio Pronunciation (Hanuman Chalisa)
+- **86 audio files** - Every Chalisa verse in two speeds (full and slow)
 - **Full speed** - Natural recitation pace for experienced practitioners
 - **Slow speed** - 25% slower for learning pronunciation
 - **AI-generated** - Clear, natural Hindi/Sanskrit pronunciation via Eleven Labs
@@ -35,22 +38,23 @@ This guide provides deep understanding of each verse with translations, meanings
 
 ### 💬 Spiritual Guidance (AI-Powered)
 - **Ask questions** and receive spiritual guidance based on relevant verses
-- **RAG system** - Finds and cites specific verses for your questions
+- **Multi-collection RAG system** - Searches across all collections
 - **GPT-4 powered** - Thoughtful, context-aware responses
 - **Bilingual** - Works in English and Hindi
 - **Conversation history** - Maintains context for follow-up questions
 - Requires your OpenAI API key (~$0.01 per query)
 
-[Try Spiritual Guidance →](https://sanatan-learnings.github.io/hanuman-chalisa/guidance)
+[Try Spiritual Guidance →](https://sanatan-learnings.github.io/hanuman-gpt/guidance)
 
 ### 📕 Generate Custom Books
 Create personalized printable books:
+- **Multiple collections**: Choose from available collections
 - **Multiple sizes**: 6"×4" pocket, 8"×6" medium, A5, A4
 - **Customizable content**: Choose what to include
 - **Custom headers/footers**: Personalize with your own text
 - **Print or PDF**: Ready for home or professional printing
 
-[Visit Book Generator →](https://sanatan-learnings.github.io/hanuman-chalisa/book)
+[Visit Book Generator →](https://sanatan-learnings.github.io/hanuman-gpt/chalisa/book)
 
 ### 🎨 Multiple Themes
 - Switch between different artistic styles
@@ -71,22 +75,25 @@ Want to contribute or generate custom themes?
 
 **→ See [CONTRIBUTING.md](CONTRIBUTING.md)** for contribution guidelines
 
-### Regenerating Embeddings (For New Languages)
+### Regenerating Embeddings
 
-The spiritual guidance feature uses pre-computed embeddings. To regenerate them (e.g., when adding new language translations):
+The spiritual guidance feature uses pre-computed embeddings. To regenerate them (e.g., when adding new collections or translations):
 
 ```bash
-# Set up Python virtual environment (first time only)
-python3 -m venv venv
-./venv/bin/pip install sentence-transformers
+# Install verse-content-sdk (first time only)
+pip install verse-content-sdk
 
-# Generate embeddings locally (FREE, no API needed)
-./venv/bin/python scripts/generate_embeddings_local.py
+# Generate embeddings for all enabled collections
+verse-embeddings --multi-collection \
+  --collections-file _data/collections.yml \
+  --verses-dir _verses \
+  --output data/embeddings.json \
+  --language en hi
 
-# Output: data/embeddings.json (~1.1MB)
+# Output: data/embeddings.json (~4.6MB with all collections)
 ```
 
-**Cost:** FREE - runs locally on your machine, no API calls required!
+**Cost:** Requires OpenAI API key (~$0.01 per collection)
 
 ## Documentation
 

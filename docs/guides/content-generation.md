@@ -5,7 +5,7 @@ title: "Developer Guide"
 
 # Developer Guide
 
-Technical documentation for developers contributing to the Hanuman Chalisa project.
+Technical documentation for developers contributing to the Hanuman GPT project (multi-collection sacred texts).
 
 ## Quick Start
 
@@ -27,33 +27,40 @@ bundle exec jekyll serve
 ## Project Structure
 
 ```
-hanuman-chalisa/
-├── _data/                    # Site data files
+hanuman-gpt/
+├── _data/
+│   ├── collections.yml       # Multi-collection configuration
 │   ├── translations/         # Language files (en.yml, hi.yml)
-│   └── themes.yml            # Image theme definitions
-├── _layouts/                 # Page templates
+│   └── themes.yml            # Image theme definitions (per-collection)
+├── _layouts/
 │   ├── default.html          # Main site layout
 │   └── verse.html            # Individual verse layout
-├── _verses/                  # 43 verse markdown files
-│   ├── doha_01.md
-│   ├── verse_01.md
-│   └── doha_closing.md
-├── assets/                   # Static assets
-│   ├── css/                  # Stylesheets
-│   ├── js/                   # JavaScript files
-│   └── images/               # Static images
-├── audio/                    # AI-generated audio files
-│   ├── doha_01_full.mp3      # Full speed recitations
-│   └── doha_01_slow.mp3      # Slow speed (75%) for learning
-├── docs/                     # Documentation
-├── images/                   # AI-generated verse images
-│   └── modern-minimalist/    # Default theme (47 images)
-├── scripts/                  # Legacy scripts (use verse-content-sdk instead)
-│   └── legacy/               # Old bash/python scripts (deprecated)
-├── book.html                 # Book generator page
-├── index.html                # Home page
-├── full-chalisa.html         # Complete chalisa view
-└── search.html               # Search page
+├── _verses/                  # Multi-collection verse files
+│   ├── hanuman-chalisa/      # 43 Chalisa verses
+│   ├── sundar-kaand/         # Sundar Kaand verses
+│   └── bajrang-baan/         # Future collection
+├── assets/
+│   ├── css/
+│   ├── js/
+│   │   ├── theme.js          # Collection-aware theme switching
+│   │   └── guidance.js       # Multi-collection RAG system
+│   └── images/
+├── audio/                    # Collection-specific audio
+│   └── hanuman-chalisa/      # 86 audio files (full + slow)
+├── images/                   # Collection-specific images
+│   ├── hanuman-chalisa/      # Chalisa images (3 themes)
+│   └── sundar-kaand/         # Sundar Kaand images (1 theme)
+├── data/
+│   └── embeddings.json       # Multi-collection embeddings (4.6MB)
+├── chalisa/                  # Chalisa-specific pages
+│   ├── index.html            # Chalisa landing page
+│   ├── full-chalisa.html     # Complete chalisa view
+│   └── book.html             # Book generator
+├── sundar-kaand/             # Sundar Kaand pages
+│   └── index.html            # Sundar Kaand landing page
+├── index.html                # Multi-collection home page
+├── guidance.html             # AI spiritual guidance (all collections)
+└── search.html               # Search (all collections)
 ```
 
 ## Local Development

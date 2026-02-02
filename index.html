@@ -7,114 +7,58 @@ title: Home
 
 <div class="hero-section">
     <div class="title-image-container">
-        <img src="{{ '/images/modern-minimalist/title-page.png' | relative_url }}" alt="Hanuman Chalisa Title Page" class="title-page-image" data-themed-image="title-page.png">
+        <img src="{{ '/images/hanuman-gpt-title.png' | relative_url }}" alt="Hanuman GPT" class="title-page-image">
     </div>
 
     <p class="blessing"><em><span data-lang="en">{{ t_en.home.blessing }}</span><span data-lang="hi">{{ t_hi.home.blessing }}</span></em></p>
 
     <div class="quick-actions">
-        <a href="{{ '/full-chalisa' | relative_url }}" class="btn-primary">📖 <span data-lang="en">{{ t_en.home.read_complete }}</span><span data-lang="hi">{{ t_hi.home.read_complete }}</span></a>
-        <a href="{{ '/guidance' | relative_url }}" class="btn-secondary">💬 <span data-lang="en">{{ t_en.guidance.title }}</span><span data-lang="hi">{{ t_hi.guidance.title }}</span></a>
+        <a href="{{ '/guidance' | relative_url }}" class="btn-primary">💬 <span data-lang="en">{{ t_en.guidance.title }}</span><span data-lang="hi">{{ t_hi.guidance.title }}</span></a>
         <a href="{{ '/search' | relative_url }}" class="btn-secondary">🔍 <span data-lang="en">{{ t_en.home.search_verses }}</span><span data-lang="hi">{{ t_hi.home.search_verses }}</span></a>
-        <a href="{{ '/book' | relative_url }}" class="btn-secondary">📕 <span data-lang="en">Generate Book</span><span data-lang="hi">पुस्तक बनाएं</span></a>
     </div>
-
-    <details class="about-section">
-        <summary><span data-lang="en">{{ t_en.home.about_title }}</span><span data-lang="hi">{{ t_hi.home.about_title }}</span></summary>
-        <p><span data-lang="en">{{ t_en.home.about_p1 }}</span><span data-lang="hi">{{ t_hi.home.about_p1 }}</span></p>
-
-        <p><span data-lang="en">{{ t_en.home.about_p2 }}</span><span data-lang="hi">{{ t_hi.home.about_p2 }}</span></p>
-
-        <p><span data-lang="en">{{ t_en.home.about_p3 }}</span><span data-lang="hi">{{ t_hi.home.about_p3 }}</span></p>
-    </details>
 </div>
 
-<section class="verse-navigation">
-    <h3>🪷 <span data-lang="en">{{ t_en.home.opening_dohas }}</span><span data-lang="hi">{{ t_hi.home.opening_dohas }}</span></h3>
-    <div class="verse-grid">
-        {% assign doha_01 = site.verses | where: "url", "/verses/doha_01/" | first %}
-        {% assign doha_02 = site.verses | where: "url", "/verses/doha_02/" | first %}
+<section class="collections-section">
+    <h2><span data-lang="en">Sacred Texts</span><span data-lang="hi">पवित्र ग्रंथ</span></h2>
 
-        <a href="{{ doha_01.url | relative_url }}" class="verse-card">
-            {% if doha_01.image %}
-            <div class="card-image">
-                <img src="{{ doha_01.image | relative_url }}" alt="{{ doha_01.title_en }}" loading="lazy">
-            </div>
-            {% endif %}
-            <div class="card-content">
-                <div class="verse-number">
-                    <span data-lang="en">{{ t_en.home.doha }} 1</span>
-                    <span data-lang="hi">{{ t_hi.home.doha }} 1</span>
-                </div>
-                <div class="verse-title">
-                    <span data-lang="en">{{ doha_01.title_en }}</span>
-                    <span data-lang="hi">{{ doha_01.title_hi }}</span>
-                </div>
-            </div>
-        </a>
+    <div class="collections-grid">
+        {% for collection_data in site.data.collections %}
+            {% assign coll_key = collection_data[0] %}
+            {% assign coll = collection_data[1] %}
+            {% if coll.enabled %}
+                {% assign coll_verses = site.verses | where: "collection_key", coll_key %}
+                {% assign verse_count = coll_verses | size %}
 
-        <a href="{{ doha_02.url | relative_url }}" class="verse-card">
-            {% if doha_02.image %}
-            <div class="card-image">
-                <img src="{{ doha_02.image | relative_url }}" alt="{{ doha_02.title_en }}" loading="lazy">
-            </div>
+                <a href="{{ coll.permalink_base | relative_url }}" class="collection-card">
+                    <div class="collection-header">
+                        <span class="collection-icon">{{ coll.icon }}</span>
+                        <div class="collection-title">
+                            <h3>
+                                <span data-lang="en">{{ coll.name_en }}</span>
+                                <span data-lang="hi">{{ coll.name_hi }}</span>
+                            </h3>
+                            <p class="collection-author">
+                                <span data-lang="en">by {{ coll.author_en }}</span>
+                                <span data-lang="hi">{{ coll.author_hi }} द्वारा</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="collection-description">
+                        <span data-lang="en">{{ coll.description_en }}</span>
+                        <span data-lang="hi">{{ coll.description_hi }}</span>
+                    </p>
+                    <div class="collection-footer">
+                        <span class="verse-count">
+                            <span data-lang="en">{{ verse_count }} verses</span>
+                            <span data-lang="hi">{{ verse_count }} चौपाई</span>
+                        </span>
+                        <span class="collection-link">
+                            <span data-lang="en">Explore →</span>
+                            <span data-lang="hi">देखें →</span>
+                        </span>
+                    </div>
+                </a>
             {% endif %}
-            <div class="card-content">
-                <div class="verse-number">
-                    <span data-lang="en">{{ t_en.home.doha }} 2</span>
-                    <span data-lang="hi">{{ t_hi.home.doha }} 2</span>
-                </div>
-                <div class="verse-title">
-                    <span data-lang="en">{{ doha_02.title_en }}</span>
-                    <span data-lang="hi">{{ doha_02.title_hi }}</span>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <h3>📿 <span data-lang="en">{{ t_en.home.main_chalisa }}</span><span data-lang="hi">{{ t_hi.home.main_chalisa }}</span></h3>
-    <div class="verse-grid">
-        {% assign verses = site.verses | where_exp: "item", "item.url contains 'verse_'" | sort: "verse_number" %}
-        {% for verse in verses %}
-        <a href="{{ verse.url | relative_url }}" class="verse-card">
-            {% if verse.image %}
-            <div class="card-image">
-                <img src="{{ verse.image | relative_url }}" alt="{{ verse.title_en }}" loading="lazy">
-            </div>
-            {% endif %}
-            <div class="card-content">
-                <div class="verse-number">
-                    <span data-lang="en">{{ t_en.home.verse }} {{ verse.verse_number }}</span>
-                    <span data-lang="hi">{{ t_hi.home.verse }} {{ verse.verse_number }}</span>
-                </div>
-                <div class="verse-title">
-                    <span data-lang="en">{{ verse.title_en }}</span>
-                    <span data-lang="hi">{{ verse.title_hi }}</span>
-                </div>
-            </div>
-        </a>
         {% endfor %}
-    </div>
-
-    <h3>🙏 <span data-lang="en">{{ t_en.home.closing_doha }}</span><span data-lang="hi">{{ t_hi.home.closing_doha }}</span></h3>
-    <div class="verse-grid">
-        {% assign doha_closing = site.verses | where: "url", "/verses/doha_closing/" | first %}
-        <a href="{{ doha_closing.url | relative_url }}" class="verse-card">
-            {% if doha_closing.image %}
-            <div class="card-image">
-                <img src="{{ doha_closing.image | relative_url }}" alt="{{ doha_closing.title_en }}" loading="lazy">
-            </div>
-            {% endif %}
-            <div class="card-content">
-                <div class="verse-number">
-                    <span data-lang="en">{{ t_en.home.closing }}</span>
-                    <span data-lang="hi">{{ t_hi.home.closing }}</span>
-                </div>
-                <div class="verse-title">
-                    <span data-lang="en">{{ doha_closing.title_en }}</span>
-                    <span data-lang="hi">{{ doha_closing.title_hi }}</span>
-                </div>
-            </div>
-        </a>
     </div>
 </section>

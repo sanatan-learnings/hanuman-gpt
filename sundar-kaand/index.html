@@ -1,0 +1,57 @@
+---
+layout: default
+title: Sundar Kaand
+---
+{% assign t_en = site.data.translations.en %}
+{% assign t_hi = site.data.translations.hi %}
+{% assign coll = site.data.collections.sundar-kaand %}
+
+<div class="hero-section">
+    <div class="collection-banner">
+        <span class="collection-icon-large">{{ coll.icon }}</span>
+        <h1>
+            <span data-lang="en">{{ coll.name_en }}</span>
+            <span data-lang="hi">{{ coll.name_hi }}</span>
+        </h1>
+        <p class="collection-author-large">
+            <span data-lang="en">by {{ coll.author_en }}</span>
+            <span data-lang="hi">{{ coll.author_hi }} द्वारा</span>
+        </p>
+        <p class="collection-description-large">
+            <span data-lang="en">{{ coll.description_en }}</span>
+            <span data-lang="hi">{{ coll.description_hi }}</span>
+        </p>
+    </div>
+
+    <div class="quick-actions">
+        <a href="{{ '/guidance' | relative_url }}" class="btn-primary">💬 <span data-lang="en">{{ t_en.guidance.title }}</span><span data-lang="hi">{{ t_hi.guidance.title }}</span></a>
+        <a href="{{ '/search' | relative_url }}" class="btn-secondary">🔍 <span data-lang="en">{{ t_en.home.search_verses }}</span><span data-lang="hi">{{ t_hi.home.search_verses }}</span></a>
+        <a href="{{ '/chalisa/book' | relative_url }}?collection=sundar-kaand" class="btn-secondary">📕 <span data-lang="en">Generate Book</span><span data-lang="hi">पुस्तक बनाएं</span></a>
+    </div>
+</div>
+
+<section class="verse-navigation">
+    <h3>🏹 <span data-lang="en">Sundar Kaand Verses</span><span data-lang="hi">सुंदर कांड चौपाई</span></h3>
+    <div class="verse-grid">
+        {% assign verses = site.verses | where: "collection_key", "sundar-kaand" | sort: "verse_number" %}
+        {% for verse in verses %}
+        <a href="{{ verse.url | relative_url }}" class="verse-card">
+            {% if verse.image %}
+            <div class="card-image">
+                <img src="{{ verse.image | relative_url }}" alt="{{ verse.title_en }}" loading="lazy">
+            </div>
+            {% endif %}
+            <div class="card-content">
+                <div class="verse-number">
+                    <span data-lang="en">Chaupai {{ verse.verse_number }}</span>
+                    <span data-lang="hi">चौपाई {{ verse.verse_number }}</span>
+                </div>
+                <div class="verse-title">
+                    <span data-lang="en">{{ verse.title_en }}</span>
+                    <span data-lang="hi">{{ verse.title_hi }}</span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>

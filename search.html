@@ -25,10 +25,18 @@ description: "Search through all Hanuman Chalisa verses by keyword, phrase, or m
     </div>
 
     <div class="search-filters">
-        <label><input type="checkbox" id="searchDevanagari" checked> <span data-lang="en">{{ t_en.search.filter_devanagari }}</span><span data-lang="hi">{{ t_hi.search.filter_devanagari }}</span></label>
-        <label><input type="checkbox" id="searchTransliteration" checked> <span data-lang="en">{{ t_en.search.filter_transliteration }}</span><span data-lang="hi">{{ t_hi.search.filter_transliteration }}</span></label>
-        <label><input type="checkbox" id="searchTranslation" checked> <span data-lang="en">{{ t_en.search.filter_translation }}</span><span data-lang="hi">{{ t_hi.search.filter_translation }}</span></label>
-        <label><input type="checkbox" id="searchMeanings" checked> <span data-lang="en">{{ t_en.search.filter_meanings }}</span><span data-lang="hi">{{ t_hi.search.filter_meanings }}</span></label>
+        <div class="filter-group">
+            <strong><span data-lang="en">Search In:</span><span data-lang="hi">खोजें:</span></strong>
+            <label><input type="checkbox" id="searchDevanagari" checked> <span data-lang="en">{{ t_en.search.filter_devanagari }}</span><span data-lang="hi">{{ t_hi.search.filter_devanagari }}</span></label>
+            <label><input type="checkbox" id="searchTransliteration" checked> <span data-lang="en">{{ t_en.search.filter_transliteration }}</span><span data-lang="hi">{{ t_hi.search.filter_transliteration }}</span></label>
+            <label><input type="checkbox" id="searchTranslation" checked> <span data-lang="en">{{ t_en.search.filter_translation }}</span><span data-lang="hi">{{ t_hi.search.filter_translation }}</span></label>
+            <label><input type="checkbox" id="searchMeanings" checked> <span data-lang="en">{{ t_en.search.filter_meanings }}</span><span data-lang="hi">{{ t_hi.search.filter_meanings }}</span></label>
+        </div>
+
+        <div class="filter-group" id="collectionFilters">
+            <strong><span data-lang="en">Collections:</span><span data-lang="hi">संग्रह:</span></strong>
+            <!-- Collection filters will be dynamically added here -->
+        </div>
     </div>
 
     <div id="searchStats" class="search-stats"></div>
@@ -97,11 +105,22 @@ description: "Search through all Hanuman Chalisa verses by keyword, phrase, or m
     background: #e55a2b;
 }
 
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-group strong {
+    color: #666;
+    margin-right: 5px;
+}
+
 .search-filters {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
@@ -164,6 +183,21 @@ description: "Search through all Hanuman Chalisa verses by keyword, phrase, or m
     font-size: 1.3em;
     color: #ff6b35;
     margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.collection-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    font-size: 0.5em;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-transform: lowercase;
 }
 
 .result-link {
@@ -224,6 +258,7 @@ description: "Search through all Hanuman Chalisa verses by keyword, phrase, or m
 <script>
 let versesData = [];
 let searchTimeout;
+let enabledCollections = new Set();
 
 // Get current language (same as language.js)
 function getCurrentLanguage() {
@@ -233,12 +268,59 @@ function getCurrentLanguage() {
     return urlLang || storedLang || 'en';
 }
 
+// Initialize collection filters
+function initializeCollectionFilters(verses) {
+    const collections = {};
+    verses.forEach(verse => {
+        if (verse.collection && !collections[verse.collection]) {
+            collections[verse.collection] = {
+                key: verse.collection,
+                name_en: verse.collection_name_en,
+                name_hi: verse.collection_name_hi,
+                icon: verse.collection_icon
+            };
+            enabledCollections.add(verse.collection);
+        }
+    });
+
+    const filtersContainer = document.getElementById('collectionFilters');
+    const currentLang = getCurrentLanguage();
+
+    Object.values(collections).forEach(coll => {
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = true;
+        checkbox.value = coll.key;
+        checkbox.className = 'collection-filter';
+
+        const collName = currentLang === 'hi' ? coll.name_hi : coll.name_en;
+        const text = document.createTextNode(` ${coll.icon} ${collName}`);
+
+        label.appendChild(checkbox);
+        label.appendChild(text);
+        filtersContainer.appendChild(label);
+
+        // Add change handler
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                enabledCollections.add(this.value);
+            } else {
+                enabledCollections.delete(this.value);
+            }
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) performSearch(query);
+        });
+    });
+}
+
 // Load verses data
 fetch('{{ "/data/search.json" | relative_url }}')
     .then(response => response.json())
     .then(data => {
         versesData = data;
         console.log(`Loaded ${versesData.length} verses for search`);
+        initializeCollectionFilters(data);
     })
     .catch(error => {
         console.error('Error loading search data:', error);
@@ -313,6 +395,11 @@ function searchVerses(query, filters) {
     const results = [];
 
     versesData.forEach(verse => {
+        // Filter by collection
+        if (verse.collection && !enabledCollections.has(verse.collection)) {
+            return; // Skip verses from disabled collections
+        }
+
         const matches = [];
 
         const labelDevanagari = currentLang === 'hi' ? 'देवनागरी' : 'Devanagari';
@@ -399,10 +486,16 @@ function displayResults(results, query) {
         const title = currentLang === 'hi' ? verse.title_hi : verse.title_en;
         const verseUrl = verse.url + (verse.url.includes('?') ? '&' : '?') + 'lang=' + currentLang;
 
+        const collectionBadge = verse.collection ?
+            `<span class="collection-badge">${verse.collection_icon || ''} ${verse.collection}</span>` : '';
+
         html += `
             <div class="search-result-item">
                 <div class="result-header">
-                    <h3 class="result-title">${escapeHtml(title)}</h3>
+                    <h3 class="result-title">
+                        ${escapeHtml(title)}
+                        ${collectionBadge}
+                    </h3>
                     <a href="${verseUrl}" class="result-link">${viewDetailsText}</a>
                 </div>
                 <div class="result-content">

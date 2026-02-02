@@ -1,120 +1,130 @@
 # Images Directory
 
-This directory contains themed visual representations for each verse of the Hanuman Chalisa, organized by theme.
+This directory contains themed visual representations for verses across multiple sacred text collections, organized by collection and theme.
 
-## Theme-Based Organization
+## Multi-Collection Organization
 
-Images are organized in subdirectories by theme:
+Images are organized by collection first, then by theme:
 
 ```
 images/
-├── modern-minimalist/    # Contemporary spiritual aesthetic (47 images)
-├── kids-friendly/        # Child-friendly storybook style (generate with script)
-└── [your-theme]/         # Add custom themes here
+├── hanuman-chalisa/         # Hanuman Chalisa collection (44 images per theme)
+│   ├── modern-minimalist/
+│   ├── kids-friendly/
+│   └── traditional/
+├── sundar-kaand/            # Sundar Kaand collection (260+ images per theme)
+│   └── modern-minimalist/
+├── bajrang-baan/            # Bajrang Baan collection (future)
+│   └── modern-minimalist/
+├── hanuman-gpt-title.png    # Main page branding image
+└── modern-minimalist/       # Staging area for SDK-generated images
 ```
 
-## File Naming Convention
+## Collection-Specific Details
 
-Each theme directory contains 47 images:
+### Hanuman Chalisa (44 images per theme)
 
-- **Title page**: `title-page.png`
+**File naming:**
 - **Opening dohas**: `opening-doha-01.png`, `opening-doha-02.png`
 - **Main verses**: `verse-01.png` through `verse-40.png`
 - **Closing doha**: `closing-doha.png`
+- **Title page**: `title-page.png`
 
-**Total**: 47 images per theme
+**Available themes:**
+- ✅ **modern-minimalist**: Complete (44 images)
+- ✅ **kids-friendly**: Complete (44 images)
+- ✅ **traditional**: Complete (44 images)
+
+### Sundar Kaand (260+ images per theme when complete)
+
+**File naming:**
+- **Chaupais**: `chaupai-01.png`, `chaupai-02.png`, ... (200+ chaupais)
+- **Dohas**: `doha-01.png`, `doha-02.png`, ... (60+ dohas)
+
+**Available themes:**
+- 🚧 **modern-minimalist**: In progress (3 images)
+
+### Bajrang Baan (future collection)
+
+**Status**: Not yet started
 
 ## Image Specifications
 
 - **Format**: PNG
-- **Resolution**: 1024 × 1536 pixels (portrait, 2:3 aspect ratio)
+- **Resolution**: 1024 × 1792 pixels (portrait orientation for verse-content-sdk)
 - **Quality**: Standard or HD (DALL-E 3)
-- **Content**: Scene-based depictions following docs/image-prompts.md with theme-specific visual styling
+- **Content**: Scene-based depictions following collection-specific prompt files
 
-## Generating New Theme Images
+## Generating New Images
 
-Use the automated image generation script to create images for any theme:
+### For New Collections (Sundar Kaand, etc.)
 
-### Quick Start
+Use the [verse-content-sdk](https://pypi.org/project/verse-content-sdk/) for standardized image generation:
 
 ```bash
-# 1. Ensure your OpenAI API key is in .env file
-cp .env.example .env
-# Edit .env and add: OPENAI_API_KEY=sk-your-key-here
+# 1. Ensure OpenAI API key is set
+export OPENAI_API_KEY=$(grep OPENAI_API_KEY .env | cut -d '=' -f2 | tr -d '"' | tr -d "'")
 
-# 2. Generate images for a theme
-./scripts/generate_images.sh kids-friendly
+# 2. Create prompt file in docs/ following SDK format
+# Example: docs/sundar-kaand-prompts.md
+
+# 3. Generate images (they go to images/modern-minimalist/ by default)
+verse-images --theme-name sundar-kaand --style "modern minimalist spiritual art"
+
+# 4. Move images to collection directory
+mv images/modern-minimalist/verse-01.png images/sundar-kaand/modern-minimalist/chaupai-01.png
+mv images/modern-minimalist/verse-02.png images/sundar-kaand/modern-minimalist/chaupai-02.png
+# ... continue for all generated images
 ```
 
-### How It Works
+**Prompt file format** (required by verse-content-sdk):
+```markdown
+### Verse 1: Title
 
-The script combines:
-- **Scene descriptions** from `docs/image-prompts.md` (what happens in each verse)
-- **Visual style** from `docs/themes/<theme-name>.yml` (colors, character design, mood)
+**Scene Description**:
+[Detailed DALL-E 3 prompt for the scene]
 
-Both are combined to create complete DALL-E 3 prompts, generating all 47 images automatically.
+---
 
-### Options
+### Verse 2: Title
+
+**Scene Description**:
+[Another prompt]
+
+---
+```
+
+### For Hanuman Chalisa Themes
+
+Use the legacy generation script for consistency:
 
 ```bash
-# Generate with HD quality (2x cost)
-./scripts/generate_images.sh kids-friendly --quality hd
+# Generate images for a theme
+./scripts/generate_images.sh kids-friendly
 
-# Resume from a specific image (if interrupted)
+# Resume from specific image if interrupted
 ./scripts/generate_images.sh kids-friendly --resume verse-15.png
 
-# Custom style override
-./scripts/generate_images.sh my-theme --style "watercolor painting style"
+# HD quality (2x cost)
+./scripts/generate_images.sh kids-friendly --quality hd
 ```
 
-### Cost Estimate
+## Cost Estimates
 
-- **Standard quality**: $0.040/image × 47 = **$1.88 per theme**
-- **HD quality**: $0.080/image × 47 = **$3.76 per theme**
+### Using verse-content-sdk (Sundar Kaand)
+- **Standard quality**: $0.040/image
+- **260 images**: $10.40 per theme
+- **HD quality**: $0.080/image = $20.80 per theme
 
-### Creating a New Theme
+### Using legacy script (Hanuman Chalisa)
+- **Standard quality**: $0.040/image × 44 = **$1.76 per theme**
+- **HD quality**: $0.080/image × 44 = **$3.52 per theme**
 
-1. **Create theme specification**: Copy and customize `docs/themes/modern-minimalist.yml` or `docs/themes/kids-friendly.yml`
-2. **Define visual style**: Specify colors, character designs, mood, composition
-3. **Generate images**: Run `./scripts/generate_images.sh your-theme-name`
-4. **Update site config**: Add theme to `_data/themes.yml`
-5. **Test locally**: `bundle exec jekyll serve`
+## Directory Structure by Collection
 
-See [docs/developer-guide.md](../docs/developer-guide.md) for detailed instructions.
-
-## Available Themes
-
-### Modern Minimalist
-- **Style**: Contemporary spiritual aesthetic with luminous saffron-gold tones
-- **Audience**: Adults, modern devotional platforms
-- **Status**: ✅ Complete (47 images)
-
-### Kids Friendly
-- **Style**: Bright cartoon storybook illustrations
-- **Audience**: Children ages 5-12
-- **Status**: ⚪ Generate using script
-
-## Technical Details
-
-### Image Pipeline
-
+### Hanuman Chalisa
 ```
-docs/image-prompts.md           docs/themes/theme-name.yml
-(Scene descriptions)      +     (Visual style specs)
-                          ↓
-             scripts/generate_images.sh
-                          ↓
-             OpenAI DALL-E 3 API
-                          ↓
-        images/theme-name/*.png (47 files)
-```
-
-### Directory Structure
-
-Each theme creates its own directory with all 47 images:
-
-```
-images/theme-name/
+images/hanuman-chalisa/modern-minimalist/
 ├── title-page.png
 ├── opening-doha-01.png
 ├── opening-doha-02.png
@@ -125,41 +135,74 @@ images/theme-name/
 └── closing-doha.png
 ```
 
-## Testing Your Theme
+### Sundar Kaand
+```
+images/sundar-kaand/modern-minimalist/
+├── chaupai-01.png
+├── chaupai-02.png
+├── chaupai-03.png
+...
+├── doha-01.png
+├── doha-02.png
+...
+```
 
-After generating images:
+## Adding a New Collection
+
+1. **Create collection directory**:
+   ```bash
+   mkdir -p images/your-collection/modern-minimalist
+   ```
+
+2. **Create prompt file**: `docs/your-collection-prompts.md` following SDK format
+
+3. **Generate images** using verse-content-sdk:
+   ```bash
+   verse-images --theme-name your-collection --style "your style description"
+   ```
+
+4. **Rename and move** images to collection directory with proper naming
+
+5. **Update verse frontmatter** to reference images:
+   ```yaml
+   image: "/images/your-collection/modern-minimalist/verse-01.png"
+   ```
+
+6. **Add to collections.yml**: Enable the collection in `_data/collections.yml`
+
+## Testing Your Images
 
 1. **Build locally**:
    ```bash
    bundle exec jekyll serve
    ```
 
-2. **Test theme selector**:
-   - Click theme dropdown (🎨) in header
-   - Select your theme
-   - Navigate through several verses
-   - Verify theme persists after reload
+2. **Navigate to collection pages**:
+   - `/hanuman-chalisa/` for Hanuman Chalisa
+   - `/sundar-kaand/` for Sundar Kaand
+   - Check individual verse pages
 
-3. **Check image quality**:
-   - Images display clearly
-   - No distortion or pixelation
-   - Colors render correctly
+3. **Verify images**:
+   - Display correctly on verse pages
+   - No broken image links
+   - Correct aspect ratio (portrait)
    - Test on mobile devices
 
-4. **Update site config**:
-   - Add theme to `_data/themes.yml`
-   - Rebuild and test again
+4. **Check theme selector** (Hanuman Chalisa only for now):
+   - Click theme dropdown (🎨) in header
+   - Switch between themes
+   - Verify theme persists after reload
 
 ## Best Practices
 
 ### Image Quality
-- Use consistent resolution (1024 × 1536 pixels)
-- Optimize file sizes (target 200-500 KB per image)
+- Use consistent resolution per collection
+- Optimize file sizes (target 2-3 MB per image for DALL-E 3)
 - Test on retina/high-DPI displays
 
 ### Artistic Consistency
-- Maintain consistent style across all 47 images
-- Use cohesive color palette
+- Maintain consistent style across all images in a theme
+- Use cohesive color palette within collection
 - Keep visual motifs recognizable
 
 ### Cultural Sensitivity
@@ -167,37 +210,40 @@ After generating images:
 - Avoid inappropriate representations
 - Consider consulting cultural advisors
 
+### File Organization
+- Always organize by collection first, then theme
+- Use consistent naming conventions per collection
+- Keep staging area (`modern-minimalist/`) clean after moving images
+
 ## Troubleshooting
 
 ### Images Not Showing
-- Check folder name in `_data/themes.yml` matches directory name
-- Verify all 47 images have correct filenames
+- Check image path in verse frontmatter matches directory structure
+- Verify collection directory exists: `images/{collection}/{theme}/`
 - Clear browser cache and reload
+- Check Jekyll build logs for missing file warnings
 
-### Theme Not in Selector
-- Verify `_data/themes.yml` syntax
-- Wait 1-2 minutes for GitHub Pages rebuild
-- Check browser console for errors
+### Theme Selector Not Working
+- Theme selector only works for Hanuman Chalisa currently
+- Other collections use single theme for now
+- Verify `_data/themes.yml` matches directory structure
+
+### verse-content-sdk Generation Issues
+- Ensure prompt file follows exact format (see example above)
+- Check `**Scene Description**:` heading spelling/format
+- Verify OpenAI API key is set correctly
+- Images generate to `images/modern-minimalist/` by default - move manually
 
 ### Slow Image Loading
-- Compress PNG files (use TinyPNG or ImageOptim)
-- Keep images under 500KB each
+- Large DALL-E 3 images (2-3 MB) are normal
+- Consider lazy loading for collections with many images
 - Test on slower connections
-
-## Theme Ideas
-
-Potential themes for future development:
-
-- **Traditional Indian Art**: Classic devotional painting, gold accents, Mughal miniatures style
-- **Watercolor**: Soft flowing aesthetic, gentle colors, hand-painted feel
-- **Pencil Sketch**: Black and white line work, classical artistic approach
-- **Contemporary Digital**: Vibrant illustration, modern palettes, graphic novel style
-- **Photorealistic**: 3D rendered scenes, dramatic lighting, cinematic composition
-- **Abstract Spiritual**: Sacred geometry, mandala-inspired, symbolic representation
 
 ## Resources
 
-- **Scene descriptions**: [docs/image-prompts.md](../docs/image-prompts.md)
+- **Sundar Kaand prompts**: [docs/image-prompts.md](../docs/image-prompts.md)
+- **Hanuman Chalisa prompts**: [docs/image-prompts.md](../docs/image-prompts.md)
 - **Theme specs**: [docs/themes/](../docs/themes/)
-- **Generation script**: [scripts/generate_images.sh](../scripts/generate_images.sh)
+- **Generation scripts**: [scripts/generate_images.sh](../scripts/generate_images.sh)
+- **verse-content-sdk**: [PyPI](https://pypi.org/project/verse-content-sdk/)
 - **Developer guide**: [docs/developer-guide.md](../docs/developer-guide.md)

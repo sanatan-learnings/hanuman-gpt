@@ -1,0 +1,38 @@
+hanuman-chalisa:
+  key: "hanuman-chalisa"
+  name_en: "Hanuman Chalisa"
+  name_hi: "हनुमान चालीसा"
+  author_en: "Goswami Tulsidas"
+  author_hi: "गोस्वामी तुलसीदास"
+  description_en: "40 verses glorifying Lord Hanuman"
+  description_hi: "भगवान हनुमान की स्तुति के 40 चौपाई"
+  permalink_base: "/chalisa/"
+  icon: "📿"
+  subdirectory: "hanuman-chalisa"
+  enabled: true
+
+sundar-kaand:
+  key: "sundar-kaand"
+  name_en: "Sundar Kaand"
+  name_hi: "सुंदर कांड"
+  author_en: "Goswami Tulsidas"
+  author_hi: "गोस्वामी तुलसीदास"
+  description_en: "Fifth chapter of Ramcharitmanas - Hanuman's journey to Lanka"
+  description_hi: "रामचरितमानस का पांचवां अध्याय - हनुमान की लंका यात्रा"
+  permalink_base: "/sundar-kaand/"
+  icon: "🏹"
+  subdirectory: "sundar-kaand"
+  enabled: true
+
+bajrang-baan:
+  key: "bajrang-baan"
+  name_en: "Bajrang Baan"
+  name_hi: "बजरंग बाण"
+  author_en: "Goswami Tulsidas"
+  author_hi: "गोस्वामी तुलसीदास"
+  description_en: "Protective hymn to Lord Hanuman"
+  description_hi: "भगवान हनुमान का रक्षा मंत्र"
+  permalink_base: "/bajrang-baan/"
+  icon: "🛡️"
+  subdirectory: "bajrang-baan"
+  enabled: false

@@ -32,21 +32,26 @@
                             <option value="hi" {% if lang == 'hi' %}selected{% endif %}>🌐 हिन्दी</option>
                         </select>
                     </div>
-                    <div class="theme-switcher">
-                        <label for="themeSelect" class="sr-only">Image Theme</label>
-                        <select id="themeSelect" onchange="switchTheme(this.value)">
-                            {% for theme_data in site.data.themes %}
-                                {% assign theme_key = theme_data[0] %}
-                                {% assign theme = theme_data[1] %}
-                                <option value="{{ theme_key }}"
-                                        data-name-en="🎨 {{ theme.name_en }}"
-                                        data-name-hi="🎨 {{ theme.name_hi }}"
-                                        {% if theme.default %}selected{% endif %}>
-                                    🎨 {{ theme.name_en }}
-                                </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+                    {% comment %} Theme switcher - only show for collections with multiple themes {% endcomment %}
+                    {% assign current_collection = page.collection_key | default: layout.collection_key %}
+                    {% if current_collection and site.data.themes.theme_switcher_enabled contains current_collection %}
+                        {% assign collection_themes = site.data.themes[current_collection].available_themes %}
+                        <div class="theme-switcher">
+                            <label for="themeSelect" class="sr-only">Image Theme</label>
+                            <select id="themeSelect" onchange="switchTheme(this.value)">
+                                {% for theme_data in collection_themes %}
+                                    {% assign theme_key = theme_data[0] %}
+                                    {% assign theme = theme_data[1] %}
+                                    <option value="{{ theme_key }}"
+                                            data-name-en="🎨 {{ theme.name_en }}"
+                                            data-name-hi="🎨 {{ theme.name_hi }}"
+                                            {% if theme.default %}selected{% endif %}>
+                                        🎨 {{ theme.name_en }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

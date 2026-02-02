@@ -3,12 +3,17 @@ layout: none
 ---
 [
   {% for verse in site.verses %}
+  {% assign coll_info = site.data.collections[verse.collection_key] %}
   {
     "title_en": {{ verse.title_en | default: verse.title | jsonify }},
     "title_hi": {{ verse.title_hi | default: verse.title | jsonify }},
     "url": {{ verse.url | relative_url | jsonify }},
     "verse_number": {{ verse.verse_number | jsonify }},
     "image": {{ verse.image | relative_url | jsonify }},
+    "collection": {{ verse.collection_key | jsonify }},
+    "collection_name_en": {% if coll_info %}{{ coll_info.name_en | jsonify }}{% else %}null{% endif %},
+    "collection_name_hi": {% if coll_info %}{{ coll_info.name_hi | jsonify }}{% else %}null{% endif %},
+    "collection_icon": {% if coll_info %}{{ coll_info.icon | jsonify }}{% else %}null{% endif %},
     "devanagari": {{ verse.devanagari | jsonify }},
     "transliteration": {{ verse.transliteration | jsonify }},
     "literal_translation_en": {% if verse.literal_translation.en %}{{ verse.literal_translation.en | jsonify }}{% else %}{{ verse.literal_translation | jsonify }}{% endif %},

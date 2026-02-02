@@ -331,12 +331,13 @@ function findRelevantVerses(queryEmbedding, lang, k = TOP_K) {
  */
 function buildSystemPrompt(verses, lang) {
     const intro = lang === 'hi'
-        ? 'आप हनुमान चालीसा के विशेषज्ञ आध्यात्मिक मार्गदर्शक हैं। उपयोगकर्ता के प्रश्न का उत्तर देने के लिए प्रासंगिक छंदों का उपयोग करें। अपनी प्रतिक्रिया में विशिष्ट छंदों का हवाला दें और व्यावहारिक आध्यात्मिक मार्गदर्शन प्रदान करें।'
-        : 'You are a spiritual guide specializing in the Hanuman Chalisa. Use the relevant verses below to answer the user\'s question. Cite specific verses in your response and provide practical spiritual guidance.';
+        ? 'आप पवित्र ग्रंथों के विशेषज्ञ आध्यात्मिक मार्गदर्शक हैं। उपयोगकर्ता के प्रश्न का उत्तर देने के लिए प्रासंगिक छंदों का उपयोग करें। अपनी प्रतिक्रिया में विशिष्ट छंदों का हवाला दें और व्यावहारिक आध्यात्मिक मार्गदर्शन प्रदान करें।'
+        : 'You are a spiritual guide specializing in sacred Hindu texts. Use the relevant verses below to answer the user\'s question. Cite specific verses in your response and provide practical spiritual guidance.';
 
     const versesContext = verses.map((v, i) => {
         const header = lang === 'hi' ? `छंद ${i + 1}:` : `Verse ${i + 1}:`;
-        return `${header} ${v.title}\n${v.metadata.transliteration}\n${v.metadata.literal_translation}`;
+        const collection = v.collection ? ` (${v.collection})` : '';
+        return `${header} ${v.title}${collection}\n${v.metadata.transliteration}\n${v.metadata.literal_translation}`;
     }).join('\n\n');
 
     const format = lang === 'hi'
@@ -586,10 +587,23 @@ function addMessage(role, content, verses = null) {
             const card = document.createElement('div');
             card.className = 'citation-card';
 
+            const titleContainer = document.createElement('div');
+            titleContainer.className = 'citation-title-container';
+
             const link = document.createElement('a');
             link.href = BASE_URL + verse.url + (verse.url.includes('?') ? '&' : '?') + 'lang=' + lang;
             link.textContent = verse.title;
-            card.appendChild(link);
+            titleContainer.appendChild(link);
+
+            // Add collection badge if present
+            if (verse.collection) {
+                const badge = document.createElement('span');
+                badge.className = 'collection-badge';
+                badge.textContent = verse.collection;
+                titleContainer.appendChild(badge);
+            }
+
+            card.appendChild(titleContainer);
 
             if (verse.metadata.devanagari) {
                 const devanagari = document.createElement('div');

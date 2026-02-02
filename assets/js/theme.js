@@ -23,9 +23,9 @@ function applyTheme(theme) {
 
     images.forEach(img => {
         const currentSrc = img.getAttribute('src');
-        // Replace the theme folder in the path
-        // Pattern: /images/{old-theme}/ -> /images/{new-theme}/
-        const newSrc = currentSrc.replace(/\/images\/[^\/]+\//, `/images/${theme}/`);
+        // Replace the theme folder in the path while preserving collection
+        // Pattern: /images/{collection}/{old-theme}/ -> /images/{collection}/{new-theme}/
+        const newSrc = currentSrc.replace(/\/images\/([^\/]+)\/[^\/]+\//, `/images/$1/${theme}/`);
         img.setAttribute('src', newSrc);
     });
 }

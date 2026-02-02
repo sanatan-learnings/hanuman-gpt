@@ -807,3 +807,155 @@ footer .footer-links a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Multi-Collection Styles */
+.collections-section {
+    margin: 3rem 0;
+}
+
+.collections-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ff6b35;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.collection-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 2px solid #ff6b35;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.collection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+    border-color: #f7931e;
+}
+
+.collection-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.collection-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.collection-title h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.25rem 0;
+    color: #ff6b35;
+}
+
+.collection-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+.collection-description {
+    flex: 1;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.collection-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.verse-count {
+    color: #666;
+    font-weight: 500;
+}
+
+.collection-link {
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .collections-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Collection Landing Page Banner */
+.collection-banner {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.collection-icon-large {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.collection-banner h1 {
+    font-size: 2.5rem;
+    color: #ff6b35;
+    margin-bottom: 0.5rem;
+}
+
+.collection-author-large {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.collection-description-large {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .collection-icon-large {
+        font-size: 3rem;
+    }
+
+    .collection-banner h1 {
+        font-size: 2rem;
+    }
+
+    .collection-author-large {
+        font-size: 1rem;
+    }
+
+    .collection-description-large {
+        font-size: 1rem;
+    }
+}

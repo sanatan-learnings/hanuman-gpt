@@ -1,25 +1,72 @@
-modern-minimalist:
-  name_en: "Modern Minimalist"
-  name_hi: "आधुनिक न्यूनतम"
-  description_en: "Contemporary spiritual aesthetics with saffron orange and clean backgrounds"
-  description_hi: "केसरिया नारंगी और साफ पृष्ठभूमि के साथ समकालीन आध्यात्मिक सौंदर्यशास्त्र"
-  folder: "modern-minimalist"
-  default: true
+# Collection-specific themes configuration
+# Each collection can have its own set of available themes
 
-kids-friendly:
-  name_en: "Kids Friendly"
-  name_hi: "बच्चों के अनुकूल"
-  description_en: "Vibrant cartoon-style illustrations perfect for children ages 5-12"
-  description_hi: "५-१२ साल के बच्चों के लिए जीवंत कार्टून शैली के चित्र"
-  folder: "kids-friendly"
-  default: false
+hanuman-chalisa:
+  available_themes:
+    modern-minimalist:
+      name_en: "Modern Minimalist"
+      name_hi: "आधुनिक न्यूनतम"
+      description_en: "Contemporary spiritual aesthetics with saffron orange and clean backgrounds"
+      description_hi: "केसरिया नारंगी और साफ पृष्ठभूमि के साथ समकालीन आध्यात्मिक सौंदर्यशास्त्र"
+      folder: "modern-minimalist"
+      default: true
+      status: "complete"  # All 44 images generated
 
-traditional:
-  name_en: "Traditional Art"
-  name_hi: "पारंपरिक कला"
-  description_en: "Classical Indian devotional art with rich colors, gold accents, and intricate details inspired by Mughal miniature paintings"
-  description_hi: "मुगल लघु चित्रों से प्रेरित समृद्ध रंग, सोने के उच्चारण और जटिल विवरण के साथ शास्त्रीय भारतीय भक्ति कला"
-  folder: "traditional"
-  default: false
+    kids-friendly:
+      name_en: "Kids Friendly"
+      name_hi: "बच्चों के अनुकूल"
+      description_en: "Vibrant cartoon-style illustrations perfect for children ages 5-12"
+      description_hi: "५-१२ साल के बच्चों के लिए जीवंत कार्टून शैली के चित्र"
+      folder: "kids-friendly"
+      default: false
+      status: "complete"  # All 44 images generated
 
-# Future themes can be added here
+    traditional:
+      name_en: "Traditional Art"
+      name_hi: "पारंपरिक कला"
+      description_en: "Classical Indian devotional art with rich colors, gold accents, and intricate details inspired by Mughal miniature paintings"
+      description_hi: "मुगल लघु चित्रों से प्रेरित समृद्ध रंग, सोने के उच्चारण और जटिल विवरण के साथ शास्त्रीय भारतीय भक्ति कला"
+      folder: "traditional"
+      default: false
+      status: "complete"  # All 44 images generated
+
+sundar-kaand:
+  available_themes:
+    modern-minimalist:
+      name_en: "Modern Minimalist"
+      name_hi: "आधुनिक न्यूनतम"
+      description_en: "Contemporary spiritual aesthetics with divine golden tones and ethereal lighting"
+      description_hi: "दिव्य स्वर्णिम स्वरों और ईथर प्रकाश के साथ समकालीन आध्यात्मिक सौंदर्यशास्त्र"
+      folder: "modern-minimalist"
+      default: true
+      status: "in-progress"  # Only 3 images generated so far
+
+    # Future themes for Sundar Kaand
+    # kids-friendly:
+    #   name_en: "Kids Friendly"
+    #   ...
+    # traditional:
+    #   name_en: "Traditional Epic"
+    #   ...
+
+bajrang-baan:
+  available_themes:
+    modern-minimalist:
+      name_en: "Modern Minimalist"
+      name_hi: "आधुनिक न्यूनतम"
+      description_en: "Contemporary spiritual aesthetics with protective warrior imagery"
+      description_hi: "सुरक्षात्मक योद्धा चित्रण के साथ समकालीन आध्यात्मिक सौंदर्यशास्त्र"
+      folder: "modern-minimalist"
+      default: true
+      status: "not-started"
+
+# Global theme settings (for theme-switcher functionality)
+# Only applies to collections with multiple complete themes
+theme_switcher_enabled:
+  - hanuman-chalisa  # Has 3 complete themes, enable switcher
+
+# Notes:
+# - Each collection can have different themes available
+# - Theme folders are collection-specific: images/{collection}/{theme}/
+# - Theme switcher only shows for collections with multiple complete themes
+# - Status values: "complete", "in-progress", "not-started"

@@ -19,7 +19,8 @@ function switchTheme(theme) {
 // Apply theme by updating all image sources
 function applyTheme(theme) {
     // Update all images that have src containing /images/
-    const images = document.querySelectorAll('img[src*="/images/"]');
+    // EXCEPT theme preview thumbnails (those should stay fixed)
+    const images = document.querySelectorAll('img[src*="/images/"]:not([data-theme-preview])');
 
     images.forEach(img => {
         const currentSrc = img.getAttribute('src');

@@ -26,6 +26,31 @@ title: Hanuman Chalisa
 
         <p><span data-lang="en">{{ t_en.home.about_p3 }}</span><span data-lang="hi">{{ t_hi.home.about_p3 }}</span></p>
     </details>
+
+    <details class="theme-showcase">
+        <summary>🎨 <span data-lang="en">Visual Themes</span><span data-lang="hi">दृश्य थीम</span></summary>
+        <p><span data-lang="en">Choose from three beautiful art styles for your reading experience:</span><span data-lang="hi">अपने पढ़ने के अनुभव के लिए तीन सुंदर कला शैलियों में से चुनें:</span></p>
+
+        <div class="theme-gallery">
+            {% assign themes = site.data.themes['hanuman-chalisa'].available_themes %}
+            {% for theme_data in themes %}
+                {% assign theme_key = theme_data[0] %}
+                {% assign theme = theme_data[1] %}
+                {% if theme.status == 'complete' %}
+                <div class="theme-preview">
+                    <img src="{{ '/images/hanuman-chalisa/' | append: theme_key | append: '/verse-01.png' | relative_url }}"
+                         alt="{{ theme.name_en }}"
+                         loading="lazy"
+                         class="theme-thumbnail">
+                    <h4>{{ theme.name_en }} / {{ theme.name_hi }}</h4>
+                    <p class="theme-description"><span data-lang="en">{{ theme.description_en }}</span><span data-lang="hi">{{ theme.description_hi }}</span></p>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <p class="theme-note"><span data-lang="en">💡 Use the theme switcher (🎨) in the header to change themes while reading.</span><span data-lang="hi">💡 पढ़ते समय थीम बदलने के लिए हेडर में थीम स्विचर (🎨) का उपयोग करें।</span></p>
+    </details>
 </div>
 
 <section class="verse-navigation">

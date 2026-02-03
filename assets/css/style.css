@@ -1013,3 +1013,25 @@ footer .footer-links a:hover {
     border-radius: 4px;
     font-size: 0.9rem;
 }
+
+/* Verse page theme switcher */
+.verse-theme-switcher {
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    padding: 0.75rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+}
+
+.verse-theme-switcher label {
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+.verse-theme-switcher select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}

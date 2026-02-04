@@ -1,0 +1,143 @@
+# Modern Minimalist Theme - Sundar Kaand
+# Visual Theme Definition for Hanuman's Journey to Lanka
+
+theme:
+  # ===== Identity =====
+  id: modern-minimalist
+  version: "1.0"
+  created: "2026-02"
+  last_updated: "2026-02"
+  generator: DALL-E 3
+  collection: sundar-kaand
+
+  # ===== Naming =====
+  name:
+    en: "Modern Minimalist"
+    hi: "आधुनिक न्यूनतम"
+    technical: "Contemporary Spiritual Narrative"
+
+  # ===== Purpose & Intent =====
+  purpose: "A visual interpretation of Sundar Kaand that brings Hanuman's epic journey to life through contemporary spiritual aesthetics, capturing the drama, devotion, and divine power of his quest to find Sita."
+
+  intent:
+    primary: "Create a cohesive visual narrative of Hanuman's journey across the ocean, through Lanka, and back"
+    secondary: "Balance action and devotion - showing both Hanuman's might and his humble service"
+    spiritual: "Invoke the protective power and devotional purity that makes Hanuman Sankat Mochan"
+    accessibility: "Make the epic narrative accessible while maintaining reverence for the sacred text"
+
+  # ===== Visual Style Core =====
+  style:
+    aesthetic: "Contemporary Spiritual Minimalism with Epic Scale"
+    description:
+      primary: "Luminous, radiant depictions with dramatic scale showing Hanuman's cosmic power"
+      atmosphere: "Mystical, heroic, and spiritually charged with golden-orange divine energy"
+      approach: "Cinematic compositions that capture key moments of the narrative journey"
+
+  # ===== Color Palette =====
+  color_palette:
+    primary:
+      name: "Sacred Orange-Gold"
+      hex: "#FF8C00"
+      significance: "Hanuman's divine radiance and spiritual fire"
+      usage: "Hanuman's form, divine energy, protective auras"
+
+    secondary:
+      - name: "Ocean Blue"
+        hex: "#0066CC"
+        usage: "The vast ocean Hanuman leaps across"
+
+      - name: "Forest Green"
+        hex: "#228B22"
+        usage: "Ashoka Vatika, sacred groves, natural elements"
+
+      - name: "Lanka Gold"
+        hex: "#DAA520"
+        usage: "Golden city of Lanka, palaces, architecture"
+
+      - name: "Night Sky"
+        hex: "#191970"
+        usage: "Night scenes, cosmic backgrounds, mystery"
+
+    divine:
+      - name: "Rama Blue"
+        hex: "#4169E1"
+        usage: "References to Lord Rama, his ring, divine grace"
+
+      - name: "Sita White-Gold"
+        hex: "#FFF8DC"
+        usage: "Sita's purity, her divine presence, hope"
+
+  # ===== Generation Settings =====
+  generation:
+    style_modifier: |
+      Modern minimalist spiritual art with contemporary aesthetics.
+      Luminous divine figures with radiant orange-golden auras.
+      Dramatic cinematic compositions capturing epic scale.
+      Deep blues for ocean and night sky scenes.
+      Sacred geometry and cosmic patterns.
+      Ethereal lighting with volumetric divine rays.
+      Clean lines and bold forms for clarity.
+      Balance of action and devotion in posture and expression.
+      Mystical atmosphere with spiritual energy visible as light.
+      Cultural authenticity with modern visual language.
+
+    dalle_params:
+      size: "1024x1792"  # Portrait orientation
+      quality: "standard"  # Can upgrade to "hd" for 2x cost
+      style: "natural"  # More realistic than "vivid"
+
+  # ===== Character Consistency =====
+  characters:
+    hanuman:
+      form: "Anthropomorphic monkey deity, muscular and heroic"
+      color: "Radiant orange-red skin with golden highlights"
+      features: "Noble monkey face, wise eyes, gentle yet powerful expression"
+      attire: "Simple dhoti, sacred thread, divine ornaments (minimal)"
+      signature: "Glowing orange-gold aura, tail visible and expressive"
+      variations:
+        - "Small humble form when meeting Rama"
+        - "Giant cosmic form when leaping ocean"
+        - "Fierce protector form in Lanka"
+        - "Gentle devotee when with Sita"
+
+    rama:
+      form: "Divine prince, serene and majestic"
+      color: "Blue-skinned divine form with golden accents"
+      features: "Peaceful face, compassionate eyes"
+      attire: "Royal dhoti, sacred ornaments, bow"
+
+    sita:
+      form: "Divine goddess, dignified in captivity"
+      color: "Golden complexion, luminous presence"
+      features: "Serene face, sorrowful but strong"
+      attire: "Simple white-gold saree, minimal jewelry"
+
+  # ===== Scene Types =====
+  scene_types:
+    - name: "Ocean Crossing"
+      description: "Dramatic scenes of Hanuman's leap across the vast sea"
+      lighting: "Daylight with ocean spray and divine energy trails"
+
+    - name: "Night in Lanka"
+      description: "Moonlit scenes in the golden city and gardens"
+      lighting: "Moonlight, shadows, divine glow from characters"
+
+    - name: "Ashoka Vatika"
+      description: "Garden scenes with trees, flowers, intimate moments"
+      lighting: "Soft natural light, mystical garden atmosphere"
+
+    - name: "Battle/Action"
+      description: "Hanuman's confrontations and demonstrations of power"
+      lighting: "Dramatic with energy effects and combat dynamics"
+
+    - name: "Devotional Moments"
+      description: "Quiet scenes of prayer, remembrance, divine connection"
+      lighting: "Soft sacred light, peaceful atmosphere"
+
+  # ===== Technical Notes =====
+  notes:
+    - "Maintain visual continuity with Hanuman Chalisa modern-minimalist theme"
+    - "Emphasize narrative progression through visual storytelling"
+    - "Balance epic scale with intimate devotional moments"
+    - "Use water, sky, and architectural elements to establish setting"
+    - "Show Hanuman's transformation from humble messenger to cosmic hero"

@@ -65,12 +65,12 @@ images/
 Use the [verse-content-sdk](https://pypi.org/project/verse-content-sdk/) for standardized image generation:
 
 ```bash
-# 1. Create prompt file in docs/ following SDK format
-# Example: docs/sankat-mochan-prompts.md
-# Place this at: docs/<collection-key>-prompts.md
+# 1. Create prompt file in docs/image-prompts/ following SDK format
+# Example: docs/image-prompts/sankat-mochan-hanumanashtak.md
+# Place this at: docs/image-prompts/<collection-key>.md
 
 # 2. Create temporary image-prompts.md for SDK (it expects this name)
-cp docs/sankat-mochan-prompts.md docs/image-prompts.md
+cp docs/image-prompts/sankat-mochan-hanumanashtak.md docs/image-prompts.md
 
 # 3. Ensure OpenAI API key is set
 export OPENAI_API_KEY=$(grep OPENAI_API_KEY .env | cut -d '=' -f2)

@@ -7,6 +7,7 @@ title_hi: "पद 2: सागर से मुक्तिदाता"
 verse_number: 2
 previous_verse: "/sankat-mochan-hanumanashtak/verse_01"
 next_verse: "/sankat-mochan-hanumanashtak/verse_03"
+image: "/images/sankat-mochan-hanumanashtak/modern-minimalist/verse-02.png"
 
 devanagari: |
   बालि की त्रास कपीस बसैं गिरि जात महाप्रभु पंथ निहारो।

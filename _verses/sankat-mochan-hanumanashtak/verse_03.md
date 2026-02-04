@@ -7,6 +7,7 @@ title_hi: "पद 3: लंका का संहारक"
 verse_number: 3
 previous_verse: "/sankat-mochan-hanumanashtak/verse_02"
 next_verse: "/sankat-mochan-hanumanashtak/verse_04"
+image: "/images/sankat-mochan-hanumanashtak/modern-minimalist/verse-03.png"
 
 devanagari: |
   अंगद के सँग लेन गये सिय खोज कपीस यह बैन उचारो।

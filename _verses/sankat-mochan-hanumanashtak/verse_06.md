@@ -7,6 +7,7 @@ title_hi: "पद 6: संजीवनी से उपचारक"
 verse_number: 6
 previous_verse: "/sankat-mochan-hanumanashtak/verse_05"
 next_verse: "/sankat-mochan-hanumanashtak/verse_07"
+image: "/images/sankat-mochan-hanumanashtak/modern-minimalist/verse-06.png"
 
 devanagari: |
   काज कियो बड़ देवन के तुम बीर महाप्रभु देखि बिचारो।

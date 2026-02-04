@@ -7,6 +7,7 @@ title_hi: "पद 5: अहिरावण की गुफा से बचा�
 verse_number: 5
 previous_verse: "/sankat-mochan-hanumanashtak/verse_04"
 next_verse: "/sankat-mochan-hanumanashtak/verse_06"
+image: "/images/sankat-mochan-hanumanashtak/modern-minimalist/verse-05.png"
 
 devanagari: |
   बंधु समेत जबै अहिरावन ले रघुनाथ पताल सिधारो।

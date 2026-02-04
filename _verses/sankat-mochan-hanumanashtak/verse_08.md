@@ -6,6 +6,7 @@ title_en: "Verse 8: Bestower of All Blessings"
 title_hi: "पद 8: सभी आशीर्वादों के दाता"
 verse_number: 8
 previous_verse: "/sankat-mochan-hanumanashtak/verse_07"
+image: "/images/sankat-mochan-hanumanashtak/modern-minimalist/verse-08.png"
 
 devanagari: |
   भजलो भाई, सोई सज्जन है, भज हनुमान गहे जो भजनु कों।

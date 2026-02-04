@@ -6,6 +6,7 @@ title_en: "Verse 1: Remover of All Afflictions"
 title_hi: "पद 1: सभी कष्टों के निवारक"
 verse_number: 1
 next_verse: "/sankat-mochan-hanumanashtak/verse_02"
+image: "/images/sankat-mochan-hanumanashtak/modern-minimalist/verse-01.png"
 
 devanagari: |
   बाल समय रवि भक्षि लियो तब तीनहुं लोक भयो अंधियारो।

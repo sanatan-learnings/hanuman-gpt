@@ -7,6 +7,7 @@ title_hi: "पद 7: पापों का नाशक"
 verse_number: 7
 previous_verse: "/sankat-mochan-hanumanashtak/verse_06"
 next_verse: "/sankat-mochan-hanumanashtak/verse_08"
+image: "/images/sankat-mochan-hanumanashtak/modern-minimalist/verse-07.png"
 
 devanagari: |
   द्वार तुम्हार खरो हू महाप्रभु करि जोरि बिनती सुनि मोरी।

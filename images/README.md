@@ -8,17 +8,20 @@ Images are organized by collection first, then by theme:
 
 ```
 images/
-├── hanuman-chalisa/         # Hanuman Chalisa collection (44 images per theme)
+├── hanuman-chalisa/                  # Hanuman Chalisa collection (44 images per theme)
 │   ├── modern-minimalist/
 │   ├── kids-friendly/
 │   └── traditional/
-├── sundar-kaand/            # Sundar Kaand collection (260+ images per theme)
+├── sundar-kaand/                     # Sundar Kaand collection (260+ images per theme)
 │   └── modern-minimalist/
-├── bajrang-baan/            # Bajrang Baan collection (future)
+├── sankat-mochan-hanumanashtak/      # Sankat Mochan Hanumanashtak (8 images per theme)
 │   └── modern-minimalist/
-├── hanuman-gpt-title.png    # Main page branding image
-└── modern-minimalist/       # Staging area for SDK-generated images
+├── bajrang-baan/                     # Bajrang Baan collection (future)
+│   └── modern-minimalist/
+└── hanuman-gpt-title.png             # Main page branding image
 ```
+
+**Note**: Previously there was a `modern-minimalist/` staging directory - this has been removed. Images now generate directly to collection-specific directories.
 
 ## Collection-Specific Details
 
@@ -57,25 +60,42 @@ images/
 
 ## Generating New Images
 
-### For New Collections (Sundar Kaand, etc.)
+### For New Collections
 
 Use the [verse-content-sdk](https://pypi.org/project/verse-content-sdk/) for standardized image generation:
 
 ```bash
-# 1. Ensure OpenAI API key is set
-export OPENAI_API_KEY=$(grep OPENAI_API_KEY .env | cut -d '=' -f2 | tr -d '"' | tr -d "'")
+# 1. Create prompt file in docs/ following SDK format
+# Example: docs/sankat-mochan-prompts.md
+# Place this at: docs/<collection-key>-prompts.md
 
-# 2. Create prompt file in docs/ following SDK format
-# Example: docs/sundar-kaand-prompts.md
+# 2. Create temporary image-prompts.md for SDK (it expects this name)
+cp docs/sankat-mochan-prompts.md docs/image-prompts.md
 
-# 3. Generate images (they go to images/modern-minimalist/ by default)
-verse-images --theme-name sundar-kaand --style "modern minimalist spiritual art"
+# 3. Ensure OpenAI API key is set
+export OPENAI_API_KEY=$(grep OPENAI_API_KEY .env | cut -d '=' -f2)
 
-# 4. Move images to collection directory
-mv images/modern-minimalist/verse-01.png images/sundar-kaand/modern-minimalist/chaupai-01.png
-mv images/modern-minimalist/verse-02.png images/sundar-kaand/modern-minimalist/chaupai-02.png
-# ... continue for all generated images
+# 4. Generate images using collection key as theme-name
+# SDK creates: images/<theme-name>/verse-01.png, verse-02.png, etc.
+verse-images --theme-name sankat-mochan --style "modern minimalist spiritual art"
+
+# 5. Move images to proper collection directory
+mkdir -p images/sankat-mochan-hanumanashtak/modern-minimalist
+mv images/sankat-mochan/verse-*.png images/sankat-mochan-hanumanashtak/modern-minimalist/
+rmdir images/sankat-mochan
+
+# 6. Clean up temporary file
+rm docs/image-prompts.md
+
+# 7. Update verse markdown files to reference images
+# Add to frontmatter: image: "/images/<collection-key>/modern-minimalist/verse-01.png"
 ```
+
+**Important Notes:**
+- The SDK uses `--theme-name` parameter to create output directory: `images/<theme-name>/`
+- Always use a shortened version of collection key (e.g., `sankat-mochan` for `sankat-mochan-hanumanashtak`)
+- Then manually move to full collection path with theme subdirectory
+- Keep prompt files named: `docs/<collection-key>-prompts.md` for clarity
 
 **Prompt file format** (required by verse-content-sdk):
 ```markdown

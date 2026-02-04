@@ -590,7 +590,7 @@ main {
 .verse-navigation h3:first-of-type + .verse-grid,
 .verse-navigation h3:last-of-type + .verse-grid {
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .verse-card {

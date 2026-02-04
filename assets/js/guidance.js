@@ -596,10 +596,11 @@ function addMessage(role, content, verses = null) {
             titleContainer.appendChild(link);
 
             // Add collection badge if present
-            if (verse.collection) {
+            const collectionName = verse.metadata?.collection_name || verse.metadata?.collection_key || verse.collection;
+            if (collectionName) {
                 const badge = document.createElement('span');
                 badge.className = 'collection-badge';
-                badge.textContent = verse.collection;
+                badge.textContent = collectionName;
                 titleContainer.appendChild(badge);
             }
 

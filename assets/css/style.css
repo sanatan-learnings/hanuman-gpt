@@ -502,6 +502,38 @@ main {
     background: #5a6268;
 }
 
+/* Collection Badge */
+.collection-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #fff8f5 0%, #fff 100%);
+    border: 2px solid #ff6b35;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 107, 53, 0.1);
+}
+
+.collection-badge .collection-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.collection-badge .collection-name {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.collection-badge .collection-name:hover {
+    color: #e55a2b;
+    text-decoration: underline;
+}
+
 /* Verse Content */
 .verse-content h1 {
     color: #ff6b35;

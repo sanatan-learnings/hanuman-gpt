@@ -29,8 +29,20 @@ layout: default
         {% endif %}
     </nav>
 
-    {% comment %} Theme switcher - only show for collections with multiple themes {% endcomment %}
+    {% comment %} Collection badge - show which collection this verse belongs to {% endcomment %}
     {% assign current_collection = page.collection_key %}
+    {% if current_collection and site.data.collections[current_collection] %}
+        {% assign collection_data = site.data.collections[current_collection] %}
+        <div class="collection-badge">
+            <span class="collection-icon">{{ collection_data.icon }}</span>
+            <a href="{{ collection_data.permalink_base | relative_url }}?lang={{ lang }}" class="collection-name">
+                <span data-lang="en">{{ collection_data.name_en }}</span>
+                <span data-lang="hi">{{ collection_data.name_hi }}</span>
+            </a>
+        </div>
+    {% endif %}
+
+    {% comment %} Theme switcher - only show for collections with multiple themes {% endcomment %}
     {% if current_collection and site.data.themes.theme_switcher_enabled contains current_collection %}
         {% assign collection_themes = site.data.themes[current_collection].available_themes %}
         <div class="verse-theme-switcher">

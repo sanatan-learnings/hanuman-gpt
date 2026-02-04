@@ -36,3 +36,55 @@ bajrang-baan:
   icon: "🛡️"
   subdirectory: "bajrang-baan"
   enabled: false
+
+hanuman-bahuk:
+  key: "hanuman-bahuk"
+  name_en: "Hanuman Bahuk"
+  name_hi: "हनुमान बाहुक"
+  author_en: "Goswami Tulsidas"
+  author_hi: "गोस्वामी तुलसीदास"
+  description_en: "Devotional hymn composed during illness, praising Lord Hanuman"
+  description_hi: "बीमारी के दौरान रचित भक्ति स्तोत्र, भगवान हनुमान की स्तुति"
+  permalink_base: "/hanuman-bahuk/"
+  icon: "🙏"
+  subdirectory: "hanuman-bahuk"
+  enabled: false
+
+sankat-mochan-hanumanashtak:
+  key: "sankat-mochan-hanumanashtak"
+  name_en: "Sankat Mochan Hanumanashtak"
+  name_hi: "संकट मोचन हनुमानाष्टक"
+  author_en: "Goswami Tulsidas"
+  author_hi: "गोस्वामी तुलसीदास"
+  description_en: "Eight verses for removing obstacles and difficulties"
+  description_hi: "संकट और कठिनाइयों को दूर करने के लिए आठ पद"
+  permalink_base: "/sankat-mochan-hanumanashtak/"
+  icon: "🕉️"
+  subdirectory: "sankat-mochan-hanumanashtak"
+  enabled: true
+
+hanuman-kavacham:
+  key: "hanuman-kavacham"
+  name_en: "Hanuman Kavacham"
+  name_hi: "हनुमान कवचम्"
+  author_en: "Traditional"
+  author_hi: "पारंपरिक"
+  description_en: "Protective armor prayer to Lord Hanuman"
+  description_hi: "भगवान हनुमान का रक्षा कवच मंत्र"
+  permalink_base: "/hanuman-kavacham/"
+  icon: "⚔️"
+  subdirectory: "hanuman-kavacham"
+  enabled: false
+
+hanuman-stuti:
+  key: "hanuman-stuti"
+  name_en: "Hanuman Stuti"
+  name_hi: "हनुमान स्तुति"
+  author_en: "Traditional"
+  author_hi: "पारंपरिक"
+  description_en: "Hymn of praise glorifying Lord Hanuman"
+  description_hi: "भगवान हनुमान की महिमा का स्तुति गान"
+  permalink_base: "/hanuman-stuti/"
+  icon: "✨"
+  subdirectory: "hanuman-stuti"
+  enabled: false

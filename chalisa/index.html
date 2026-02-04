@@ -41,6 +41,13 @@ collection_key: hanuman-chalisa
 
         <p><span data-lang="en">{{ t_en.home.about_p3 }}</span><span data-lang="hi">{{ t_hi.home.about_p3 }}</span></p>
     </details>
+
+    {% comment %} Legend for Puranic Context Indicators {% endcomment %}
+    <div class="puranic-legend">
+        <span class="legend-icon">📚</span>
+        <span data-lang="en">Verses marked with 📚 contain additional Puranic context and stories</span>
+        <span data-lang="hi">📚 चिह्न वाले छंदों में अतिरिक्त पौराणिक संदर्भ और कथाएं हैं</span>
+    </div>
 </div>
 
 <section class="verse-navigation">
@@ -49,7 +56,7 @@ collection_key: hanuman-chalisa
         {% assign doha_01 = site.verses | where: "collection_key", "hanuman-chalisa" | where_exp: "item", "item.url contains 'doha_01'" | first %}
         {% assign doha_02 = site.verses | where: "collection_key", "hanuman-chalisa" | where_exp: "item", "item.url contains 'doha_02'" | first %}
 
-        <a href="{{ doha_01.url | relative_url }}" class="verse-card">
+        <a href="{{ doha_01.url | relative_url }}" class="verse-card{% if doha_01.puranic_context %} has-puranic-context{% endif %}">
             {% if doha_01.image %}
             <div class="card-image">
                 <img src="{{ doha_01.image | relative_url }}" alt="{{ doha_01.title_en }}" loading="lazy">
@@ -64,10 +71,17 @@ collection_key: hanuman-chalisa
                     <span data-lang="en">{{ doha_01.title_en }}</span>
                     <span data-lang="hi">{{ doha_01.title_hi }}</span>
                 </div>
+                {% if doha_01.puranic_context %}
+                <div class="puranic-badge">
+                    <span class="badge-icon">📚</span>
+                    <span class="badge-text" data-lang="en">Puranic Stories</span>
+                    <span class="badge-text" data-lang="hi">पौराणिक कथाएं</span>
+                </div>
+                {% endif %}
             </div>
         </a>
 
-        <a href="{{ doha_02.url | relative_url }}" class="verse-card">
+        <a href="{{ doha_02.url | relative_url }}" class="verse-card{% if doha_02.puranic_context %} has-puranic-context{% endif %}">
             {% if doha_02.image %}
             <div class="card-image">
                 <img src="{{ doha_02.image | relative_url }}" alt="{{ doha_02.title_en }}" loading="lazy">
@@ -82,6 +96,13 @@ collection_key: hanuman-chalisa
                     <span data-lang="en">{{ doha_02.title_en }}</span>
                     <span data-lang="hi">{{ doha_02.title_hi }}</span>
                 </div>
+                {% if doha_02.puranic_context %}
+                <div class="puranic-badge">
+                    <span class="badge-icon">📚</span>
+                    <span class="badge-text" data-lang="en">Puranic Stories</span>
+                    <span class="badge-text" data-lang="hi">पौराणिक कथाएं</span>
+                </div>
+                {% endif %}
             </div>
         </a>
     </div>
@@ -90,7 +111,7 @@ collection_key: hanuman-chalisa
     <div class="verse-grid">
         {% assign verses = site.verses | where: "collection_key", "hanuman-chalisa" | where_exp: "item", "item.url contains 'verse_'" | sort: "verse_number" %}
         {% for verse in verses %}
-        <a href="{{ verse.url | relative_url }}" class="verse-card">
+        <a href="{{ verse.url | relative_url }}" class="verse-card{% if verse.puranic_context %} has-puranic-context{% endif %}">
             {% if verse.image %}
             <div class="card-image">
                 <img src="{{ verse.image | relative_url }}" alt="{{ verse.title_en }}" loading="lazy">
@@ -105,6 +126,11 @@ collection_key: hanuman-chalisa
                     <span data-lang="en">{{ verse.title_en }}</span>
                     <span data-lang="hi">{{ verse.title_hi }}</span>
                 </div>
+                {% if verse.puranic_context %}
+                <div class="puranic-badge">
+                    <span class="badge-icon">📚</span>
+                </div>
+                {% endif %}
             </div>
         </a>
         {% endfor %}
@@ -113,7 +139,7 @@ collection_key: hanuman-chalisa
     <h3>🙏 <span data-lang="en">{{ t_en.home.closing_doha }}</span><span data-lang="hi">{{ t_hi.home.closing_doha }}</span></h3>
     <div class="verse-grid">
         {% assign doha_closing = site.verses | where: "collection_key", "hanuman-chalisa" | where_exp: "item", "item.url contains 'doha_closing'" | first %}
-        <a href="{{ doha_closing.url | relative_url }}" class="verse-card">
+        <a href="{{ doha_closing.url | relative_url }}" class="verse-card{% if doha_closing.puranic_context %} has-puranic-context{% endif %}">
             {% if doha_closing.image %}
             <div class="card-image">
                 <img src="{{ doha_closing.image | relative_url }}" alt="{{ doha_closing.title_en }}" loading="lazy">
@@ -128,6 +154,13 @@ collection_key: hanuman-chalisa
                     <span data-lang="en">{{ doha_closing.title_en }}</span>
                     <span data-lang="hi">{{ doha_closing.title_hi }}</span>
                 </div>
+                {% if doha_closing.puranic_context %}
+                <div class="puranic-badge">
+                    <span class="badge-icon">📚</span>
+                    <span class="badge-text" data-lang="en">Puranic Stories</span>
+                    <span class="badge-text" data-lang="hi">पौराणिक कथाएं</span>
+                </div>
+                {% endif %}
             </div>
         </a>
     </div>

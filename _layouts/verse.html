@@ -160,6 +160,68 @@ layout: default
         {% if page.practical_application.when_to_use.en %}<span data-lang="en">{{ page.practical_application.when_to_use.en }}</span>{% endif %}{% if page.practical_application.when_to_use.hi %}<span data-lang="hi">{{ page.practical_application.when_to_use.hi }}</span>{% endif %}
         </p>
 
+        {% comment %} Puranic Context Boxes {% endcomment %}
+        {% if page.puranic_context %}
+        <section class="puranic-context-section">
+            <h2 class="puranic-context-heading">
+                <span data-lang="en">📖 Puranic Context & Stories</span>
+                <span data-lang="hi">📖 पौराणिक संदर्भ और कहानियां</span>
+            </h2>
+
+            {% comment %} Separate contexts by priority {% endcomment %}
+            {% assign high_priority = page.puranic_context | where: "priority", "high" %}
+            {% assign medium_priority = page.puranic_context | where: "priority", "medium" %}
+            {% assign low_priority = page.puranic_context | where: "priority", "low" %}
+
+            {% comment %} High Priority Contexts - Always Visible {% endcomment %}
+            {% if high_priority.size > 0 %}
+            <div class="puranic-context-grid">
+                {% for context in high_priority %}
+                    {% include puranic-context-box.html context=context priority="high" %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% comment %} Medium Priority Contexts - Expandable {% endcomment %}
+            {% if medium_priority.size > 0 %}
+            <div class="puranic-context-expandable">
+                <button class="puranic-expand-toggle"
+                        onclick="togglePuranicContexts(this)"
+                        aria-expanded="false"
+                        aria-controls="medium-priority-contexts">
+                    <span class="expand-icon">▶</span>
+                    <span data-lang="en">Show {{ medium_priority.size }} More Context{% if medium_priority.size > 1 %}s{% endif %}</span>
+                    <span data-lang="hi">{{ medium_priority.size }} और संदर्भ दिखाएं</span>
+                </button>
+                <div id="medium-priority-contexts" class="puranic-context-grid context-collapsed">
+                    {% for context in medium_priority %}
+                        {% include puranic-context-box.html context=context priority="medium" %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% comment %} Low Priority Contexts - Expandable {% endcomment %}
+            {% if low_priority.size > 0 %}
+            <div class="puranic-context-expandable">
+                <button class="puranic-expand-toggle"
+                        onclick="togglePuranicContexts(this)"
+                        aria-expanded="false"
+                        aria-controls="low-priority-contexts">
+                    <span class="expand-icon">▶</span>
+                    <span data-lang="en">Learn More ({{ low_priority.size }} Additional Context{% if low_priority.size > 1 %}s{% endif %})</span>
+                    <span data-lang="hi">और जानें ({{ low_priority.size }} अतिरिक्त संदर्भ)</span>
+                </button>
+                <div id="low-priority-contexts" class="puranic-context-grid context-collapsed">
+                    {% for context in low_priority %}
+                        {% include puranic-context-box.html context=context priority="low" %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </section>
+        {% endif %}
+
         <hr>
 
         <p><em><span data-lang="en">{{ t_en.labels.recitation_guidelines }}</span><span data-lang="hi">{{ t_hi.labels.recitation_guidelines }}</span> <a href="{{ '/docs/user-guide' | relative_url }}?lang={{ lang }}"><span data-lang="en">{{ t_en.labels.comprehensive_guide }}</span><span data-lang="hi">{{ t_hi.labels.comprehensive_guide }}</span></a>.</em></p>
@@ -188,4 +250,25 @@ layout: default
         previous: "{{ page.previous_verse | relative_url }}?lang={{ lang }}",
         next: "{{ page.next_verse | relative_url }}?lang={{ lang }}"
     };
+
+    // Toggle Puranic Context sections
+    function togglePuranicContexts(button) {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const targetId = button.getAttribute('aria-controls');
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            if (isExpanded) {
+                // Collapse
+                targetSection.classList.remove('context-expanded');
+                targetSection.classList.add('context-collapsed');
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                // Expand
+                targetSection.classList.remove('context-collapsed');
+                targetSection.classList.add('context-expanded');
+                button.setAttribute('aria-expanded', 'true');
+            }
+        }
+    }
 </script>

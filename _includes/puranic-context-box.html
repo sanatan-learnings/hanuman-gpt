@@ -1,0 +1,374 @@
+{% comment %}
+  Puranic Context Box Component
+  Renders a single context box based on its type and priority
+{% endcomment %}
+
+{% assign context = include.context %}
+{% assign priority = include.priority | default: "medium" %}
+
+<div class="puranic-context-box context-{{ priority }} context-type-{{ context.type }}"
+     role="complementary"
+     aria-label="Puranic context: {{ context.title.en }}">
+
+    {% comment %} Box Header {% endcomment %}
+    <div class="context-header">
+        {% if context.icon %}
+        <span class="context-icon">{{ context.icon }}</span>
+        {% endif %}
+        <h3 class="context-title">
+            <span data-lang="en">{{ context.title.en }}</span>
+            <span data-lang="hi">{{ context.title.hi }}</span>
+        </h3>
+    </div>
+
+    {% comment %} Box Content - Type Specific Rendering {% endcomment %}
+    <div class="context-content">
+
+        {% if context.type == "story" %}
+            {% comment %} Story Box {% endcomment %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">📖</span>
+                    <span data-lang="en">THE STORY</span>
+                    <span data-lang="hi">कहानी</span>
+                </div>
+                <div class="context-section-content context-bilingual">
+                    {% if context.story_summary.en %}
+                    <div data-lang="en"><p>{{ context.story_summary.en | strip | strip_newlines }}</p></div>
+                    {% endif %}
+                    {% if context.story_summary.hi %}
+                    <div data-lang="hi"><p>{{ context.story_summary.hi | strip | strip_newlines }}</p></div>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if context.theological_significance %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">💡</span>
+                    <span data-lang="en">WHY THIS MATTERS</span>
+                    <span data-lang="hi">यह क्यों महत्वपूर्ण है</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.theological_significance.en %}
+                    <p data-lang="en">{{ context.theological_significance.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.theological_significance.hi %}
+                    <p data-lang="hi">{{ context.theological_significance.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.practical_application %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">🎯</span>
+                    <span data-lang="en">APPLY THIS TEACHING</span>
+                    <span data-lang="hi">इस शिक्षा को लागू करें</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.practical_application.en %}
+                    <p data-lang="en">{{ context.practical_application.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.practical_application.hi %}
+                    <p data-lang="hi">{{ context.practical_application.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+        {% elsif context.type == "etymology" %}
+            {% comment %} Etymology Box {% endcomment %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">🔤</span>
+                    <span data-lang="en">WORD BREAKDOWN</span>
+                    <span data-lang="hi">शब्द विश्लेषण</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.word_breakdown %}
+                    <div class="word-breakdown">
+                        <div class="original-word">{{ context.word_breakdown.original }}</div>
+                        <div class="word-components">
+                            {% for component in context.word_breakdown.components %}
+                            <div class="component">
+                                <strong>{{ component.part }}</strong> ({{ component.roman }}) =
+                                {% if component.meaning.en %}
+                                <span data-lang="en">{{ component.meaning.en }}</span>
+                                {% endif %}
+                                {% if component.meaning.hi %}
+                                <span data-lang="hi">{{ component.meaning.hi }}</span>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if context.origin_story %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">📖</span>
+                    <span data-lang="en">ORIGIN STORY</span>
+                    <span data-lang="hi">उत्पत्ति की कहानी</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.origin_story.en %}
+                    <p data-lang="en">{{ context.origin_story.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.origin_story.hi %}
+                    <p data-lang="hi">{{ context.origin_story.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.alternative_names %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">🏷️</span>
+                    <span data-lang="en">OTHER NAMES</span>
+                    <span data-lang="hi">अन्य नाम</span>
+                </div>
+                <div class="context-section-content">
+                    <ul class="alternative-names-list">
+                        {% for alt_name in context.alternative_names %}
+                        <li>
+                            <strong>{{ alt_name.name }}</strong> -
+                            {% if alt_name.meaning.en %}
+                            <span data-lang="en">{{ alt_name.meaning.en }}</span>
+                            {% endif %}
+                            {% if alt_name.meaning.hi %}
+                            <span data-lang="hi">{{ alt_name.meaning.hi }}</span>
+                            {% endif %}
+                            {% if alt_name.context %}
+                            <span class="name-context">({{ alt_name.context }})</span>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.deeper_significance %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">💡</span>
+                    <span data-lang="en">DEEPER MEANING</span>
+                    <span data-lang="hi">गहरा अर्थ</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.deeper_significance.en %}
+                    <p data-lang="en">{{ context.deeper_significance.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.deeper_significance.hi %}
+                    <p data-lang="hi">{{ context.deeper_significance.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+        {% elsif context.type == "concept" %}
+            {% comment %} Concept Box {% endcomment %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">💭</span>
+                    <span data-lang="en">UNDERSTANDING THE CONCEPT</span>
+                    <span data-lang="hi">अवधारणा को समझना</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.concept_explanation.en %}
+                    <p data-lang="en">{{ context.concept_explanation.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.concept_explanation.hi %}
+                    <p data-lang="hi">{{ context.concept_explanation.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if context.scriptural_basis %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">📜</span>
+                    <span data-lang="en">SCRIPTURAL BASIS</span>
+                    <span data-lang="hi">शास्त्रीय आधार</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.scriptural_basis.en %}
+                    <p data-lang="en">{{ context.scriptural_basis.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.scriptural_basis.hi %}
+                    <p data-lang="hi">{{ context.scriptural_basis.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.practical_application %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">🎯</span>
+                    <span data-lang="en">HOW TO APPLY</span>
+                    <span data-lang="hi">कैसे लागू करें</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.practical_application.en %}
+                    <p data-lang="en">{{ context.practical_application.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.practical_application.hi %}
+                    <p data-lang="hi">{{ context.practical_application.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.key_terms %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">📖</span>
+                    <span data-lang="en">KEY TERMS</span>
+                    <span data-lang="hi">मुख्य शब्द</span>
+                </div>
+                <div class="context-section-content">
+                    <ul class="key-terms-list">
+                        {% for term in context.key_terms %}
+                        <li>
+                            <strong>{{ term.term }}</strong> ({{ term.roman }}) =
+                            {% if term.meaning.en %}
+                            <span data-lang="en">{{ term.meaning.en }}</span>
+                            {% endif %}
+                            {% if term.meaning.hi %}
+                            <span data-lang="hi">{{ term.meaning.hi }}</span>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+        {% elsif context.type == "cross_reference" %}
+            {% comment %} Cross Reference Box {% endcomment %}
+            {% if context.primary_source %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">📚</span>
+                    <span data-lang="en">PRIMARY SOURCE</span>
+                    <span data-lang="hi">मुख्य स्रोत</span>
+                </div>
+                <div class="context-section-content">
+                    <strong>{{ context.primary_source.text }}</strong>
+                    {% if context.primary_source.section %}
+                    - {{ context.primary_source.section }}
+                    {% endif %}
+                    {% if context.primary_source.summary %}
+                    <br>
+                    {% if context.primary_source.summary.en %}
+                    <span data-lang="en">{{ context.primary_source.summary.en | strip | strip_newlines }}</span>
+                    {% endif %}
+                    {% if context.primary_source.summary.hi %}
+                    <span data-lang="hi">{{ context.primary_source.summary.hi | strip | strip_newlines }}</span>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.related_texts %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">🔗</span>
+                    <span data-lang="en">RELATED TEXTS</span>
+                    <span data-lang="hi">संबंधित ग्रंथ</span>
+                </div>
+                <div class="context-section-content">
+                    <ul class="related-texts-list">
+                        {% for text in context.related_texts %}
+                        <li>
+                            <strong>{{ text.text }}</strong>
+                            {% if text.section %}- {{ text.section }}{% endif %}
+                            {% if text.relevance %}
+                            <br>
+                            <span class="text-relevance">
+                                {% if text.relevance.en %}
+                                <span data-lang="en">{{ text.relevance.en }}</span>
+                                {% endif %}
+                                {% if text.relevance.hi %}
+                                <span data-lang="hi">{{ text.relevance.hi }}</span>
+                                {% endif %}
+                            </span>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.comparative_insights %}
+            <div class="context-section">
+                <div class="context-section-label">
+                    <span class="section-icon">💡</span>
+                    <span data-lang="en">INSIGHTS</span>
+                    <span data-lang="hi">अंतर्दृष्टि</span>
+                </div>
+                <div class="context-section-content">
+                    {% if context.comparative_insights.en %}
+                    <p data-lang="en">{{ context.comparative_insights.en | strip | strip_newlines }}</p>
+                    {% endif %}
+                    {% if context.comparative_insights.hi %}
+                    <p data-lang="hi">{{ context.comparative_insights.hi | strip | strip_newlines }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+        {% endif %}
+
+        {% comment %} Meta Information - Common to All Types {% endcomment %}
+        <div class="context-meta">
+            {% if context.source_texts %}
+            <div class="meta-item">
+                <span class="meta-icon">📚</span>
+                <span data-lang="en">Sources:</span>
+                <span data-lang="hi">स्रोत:</span>
+                {% for source in context.source_texts %}
+                {{ source.text }}{% if source.section %} ({{ source.section }}){% endif %}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if context.related_verses %}
+            <div class="meta-item">
+                <span class="meta-icon">🔗</span>
+                <span data-lang="en">Related Verses:</span>
+                <span data-lang="hi">संबंधित चौपाई:</span>
+                <div class="context-related-verses">
+                    {% for related in context.related_verses %}
+                    <a href="{{ '/chalisa/verse_' | append: related.verse_number | append: '/' | relative_url }}"
+                       class="verse-chip"
+                       title="{{ related.relationship }}">
+                        {{ related.verse_number }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if context.related_concepts %}
+            <div class="meta-item">
+                <span class="meta-icon">🔗</span>
+                <span data-lang="en">Related:</span>
+                <span data-lang="hi">संबंधित:</span>
+                {% for concept in context.related_concepts %}
+                {{ concept.concept }}{% if concept.verses.size > 0 %} (Verses: {% for v in concept.verses %}{{ v }}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endif %}{% unless forloop.last %}; {% endunless %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

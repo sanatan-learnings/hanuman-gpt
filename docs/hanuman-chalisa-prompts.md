@@ -4,10 +4,10 @@
 
 ## Architecture
 
-This file contains **what happens** in each image. Visual specifications (colors, style, character design) are defined separately in `docs/themes/*.yml` files.
+This file contains **what happens** in each image. Visual specifications (colors, style, character design) are defined separately in `docs/themes/<collection-key>/*.yml` files.
 
 **How it works:**
-- **Scene descriptions** (this file) + **Theme specifications** (`docs/themes/*.yml`) = **Complete DALL-E 3 prompts**
+- **Scene descriptions** (this file) + **Theme specifications** (`docs/themes/<collection-key>/*.yml`) = **Complete DALL-E 3 prompts**
 - Each description focuses on: action, characters, setting, and spiritual significance
 - Use `scripts/generate_theme_images.py` to automatically combine scene + theme
 

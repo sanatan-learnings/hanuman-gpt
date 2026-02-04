@@ -59,7 +59,9 @@ Each theme specification includes:
 - Contains only: name, description, folder path, default status
 - Consumed by Jekyll for theme switching functionality
 
-### `docs/themes/*.yml`
+### `docs/themes/<collection-key>/*.yml`
+
+Themes are organized by collection:
 - **Comprehensive specifications** and design documentation
 - Not processed by Jekyll - for human reference
 - Detailed style guides, principles, and technical specs

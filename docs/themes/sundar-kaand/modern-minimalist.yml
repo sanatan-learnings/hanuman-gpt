@@ -82,7 +82,7 @@ theme:
       Cultural authenticity with modern visual language.
 
     dalle_params:
-      size: "1024x1792"  # Portrait orientation
+      size: "1792x1024"  # Landscape 16:9 format
       quality: "standard"  # Can upgrade to "hd" for 2x cost
       style: "natural"  # More realistic than "vivid"
 

@@ -150,7 +150,7 @@ theme:
     # DALL-E 3 API parameters
     dalle_params:
       model: "dall-e-3"
-      size: "1024x1792"  # Portrait format
+      size: "1792x1024"  # Landscape 16:9 format
       quality: "hd"       # HD quality recommended for intricate details
       style: "natural"    # More authentic to traditional art
 
@@ -231,7 +231,7 @@ theme:
     directory: "images/traditional"
     naming: "[verse-id].png"
     format: "PNG with transparency support for borders"
-    size: "1024x1792 (portrait, HD quality)"
+    size: "1792x1024 (landscape 16:9, HD quality)"
 
   # ===== Usage & Attribution =====
   usage:

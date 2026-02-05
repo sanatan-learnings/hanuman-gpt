@@ -238,7 +238,7 @@ theme:
     generation_parameters:
       model: "DALL-E 3"
       quality: "standard"
-      size: "1024x1024 or 1024x1792 (cropped to 1024x1536)"
+      size: "1792x1024 (landscape 16:9 format)"
       iterations: "Multiple variations reviewed for best spiritual and artistic quality"
 
   # ===== Generation Configuration =====
@@ -258,7 +258,7 @@ theme:
     # DALL-E 3 API parameters
     dalle_params:
       model: "dall-e-3"
-      size: "1024x1792"      # Portrait orientation (crop to 1024x1536 for final)
+      size: "1792x1024"      # Landscape 16:9 format for title pages
       quality: "standard"     # Options: standard, hd
       style: "natural"        # Options: natural, vivid
       n: 1

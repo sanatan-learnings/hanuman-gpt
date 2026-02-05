@@ -12,17 +12,14 @@ collection_key: hanuman-chalisa
         <img src="{{ '/images/hanuman-chalisa/modern-minimalist/title-page.png' | relative_url }}" alt="Hanuman Chalisa Title Page" class="title-page-image" data-themed-image="title-page.png">
     </div>
 
-    {% comment %} Row 1: Buttons and Theme Switcher {% endcomment %}
-    <div class="collection-header-row">
-        <div class="quick-actions">
-            <a href="{{ '/chalisa/full-chalisa' | relative_url }}" class="btn-primary">📖 <span data-lang="en">{{ t_en.home.read_complete }}</span><span data-lang="hi">{{ t_hi.home.read_complete }}</span></a>
-            <a href="{{ '/chalisa/book' | relative_url }}?collection=hanuman-chalisa" class="btn-secondary">📕 <span data-lang="en">Generate Book</span><span data-lang="hi">पुस्तक बनाएं</span></a>
-        </div>
+    <div class="quick-actions">
+        <a href="{{ '/chalisa/full-chalisa' | relative_url }}" class="btn-primary">📖 <span data-lang="en">{{ t_en.home.read_complete }}</span><span data-lang="hi">{{ t_hi.home.read_complete }}</span></a>
+        <a href="{{ '/chalisa/book' | relative_url }}?collection=hanuman-chalisa" class="btn-secondary">📕 <span data-lang="en">Generate Book</span><span data-lang="hi">पुस्तक बनाएं</span></a>
 
         {% comment %} Theme switcher for Hanuman Chalisa {% endcomment %}
         {% assign collection_themes = site.data.themes.hanuman-chalisa.available_themes %}
-        <div class="verse-theme-switcher">
-            <label for="themeSelect">🎨 <span data-lang="en">Image Theme</span><span data-lang="hi">चित्र थीम</span>:</label>
+        <div class="theme-switcher-inline">
+            <label for="themeSelect">🎨</label>
             <select id="themeSelect" onchange="switchTheme(this.value)">
                 {% for theme_data in collection_themes %}
                     {% assign theme_key = theme_data[0] %}
@@ -36,23 +33,14 @@ collection_key: hanuman-chalisa
         </div>
     </div>
 
-    {% comment %} Row 2: About and Puranic Legend {% endcomment %}
-    <div class="collection-info-row">
-        <details class="about-section">
-            <summary><span data-lang="en">{{ t_en.home.about_title }}</span><span data-lang="hi">{{ t_hi.home.about_title }}</span></summary>
+    <div class="collection-meta">
+        <details class="about-section-compact">
+            <summary>▶ <span data-lang="en">About</span><span data-lang="hi">परिचय</span></summary>
             <p><span data-lang="en">{{ t_en.home.about_p1 }}</span><span data-lang="hi">{{ t_hi.home.about_p1 }}</span></p>
-
             <p><span data-lang="en">{{ t_en.home.about_p2 }}</span><span data-lang="hi">{{ t_hi.home.about_p2 }}</span></p>
-
             <p><span data-lang="en">{{ t_en.home.about_p3 }}</span><span data-lang="hi">{{ t_hi.home.about_p3 }}</span></p>
         </details>
-
-        {% comment %} Legend for Puranic Context Indicators {% endcomment %}
-        <div class="puranic-legend">
-            <span class="legend-icon">📚</span>
-            <span data-lang="en">Verses marked with 📚 contain additional Puranic context and stories</span>
-            <span data-lang="hi">📚 चिह्न वाले छंदों में अतिरिक्त पौराणिक संदर्भ और कथाएं हैं</span>
-        </div>
+        <span class="puranic-legend-compact">📚 <span data-lang="en">Some verses have Puranic stories</span><span data-lang="hi">कुछ पदों में पौराणिक कथाएं हैं</span></span>
     </div>
 </div>
 

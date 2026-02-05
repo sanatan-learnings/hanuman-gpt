@@ -233,20 +233,18 @@ main {
 /* About Section (Collapsible) */
 .about-section {
     max-width: 700px;
-    margin: 0;
-    padding: 0.25rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
     background: #f8f9fa;
     border-radius: 8px;
     border: 1px solid #e0e0e0;
-    flex: 1;
-    min-width: 300px;
 }
 
 .about-section summary {
     cursor: pointer;
     font-weight: 600;
     color: #ff6b35;
-    padding: 0.25rem;
+    padding: 0.5rem;
     user-select: none;
     list-style: none;
     display: flex;
@@ -294,32 +292,85 @@ main {
     max-width: 700px;
 }
 
-/* Collection Header Layout - 2 Row Design */
-.collection-header-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 0.25rem 0;
-    flex-wrap: wrap;
-}
-
-.collection-info-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 0.25rem 0;
-    flex-wrap: wrap;
-}
-
 /* Quick Actions */
 .quick-actions {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin: 0;
+    align-items: center;
+    gap: 12px;
+    margin: 0.5rem 0;
     flex-wrap: wrap;
+}
+
+/* Inline theme switcher */
+.theme-switcher-inline {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: white;
+    border: 2px solid #ff6b35;
+    border-radius: 8px;
+}
+
+.theme-switcher-inline label {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.theme-switcher-inline select {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Collection metadata row */
+.collection-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.about-section-compact {
+    padding: 4px 12px;
+    background: transparent;
+    border: none;
+    margin: 0;
+}
+
+.about-section-compact summary {
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    font-weight: normal;
+    font-size: 0.9rem;
+    display: inline;
+}
+
+.about-section-compact summary:hover {
+    color: #ff6b35;
+}
+
+.about-section-compact p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.puranic-legend-compact {
+    color: #666;
+    font-size: 0.85rem;
+    padding: 4px 8px;
 }
 
 .btn-primary,
@@ -1094,11 +1145,10 @@ footer .footer-links a:hover {
 /* Verse page theme switcher */
 .verse-theme-switcher {
     text-align: center;
-    margin: 0;
-    padding: 0.25rem 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
     background: var(--card-bg);
     border-radius: 8px;
-    white-space: nowrap;
 }
 
 .verse-theme-switcher label {
@@ -1742,14 +1792,12 @@ footer .footer-links a:hover {
     background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
     border: 2px solid #ff6b35;
     border-radius: 8px;
-    padding: 0.5rem 0.75rem;
-    margin: 0;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     box-shadow: 0 2px 8px rgba(255, 107, 53, 0.15);
-    flex: 1;
-    min-width: 300px;
 }
 
 .puranic-legend .legend-icon {

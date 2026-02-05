@@ -233,7 +233,7 @@ main {
 /* About Section (Collapsible) */
 .about-section {
     max-width: 700px;
-    margin: 0.5rem auto 0;
+    margin: 0.25rem auto 0;
     padding: 0.5rem;
     background: #f8f9fa;
     border-radius: 8px;
@@ -297,7 +297,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 0.5rem 0 0.5rem;
+    margin: 0.5rem 0 0.25rem;
     flex-wrap: wrap;
 }
 
@@ -1073,7 +1073,7 @@ footer .footer-links a:hover {
 /* Verse page theme switcher */
 .verse-theme-switcher {
     text-align: center;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.25rem 0 0.25rem 0;
     padding: 0.5rem;
     background: var(--card-bg);
     border-radius: 8px;
@@ -1721,7 +1721,7 @@ footer .footer-links a:hover {
     border: 2px solid #ff6b35;
     border-radius: 8px;
     padding: 0.75rem 1rem;
-    margin: 0.5rem 0 0.75rem;
+    margin: 0.25rem 0 0.5rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;

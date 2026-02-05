@@ -4,6 +4,15 @@ Modern minimalist spiritual art style with radiant divine figures, contemporary 
 
 ---
 
+### Title Page
+
+**File**: `title-page.png`
+
+**Scene Description**:
+Divine Hanuman in a powerful protective stance, radiating golden-orange light that dispels surrounding darkness and obstacles. His form is majestic and compassionate, with one hand raised in abhaya mudra (blessing gesture) removing fears, and the other holding a gada (mace) symbolizing strength. Around him, abstract representations of difficulties dissolving into light - dark clouds clearing, chains breaking, obstacles crumbling. His expression is both powerful and benevolent - the remover of all dangers (Sankat Mochan). Sacred Sanskrit Om symbols and protective mantras glow in the background. Modern minimalist spiritual aesthetic emphasizing divine protection, hope, and liberation from suffering.
+
+---
+
 ### Verse 1: Remover of All Afflictions
 
 **Scene Description**:

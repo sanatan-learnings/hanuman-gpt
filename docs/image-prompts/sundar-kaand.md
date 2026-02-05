@@ -1,5 +1,14 @@
 # Image Generation Prompts - Sundar Kaand
 
+### Title Page
+
+**File**: `title-page.png`
+
+**Scene Description**:
+Majestic Hanuman mid-flight over the vast ocean, flying towards Lanka with determination and devotion. His powerful orange-red form radiates divine energy against a dramatic sunset sky. Below, the endless blue ocean with waves, and in the distance, the golden island of Lanka. Hanuman's expression shows focused devotion, remembering Lord Rama. Sacred symbols and divine light surround him. This captures the essence of Sundar Kaand - Hanuman's heroic journey, his unwavering faith, and the beautiful (sundar) narrative of devotion and courage.
+
+---
+
 ### Verse 1: Jambavan's Inspiring Words
 
 **Scene Description**:
